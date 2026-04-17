@@ -1,165 +1,166 @@
-/* ========================================
-   DORO Education Portal - Main JS
-   ======================================== */
+/* ============================================
+   DOROLAND Education Portal - Main JavaScript
+   ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
-
-    // --- Header scroll effect ---
-    const header = document.getElementById('site-header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 10);
-        });
-    }
-
-    // --- Scroll animations ---
-    const observerOptions = {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px'
-    };
-
-    const scrollObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                scrollObserver.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    // Observe program cards
-    document.querySelectorAll('.program-card, .animate-on-scroll').forEach(el => {
-        scrollObserver.observe(el);
-    });
-
-    // Observe step cards
-    document.querySelectorAll('.step-card').forEach(el => {
-        scrollObserver.observe(el);
-    });
-
-    // --- Progress bar for program pages ---
-    const progressBar = document.querySelector('.progress-bar');
-    if (progressBar) {
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            progressBar.style.width = scrollPercent + '%';
-        });
-    }
-
-    // --- Table of Contents highlight ---
-    const tocItems = document.querySelectorAll('.toc-item');
-    const sections = [];
-
-    tocItems.forEach(item => {
-        const targetId = item.getAttribute('data-target');
-        const section = document.getElementById(targetId);
-        if (section) {
-            sections.push({ element: section, tocItem: item });
-        }
-
-        item.addEventListener('click', () => {
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    });
-
-    if (sections.length > 0) {
-        window.addEventListener('scroll', () => {
-            const scrollPos = window.scrollY + 200;
-            let current = sections[0];
-
-            sections.forEach(s => {
-                if (scrollPos >= s.element.offsetTop) {
-                    current = s;
-                }
-            });
-
-            tocItems.forEach(item => item.classList.remove('active'));
-            current.tocItem.classList.add('active');
-        });
-    }
-
-    // --- Step card active state based on scroll ---
-    const stepCards = document.querySelectorAll('.step-card');
-    if (stepCards.length > 0) {
-        const stepObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Remove active from all
-                    stepCards.forEach(c => c.classList.remove('active'));
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.5 });
-
-        stepCards.forEach(card => stepObserver.observe(card));
-    }
-
-    // --- Checklist toggle ---
-    document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('change', function () {
-            const item = this.closest('.checklist-item');
-            item.classList.toggle('checked', this.checked);
-
-            // Save state to localStorage
-            const key = `doro-checklist-${window.location.pathname}-${this.id}`;
-            localStorage.setItem(key, this.checked);
-        });
-
-        // Restore state from localStorage
-        const key = `doro-checklist-${window.location.pathname}-${checkbox.id}`;
-        const saved = localStorage.getItem(key);
-        if (saved === 'true') {
-            checkbox.checked = true;
-            checkbox.closest('.checklist-item').classList.add('checked');
-        }
-    });
-
-    // --- FAQ accordion ---
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-            const item = question.closest('.faq-item');
-            const answer = item.querySelector('.faq-answer');
-            const isOpen = item.classList.contains('open');
-
-            // Close all others
-            document.querySelectorAll('.faq-item.open').forEach(other => {
-                if (other !== item) {
-                    other.classList.remove('open');
-                    other.querySelector('.faq-answer').style.maxHeight = '0';
-                }
-            });
-
-            // Toggle current
-            item.classList.toggle('open', !isOpen);
-            if (!isOpen) {
-                answer.style.maxHeight = answer.scrollHeight + 'px';
-            } else {
-                answer.style.maxHeight = '0';
-            }
-        });
-    });
-
-    // --- Program card entrance animation with stagger ---
-    const cards = document.querySelectorAll('.program-card');
-    cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = `all 0.5s ease ${index * 0.1}s`;
-    });
-
-    const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                cardObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    cards.forEach(card => cardObserver.observe(card));
+  initScrollAnimations();
+  initNavScroll();
+  initQuestTabs();
+  initFAQAccordion();
+  initChecklist();
+  initProgressBar();
 });
+
+/* --- Scroll Animations (Intersection Observer) --- */
+function initScrollAnimations() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}
+
+/* --- Navigation Scroll Effect --- */
+function initNavScroll() {
+  const nav = document.getElementById('navbar');
+  if (!nav) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+}
+
+/* --- Quest Tabs --- */
+function initQuestTabs() {
+  const tabs = document.querySelectorAll('.quest-tab');
+  if (!tabs.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const tabType = tab.dataset.tab;
+      const cards = document.querySelectorAll('.quest-card');
+      cards.forEach(card => {
+        if (tabType === 'active') {
+          card.style.display = card.classList.contains('locked') ? 'none' : '';
+        } else {
+          card.style.display = card.classList.contains('locked') ? '' : 'none';
+        }
+      });
+    });
+  });
+}
+
+/* --- FAQ Accordion --- */
+function initFAQAccordion() {
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const wasOpen = item.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+
+      // Toggle current
+      if (!wasOpen) {
+        item.classList.add('open');
+      }
+    });
+  });
+}
+
+/* --- Checklist with LocalStorage --- */
+function initChecklist() {
+  const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+  if (!checkboxes.length) return;
+
+  const pageId = window.location.pathname;
+
+  // Restore state
+  checkboxes.forEach((cb, index) => {
+    const key = `doro-checklist-${pageId}-${index}`;
+    const saved = localStorage.getItem(key);
+    if (saved === 'true') {
+      cb.checked = true;
+    }
+
+    // Save on change
+    cb.addEventListener('change', () => {
+      localStorage.setItem(key, cb.checked);
+      updateChecklistProgress();
+    });
+  });
+
+  updateChecklistProgress();
+}
+
+function updateChecklistProgress() {
+  const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+  const total = checkboxes.length;
+  if (!total) return;
+
+  const checked = document.querySelectorAll('.checklist-item input[type="checkbox"]:checked').length;
+  const progressEl = document.getElementById('checklist-progress');
+  if (progressEl) {
+    const pct = Math.round((checked / total) * 100);
+    progressEl.textContent = `${checked}/${total} 완료 (${pct}%)`;
+    progressEl.style.color = pct === 100 ? 'var(--emerald)' : 'var(--text-secondary)';
+  }
+}
+
+/* --- Scroll Progress Bar --- */
+function initProgressBar() {
+  const bar = document.querySelector('.progress-bar');
+  if (!bar) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = progress + '%';
+  });
+}
+
+/* --- TOC Active State --- */
+function initTOC() {
+  const tocItems = document.querySelectorAll('.toc-item');
+  if (!tocItems.length) return;
+
+  const sections = [];
+  tocItems.forEach(item => {
+    const href = item.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const section = document.querySelector(href);
+      if (section) sections.push({ el: section, tocItem: item });
+    }
+  });
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY + 200;
+    let current = null;
+
+    sections.forEach(({ el, tocItem }) => {
+      if (el.offsetTop <= scrollY) {
+        current = tocItem;
+      }
+    });
+
+    tocItems.forEach(i => i.classList.remove('active'));
+    if (current) current.classList.add('active');
+  });
+}
+
+// Init TOC if present
+if (document.querySelector('.toc-sidebar')) {
+  initTOC();
+}

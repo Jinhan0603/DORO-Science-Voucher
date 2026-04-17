@@ -1,324 +1,225 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DORO 프로그램 1 - IoT 블루투스 스피커를 조립하고 Suno AI로 음악을 만들어 재생하는 융합 교육">
-    <title>블루투스 스피커 × Suno 음악 체험 | DORO Lab</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도블투스 — DORO IoT 사운드 키트 | DOROLAND</title>
+  <meta name="description" content="블루투스 통신과 소리의 원리를 체험하는 IoT 스피커 조립 키트. DORO DIMC 홈러닝.">
+  <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
+  <div class="bg-fantasy"></div>
+  <div class="bg-overlay"></div>
+  <div class="bg-glow-teal"></div>
+  <div class="bg-glow-purple"></div>
+  <div class="progress-bar" id="progress"></div>
 
-    <!-- Header -->
-    <header class="site-header" id="site-header">
-        <div class="header-inner">
-            <a href="../../index.html" class="back-link">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                프로그램 목록
-            </a>
-            <a href="../../index.html" class="logo">
-                <div class="logo-icon">D</div>
-                <div class="logo-text">DORO <span>Lab</span></div>
-            </a>
-        </div>
-    </header>
+  <!-- Nav -->
+  <nav class="nav" id="navbar">
+    <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
+      <span style="font-size:1.2rem;">←</span>
+      <span class="nav-brand-text">프로그램 목록</span>
+    </a>
+    <a href="../../index.html" class="nav-brand">
+      <span class="nav-brand-text">DORO<span>LAND</span></span>
+    </a>
+  </nav>
 
-    <!-- Progress Bar -->
-    <div class="progress-bar-container">
-        <div class="progress-bar"></div>
-    </div>
+  <!-- TOC Sidebar -->
+  <div class="toc-sidebar">
+    <a href="#checklist" class="toc-item active"><span class="toc-dot"></span> 준비물</a>
+    <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
+    <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
+    <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
+  </div>
 
-    <!-- Hero -->
-    <section class="program-hero">
-        <img src="../../assets/images/programs/speaker.jpeg" alt="블루투스 스피커 키트" class="program-hero-bg">
-        <div class="program-hero-overlay">
-            <div class="program-hero-content">
-                <div class="program-number-badge">프로그램 #1</div>
-                <h1>🔊 블루투스 스피커 × Suno 음악 체험</h1>
-                <p class="program-hero-tagline">IoT 블루투스 스피커를 직접 조립하고, AI 작곡 도구 Suno를 활용해 음악을 만든 뒤 내가 만든 스피커로 재생해요</p>
-            </div>
-        </div>
+  <!-- Hero -->
+  <section class="detail-hero">
+    <span class="chapter-badge" style="background: var(--emerald);">DORO IoT 사운드 키트</span>
+    <h1>🔊 도블투스 — 블루투스 스피커</h1>
+    <p class="hero-desc">
+      IoT 블루투스 스피커를 직접 조립하고, 블루투스 통신의 원리와 소리가 만들어지는 과정을 체험하며 사물인터넷의 기초를 학습합니다.
+    </p>
+    <div class="science-badge">🔬 핵심 과학 개념: 블루투스 통신 · 사물인터넷 · 소리의 원리 · 모듈 연결</div>
+  </section>
+
+  <!-- Info Bar -->
+  <div class="info-bar">
+    <div class="info-item"><span class="info-label">소요시간</span><span class="info-value">⏱ 90분</span></div>
+    <div class="info-item"><span class="info-label">대상</span><span class="info-value">👤 초등 4~6학년</span></div>
+    <div class="info-item"><span class="info-label">난이도</span><span class="info-value">⭐⭐☆</span></div>
+    <div class="info-item"><span class="info-label">AI 확장</span><span class="info-value">🎵 Suno (선택)</span></div>
+    <div class="info-item"><span class="info-label">운영형태</span><span class="info-value">🚌 DOROBUS</span></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="detail-content">
+
+    <!-- Checklist -->
+    <section id="checklist" class="checklist-section fade-in">
+      <h2 class="checklist-title">🔧 준비물 체크리스트</h2>
+      <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. 체크 상태는 자동 저장됩니다. <span id="checklist-progress"></span></p>
+      <div class="checklist-item"><input type="checkbox"><span>블루투스 스피커 본체 (판다 디자인 프레임)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>스피커 유닛 × 2</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>블루투스 모듈</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>앰프 보드</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>배터리 팩 + 충전 케이블</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>연결 케이블 세트</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>조립 나사 + 드라이버</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>학생용 활동지</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>조립 설명서</span></div>
     </section>
 
-    <!-- Info Bar -->
-    <div class="info-bar">
-        <div class="info-bar-inner">
-            <div class="info-item">
-                <div class="info-item-label">소요시간</div>
-                <div class="info-item-value">⏱️ 90분</div>
-            </div>
-            <div class="info-item">
-                <div class="info-item-label">대상</div>
-                <div class="info-item-value">👦 초등 4~6학년</div>
-            </div>
-            <div class="info-item">
-                <div class="info-item-label">난이도</div>
-                <div class="info-item-value"><span class="stars">★★☆</span></div>
-            </div>
-            <div class="info-item">
-                <div class="info-item-label">AI 도구</div>
-                <div class="info-item-value">🎵 Suno</div>
-            </div>
-            <div class="info-item">
-                <div class="info-item-label">운영형태</div>
-                <div class="info-item-value">🚌 DOROBUS</div>
-            </div>
+    <!-- Mission Steps -->
+    <section id="missions" class="mission-section fade-in">
+      <h2>📖 STEP-BY-STEP 교육 과정</h2>
+
+      <div class="mission-step">
+        <span class="mission-step-number" style="background:var(--emerald);">1</span>
+        <div class="mission-step-header">
+          <span class="mission-step-title">왜 이 키트를 배우는가 — 도입</span>
+          <span class="mission-step-time">⏱ 10분</span>
         </div>
+        <div class="mission-step-body">
+          <p>오늘 우리가 만들 것을 소개합니다. 블루투스 스피커가 어떻게 작동하는지, 소리가 어떻게 만들어지는지 간단히 알아봅니다.</p>
+          <ul>
+            <li>블루투스 통신의 기본 원리 소개</li>
+            <li>스피커가 소리를 내는 원리 (전기 신호 → 진동 → 소리)</li>
+            <li>완성된 스피커 샘플 시연</li>
+            <li>사물인터넷(IoT) 개념 소개</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/programs/speaker.jpeg" alt="블루투스 스피커 키트" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-step">
+        <span class="mission-step-number" style="background:var(--emerald);">2</span>
+        <div class="mission-step-header">
+          <span class="mission-step-title">오늘의 과학 개념</span>
+          <span class="mission-step-time">⏱ 10분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>블루투스가 어떻게 데이터를 전송하는지, 스피커의 전자기 원리를 학습합니다.</p>
+          <ul>
+            <li>블루투스: 2.4GHz 무선 통신, 기기 간 페어링</li>
+            <li>소리의 3요소: 크기, 높낮이, 음색</li>
+            <li>앰프 보드의 역할: 신호 증폭</li>
+            <li>활동지 과학 개념 카드 작성</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mission-step">
+        <span class="mission-step-number" style="background:var(--emerald);">3</span>
+        <div class="mission-step-header">
+          <span class="mission-step-title">조립 — 스피커 만들기</span>
+          <span class="mission-step-time">⏱ 30분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>설명서를 따라 나만의 블루투스 스피커를 조립합니다.</p>
+          <ul>
+            <li>프레임에 스피커 유닛 설치</li>
+            <li>블루투스 모듈과 앰프 보드 연결</li>
+            <li>배터리 팩 연결 및 케이블 정리</li>
+            <li>외부 케이스 조립 및 고정</li>
+            <li>⚡ 안전 주의: 전선 연결 방향 확인</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mission-step">
+        <span class="mission-step-number" style="background:var(--emerald);">4</span>
+        <div class="mission-step-header">
+          <span class="mission-step-title">작동 확인 + 소리 탐구</span>
+          <span class="mission-step-time">⏱ 20분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>완성된 스피커를 스마트폰과 연결하고, 소리의 변화를 관찰합니다.</p>
+          <ul>
+            <li>블루투스 페어링 실습</li>
+            <li>음악 재생 및 소리 크기/음질 비교</li>
+            <li>볼륨에 따른 진동 관찰</li>
+            <li>활동지 실험 결과 기록</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/programs/suno.jpeg" alt="소리 탐구" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-step">
+        <span class="mission-step-number" style="background:var(--emerald);">5</span>
+        <div class="mission-step-header">
+          <span class="mission-step-title">정리 + 발표</span>
+          <span class="mission-step-time">⏱ 20분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>활동을 정리하고, 배운 과학 개념을 발표합니다.</p>
+          <ul>
+            <li>오늘 배운 과학 개념 정리 (활동지)</li>
+            <li>내 스피커의 특징 소개</li>
+            <li>사후 질문 카드 작성</li>
+            <li>확장 미션 카드 안내</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Extension -->
+    <section id="ai-ext" class="ai-extension fade-in">
+      <span class="extension-label">선택형 확장 활동</span>
+      <h3>🎵 AI 작곡 도구 Suno 체험</h3>
+      <p>
+        기본 키트만으로도 학습이 완결됩니다. 
+        추가로 AI 작곡 도구 Suno를 활용하면, 가사를 입력해 나만의 음악을 만들고 
+        내가 만든 스피커로 재생하는 창작 확장 활동이 가능합니다.
+      </p>
+      <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+        ※ Suno 미사용 시에도 스마트폰 음악 재생으로 동일한 과학 탐구가 가능합니다.
+      </p>
+      <a href="https://suno.com" target="_blank" class="ai-link">Suno 바로가기 →</a>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq-section fade-in">
+      <h2 style="font-family:var(--font-display); font-size:1.3rem; margin-bottom:1.5rem;">❓ 자주 묻는 질문</h2>
+      <div class="faq-item">
+        <button class="faq-question">블루투스 연결이 안 될 때는 어떻게 하나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          스피커 전원을 끄고 다시 켠 후, 스마트폰의 블루투스 설정에서 기존 페어링 기록을 삭제하고 재연결해 보세요. 모듈의 LED가 빠르게 깜빡이면 페어링 대기 상태입니다.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">소리가 너무 작거나 안 나올 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          먼저 배터리 충전 상태를 확인하세요. 케이블 연결이 제대로 되어 있는지, 앰프 보드의 볼륨 노브가 올라가 있는지 점검합니다. 스마트폰 볼륨도 함께 확인해 주세요.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Suno를 꼭 사용해야 하나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          아닙니다. Suno는 선택형 확장 활동입니다. 키트 조립과 과학 탐구만으로도 학습 목표를 충분히 달성할 수 있습니다. 스마트폰에 저장된 음악으로 동일한 작동 테스트가 가능합니다.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">보호자/교사 지도 가이드가 있나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          네, 키트에 보호자/교사용 지도 가이드가 포함되어 있습니다. 지도 포인트, 질문 예시, 확장 활동 안내가 정리되어 있어 비전문가도 쉽게 가이드할 수 있습니다.
+        </div></div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">DOROLAND</div>
+      <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
     </div>
+  </footer>
 
-    <!-- TOC Sidebar -->
-    <nav class="toc-sidebar">
-        <div class="toc-item active" data-target="checklist-section">
-            <span class="toc-dot"></span> 준비물
-        </div>
-        <div class="toc-item" data-target="steps-section">
-            <span class="toc-dot"></span> 교육 과정
-        </div>
-        <div class="toc-item" data-target="ai-section">
-            <span class="toc-dot"></span> AI 도구
-        </div>
-        <div class="toc-item" data-target="faq-section">
-            <span class="toc-dot"></span> FAQ
-        </div>
-    </nav>
-
-    <!-- Content -->
-    <div class="program-content">
-
-        <!-- Checklist -->
-        <div class="checklist" id="checklist-section">
-            <h3>🔧 준비물 체크리스트</h3>
-            <p style="font-size: var(--fs-sm); color: var(--text-secondary); margin-bottom: var(--space-lg);">키트 구성품을 확인하고 체크해주세요. 체크 상태는 자동 저장됩니다.</p>
-            <div class="checklist-item">
-                <input type="checkbox" id="chk1-1">
-                <label for="chk1-1">블루투스 스피커 본체 (판다 디자인 프레임)</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="chk1-2">
-                <label for="chk1-2">스피커 유닛 × 2</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="chk1-3">
-                <label for="chk1-3">블루투스 모듈</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="chk1-4">
-                <label for="chk1-4">앰프 보드</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="chk1-5">
-                <label for="chk1-5">배터리 팩 + 충전 케이블</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="chk1-6">
-                <label for="chk1-6">연결 케이블 세트</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="chk1-7">
-                <label for="chk1-7">조립 나사 + 드라이버</label>
-            </div>
-            <div class="checklist-item">
-                <input type="checkbox" id="chk1-8">
-                <label for="chk1-8">스마트폰 또는 태블릿 (Suno 접속용)</label>
-            </div>
-        </div>
-
-        <!-- Steps -->
-        <div class="steps-section" id="steps-section">
-            <h2>📖 STEP-BY-STEP 교육 과정</h2>
-
-            <!-- Step 1 -->
-            <div class="step-card" id="step-1">
-                <div class="step-number">1</div>
-                <div class="step-header">
-                    <h3 class="step-title">도입 — 오늘의 활동 소개</h3>
-                    <span class="step-time">⏱️ 10분</span>
-                </div>
-                <div class="step-body">
-                    <p>오늘 우리가 만들 것을 소개합니다. 블루투스 스피커가 어떻게 작동하는지, 그리고 AI가 어떻게 음악을 만들 수 있는지 간단히 알아봅니다.</p>
-                    <ul>
-                        <li>블루투스 통신의 기본 원리 소개</li>
-                        <li>스피커가 소리를 내는 원리 (전기 신호 → 진동 → 소리)</li>
-                        <li>AI 작곡 도구 Suno 시연 영상 감상</li>
-                        <li>완성된 스피커 샘플 시연</li>
-                    </ul>
-                    <div class="tip-box">
-                        <div class="tip-title">💡 강사 TIP</div>
-                        <p>완성된 스피커로 Suno 음악을 미리 재생해서 완성품의 매력을 먼저 보여주면 학생들의 흥미가 높아집니다.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="step-card" id="step-2">
-                <div class="step-number">2</div>
-                <div class="step-header">
-                    <h3 class="step-title">원리 이해 — 블루투스와 스피커 구조</h3>
-                    <span class="step-time">⏱️ 15분</span>
-                </div>
-                <div class="step-body">
-                    <p>블루투스 기술과 스피커의 물리적 원리를 탐구합니다.</p>
-                    <ul>
-                        <li><strong>블루투스란?</strong> — 가까운 거리에서 기기 간 무선 데이터 전송 기술</li>
-                        <li><strong>스피커 원리</strong> — 전기 신호가 코일을 진동시키고, 진동이 공기를 통해 소리로 전달</li>
-                        <li><strong>앰프의 역할</strong> — 약한 오디오 신호를 증폭하여 스피커를 구동</li>
-                        <li>각 부품의 역할을 실물로 확인</li>
-                    </ul>
-                    <div class="tip-box">
-                        <div class="tip-title">💡 활동 TIP</div>
-                        <p>스피커 유닛에 손을 대고 음악을 재생하면 진동을 직접 느낄 수 있어요. 소리 = 진동이라는 개념을 체감할 수 있습니다.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="step-card" id="step-3">
-                <div class="step-number">3</div>
-                <div class="step-header">
-                    <h3 class="step-title">조립/실습 — 스피커 만들기</h3>
-                    <span class="step-time">⏱️ 35분 ⭐핵심</span>
-                </div>
-                <div class="step-body">
-                    <p>판다 디자인 프레임에 스피커 유닛, 블루투스 모듈, 앰프 보드를 조립합니다.</p>
-                    <ul>
-                        <li><strong>1단계:</strong> 프레임 조립 — 레이저 컷 MDF 부품을 순서대로 끼워 맞추기</li>
-                        <li><strong>2단계:</strong> 스피커 유닛 장착 — 2개의 스피커를 프레임에 고정</li>
-                        <li><strong>3단계:</strong> 블루투스 모듈 + 앰프 보드 연결 — 케이블 연결 (색상 맞추기)</li>
-                        <li><strong>4단계:</strong> 배터리 팩 연결 및 전원 테스트</li>
-                        <li><strong>5단계:</strong> 스마트폰과 블루투스 페어링 테스트</li>
-                    </ul>
-                    <div class="step-image">
-                        <img src="../../assets/images/programs/speaker.jpeg" alt="판다 블루투스 스피커 완성품">
-                    </div>
-                    <div class="warning-box">
-                        <div class="warning-title">⚠️ 안전 주의사항</div>
-                        <p>5V 저전압 회로이므로 감전 위험은 없지만, 나사 조임 시 드라이버 사용에 주의하세요. 케이블 연결 시 극성(+/-)을 반드시 확인하세요.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="step-card" id="step-4">
-                <div class="step-number">4</div>
-                <div class="step-header">
-                    <h3 class="step-title">AI 도구 체험 — Suno로 음악 만들기</h3>
-                    <span class="step-time">⏱️ 20분</span>
-                </div>
-                <div class="step-body">
-                    <p>AI 작곡 도구 Suno를 사용해 나만의 음악을 만들어 봅니다.</p>
-                    <ul>
-                        <li>Suno 웹사이트 접속 (suno.com)</li>
-                        <li>프롬프트 작성 — 원하는 음악 스타일, 분위기, 가사 키워드 입력</li>
-                        <li>AI가 생성한 음악 시청 및 선택</li>
-                        <li>내가 만든 블루투스 스피커로 재생!</li>
-                    </ul>
-                    <div class="step-image">
-                        <img src="../../assets/images/programs/suno.jpeg" alt="Suno AI 음악 생성 화면">
-                    </div>
-                    <div class="tip-box">
-                        <div class="tip-title">💡 프롬프트 예시</div>
-                        <p>"밝고 에너지 넘치는 팝송, 봄날의 소풍을 떠나는 기분, 한국어 가사" — 이런 식으로 원하는 분위기를 자세히 쓸수록 더 좋은 결과물이 나옵니다!</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Step 5 -->
-            <div class="step-card" id="step-5">
-                <div class="step-number">5</div>
-                <div class="step-header">
-                    <h3 class="step-title">정리/피드백 — 결과물 공유</h3>
-                    <span class="step-time">⏱️ 10분</span>
-                </div>
-                <div class="step-body">
-                    <p>완성된 스피커와 AI로 만든 음악을 친구들과 공유합니다.</p>
-                    <ul>
-                        <li>각자 만든 음악을 스피커로 재생하며 발표</li>
-                        <li>어떤 프롬프트를 사용했는지, AI의 결과물이 어땠는지 소감 나누기</li>
-                        <li>활동지 작성 (오늘 배운 점, 느낀 점)</li>
-                        <li>완성된 스피커는 집에 가져갑니다! 🎁</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Tool Section -->
-        <div class="ai-tool-section" id="ai-section">
-            <h3>🎵 AI 도구: Suno</h3>
-            <p>Suno는 텍스트 프롬프트만으로 노래를 만들어주는 AI 작곡 도구입니다. 가사, 멜로디, 보컬까지 자동으로 생성해 줍니다. 음악 전문 지식이 없어도 누구나 쉽게 나만의 음악을 만들 수 있어요.</p>
-            <a href="https://suno.com" target="_blank" class="ai-tool-link">
-                Suno 바로가기
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-            </a>
-        </div>
-
-        <!-- FAQ -->
-        <div class="faq-section" id="faq-section">
-            <h2>💡 자주 묻는 질문</h2>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    블루투스 페어링이 안 돼요
-                    <span class="arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">
-                        전원을 끄고 다시 켠 후, 스마트폰의 블루투스 설정에서 기존 페어링 기록을 삭제하고 다시 검색해 보세요. 모듈의 LED가 깜빡이면 페어링 대기 상태입니다.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    소리가 너무 작아요
-                    <span class="arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">
-                        스마트폰 볼륨과 앰프 보드의 볼륨 노브를 모두 확인하세요. 케이블 연결이 느슨한 경우에도 소리가 작을 수 있으니 모든 연결을 다시 확인해 주세요.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    Suno 사용에 비용이 드나요?
-                    <span class="arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">
-                        Suno는 무료 크레딧으로 하루에 여러 곡을 만들 수 있습니다. 수업 중 사용하기에 충분한 양이 제공됩니다.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">
-                    스피커를 집에 가져가도 되나요?
-                    <span class="arrow">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-inner">
-                        네! 완성된 스피커는 여러분의 것입니다. USB로 충전해서 계속 사용할 수 있어요. 집에서도 Suno로 새로운 음악을 만들어 재생해보세요.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-logo">DORO <span>Lab</span></div>
-            <p class="footer-text">(주)도로 · 과학문화바우처 교육 포털</p>
-            <div class="footer-links">
-                <a href="../../index.html">프로그램 목록</a>
-                <a href="https://www.changex.org/kr/doro" target="_blank">Change X</a>
-                <a href="https://www.doro-robot.com" target="_blank">DORO 홈페이지</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/main.js"></script>
 </body>
 </html>
