@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DORO 프로그램 5 - 아두이노 기반 휴대용 게임기를 만들고 MakeCode Arcade에서 블록코딩 게임을 체험하는 교육">
+    <title>아두이노 게임기 × MakeCode Arcade | DORO Lab</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <a href="../../index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                프로그램 목록
+            </a>
+            <a href="../../index.html" class="logo">
+                <div class="logo-icon">D</div>
+                <div class="logo-text">DORO <span>Lab</span></div>
+            </a>
+        </div>
+    </header>
+
+    <div class="progress-bar-container"><div class="progress-bar"></div></div>
+
+    <section class="program-hero">
+        <img src="../../assets/images/programs/makecode-student.jpeg" alt="MakeCode Arcade 수업 장면" class="program-hero-bg">
+        <div class="program-hero-overlay">
+            <div class="program-hero-content">
+                <div class="program-number-badge">프로그램 #5</div>
+                <h1>🎮 아두이노 게임기 × MakeCode Arcade</h1>
+                <p class="program-hero-tagline">기본 코드가 업로드된 아두이노 보드로 휴대용 게임기를 만들고, MakeCode Arcade에서 블록코딩 게임을 실행해 직접 플레이하는 활동</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-bar">
+        <div class="info-bar-inner">
+            <div class="info-item">
+                <div class="info-item-label">소요시간</div>
+                <div class="info-item-value">⏱️ 90분</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">대상</div>
+                <div class="info-item-value">👦 초등 3~6학년</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">난이도</div>
+                <div class="info-item-value"><span class="stars">★★☆</span></div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">AI 도구</div>
+                <div class="info-item-value">🎮 MakeCode Arcade</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">운영형태</div>
+                <div class="info-item-value">🚌 DOROBUS</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="toc-sidebar">
+        <div class="toc-item active" data-target="checklist-section"><span class="toc-dot"></span> 준비물</div>
+        <div class="toc-item" data-target="steps-section"><span class="toc-dot"></span> 교육 과정</div>
+        <div class="toc-item" data-target="ai-section"><span class="toc-dot"></span> AI 도구</div>
+        <div class="toc-item" data-target="faq-section"><span class="toc-dot"></span> FAQ</div>
+    </nav>
+
+    <div class="program-content">
+
+        <div class="checklist" id="checklist-section">
+            <h3>🔧 준비물 체크리스트</h3>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); margin-bottom: var(--space-lg);">키트 구성품을 확인하고 체크해주세요.</p>
+            <div class="checklist-item"><input type="checkbox" id="chk5-1"><label for="chk5-1">게임기 케이스 (MDF 프레임)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk5-2"><label for="chk5-2">아두이노 보드 (코드 사전 업로드)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk5-3"><label for="chk5-3">OLED 디스플레이 모듈</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk5-4"><label for="chk5-4">조이스틱 모듈</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk5-5"><label for="chk5-5">버튼 × 4 (방향키 + 액션)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk5-6"><label for="chk5-6">피에조 스피커</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk5-7"><label for="chk5-7">USB 케이블 + 배터리</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk5-8"><label for="chk5-8">노트북 또는 태블릿 (MakeCode 접속용)</label></div>
+        </div>
+
+        <div class="steps-section" id="steps-section">
+            <h2>📖 STEP-BY-STEP 교육 과정</h2>
+
+            <div class="step-card" id="step-1">
+                <div class="step-number">1</div>
+                <div class="step-header">
+                    <h3 class="step-title">도입 — 게임의 역사와 원리</h3>
+                    <span class="step-time">⏱️ 10분</span>
+                </div>
+                <div class="step-body">
+                    <p>게임이 어떻게 만들어지는지, 하드웨어와 소프트웨어의 관계를 알아봅니다.</p>
+                    <ul>
+                        <li>게임 역사 — 아타리부터 닌텐도까지</li>
+                        <li>게임의 3요소: 입력(버튼) → 처리(코드) → 출력(화면+소리)</li>
+                        <li>아두이노 게임기 완성 샘플 시연</li>
+                        <li>오늘 우리가 만들 게임 미리보기</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-2">
+                <div class="step-number">2</div>
+                <div class="step-header">
+                    <h3 class="step-title">원리 이해 — 블록코딩과 게임 로직</h3>
+                    <span class="step-time">⏱️ 15분</span>
+                </div>
+                <div class="step-body">
+                    <p>MakeCode Arcade의 블록코딩 환경을 탐색하고, 게임의 기본 구조를 이해합니다.</p>
+                    <ul>
+                        <li><strong>스프라이트:</strong> 게임의 캐릭터나 오브젝트</li>
+                        <li><strong>이벤트:</strong> 버튼을 누르면 일어나는 일</li>
+                        <li><strong>게임 루프:</strong> 계속 반복되는 게임의 메인 로직</li>
+                        <li><strong>충돌 감지:</strong> 캐릭터와 적/아이템이 만나면 발생하는 이벤트</li>
+                    </ul>
+                    <div class="step-image">
+                        <img src="../../assets/images/programs/makecode-lecture.jpeg" alt="MakeCode 블록코딩 강의">
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-3">
+                <div class="step-number">3</div>
+                <div class="step-header">
+                    <h3 class="step-title">조립/실습 — 게임기 만들기</h3>
+                    <span class="step-time">⏱️ 30분 ⭐핵심</span>
+                </div>
+                <div class="step-body">
+                    <p>MDF 프레임에 디스플레이, 버튼, 조이스틱을 조립해 휴대용 게임기를 완성합니다.</p>
+                    <ul>
+                        <li><strong>1단계:</strong> 케이스 프레임 조립</li>
+                        <li><strong>2단계:</strong> OLED 디스플레이 고정 및 연결</li>
+                        <li><strong>3단계:</strong> 버튼 + 조이스틱 장착</li>
+                        <li><strong>4단계:</strong> 피에조 스피커 연결 (게임 효과음용)</li>
+                        <li><strong>5단계:</strong> 아두이노 보드 장착 및 전원 연결</li>
+                        <li><strong>6단계:</strong> 기본 게임 동작 테스트</li>
+                    </ul>
+                    <div class="step-image">
+                        <img src="../../assets/images/programs/makecode-class.jpeg" alt="학생들의 블록코딩 수업">
+                    </div>
+                    <div class="tip-box">
+                        <div class="tip-title">💡 조립 TIP</div>
+                        <p>버튼 연결 시 핀 번호를 코드와 맞춰야 합니다. 버튼이 반응하지 않으면 점퍼 와이어가 올바른 핀에 꽂혀있는지 확인하세요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-4">
+                <div class="step-number">4</div>
+                <div class="step-header">
+                    <h3 class="step-title">AI 도구 체험 — MakeCode Arcade 게임 만들기</h3>
+                    <span class="step-time">⏱️ 25분</span>
+                </div>
+                <div class="step-body">
+                    <p>MakeCode Arcade에서 블록코딩으로 나만의 간단한 게임을 만들어 게임기에서 실행합니다.</p>
+                    <ul>
+                        <li>MakeCode Arcade 사이트 접속 (arcade.makecode.com)</li>
+                        <li><strong>기본 게임 만들기:</strong> 캐릭터 이동 + 아이템 수집 게임</li>
+                        <li>스프라이트 디자인 — 도트 에디터로 캐릭터 그리기</li>
+                        <li>점수 시스템과 타이머 추가</li>
+                        <li>시뮬레이터에서 테스트 후 게임기 업로드</li>
+                    </ul>
+                    <div class="tip-box">
+                        <div class="tip-title">💡 게임 아이디어</div>
+                        <p>첫 번째 게임은 "떨어지는 아이템 잡기" 같은 간단한 게임으로 시작하세요. 블록 3~4개만으로도 재미있는 게임을 만들 수 있어요!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-5">
+                <div class="step-number">5</div>
+                <div class="step-header">
+                    <h3 class="step-title">정리/피드백 — 게임 플레이 타임</h3>
+                    <span class="step-time">⏱️ 10분</span>
+                </div>
+                <div class="step-body">
+                    <p>서로의 게임기를 바꿔 플레이하고, 최고 점수에 도전합니다!</p>
+                    <ul>
+                        <li>친구가 만든 게임 플레이 & 피드백</li>
+                        <li>최고 점수 도전! 게임 대회</li>
+                        <li>게임 개발자의 역할과 코딩의 즐거움 이야기</li>
+                        <li>게임기는 집에 가져가서 계속 플레이! 🎁</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-tool-section" id="ai-section">
+            <h3>🎮 AI 도구: MakeCode Arcade</h3>
+            <p>Microsoft MakeCode Arcade는 블록코딩으로 레트로 스타일 게임을 쉽게 만들 수 있는 플랫폼입니다. 텍스트 코딩 없이 블록을 드래그&드랍해서 게임을 만들고, 시뮬레이터에서 바로 실행해볼 수 있습니다. 만든 게임은 하드웨어 디바이스에 업로드해서 실제 게임기처럼 즐길 수 있어요.</p>
+            <a href="https://arcade.makecode.com/" target="_blank" class="ai-tool-link">
+                MakeCode Arcade 바로가기
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+        </div>
+
+        <div class="faq-section" id="faq-section">
+            <h2>💡 자주 묻는 질문</h2>
+            <div class="faq-item">
+                <div class="faq-question">화면이 안 나와요<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">OLED 디스플레이 핀 연결(VCC, GND, SDA, SCL)을 확인하세요. 특히 SDA와 SCL이 바뀌면 화면이 동작하지 않습니다. 아두이노 보드에 전원이 들어오는지(LED 점등) 확인하세요.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">버튼을 눌러도 반응이 없어요<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">버튼 핀 번호가 코드와 일치하는지 확인하세요. 풀업/풀다운 저항 설정이 코드와 맞아야 합니다. 브레드보드의 접촉 불량도 원인이 될 수 있으니 케이블을 다시 꽂아보세요.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">MakeCode에서 만든 게임을 게임기에 어떻게 넣나요?<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">MakeCode에서 "다운로드" 버튼을 누르면 .uf2 파일이 생성됩니다. 아두이노를 USB로 연결하고 파일을 업로드하면 됩니다. 수업 중에는 강사가 도와드립니다.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">집에서도 새로운 게임을 만들 수 있나요?<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">물론이죠! arcade.makecode.com에서 무료로 무제한 게임을 만들 수 있습니다. 다른 사람이 만든 게임의 코드도 볼 수 있어서 학습에 도움이 됩니다.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">DORO <span>Lab</span></div>
+            <p class="footer-text">(주)도로 · 과학문화바우처 교육 포털</p>
+            <div class="footer-links">
+                <a href="../../index.html">프로그램 목록</a>
+                <a href="https://www.changex.org/kr/doro" target="_blank">Change X</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

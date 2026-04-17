@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DORO 프로그램 3 - 이족보행 워킹 로봇을 조립하고 Vrew AI로 영상을 편집하는 융합 교육">
+    <title>워킹 로봇 × Vrew 영상 편집 | DORO Lab</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <a href="../../index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                프로그램 목록
+            </a>
+            <a href="../../index.html" class="logo">
+                <div class="logo-icon">D</div>
+                <div class="logo-text">DORO <span>Lab</span></div>
+            </a>
+        </div>
+    </header>
+
+    <div class="progress-bar-container"><div class="progress-bar"></div></div>
+
+    <section class="program-hero">
+        <img src="../../assets/images/programs/walking-robot.png" alt="워킹 로봇" class="program-hero-bg" style="object-fit: contain; background: #f0f0f0;">
+        <div class="program-hero-overlay">
+            <div class="program-hero-content">
+                <div class="program-number-badge">프로그램 #3</div>
+                <h1>🤖 워킹 로봇 × Vrew 영상 편집</h1>
+                <p class="program-hero-tagline">두 발로 걷는 로봇을 조립하고, Vrew로 로봇의 움직임을 촬영·편집해 자동 자막과 나레이션이 들어간 영상으로 기록하는 융합 활동</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-bar">
+        <div class="info-bar-inner">
+            <div class="info-item">
+                <div class="info-item-label">소요시간</div>
+                <div class="info-item-value">⏱️ 120분</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">대상</div>
+                <div class="info-item-value">👦 초등 4~중등</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">난이도</div>
+                <div class="info-item-value"><span class="stars">★★★</span></div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">AI 도구</div>
+                <div class="info-item-value">🎬 Vrew</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">운영형태</div>
+                <div class="info-item-value">🚌 DOROBUS</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="toc-sidebar">
+        <div class="toc-item active" data-target="checklist-section"><span class="toc-dot"></span> 준비물</div>
+        <div class="toc-item" data-target="steps-section"><span class="toc-dot"></span> 교육 과정</div>
+        <div class="toc-item" data-target="ai-section"><span class="toc-dot"></span> AI 도구</div>
+        <div class="toc-item" data-target="faq-section"><span class="toc-dot"></span> FAQ</div>
+    </nav>
+
+    <div class="program-content">
+
+        <div class="checklist" id="checklist-section">
+            <h3>🔧 준비물 체크리스트</h3>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); margin-bottom: var(--space-lg);">키트 구성품을 확인하고 체크해주세요.</p>
+            <div class="checklist-item"><input type="checkbox" id="chk3-1"><label for="chk3-1">워킹 로봇 프레임 (고양이 디자인 MDF)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk3-2"><label for="chk3-2">서보모터 × 4 (다리 관절용)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk3-3"><label for="chk3-3">아두이노 보드</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk3-4"><label for="chk3-4">서보모터 확장 실드</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk3-5"><label for="chk3-5">배터리 팩 + AA 건전지</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk3-6"><label for="chk3-6">USB 케이블</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk3-7"><label for="chk3-7">조립 나사 + 드라이버</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk3-8"><label for="chk3-8">스마트폰 또는 태블릿 (촬영 + Vrew 접속용)</label></div>
+        </div>
+
+        <div class="steps-section" id="steps-section">
+            <h2>📖 STEP-BY-STEP 교육 과정</h2>
+
+            <div class="step-card" id="step-1">
+                <div class="step-number">1</div>
+                <div class="step-header">
+                    <h3 class="step-title">도입 — 로봇의 보행 원리</h3>
+                    <span class="step-time">⏱️ 10분</span>
+                </div>
+                <div class="step-body">
+                    <p>이족보행 로봇이 어떻게 균형을 잡고 걷는지 알아봅니다.</p>
+                    <ul>
+                        <li>인간의 걷기 동작 분석 — 무게중심 이동과 관절 운동</li>
+                        <li>로봇 보행의 핵심: 서보모터로 관절 각도 제어</li>
+                        <li>보스턴 다이내믹스 로봇 영상 감상</li>
+                        <li>오늘 만들 워킹 로봇 완성품 시연</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-2">
+                <div class="step-number">2</div>
+                <div class="step-header">
+                    <h3 class="step-title">원리 이해 — 서보모터와 보행 패턴</h3>
+                    <span class="step-time">⏱️ 15분</span>
+                </div>
+                <div class="step-body">
+                    <p>서보모터의 작동 원리와 이족보행 패턴(걸음 시퀀스)을 학습합니다.</p>
+                    <ul>
+                        <li><strong>서보모터란?</strong> — 정밀한 각도 제어가 가능한 모터</li>
+                        <li><strong>보행 시퀀스:</strong> 왼발 들기 → 앞으로 → 내려놓기 → 오른발 반복</li>
+                        <li><strong>PWM 신호:</strong> 펄스 폭으로 서보 각도를 제어하는 원리</li>
+                        <li>4개 서보모터의 동기화 타이밍 이해</li>
+                    </ul>
+                    <div class="step-image">
+                        <img src="../../assets/images/programs/walking-robot.png" alt="고양이 워킹 로봇">
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-3">
+                <div class="step-number">3</div>
+                <div class="step-header">
+                    <h3 class="step-title">조립/실습 — 워킹 로봇 만들기</h3>
+                    <span class="step-time">⏱️ 50분 ⭐핵심</span>
+                </div>
+                <div class="step-body">
+                    <p>고양이 디자인 프레임에 서보모터를 장착하고 보행 코드를 업로드합니다.</p>
+                    <ul>
+                        <li><strong>1단계:</strong> 프레임 본체 조립 — MDF 부품 끼워 맞추기</li>
+                        <li><strong>2단계:</strong> 서보모터 4개 장착 — 다리 관절에 정확히 고정</li>
+                        <li><strong>3단계:</strong> 아두이노 + 서보 실드 장착 및 배선</li>
+                        <li><strong>4단계:</strong> 보행 코드 업로드 (미리 준비된 코드)</li>
+                        <li><strong>5단계:</strong> 보행 테스트 및 걸음 속도 조절</li>
+                        <li><strong>6단계:</strong> 발 부분 미끄러짐 방지 처리</li>
+                    </ul>
+                    <div class="warning-box">
+                        <div class="warning-title">⚠️ 안전 주의사항</div>
+                        <p>서보모터 기어에 손가락이 끼지 않도록 주의하세요. 배터리를 연결한 상태에서 로봇이 갑자기 움직일 수 있으므로 평평한 곳에 놓고 테스트하세요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-4">
+                <div class="step-number">4</div>
+                <div class="step-header">
+                    <h3 class="step-title">AI 도구 체험 — Vrew로 영상 만들기</h3>
+                    <span class="step-time">⏱️ 30분</span>
+                </div>
+                <div class="step-body">
+                    <p>로봇이 걷는 모습을 촬영하고, Vrew AI 영상 편집 도구로 멋진 영상을 만듭니다.</p>
+                    <ul>
+                        <li>스마트폰으로 로봇 보행 영상 촬영 (30초~1분)</li>
+                        <li>Vrew에 영상 업로드</li>
+                        <li>AI 자동 자막 생성 — 나레이션 녹음 또는 AI 음성 추가</li>
+                        <li>제목, 배경음악, 전환효과 추가</li>
+                        <li>완성된 영상 내보내기</li>
+                    </ul>
+                    <div class="tip-box">
+                        <div class="tip-title">💡 촬영 TIP</div>
+                        <p>로봇의 높이에 맞춰 낮은 앵글로 촬영하면 더 역동적인 영상이 됩니다. 측면과 정면 두 가지 앵글로 촬영해보세요!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-5">
+                <div class="step-number">5</div>
+                <div class="step-header">
+                    <h3 class="step-title">정리/피드백 — 영상 상영회</h3>
+                    <span class="step-time">⏱️ 15분</span>
+                </div>
+                <div class="step-body">
+                    <p>완성된 영상을 함께 감상하고 서로의 작품에 피드백을 나눕니다.</p>
+                    <ul>
+                        <li>각 조/개인의 영상을 프로젝터로 함께 시청</li>
+                        <li>가장 창의적인 영상, 재미있는 나레이션 등 투표</li>
+                        <li>로봇 보행 원리 복습 퀴즈</li>
+                        <li>활동 소감 나누기</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-tool-section" id="ai-section">
+            <h3>🎬 AI 도구: Vrew</h3>
+            <p>Vrew는 보이저엑스가 만든 AI 기반 영상 편집 도구입니다. 음성을 자동으로 인식해 자막을 생성하고, AI 음성 나레이션, 자동 자르기 등 강력한 AI 기능으로 누구나 쉽게 영상을 편집할 수 있습니다.</p>
+            <a href="https://vrew.voyagerx.com" target="_blank" class="ai-tool-link">
+                Vrew 바로가기
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+        </div>
+
+        <div class="faq-section" id="faq-section">
+            <h2>💡 자주 묻는 질문</h2>
+            <div class="faq-item">
+                <div class="faq-question">로봇이 걷다가 넘어져요<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">서보모터의 초기 각도가 정확히 맞는지 확인하세요. 보행 속도를 늦추면(delay 값 증가) 균형이 좋아집니다. 바닥이 미끄러우면 발에 고무밴드를 감아보세요.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Vrew에서 자막이 정확하지 않아요<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">AI 자막은 완벽하지 않을 수 있습니다. 텍스트를 직접 수정할 수 있으니, 잘못된 부분은 클릭해서 고쳐보세요. 조용한 환경에서 또박또박 나레이션하면 인식률이 올라갑니다.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">서보모터가 떨려요 (지터 현상)<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">배터리 전압이 부족할 수 있습니다. 새 건전지로 교체하거나 외부 전원을 사용해보세요. 코드에서 서보 각도 범위를 약간 좁히면 떨림이 줄어들 수 있습니다.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">DORO <span>Lab</span></div>
+            <p class="footer-text">(주)도로 · 과학문화바우처 교육 포털</p>
+            <div class="footer-links">
+                <a href="../../index.html">프로그램 목록</a>
+                <a href="https://www.changex.org/kr/doro" target="_blank">Change X</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

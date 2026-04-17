@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DORO 프로그램 2 - 조도센서와 LED로 무드등을 만들고 ChatGPT로 창의적 스토리를 꾸며넣는 교육 프로그램">
+    <title>무드등 × ChatGPT 스토리 꾸미기 | DORO Lab</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <a href="../../index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                프로그램 목록
+            </a>
+            <a href="../../index.html" class="logo">
+                <div class="logo-icon">D</div>
+                <div class="logo-text">DORO <span>Lab</span></div>
+            </a>
+        </div>
+    </header>
+
+    <div class="progress-bar-container"><div class="progress-bar"></div></div>
+
+    <section class="program-hero">
+        <img src="../../assets/images/programs/moodlight-circuit.jpeg" alt="무드등 회로 실습" class="program-hero-bg">
+        <div class="program-hero-overlay">
+            <div class="program-hero-content">
+                <div class="program-number-badge">프로그램 #2</div>
+                <h1>💡 무드등 × ChatGPT 스토리 꾸미기</h1>
+                <p class="program-hero-tagline">조도센서와 LED로 무드등을 제작하고, ChatGPT로 생성한 짧은 메시지나 스토리를 꾸며 넣는 창의적 활동</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-bar">
+        <div class="info-bar-inner">
+            <div class="info-item">
+                <div class="info-item-label">소요시간</div>
+                <div class="info-item-value">⏱️ 90분</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">대상</div>
+                <div class="info-item-value">👦 초등 3~6학년</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">난이도</div>
+                <div class="info-item-value"><span class="stars">★☆☆</span></div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">AI 도구</div>
+                <div class="info-item-value">💬 ChatGPT</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">운영형태</div>
+                <div class="info-item-value">🚌 DOROBUS</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="toc-sidebar">
+        <div class="toc-item active" data-target="checklist-section"><span class="toc-dot"></span> 준비물</div>
+        <div class="toc-item" data-target="steps-section"><span class="toc-dot"></span> 교육 과정</div>
+        <div class="toc-item" data-target="ai-section"><span class="toc-dot"></span> AI 도구</div>
+        <div class="toc-item" data-target="faq-section"><span class="toc-dot"></span> FAQ</div>
+    </nav>
+
+    <div class="program-content">
+
+        <div class="checklist" id="checklist-section">
+            <h3>🔧 준비물 체크리스트</h3>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); margin-bottom: var(--space-lg);">키트 구성품을 확인하고 체크해주세요.</p>
+            <div class="checklist-item"><input type="checkbox" id="chk2-1"><label for="chk2-1">무드등 프레임 (아크릴/MDF)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk2-2"><label for="chk2-2">LED 모듈 (RGB 또는 네오픽셀)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk2-3"><label for="chk2-3">조도센서 (CdS 광센서)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk2-4"><label for="chk2-4">아두이노 나노 또는 호환 보드</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk2-5"><label for="chk2-5">브레드보드 + 점퍼 와이어</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk2-6"><label for="chk2-6">USB 케이블</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk2-7"><label for="chk2-7">꾸미기 재료 (스티커, 색지, 마커 등)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk2-8"><label for="chk2-8">스마트폰 또는 태블릿 (ChatGPT 접속용)</label></div>
+        </div>
+
+        <div class="steps-section" id="steps-section">
+            <h2>📖 STEP-BY-STEP 교육 과정</h2>
+
+            <div class="step-card" id="step-1">
+                <div class="step-number">1</div>
+                <div class="step-header">
+                    <h3 class="step-title">도입 — 빛과 센서 이야기</h3>
+                    <span class="step-time">⏱️ 10분</span>
+                </div>
+                <div class="step-body">
+                    <p>빛이 우리 일상에서 어떤 역할을 하는지 이야기하고, 센서를 이용해 빛을 '감지'하는 기술을 소개합니다.</p>
+                    <ul>
+                        <li>어두워지면 자동으로 켜지는 가로등의 원리</li>
+                        <li>조도센서(CdS)의 작동 원리 — 빛의 양에 따라 저항이 변하는 소자</li>
+                        <li>LED의 원리 — 전기 에너지를 빛으로 변환</li>
+                        <li>완성 샘플 시연</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-2">
+                <div class="step-number">2</div>
+                <div class="step-header">
+                    <h3 class="step-title">원리 이해 — 회로와 센서</h3>
+                    <span class="step-time">⏱️ 15분</span>
+                </div>
+                <div class="step-body">
+                    <p>조도센서와 LED가 포함된 간단한 회로의 원리를 배웁니다.</p>
+                    <ul>
+                        <li><strong>조도센서 읽기:</strong> 밝을 때 / 어두울 때 센서값 변화 확인</li>
+                        <li><strong>LED 제어:</strong> 센서값에 따라 LED 밝기 조절하는 원리</li>
+                        <li><strong>아날로그 vs 디지털:</strong> 아날로그 입력과 PWM 출력 개념</li>
+                        <li>회로도 함께 살펴보기</li>
+                    </ul>
+                    <div class="step-image">
+                        <img src="../../assets/images/programs/moodlight-circuit.jpeg" alt="조도센서 회로 실습">
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-3">
+                <div class="step-number">3</div>
+                <div class="step-header">
+                    <h3 class="step-title">조립/실습 — 무드등 만들기</h3>
+                    <span class="step-time">⏱️ 35분 ⭐핵심</span>
+                </div>
+                <div class="step-body">
+                    <p>브레드보드에 회로를 구성하고, 프레임을 조립해 무드등을 완성합니다.</p>
+                    <ul>
+                        <li><strong>1단계:</strong> 브레드보드에 조도센서 연결</li>
+                        <li><strong>2단계:</strong> LED 모듈 연결 (RGB LED의 경우 3개 핀 연결)</li>
+                        <li><strong>3단계:</strong> 아두이노에 기본 코드 업로드 (미리 준비된 코드)</li>
+                        <li><strong>4단계:</strong> 주변 밝기에 따른 LED 반응 테스트</li>
+                        <li><strong>5단계:</strong> 프레임 조립 및 고정</li>
+                    </ul>
+                    <div class="warning-box">
+                        <div class="warning-title">⚠️ 안전 주의사항</div>
+                        <p>LED를 직접 눈으로 가까이 보지 마세요. 브레드보드 연결 시 핀 방향(+/-)을 확인하세요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-4">
+                <div class="step-number">4</div>
+                <div class="step-header">
+                    <h3 class="step-title">AI 도구 체험 — ChatGPT로 스토리 꾸미기</h3>
+                    <span class="step-time">⏱️ 20분</span>
+                </div>
+                <div class="step-body">
+                    <p>ChatGPT를 활용해 무드등에 넣을 창의적인 메시지나 짧은 스토리를 만들어봅니다.</p>
+                    <ul>
+                        <li>ChatGPT에 접속 (chat.openai.com)</li>
+                        <li>무드등 테마에 맞는 프롬프트 작성 (예: "잠자리에 들기 전 읽는 따뜻한 이야기 3줄")</li>
+                        <li>생성된 메시지를 스티커/색지에 예쁘게 적어 무드등에 장식</li>
+                        <li>친구의 무드등에 들어갈 응원 메시지도 만들어보기</li>
+                    </ul>
+                    <div class="tip-box">
+                        <div class="tip-title">💡 프롬프트 예시</div>
+                        <p>"초등학생이 잠들기 전에 읽으면 행복해지는 짧은 동화를 3줄로 만들어줘. 별과 달이 나오는 이야기로!" — 구체적인 키워드를 넣을수록 더 좋은 결과물이 나옵니다.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-5">
+                <div class="step-number">5</div>
+                <div class="step-header">
+                    <h3 class="step-title">정리/피드백 — 나만의 무드등 완성</h3>
+                    <span class="step-time">⏱️ 10분</span>
+                </div>
+                <div class="step-body">
+                    <p>완성된 무드등을 켜고 친구들과 작품을 공유합니다.</p>
+                    <ul>
+                        <li>교실 조명을 끄고 모든 무드등 점등 — 분위기 체험</li>
+                        <li>각자의 스토리 메시지 소개</li>
+                        <li>활동 소감 나누기</li>
+                        <li>완성된 무드등은 집에 가져갑니다! 🎁</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-tool-section" id="ai-section">
+            <h3>💬 AI 도구: ChatGPT</h3>
+            <p>ChatGPT는 OpenAI가 만든 대화형 AI입니다. 질문에 답하고, 이야기를 만들고, 아이디어를 브레인스토밍하는 데 사용할 수 있어요. 무드등에 들어갈 감성적인 문구부터 재미있는 동화까지, 원하는 글을 자유롭게 만들어보세요.</p>
+            <a href="https://chat.openai.com" target="_blank" class="ai-tool-link">
+                ChatGPT 바로가기
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+        </div>
+
+        <div class="faq-section" id="faq-section">
+            <h2>💡 자주 묻는 질문</h2>
+            <div class="faq-item">
+                <div class="faq-question">조도센서가 반응하지 않아요<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">브레드보드 핀이 올바른 위치에 꽂혀있는지 확인하세요. 조도센서의 다리가 같은 행에 있으면 안 됩니다. 아두이노의 시리얼 모니터에서 센서값이 변하는지 확인해보세요.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">LED 색상을 바꾸고 싶어요<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">RGB LED의 경우 코드에서 R, G, B 값을 각각 0~255 범위로 조절할 수 있습니다. 강사에게 코드 수정 도움을 요청하세요.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">ChatGPT 계정이 없어도 되나요?<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">수업에서는 강사가 미리 준비한 공용 계정 또는 접속 환경을 제공합니다. 별도 계정 생성 없이 체험할 수 있습니다.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">DORO <span>Lab</span></div>
+            <p class="footer-text">(주)도로 · 과학문화바우처 교육 포털</p>
+            <div class="footer-links">
+                <a href="../../index.html">프로그램 목록</a>
+                <a href="https://www.changex.org/kr/doro" target="_blank">Change X</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

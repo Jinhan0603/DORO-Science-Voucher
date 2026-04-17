@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DORO 프로그램 4 - IR 센서 장애물 인식 자동차를 만들고 Teachable Machine으로 AI 인식 모델을 체험하는 교육">
+    <title>IR 자동차 × Teachable Machine | DORO Lab</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+    <header class="site-header" id="site-header">
+        <div class="header-inner">
+            <a href="../../index.html" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                프로그램 목록
+            </a>
+            <a href="../../index.html" class="logo">
+                <div class="logo-icon">D</div>
+                <div class="logo-text">DORO <span>Lab</span></div>
+            </a>
+        </div>
+    </header>
+
+    <div class="progress-bar-container"><div class="progress-bar"></div></div>
+
+    <section class="program-hero">
+        <img src="../../assets/images/programs/ir-car.png" alt="IR 자동차 Safari" class="program-hero-bg" style="object-fit: contain; background: #f0f0f0;">
+        <div class="program-hero-overlay">
+            <div class="program-hero-content">
+                <div class="program-number-badge">프로그램 #4</div>
+                <h1>🚗 IR 자동차 × Teachable Machine</h1>
+                <p class="program-hero-tagline">장애물을 인식해 멈추거나 피하는 IR 자동차를 제작하고, Teachable Machine으로 학습시킨 간단한 인식 모델을 연동해 실제 반응을 체험하는 활동</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="info-bar">
+        <div class="info-bar-inner">
+            <div class="info-item">
+                <div class="info-item-label">소요시간</div>
+                <div class="info-item-value">⏱️ 120분</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">대상</div>
+                <div class="info-item-value">👦 초등 5~중등</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">난이도</div>
+                <div class="info-item-value"><span class="stars">★★★</span></div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">AI 도구</div>
+                <div class="info-item-value">🧠 Teachable Machine</div>
+            </div>
+            <div class="info-item">
+                <div class="info-item-label">운영형태</div>
+                <div class="info-item-value">🚌 DOROBUS</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="toc-sidebar">
+        <div class="toc-item active" data-target="checklist-section"><span class="toc-dot"></span> 준비물</div>
+        <div class="toc-item" data-target="steps-section"><span class="toc-dot"></span> 교육 과정</div>
+        <div class="toc-item" data-target="ai-section"><span class="toc-dot"></span> AI 도구</div>
+        <div class="toc-item" data-target="faq-section"><span class="toc-dot"></span> FAQ</div>
+    </nav>
+
+    <div class="program-content">
+
+        <div class="checklist" id="checklist-section">
+            <h3>🔧 준비물 체크리스트</h3>
+            <p style="font-size: var(--fs-sm); color: var(--text-secondary); margin-bottom: var(--space-lg);">키트 구성품을 확인하고 체크해주세요.</p>
+            <div class="checklist-item"><input type="checkbox" id="chk4-1"><label for="chk4-1">Safari 자동차 프레임 (코끼리 디자인 MDF)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk4-2"><label for="chk4-2">DC 모터 × 2 + 바퀴</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk4-3"><label for="chk4-3">IR 적외선 센서 모듈 × 2</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk4-4"><label for="chk4-4">아두이노 보드</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk4-5"><label for="chk4-5">모터 드라이버 (L298N 또는 호환)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk4-6"><label for="chk4-6">배터리 팩 + 건전지</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk4-7"><label for="chk4-7">연결 케이블 세트 + 조립 나사</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk4-8"><label for="chk4-8">노트북 또는 태블릿 (Teachable Machine 접속용)</label></div>
+            <div class="checklist-item"><input type="checkbox" id="chk4-9"><label for="chk4-9">장애물 (종이 상자, 블록 등)</label></div>
+        </div>
+
+        <div class="steps-section" id="steps-section">
+            <h2>📖 STEP-BY-STEP 교육 과정</h2>
+
+            <div class="step-card" id="step-1">
+                <div class="step-number">1</div>
+                <div class="step-header">
+                    <h3 class="step-title">도입 — 자율주행의 세계</h3>
+                    <span class="step-time">⏱️ 10분</span>
+                </div>
+                <div class="step-body">
+                    <p>자율주행 자동차가 어떻게 주변 환경을 인식하는지 알아봅니다.</p>
+                    <ul>
+                        <li>테슬라, 웨이모 등 자율주행 자동차 영상 감상</li>
+                        <li>센서의 종류: 카메라, 라이다, IR 적외선 센서</li>
+                        <li>오늘 만들 IR 자동차의 작동 원리 미리보기</li>
+                        <li>AI 인식 기술과 Teachable Machine 소개</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-2">
+                <div class="step-number">2</div>
+                <div class="step-header">
+                    <h3 class="step-title">원리 이해 — IR 센서와 모터 제어</h3>
+                    <span class="step-time">⏱️ 15분</span>
+                </div>
+                <div class="step-body">
+                    <p>적외선 센서의 원리와 DC 모터 제어 방법을 학습합니다.</p>
+                    <ul>
+                        <li><strong>IR 센서 원리:</strong> 적외선을 쏘고 반사되는 빛으로 장애물 감지</li>
+                        <li><strong>DC 모터 제어:</strong> 모터 드라이버로 속도와 방향 제어</li>
+                        <li><strong>자율주행 로직:</strong> 장애물 감지 → 정지 → 회전 → 전진</li>
+                        <li>센서 감도 조절 방법 (가변저항 트리밍)</li>
+                    </ul>
+                    <div class="step-image">
+                        <img src="../../assets/images/programs/ir-car.png" alt="Safari IR 자동차">
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-3">
+                <div class="step-number">3</div>
+                <div class="step-header">
+                    <h3 class="step-title">조립/실습 — IR 자동차 만들기</h3>
+                    <span class="step-time">⏱️ 45분 ⭐핵심</span>
+                </div>
+                <div class="step-body">
+                    <p>코끼리 디자인 Safari 자동차를 조립하고 장애물 회피 주행을 테스트합니다.</p>
+                    <ul>
+                        <li><strong>1단계:</strong> 프레임 조립 — MDF 부품을 순서대로 끼워 맞추기</li>
+                        <li><strong>2단계:</strong> DC 모터 + 바퀴 장착</li>
+                        <li><strong>3단계:</strong> IR 센서 모듈 2개 전방 장착 (좌/우)</li>
+                        <li><strong>4단계:</strong> 아두이노 + 모터 드라이버 배선</li>
+                        <li><strong>5단계:</strong> 장애물 회피 코드 업로드</li>
+                        <li><strong>6단계:</strong> 주행 테스트 — 장애물을 놓고 회피 동작 확인</li>
+                    </ul>
+                    <div class="warning-box">
+                        <div class="warning-title">⚠️ 안전 주의사항</div>
+                        <p>모터 회전 중 바퀴에 손가락이나 머리카락이 끼지 않도록 주의하세요. 테스트 시 테이블 가장자리에서 떨어지지 않게 주의하세요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-4">
+                <div class="step-number">4</div>
+                <div class="step-header">
+                    <h3 class="step-title">AI 도구 체험 — Teachable Machine</h3>
+                    <span class="step-time">⏱️ 35분</span>
+                </div>
+                <div class="step-body">
+                    <p>Google Teachable Machine으로 이미지 인식 모델을 직접 만들어봅니다.</p>
+                    <ul>
+                        <li>Teachable Machine 웹사이트 접속</li>
+                        <li><strong>학습 데이터 수집:</strong> 웹캠으로 "가위", "바위", "보" 이미지 촬영</li>
+                        <li><strong>모델 학습:</strong> "Train Model" 버튼으로 AI 모델 학습 시작</li>
+                        <li><strong>모델 테스트:</strong> 실시간 웹캠으로 인식 정확도 확인</li>
+                        <li>다양한 사물 인식 실험 — 펜, 지우개, 손 모양 등</li>
+                    </ul>
+                    <div class="step-image">
+                        <img src="../../assets/images/programs/teachable-machine.png" alt="Teachable Machine 사용 화면">
+                    </div>
+                    <div class="tip-box">
+                        <div class="tip-title">💡 학습 TIP</div>
+                        <p>각 클래스별로 최소 30장 이상의 이미지를 다양한 각도에서 촬영하면 인식 정확도가 크게 올라갑니다. 배경을 단순하게 하면 더 좋아요!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step-card" id="step-5">
+                <div class="step-number">5</div>
+                <div class="step-header">
+                    <h3 class="step-title">정리/피드백 — AI와 자율주행의 미래</h3>
+                    <span class="step-time">⏱️ 15분</span>
+                </div>
+                <div class="step-body">
+                    <p>오늘 배운 IR 센서 기술과 AI 인식의 연결고리를 정리합니다.</p>
+                    <ul>
+                        <li>IR 자동차 주행 대회 — 가장 깔끔하게 장애물을 피하는 자동차 선발</li>
+                        <li>Teachable Machine 모델 정확도 비교</li>
+                        <li>실제 자율주행에서의 AI 역할 토론</li>
+                        <li>활동 소감 및 피드백 작성</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="ai-tool-section" id="ai-section">
+            <h3>🧠 AI 도구: Teachable Machine</h3>
+            <p>Google Teachable Machine은 코딩 없이 브라우저에서 바로 사용할 수 있는 AI 머신러닝 도구입니다. 이미지, 소리, 포즈를 학습시켜 나만의 인식 모델을 만들 수 있습니다. 복잡한 수학이나 코딩 없이 AI의 핵심 개념인 '학습'과 '추론'을 직접 체험해보세요.</p>
+            <a href="https://teachablemachine.withgoogle.com/" target="_blank" class="ai-tool-link">
+                Teachable Machine 바로가기
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+        </div>
+
+        <div class="faq-section" id="faq-section">
+            <h2>💡 자주 묻는 질문</h2>
+            <div class="faq-item">
+                <div class="faq-question">자동차가 장애물을 감지 못해요<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">IR 센서의 감도 트리밍 가변저항을 드라이버로 조절해보세요. 너무 먼 거리이거나 검은색/투명한 장애물은 감지가 어려울 수 있습니다. 하얀색 장애물로 테스트를 시작하세요.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">한쪽 바퀴만 돌아요<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">모터 드라이버의 배선이 올바른지 확인하세요. IN1/IN2, IN3/IN4 핀의 연결이 바뀌면 한쪽 모터만 동작할 수 있습니다. Enable 핀도 확인해주세요.</div></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Teachable Machine이 정확하지 않아요<span class="arrow">▼</span></div>
+                <div class="faq-answer"><div class="faq-answer-inner">학습 이미지를 더 많이, 다양한 각도에서 촬영하세요. 배경이 복잡하면 사물보다 배경을 학습할 수 있으니 단색 배경에서 촬영하는 것이 좋습니다.</div></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-logo">DORO <span>Lab</span></div>
+            <p class="footer-text">(주)도로 · 과학문화바우처 교육 포털</p>
+            <div class="footer-links">
+                <a href="../../index.html">프로그램 목록</a>
+                <a href="https://www.changex.org/kr/doro" target="_blank">Change X</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>
