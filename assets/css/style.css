@@ -1147,11 +1147,180 @@ body {
 .stagger-6 { transition-delay: 0.3s; }
 
 /* ============================================
-   RESPONSIVE
+   FONT SIZE FIXES — pixel font minimum legibility
+   ============================================ */
+
+/* Pixel font elements — minimum readable sizes */
+.step-quest-label      { font-size: 0.58rem; }
+.step-xp-badge         { font-size: 0.55rem !important; }
+.mission-step-time     { font-size: 0.52rem !important; }
+.info-label            { font-size: 0.52rem !important; }
+.panel-badge           { font-size: 0.52rem; }
+.quest-progress-top    { font-size: 0.52rem; }
+.checklist-exp-label   { font-size: 0.52rem; }
+.kit-gallery-label     { font-size: 0.55rem; }
+.info-bar::before      { font-size: 0.55rem; }
+.chapter-badge         { font-size: 0.65rem; }
+.extension-label       { font-size: 0.6rem !important; }
+.locked-badge          { font-size: 0.6rem; }
+.quest-tab             { font-size: 0.62rem; }
+.nav-brand-text        { font-size: 0.75rem !important; }
+
+/* Body text — comfortable reading */
+body { font-size: 17px; }
+.mission-step-title    { font-size: 1rem !important; }
+.mission-step-body p   { font-size: 0.9rem !important; line-height: 1.8 !important; }
+.mission-step-body ul li { font-size: 0.88rem !important; }
+.checklist-item        { font-size: 0.9rem !important; }
+.faq-question          { font-size: 0.9rem !important; }
+.faq-answer-inner      { font-size: 0.88rem !important; line-height: 1.8 !important; }
+.ai-extension p        { font-size: 0.9rem !important; }
+.hero-desc             { font-size: 1rem !important; }
+.info-value            { font-size: 0.95rem !important; }
+
+/* ============================================
+   RESPONSIVE — Desktop (1200px+)
+   ============================================ */
+@media (min-width: 1200px) {
+  .detail-content { max-width: 860px; }
+  .mission-step-title { font-size: 1.05rem !important; }
+  .hero-desc { font-size: 1.05rem !important; }
+}
+
+/* ============================================
+   RESPONSIVE — Tablet (768px–1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .toc-sidebar { display: none; } /* hide TOC on tablet/mobile */
+  .detail-content { padding: 0 1.25rem 4rem; }
+  .quest-grid { grid-template-columns: repeat(2, 1fr); }
+  .info-item { padding: 0.85rem 1rem; min-width: 90px; }
+}
+
+/* ============================================
+   RESPONSIVE — Mobile (max 768px) — full overhaul
    ============================================ */
 @media (max-width: 768px) {
+  html { font-size: 16px; }
+
+  /* Nav */
+  .nav { padding: 0.75rem 1rem; }
   .nav-links { display: none; }
-  .quest-grid { grid-template-columns: 1fr; }
-  .info-bar .info-item { width: 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .nav-brand-text { font-size: 0.65rem !important; }
+  .lang-toggle { top: 0.85rem; right: 1rem; padding: 0.35rem 0.7rem; font-size: 0.55rem; }
+
+  /* Hero */
+  .hero { padding: 6rem 1.25rem 3rem; }
+  .hero h1 { font-size: clamp(1.8rem, 7vw, 2.8rem); }
+  .hero-taglines { font-size: clamp(0.8rem, 3vw, 1rem); }
+  .hero-desc { font-size: 0.92rem !important; }
+  .detail-hero { padding: 6rem 1.25rem 2rem; }
+  .detail-hero h1 { font-size: clamp(1.3rem, 5vw, 1.8rem); }
+
+  /* Info bar — 2 per row on mobile */
+  .info-bar { padding-top: 1.8rem; }
+  .info-bar .info-item {
+    width: 50%;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 0.85rem 0.75rem;
+    min-width: unset;
+  }
+  .info-bar::before { font-size: 0.5rem; }
+  .info-label { font-size: 0.48rem !important; }
+  .info-value { font-size: 0.88rem !important; }
+
+  /* Quest section */
+  .quest-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .quest-tabs { gap: 0.35rem; flex-wrap: wrap; }
+  .quest-tab { font-size: 0.55rem; padding: 0.55rem 0.75rem; }
+  .quest-cta { font-size: 0.5rem !important; }
+
+  /* Detail content */
+  .detail-content { padding: 0 1rem 3.5rem; }
+
+  /* Kit photos */
+  .detail-kit-thumb-row { grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+  .detail-kit-thumb img { height: 140px; }
+
+  /* Mission steps */
+  .step-quest-label { font-size: 0.52rem; padding: 0.3rem 0.75rem; }
+  .step-xp-badge { font-size: 0.5rem !important; }
+  .mission-step-number { width: 2rem !important; height: 2rem !important; font-size: 0.58rem !important; }
+  .mission-step-header { padding: 0.75rem !important; gap: 0.55rem; }
+  .mission-step-title { font-size: 0.9rem !important; }
+  .mission-step-time { font-size: 0.48rem !important; padding: 0.2rem 0.45rem; }
+  .mission-step-body { padding: 0 0.85rem 0.85rem; }
+  .mission-step-body p { font-size: 0.86rem !important; }
+  .mission-step-body ul li { font-size: 0.84rem !important; }
+  .mission-step-body ul li::before { font-size: 0.48rem; top: 0.22rem; }
+
+  /* Quest progress */
+  .quest-progress-panel { padding: 0.7rem 0.85rem; }
+  .quest-progress-top { font-size: 0.48rem; }
+  .quest-progress-track { height: 8px; }
+
+  /* Game panel headers */
+  .game-panel-header { padding: 0.45rem 0.85rem; }
+  .panel-badge { font-size: 0.48rem; }
+  .panel-title { font-size: 0.9rem; }
+
+  /* Checklist */
+  .checklist-item { font-size: 0.86rem !important; padding: 0.6rem 0.85rem !important; }
+  .checklist-exp-label { font-size: 0.48rem; }
+  .checklist-exp-wrap { padding: 0.7rem 0.85rem; }
+
+  /* Science badge */
+  .science-badge { font-size: 0.42rem !important; padding: 0.55rem 0.85rem !important; }
+
+  /* Chapter badge */
+  .chapter-badge { font-size: 0.58rem; }
+
+  /* AI extension */
+  .ai-extension { padding: 1.1rem 1rem; }
+  .extension-label { font-size: 0.55rem !important; }
+  .ai-extension h3 { font-size: 0.92rem; }
+  .ai-extension p { font-size: 0.86rem !important; }
+
+  /* FAQ */
+  .faq-question { font-size: 0.86rem !important; padding: 0.9rem 0.85rem !important; min-height: 48px; }
+  .faq-answer-inner { font-size: 0.84rem !important; padding: 0.85rem; }
+
+  /* DIMC cards */
+  .dimc-cards { flex-direction: column; gap: 0.75rem; }
+  .dimc-card { width: 100%; }
+
+  /* Story / characters */
+  .chars-grid { grid-template-columns: repeat(3, 1fr); }
+
+  /* Media section */
+  .media-downloads { flex-direction: column; gap: 0.6rem; }
+  .media-download-btn { width: 100%; text-align: center; padding: 0.85rem 1rem; }
+
+  /* Footer */
+  .footer-brand { font-size: 0.65rem; }
+  .footer-copy { font-size: 0.72rem; }
+
+  /* MISSION CLEAR toast */
+  .mission-clear-toast { font-size: 0.5rem; padding: 0.7rem 1.25rem; width: 90%; text-align: center; }
+
+  /* Scroll progress bar — thicker on mobile for visibility */
+  .progress-bar { height: 4px; }
+}
+
+/* ============================================
+   RESPONSIVE — Small mobile (max 480px)
+   ============================================ */
+@media (max-width: 480px) {
+  html { font-size: 15px; }
+  .hero h1 { font-size: clamp(1.6rem, 8vw, 2.4rem); }
+  .detail-hero h1 { font-size: clamp(1.2rem, 6vw, 1.6rem); }
+  .info-bar .info-item { width: 100%; border-right: none; }
   .detail-kit-thumb-row { grid-template-columns: 1fr; }
+  .chars-grid { grid-template-columns: repeat(2, 1fr); }
+  .quest-tabs { justify-content: center; }
+  .mission-step-title { font-size: 0.85rem !important; }
+  .step-quest-label { font-size: 0.48rem; }
+  .panel-badge { font-size: 0.44rem; }
+  .panel-title { font-size: 0.85rem; }
 }
