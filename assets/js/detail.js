@@ -1,177 +1,183 @@
 /* ============================================
-   DOROLAND Detail Page — Pixel Game UI
-   Quest objectives, XP system, inventory
+   DOROLAND Detail Page — Pixel Game UI v2
    ============================================ */
 (function () {
   'use strict';
 
-  /* ── Helpers ── */
   function parseMinutes(el) {
     if (!el) return 15;
     const n = parseInt(el.textContent.replace(/[^0-9]/g, ''), 10);
     return isNaN(n) ? 15 : n;
   }
 
-  /* ── Mission Steps: Quest Objective mode ── */
+  /* Inject a game-panel header before an element */
+  function injectPanelHeader(beforeEl, badgeText, titleText, theme) {
+    if (!beforeEl) return;
+    const div = document.createElement('div');
+    div.className = 'game-panel-header' + (theme ? ' ' + theme : '');
+    div.innerHTML = `<span class="panel-badge">${badgeText}</span><span class="panel-title">${titleText}</span>`;
+    beforeEl.parentElement.insertBefore(div, beforeEl);
+  }
+
+  /* ── Mission Steps ── */
   function initMissionSteps() {
     const steps = document.querySelectorAll('.mission-step');
     if (!steps.length) return;
 
-    /* XP values per step = minutes * 1 */
+    /* Replace h2 with game panel header */
+    const section = document.querySelector('.mission-section');
+    const h2 = section && section.querySelector('h2');
+    const h2Text = h2 ? h2.textContent.replace(/^[^\w가-힣]+/, '').trim() : '교육 과정';
+    if (h2) injectPanelHeader(h2, 'MISSION', h2Text);
+
+    /* Inject QUEST label + XP badge above each step header */
     steps.forEach((step, i) => {
       const header = step.querySelector('.mission-step-header');
       const timeEl = step.querySelector('.mission-step-time');
       const xp = parseMinutes(timeEl);
+      const num = String(i + 1).padStart(2, '0');
 
-      /* Inject XP badge */
-      const xpBadge = document.createElement('span');
-      xpBadge.className = 'step-xp-badge';
-      xpBadge.textContent = '+' + xp + ' XP';
-      if (timeEl) header.insertBefore(xpBadge, timeEl);
-      else header.appendChild(xpBadge);
-
-      /* Toggle open/close on header click */
-      step.classList.toggle('step-open', i === 0); // first step open
-      header.addEventListener('click', () => {
-        const isOpen = step.classList.contains('step-open');
-        /* Close all, then open clicked (accordion) */
-        steps.forEach(s => s.classList.remove('step-open'));
-        if (!isOpen) step.classList.add('step-open');
-        updateMissionProgress();
-      });
+      const label = document.createElement('div');
+      label.className = 'step-quest-label';
+      label.innerHTML = `<span>QUEST ${num}</span><span class="step-xp-badge">+${xp} XP</span>`;
+      step.insertBefore(label, header);
     });
 
-    /* Mission Progress Bar */
-    const section = document.querySelector('.mission-section');
-    if (section) {
-      const h2 = section.querySelector('h2');
-      const wrap = document.createElement('div');
-      wrap.className = 'mission-progress-wrap';
-      wrap.innerHTML = `
-        <div class="mission-progress-label">
+    /* Quest progress bar */
+    const firstStep = steps[0];
+    if (firstStep && firstStep.parentElement) {
+      const panel = document.createElement('div');
+      panel.className = 'quest-progress-panel';
+      panel.innerHTML = `
+        <div class="quest-progress-top">
           <span>QUEST PROGRESS</span>
-          <span id="mission-progress-text">STEP 1 / ${steps.length}</span>
+          <span id="qp-text">0 / ${steps.length} COMPLETED</span>
         </div>
-        <div class="mission-progress-track">
-          <div class="mission-progress-fill" id="mission-progress-fill"></div>
+        <div class="quest-progress-track">
+          <div class="quest-progress-fill" id="qp-fill"></div>
         </div>`;
-      h2.insertAdjacentElement('afterend', wrap);
+      firstStep.parentElement.insertBefore(panel, firstStep);
     }
 
-    updateMissionProgress();
+    /* Track scroll-based progress (which step is in view) */
+    function updateProgress() {
+      let visible = 0;
+      steps.forEach(s => {
+        const rect = s.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.7) visible++;
+      });
+      const pct = Math.round((visible / steps.length) * 100);
+      const fill = document.getElementById('qp-fill');
+      const text = document.getElementById('qp-text');
+      if (fill) fill.style.width = pct + '%';
+      if (text) text.textContent = visible + ' / ' + steps.length + ' COMPLETED';
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
   }
 
-  function updateMissionProgress() {
-    const steps = document.querySelectorAll('.mission-step');
-    const open = Array.from(steps).findIndex(s => s.classList.contains('step-open'));
-    const current = open >= 0 ? open + 1 : 1;
-    const total = steps.length;
-    const pct = Math.round((current / total) * 100);
-
-    const fill = document.getElementById('mission-progress-fill');
-    const text = document.getElementById('mission-progress-text');
-    if (fill) fill.style.width = pct + '%';
-    if (text) text.textContent = 'STEP ' + current + ' / ' + total;
-  }
-
-  /* ── Checklist: Inventory + EXP Bar ── */
+  /* ── Checklist: Inventory + EXP ── */
   function initInventoryChecklist() {
     const items = document.querySelectorAll('.checklist-item');
     if (!items.length) return;
 
-    /* Sync item-checked class with checkbox state */
-    function syncItem(item) {
-      const cb = item.querySelector('input[type="checkbox"]');
-      if (!cb) return;
-      item.classList.toggle('item-checked', cb.checked);
+    /* Replace title with game panel header */
+    const section = document.querySelector('.checklist-section');
+    const title = section && section.querySelector('.checklist-title');
+    const titleText = title ? title.textContent.replace(/^[^\w가-힣]+/, '').trim() : '준비물 체크리스트';
+    if (title) injectPanelHeader(title, 'INVENTORY', titleText, 'amber-theme');
+
+    /* Sync item-checked class */
+    function syncAll() {
+      let checked = 0;
+      items.forEach(item => {
+        const cb = item.querySelector('input[type="checkbox"]');
+        const isChecked = cb && cb.checked;
+        item.classList.toggle('item-checked', !!isChecked);
+        if (isChecked) checked++;
+      });
+      return checked;
     }
 
     items.forEach(item => {
-      syncItem(item);
       const cb = item.querySelector('input[type="checkbox"]');
       if (cb) cb.addEventListener('change', () => {
-        syncItem(item);
-        updateExpBar();
+        const checked = syncAll();
+        updateExp(checked);
       });
     });
 
-    /* Inject EXP bar after last checklist item */
-    const section = document.querySelector('.checklist-section');
-    if (section) {
-      const expWrap = document.createElement('div');
-      expWrap.className = 'checklist-exp-wrap';
-      expWrap.innerHTML = `
-        <div class="checklist-exp-label">
-          <span>ITEM COLLECTION EXP</span>
-          <span id="checklist-exp-text">0 / ${items.length}</span>
-        </div>
-        <div class="checklist-exp-track">
-          <div class="checklist-exp-fill" id="checklist-exp-fill"></div>
-        </div>`;
-      section.appendChild(expWrap);
-    }
+    /* EXP bar */
+    const expWrap = document.createElement('div');
+    expWrap.className = 'checklist-exp-wrap';
+    expWrap.innerHTML = `
+      <div class="checklist-exp-label">
+        <span>ITEM COLLECTION EXP</span>
+        <span id="exp-text">0 / ${items.length}</span>
+      </div>
+      <div class="checklist-exp-track">
+        <div class="checklist-exp-fill" id="exp-fill"></div>
+      </div>`;
+    if (section) section.appendChild(expWrap);
 
     /* MISSION CLEAR toast */
     const toast = document.createElement('div');
     toast.className = 'mission-clear-toast';
-    toast.textContent = '✓ ITEMS COLLECTED — MISSION CLEAR!';
+    toast.textContent = '★ INVENTORY COMPLETE — READY FOR MISSION! ★';
     document.body.appendChild(toast);
 
-    updateExpBar();
-
-    function updateExpBar() {
+    function updateExp(checked) {
       const total = items.length;
-      const checked = document.querySelectorAll('.checklist-item.item-checked').length;
       const pct = Math.round((checked / total) * 100);
-
-      const fill = document.getElementById('checklist-exp-fill');
-      const text = document.getElementById('checklist-exp-text');
+      const fill = document.getElementById('exp-fill');
+      const text = document.getElementById('exp-text');
       if (fill) fill.style.width = pct + '%';
       if (text) text.textContent = checked + ' / ' + total;
-
-      if (checked === total && total > 0) showClearToast(toast);
+      if (checked === total) {
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 3500);
+      }
     }
+
+    syncAll();
+    updateExp(document.querySelectorAll('.checklist-item.item-checked').length);
   }
 
-  function showClearToast(toast) {
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3000);
+  /* ── FAQ: Quest Codex header ── */
+  function initFaqHeader() {
+    const faq = document.querySelector('.faq-section');
+    if (!faq) return;
+    const h2 = faq.querySelector('h2');
+    if (h2) injectPanelHeader(h2, 'CODEX', '자주 묻는 질문', 'purple-theme');
   }
 
-  /* ── Section Rule Lines ── */
-  function addSectionRules() {
-    const targets = [
-      '.mission-section > h2',
-      '.faq-section > h2',
-      '.checklist-title',
-    ];
-    targets.forEach(sel => {
-      const el = document.querySelector(sel);
-      if (!el) return;
-      const rule = document.createElement('span');
-      rule.className = 'section-rule';
-      el.insertAdjacentElement('afterend', rule);
-    });
+  /* ── Media section header ── */
+  function initMediaHeader() {
+    const media = document.querySelector('.media-section');
+    if (!media) return;
+    const h2 = media.querySelector('h2');
+    if (h2) injectPanelHeader(h2, 'DEMO', h2.textContent.replace(/^[^\w가-힣A-Z]+/, '').trim());
   }
 
-  /* ── Pixel art label for kit photos section ── */
-  function addPhotoLabel() {
-    const photosSection = document.querySelector('#photos h2');
-    if (photosSection) return; // already has h2
-    const section = document.getElementById('photos');
-    if (!section) return;
+  /* ── Kit Gallery label ── */
+  function initGalleryLabel() {
+    const photos = document.getElementById('photos');
+    if (!photos) return;
+    if (photos.querySelector('.kit-gallery-label')) return;
     const label = document.createElement('div');
-    label.style.cssText = 'font-family:var(--font-pixel);font-size:0.48rem;color:var(--emerald);letter-spacing:0.1em;margin-bottom:0.85rem;';
+    label.className = 'kit-gallery-label';
     label.textContent = '▸ KIT GALLERY';
-    section.prepend(label);
+    photos.prepend(label);
   }
 
   /* ── Init ── */
   function init() {
     initMissionSteps();
     initInventoryChecklist();
-    addSectionRules();
-    addPhotoLabel();
+    initFaqHeader();
+    initMediaHeader();
+    initGalleryLabel();
   }
 
   if (document.readyState === 'loading') {

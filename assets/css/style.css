@@ -758,254 +758,330 @@ body {
 }
 
 /* ============================================
-   PROGRAM PAGE — PIXEL GAME UI OVERHAUL
+   PROGRAM PAGE — PIXEL GAME UI  (v2)
    ============================================ */
 
-/* ── Info Bar: Quest HUD ── */
+/* ══ INFO BAR: RPG Stats HUD ══ */
 .info-bar {
   position: relative;
-  border-top: 2px solid rgba(20,184,166,0.25);
-  border-bottom: 2px solid rgba(20,184,166,0.25);
+  border-top: 2px solid var(--emerald);
+  border-bottom: 2px solid var(--emerald);
+  background: linear-gradient(180deg, rgba(20,184,166,0.06) 0%, var(--bg-surface) 100%);
+  padding-top: 1.6rem;
 }
 .info-bar::before {
-  content: '▸ QUEST INFO ◂';
+  content: '[ QUEST INFO ]';
   font-family: var(--font-pixel);
-  font-size: 0.42rem;
-  color: var(--emerald);
-  letter-spacing: 0.12em;
+  font-size: 0.45rem;
+  color: #000;
+  background: var(--emerald);
+  letter-spacing: 0.1em;
   position: absolute;
-  top: -0.65rem; left: 50%; transform: translateX(-50%);
-  background: var(--bg-deep);
-  padding: 0 0.75rem;
+  top: 0; left: 50%; transform: translateX(-50%);
+  padding: 0.2rem 1rem;
   white-space: nowrap;
 }
-.info-label { color: var(--emerald) !important; opacity: 0.75; }
-.info-value { color: var(--text-primary) !important; }
-
-/* ── Science Badge: Core Concepts Panel ── */
-.science-badge {
-  font-family: var(--font-pixel) !important;
-  font-size: 0.44rem !important;
-  letter-spacing: 0.04em;
-  border-left: 3px solid var(--emerald) !important;
-  border-right: 3px solid var(--emerald) !important;
-  border-top: none !important;
-  border-bottom: none !important;
-  padding: 0.6rem 1.25rem !important;
-}
-
-/* ── Mission Steps: Quest Objective Style ── */
-.mission-step {
-  border-left: 3px solid rgba(20,184,166,0.4);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.mission-step:hover { border-left-color: var(--emerald); box-shadow: -2px 0 12px var(--emerald-glow); }
-.mission-step.step-open { border-left-color: var(--emerald); }
-.mission-step-number {
-  border-radius: 3px !important; /* square pixel badge */
-  box-shadow: 2px 2px 0 rgba(0,0,0,0.6);
-  font-size: 0.6rem !important;
-}
-.mission-step-time {
+.info-label {
   font-family: var(--font-pixel) !important;
   font-size: 0.42rem !important;
   color: var(--emerald) !important;
-  background: rgba(20,184,166,0.08);
-  border: 1px solid rgba(20,184,166,0.25);
-  padding: 0.18rem 0.5rem;
-  border-radius: 2px;
+  letter-spacing: 0.05em;
 }
-/* XP Badge injected by JS */
-.step-xp-badge {
+.info-value { font-size: 0.85rem !important; font-weight: 700 !important; }
+
+/* ══ SCIENCE BADGE ══ */
+.science-badge {
+  font-family: var(--font-pixel) !important;
+  font-size: 0.45rem !important;
+  border: 2px solid var(--emerald) !important;
+  background: rgba(20,184,166,0.06) !important;
+  padding: 0.65rem 1.25rem !important;
+  display: block !important;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-top: 0.5rem;
+}
+
+/* ══ SECTION PANEL HEADERS ══ */
+.game-panel-header {
+  background: linear-gradient(90deg, rgba(20,184,166,0.15), transparent);
+  border-left: 4px solid var(--emerald);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.25rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.game-panel-header .panel-badge {
   font-family: var(--font-pixel);
   font-size: 0.4rem;
-  color: var(--amber);
-  background: rgba(245,158,11,0.1);
-  border: 1px solid rgba(245,158,11,0.3);
-  padding: 0.18rem 0.45rem;
-  border-radius: 2px;
-  flex-shrink: 0;
-  white-space: nowrap;
-}
-/* Step CLEAR badge (added by JS on completion) */
-.step-clear-badge {
-  font-family: var(--font-pixel);
-  font-size: 0.38rem;
   color: #000;
   background: var(--emerald);
-  padding: 0.15rem 0.45rem;
-  border-radius: 2px;
+  padding: 0.15rem 0.5rem;
+  white-space: nowrap;
+}
+.game-panel-header .panel-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+}
+.game-panel-header.purple-theme {
+  background: linear-gradient(90deg, rgba(139,92,246,0.15), transparent);
+  border-left-color: var(--purple);
+}
+.game-panel-header.purple-theme .panel-badge { background: var(--purple); }
+.game-panel-header.amber-theme {
+  background: linear-gradient(90deg, rgba(245,158,11,0.15), transparent);
+  border-left-color: var(--amber);
+}
+.game-panel-header.amber-theme .panel-badge { background: var(--amber); }
+
+/* ══ MISSION STEPS: Quest Cards ══ */
+.mission-section > h2 { display: none; } /* replaced by game-panel-header injected by JS */
+
+.mission-step {
+  border: 1px solid rgba(20,184,166,0.2);
+  border-top: 3px solid var(--emerald);
+  border-radius: 0 !important; /* sharp pixel corners */
+  margin-bottom: 1rem !important;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.mission-step:hover {
+  border-color: var(--emerald);
+  box-shadow: 0 0 20px var(--emerald-glow), 4px 4px 0 rgba(0,0,0,0.4);
+}
+/* QUEST label injected above each step by JS */
+.step-quest-label {
+  font-family: var(--font-pixel);
+  font-size: 0.38rem;
+  color: var(--emerald);
+  letter-spacing: 0.15em;
+  padding: 0.2rem 0.75rem;
+  background: rgba(20,184,166,0.08);
+  border-bottom: 1px solid rgba(20,184,166,0.15);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.step-quest-label .step-xp-badge {
+  font-family: var(--font-pixel);
+  font-size: 0.38rem;
+  color: var(--amber);
+  background: rgba(245,158,11,0.12);
+  border: 1px solid rgba(245,158,11,0.35);
+  padding: 0.1rem 0.4rem;
+}
+.mission-step-number {
+  width: 2.2rem !important; height: 2.2rem !important;
+  border-radius: 2px !important;
+  font-size: 0.65rem !important;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.7) !important;
   flex-shrink: 0;
 }
-/* Pixel arrow bullet points */
-.mission-step-body ul { list-style: none; padding-left: 0 !important; }
+.mission-step-header {
+  background: rgba(20,184,166,0.04);
+  padding: 0.85rem 1rem !important;
+  border-bottom: 1px solid rgba(20,184,166,0.1);
+}
+.mission-step-title {
+  font-family: var(--font-display) !important;
+  font-size: 0.95rem !important;
+  font-weight: 800 !important;
+}
+.mission-step-time {
+  font-family: var(--font-pixel) !important;
+  font-size: 0.4rem !important;
+  color: var(--emerald) !important;
+  background: rgba(20,184,166,0.1);
+  border: 1px solid rgba(20,184,166,0.3);
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+/* Pixel arrow bullets — visible always */
+.mission-step-body { display: block !important; }
+.mission-step-body ul { list-style: none !important; padding-left: 0 !important; }
 .mission-step-body ul li {
-  padding-left: 1.1rem;
+  padding-left: 1.15rem !important;
   position: relative;
-  margin-bottom: 0.3rem !important;
+  margin-bottom: 0.35rem !important;
 }
 .mission-step-body ul li::before {
   content: '▶';
-  position: absolute; left: 0; top: 0.18rem;
-  color: var(--emerald);
-  font-size: 0.52rem;
-  line-height: 1.5;
+  position: absolute; left: 0; top: 0.2rem;
+  color: var(--emerald); font-size: 0.5rem; line-height: 1.5;
+}
+.mission-step-body p {
+  border-left: 2px solid rgba(20,184,166,0.2);
+  padding-left: 0.75rem !important;
+  margin-left: 0;
+  font-style: italic;
 }
 
-/* ── Mission Progress Bar ── */
-.mission-progress-wrap { margin-bottom: 1.25rem; }
-.mission-progress-label {
+/* ══ QUEST PROGRESS BAR ══ */
+.quest-progress-panel {
+  background: rgba(11,21,40,0.7);
+  border: 1px solid rgba(20,184,166,0.2);
+  border-top: 2px solid var(--emerald);
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0;
+}
+.quest-progress-top {
   font-family: var(--font-pixel);
   font-size: 0.42rem;
   color: var(--text-muted);
   display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.45rem;
 }
-.mission-progress-track {
-  height: 6px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 2px;
+.quest-progress-top span:last-child { color: var(--emerald); }
+.quest-progress-track {
+  height: 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(20,184,166,0.2);
+  position: relative;
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.06);
 }
-.mission-progress-fill {
+.quest-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--emerald), var(--sky));
+  background: linear-gradient(90deg, var(--emerald) 0%, var(--sky) 100%);
   width: 0%;
-  transition: width 0.5s ease;
-  box-shadow: 0 0 6px var(--emerald);
+  transition: width 0.6s ease;
+  box-shadow: 0 0 10px var(--emerald);
+}
+/* Pixel tick marks */
+.quest-progress-track::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(90deg,
+    transparent 0px, transparent 19%, rgba(0,0,0,0.3) 19%, rgba(0,0,0,0.3) 20%);
 }
 
-/* ── Checklist: Inventory Style ── */
+/* ══ CHECKLIST: Inventory Screen ══ */
+.checklist-section > h2,
+.checklist-title { display: none !important; } /* replaced by game-panel-header */
+
 .checklist-item {
-  border-left: 3px solid rgba(255,255,255,0.06) !important;
-  transition: border-color 0.2s, background 0.2s !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-left: 4px solid rgba(20,184,166,0.25) !important;
+  border-radius: 0 !important;
+  padding: 0.65rem 0.9rem !important;
+  transition: border-color 0.15s, background 0.15s !important;
+  margin-bottom: 0.35rem !important;
 }
-.checklist-item:hover { border-left-color: rgba(20,184,166,0.35) !important; }
+.checklist-item:hover { border-left-color: var(--emerald) !important; background: rgba(20,184,166,0.04) !important; }
 .checklist-item.item-checked {
   border-left-color: var(--emerald) !important;
-  background: rgba(20,184,166,0.05) !important;
+  background: rgba(20,184,166,0.06) !important;
 }
-.checklist-item.item-checked span {
-  text-decoration: line-through;
-  color: var(--text-muted);
-}
-/* Pixel-style checkbox */
+.checklist-item.item-checked span { text-decoration: line-through; color: var(--text-muted); }
 .checklist-item input[type="checkbox"] {
   appearance: none; -webkit-appearance: none;
-  width: 16px !important; height: 16px !important;
-  border: 2px solid rgba(20,184,166,0.45);
-  border-radius: 2px;
-  background: transparent;
-  cursor: pointer; flex-shrink: 0;
-  position: relative; transition: border-color 0.15s, background 0.15s;
+  width: 18px !important; height: 18px !important;
+  border: 2px solid rgba(20,184,166,0.5);
+  border-radius: 2px; background: transparent;
+  cursor: pointer; flex-shrink: 0; position: relative;
+  transition: background 0.15s, border-color 0.15s;
 }
 .checklist-item input[type="checkbox"]:checked {
-  background: var(--emerald);
-  border-color: var(--emerald);
+  background: var(--emerald); border-color: var(--emerald);
 }
 .checklist-item input[type="checkbox"]:checked::after {
   content: '';
-  position: absolute; top: 1px; left: 4px;
-  width: 5px; height: 8px;
-  border: 2px solid #000;
-  border-top: none; border-left: none;
+  position: absolute; top: 2px; left: 5px;
+  width: 5px; height: 9px;
+  border: 2px solid #000; border-top: none; border-left: none;
   transform: rotate(40deg);
 }
-/* EXP bar below checklist */
-.checklist-exp-wrap { margin-top: 0.9rem; }
+/* EXP bar */
+.checklist-exp-wrap { margin-top: 1rem; padding: 0.85rem 1rem; background: rgba(11,21,40,0.5); border: 1px solid rgba(255,255,255,0.06); border-top: 2px solid var(--purple); }
 .checklist-exp-label {
-  font-family: var(--font-pixel);
-  font-size: 0.42rem;
-  color: var(--text-muted);
-  display: flex; justify-content: space-between;
-  margin-bottom: 0.3rem;
+  font-family: var(--font-pixel); font-size: 0.42rem; color: var(--text-muted);
+  display: flex; justify-content: space-between; margin-bottom: 0.4rem;
 }
+.checklist-exp-label span:last-child { color: var(--purple); }
 .checklist-exp-track {
-  height: 8px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 2px;
-  overflow: hidden;
+  height: 10px; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(139,92,246,0.2); overflow: hidden;
 }
 .checklist-exp-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--purple), var(--emerald));
-  width: 0%;
-  transition: width 0.4s ease;
-  box-shadow: 0 0 8px var(--purple);
+  height: 100%; background: linear-gradient(90deg, var(--purple), var(--emerald));
+  width: 0%; transition: width 0.4s ease; box-shadow: 0 0 10px var(--purple);
 }
+
 /* MISSION CLEAR toast */
 .mission-clear-toast {
-  position: fixed; bottom: 2rem; left: 50%; transform: translateX(-50%) translateY(4rem);
+  position: fixed; bottom: 2.5rem; left: 50%;
+  transform: translateX(-50%) translateY(5rem);
   background: var(--emerald); color: #000;
-  font-family: var(--font-pixel); font-size: 0.6rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 3px;
-  box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
-  z-index: 9999;
+  font-family: var(--font-pixel); font-size: 0.55rem;
+  padding: 0.85rem 2rem;
+  border-radius: 2px;
+  box-shadow: 6px 6px 0 rgba(0,0,0,0.6), 0 0 30px var(--emerald-glow);
+  z-index: 9999; letter-spacing: 0.08em;
   transition: transform 0.4s ease, opacity 0.4s ease;
   opacity: 0; pointer-events: none;
 }
 .mission-clear-toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
 
-/* ── FAQ: Codex Style ── */
+/* ══ FAQ: Quest Codex ══ */
+.faq-section > h2 { display: none !important; } /* replaced by game-panel-header */
 .faq-question {
-  display: flex !important;
-  align-items: center !important;
-  gap: 0.6rem;
+  display: flex !important; align-items: center !important; gap: 0.7rem;
+  border-radius: 0 !important;
+  border-left: 3px solid rgba(20,184,166,0.2) !important;
+  transition: border-color 0.2s, background 0.2s !important;
 }
+.faq-question:hover { border-left-color: var(--emerald) !important; }
+.faq-item.open .faq-question { border-left-color: var(--emerald) !important; background: rgba(20,184,166,0.06) !important; }
 .faq-question::before {
-  content: '▶';
-  color: var(--emerald);
-  font-size: 0.6rem;
-  flex-shrink: 0;
-  transition: transform 0.2s;
-  line-height: 1;
+  content: '▶'; color: var(--emerald); font-size: 0.65rem;
+  flex-shrink: 0; transition: transform 0.2s; line-height: 1;
 }
 .faq-item.open .faq-question::before { transform: rotate(90deg); }
+.faq-answer-inner { border-radius: 0 !important; border-left: 3px solid rgba(20,184,166,0.15) !important; }
 
-/* ── AI Extension: Side Quest Panel ── */
+/* ══ AI Extension: Side Quest ══ */
 .ai-extension {
-  border-left: 3px solid rgba(139,92,246,0.5) !important;
-  position: relative;
+  border: 1px solid rgba(139,92,246,0.3) !important;
+  border-top: 3px solid var(--purple) !important;
+  border-radius: 0 !important;
 }
 .extension-label {
+  display: flex !important; align-items: center; gap: 0.45rem;
+  letter-spacing: 0.1em; font-size: 0.5rem !important;
+}
+.extension-label::before { content: '◈'; font-size: 0.75rem; }
+
+/* ══ Media / Download section ══ */
+.media-section > h2 { display: none !important; }
+
+/* ══ PIXEL ART: Kit Photos section label ══ */
+.kit-gallery-label {
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  color: #000;
+  background: var(--emerald);
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.1em;
-  display: flex !important; align-items: center; gap: 0.5rem;
 }
-.extension-label::before { content: '⬡'; font-size: 0.7rem; }
-
-/* ── Section Headers: Game Panel Style ── */
-.mission-section > h2,
-.checklist-title,
-.faq-section > h2 span[data-i18n] {
-  position: relative;
-}
-.section-rule {
-  display: block; height: 1px;
-  background: linear-gradient(90deg, rgba(20,184,166,0.4), transparent);
-  margin-top: 0.4rem; margin-bottom: 1.2rem;
-}
-
-/* ── Step body collapsible (toggled by JS) ── */
-.mission-step-body { display: none; }
-.mission-step.step-open .mission-step-body { display: block; }
-/* First step open by default — handled by JS */
 
 /* ============================================
    PIXEL ART IMAGE STYLES
    ============================================ */
 
-/* All non-hero kit images get crisp pixel rendering */
-.detail-kit-thumb img,
-.mission-step-image img,
+/* Pixel rendering: character sprites + quest card photos only (NOT kit photos) */
 .photo-front img,
 .photo-back img,
 .doroland-char-frame img {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges;
+}
+/* Kit photos (hero, hand, parts, step images) — keep original quality */
+.detail-kit-hero img,
+.detail-kit-thumb img,
+.mission-step-image img {
+  image-rendering: auto;
 }
 
 /* Pixel frame border — 8-bit cartridge look */
