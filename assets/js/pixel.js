@@ -52,14 +52,7 @@
       pixelate(img, 10);
     });
 
-    /* Kit thumb row photos: pixelate only the small thumbs, NOT the hero photo */
-    document.querySelectorAll('.detail-kit-thumb img').forEach(img => {
-      img.crossOrigin = 'anonymous';
-      pixelate(img, 8);
-    });
-
-    /* Mission step images: keep original — do NOT pixelate */
-    /* (user request: kit photos stay original) */
+    /* Kit photos (hero, thumb, step images): keep original — no pixelation */
   }
 
   if (document.readyState === 'loading') {

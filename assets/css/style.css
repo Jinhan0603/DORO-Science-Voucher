@@ -1178,24 +1178,16 @@ body {
   image-rendering: auto;
 }
 
-/* Pixel frame border — 8-bit cartridge look */
-.detail-kit-thumb,
+/* Kit photos: clean look, subtle border only */
+.detail-kit-thumb {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
 .mission-step-image {
-  position: relative;
-  box-shadow: 4px 4px 0 #000, -2px -2px 0 rgba(255,255,255,0.08);
-  border: 2px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
 }
-.detail-kit-thumb::after,
-.mission-step-image::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent, transparent 3px,
-    rgba(0,0,0,0.07) 3px, rgba(0,0,0,0.07) 4px
-  );
-  pointer-events: none; z-index: 2;
-}
+/* kit thumb and step image overlays removed — keep photos original */
 
 /* Quest card photos pixel effect */
 .photo-front, .photo-back {
