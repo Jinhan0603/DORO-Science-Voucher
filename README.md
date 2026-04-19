@@ -8,8 +8,7 @@
 
 | 버전 | 링크 | 설명 |
 |------|------|------|
-| **V2** (최신) | [DOROLAND V2 →](https://jinhan0603.github.io/DORO-Science-Voucher/DORO-Science-Voucher-V2/) | 픽셀 RPG 테마 · 와디즈 실제 사진 · 조립 영상 포함 |
-| V1 | [DOROLAND V1 →](https://jinhan0603.github.io/DORO-Science-Voucher/) | 초기 버전 |
+| **V2** (최신) | [DOROLAND V2 →](https://jinhan0603.github.io/DORO-Science-Voucher/) | 픽셀 RPG 테마 · 와디즈 실제 사진 · 조립 영상 포함 |
 
 ## 🚀 프로그램 목록
 
