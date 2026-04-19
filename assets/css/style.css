@@ -1186,7 +1186,144 @@ body {
 .footer-copy { color: var(--text-muted); font-size: 0.75rem; }
 
 /* ============================================
-   ANIMATIONS
+   PIXEL GAME ANIMATIONS — DOROLAND LIVE ELEMENTS
+   ============================================ */
+
+/* ── Pixel Sparkles around hero character ── */
+.doro-char-sprite::before,
+.doro-char-sprite::after {
+  content: '';
+  position: absolute;
+  width: 6px; height: 6px;
+  background: var(--emerald);
+  image-rendering: pixelated;
+  animation: px-spark 2s ease-in-out infinite;
+}
+.doro-char-sprite::before {
+  top: 4px; right: -8px;
+  animation-delay: 0s;
+  box-shadow: 0 0 0 2px var(--bg-deep), 0 0 0 3px var(--emerald);
+}
+.doro-char-sprite::after {
+  bottom: 8px; left: -8px;
+  width: 4px; height: 4px;
+  background: var(--amber);
+  animation-delay: 1s;
+  box-shadow: 0 0 0 2px var(--bg-deep), 0 0 0 3px var(--amber);
+}
+@keyframes px-spark {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  30%       { opacity: 1; transform: scale(1) rotate(45deg); }
+  60%       { opacity: 0.6; transform: scale(1.4) rotate(90deg); }
+}
+
+/* ── Floating pixel particles (injected by JS) ── */
+.px-particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  image-rendering: pixelated;
+  pointer-events: none;
+  animation: px-float-up linear infinite;
+}
+@keyframes px-float-up {
+  0%   { transform: translateY(0) translateX(0); opacity: 0.8; }
+  50%  { transform: translateY(-30px) translateX(8px); opacity: 0.4; }
+  100% { transform: translateY(-60px) translateX(-4px); opacity: 0; }
+}
+
+/* ── Blinking QUEST indicator ── */
+.quest-blink-dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--emerald);
+  margin-right: 0.4rem;
+  vertical-align: middle;
+  image-rendering: pixelated;
+  animation: px-blink 1.2s step-start infinite;
+  flex-shrink: 0;
+}
+@keyframes px-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Walking pixel character on progress bar ── */
+.quest-progress-walker {
+  position: absolute;
+  top: -18px;
+  width: 20px; height: 20px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  transition: left 0.6s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.6));
+  animation: px-walk-bob 0.4s step-start infinite;
+}
+@keyframes px-walk-bob {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-2px); }
+}
+.quest-progress-track { position: relative; overflow: visible !important; }
+
+/* ── Pixel divider between sections (injected by JS) ── */
+.px-divider {
+  display: flex; align-items: center; gap: 0; justify-content: center;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  height: 16px;
+  position: relative;
+}
+.px-divider-dot {
+  width: 4px; height: 4px;
+  background: var(--emerald);
+  image-rendering: pixelated;
+  flex-shrink: 0;
+  animation: px-wave 1.5s ease-in-out infinite;
+}
+.px-divider-dot:nth-child(odd)  { background: var(--emerald); }
+.px-divider-dot:nth-child(even) { background: var(--sky); height: 6px; }
+@keyframes px-wave {
+  0%, 100% { transform: scaleY(1); opacity: 0.5; }
+  50%       { transform: scaleY(2.5); opacity: 1; }
+}
+
+/* ── Checkbox pixel burst ── */
+@keyframes px-burst {
+  0%   { transform: scale(0) rotate(0deg); opacity: 1; }
+  60%  { transform: scale(1.4) rotate(180deg); opacity: 0.7; }
+  100% { transform: scale(2) rotate(360deg); opacity: 0; }
+}
+.px-check-burst {
+  position: absolute;
+  width: 20px; height: 20px;
+  pointer-events: none;
+  animation: px-burst 0.5s ease-out forwards;
+}
+.px-check-burst::before,
+.px-check-burst::after {
+  content: '';
+  position: absolute; inset: 0;
+  border: 2px solid var(--emerald);
+  image-rendering: pixelated;
+}
+.px-check-burst::after { border-color: var(--amber); transform: rotate(45deg); }
+
+/* ── Animated section banner (info/science) ── */
+.doro-zone-badge {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center; gap: 0.4rem;
+}
+.doro-zone-badge::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--emerald);
+  animation: px-blink 0.8s step-start infinite;
+}
+
+/* ── ANIMATIONS (general) ── */
+/* ============================================
+   FADE / SCROLL ANIMATIONS
    ============================================ */
 .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }

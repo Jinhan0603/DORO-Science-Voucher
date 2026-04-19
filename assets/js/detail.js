@@ -287,6 +287,98 @@
     photos.prepend(label);
   }
 
+  /* ── Animated Pixel Elements ── */
+  function initPixelAnimations(zoneData) {
+    const charImg = zoneData ? zoneData.charImg : '../../assets/images/pixel/panda.svg';
+
+    /* 1. Walking character on quest progress bar */
+    const track = document.querySelector('.quest-progress-track');
+    if (track) {
+      const walker = document.createElement('img');
+      walker.src = charImg;
+      walker.className = 'quest-progress-walker';
+      walker.alt = '';
+      walker.style.left = '0px';
+      track.appendChild(walker);
+
+      const fill = document.getElementById('qp-fill');
+      if (fill) {
+        new MutationObserver(() => {
+          const pct = parseFloat(fill.style.width) || 0;
+          const trackW = track.offsetWidth;
+          const walkerW = walker.offsetWidth || 20;
+          walker.style.left = Math.min(pct / 100 * trackW - walkerW / 2, trackW - walkerW) + 'px';
+        }).observe(fill, { attributes: true, attributeFilter: ['style'] });
+      }
+    }
+
+    /* 2. Blinking dot on each QUEST label */
+    document.querySelectorAll('.step-quest-label').forEach(label => {
+      const dot = document.createElement('span');
+      dot.className = 'quest-blink-dot';
+      label.prepend(dot);
+    });
+
+    /* 3. Pixel wave dividers between every 2nd mission step */
+    const steps = document.querySelectorAll('.mission-step');
+    steps.forEach((step, i) => {
+      if ((i + 1) % 2 === 0 && i < steps.length - 1) {
+        step.insertAdjacentElement('afterend', buildPixelDivider());
+      }
+    });
+
+    /* 4. Floating pixel particles around hero character */
+    const sprite = document.querySelector('.doro-char-sprite');
+    if (sprite) {
+      sprite.style.overflow = 'visible';
+      const colors = ['var(--emerald)', 'var(--amber)', 'var(--sky)', 'var(--purple)'];
+      for (let i = 0; i < 6; i++) {
+        const p = document.createElement('div');
+        p.className = 'px-particle';
+        p.style.cssText = `background:${colors[i % 4]};left:${10 + Math.random() * 60}%;bottom:${Math.random() * 8}px;animation-duration:${1.5 + Math.random() * 2}s;animation-delay:${Math.random() * 2}s;`;
+        sprite.appendChild(p);
+      }
+    }
+
+    /* 5. Pixel burst on checkbox check */
+    document.querySelectorAll('.checklist-item').forEach(item => {
+      const cb = item.querySelector('input[type="checkbox"]');
+      if (!cb) return;
+      cb.addEventListener('change', () => {
+        if (!cb.checked) return;
+        const burst = document.createElement('div');
+        burst.className = 'px-check-burst';
+        item.style.position = 'relative';
+        item.appendChild(burst);
+        setTimeout(() => burst.remove(), 600);
+      });
+    });
+
+    /* 6. Floating particles in zone story banner */
+    const storyInner = document.querySelector('.doro-zone-story-inner');
+    if (storyInner) {
+      storyInner.style.cssText += ';position:relative;overflow:hidden;';
+      for (let i = 0; i < 4; i++) {
+        const p = document.createElement('div');
+        p.className = 'px-particle';
+        p.style.cssText = `background:var(--emerald);opacity:0.25;right:${5 + i * 7}%;bottom:0;animation-duration:${2 + i * 0.6}s;animation-delay:${i * 0.5}s;`;
+        storyInner.appendChild(p);
+      }
+    }
+  }
+
+  function buildPixelDivider() {
+    const wrap = document.createElement('div');
+    wrap.className = 'px-divider';
+    for (let i = 0; i < 48; i++) {
+      const dot = document.createElement('div');
+      dot.className = 'px-divider-dot';
+      dot.style.animationDelay = (i * 0.04) + 's';
+      wrap.appendChild(dot);
+    }
+    return wrap;
+  }
+
   /* ── INIT ── */
   function init() {
     const zone = detectZone();
@@ -298,6 +390,7 @@
     initFaqHeader();
     initMediaHeader();
     initGalleryLabel();
+    initPixelAnimations(zoneData);
   }
 
   if (document.readyState === 'loading') {
