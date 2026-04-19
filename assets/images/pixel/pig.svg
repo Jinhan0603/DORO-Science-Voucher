@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="64" height="64">
+  <!-- Pig face: pink, round ears, snout, cute eyes -->
+
+  <!-- Left ear (pink, round) -->
+  <rect x="1" y="2" width="3" height="3" fill="#F472B6"/>
+  <rect x="0" y="3" width="3" height="2" fill="#F472B6"/>
+  <!-- Left ear inner -->
+  <rect x="1" y="3" width="1" height="1" fill="#EC4899"/>
+
+  <!-- Right ear (pink, round) -->
+  <rect x="12" y="2" width="3" height="3" fill="#F472B6"/>
+  <rect x="13" y="3" width="3" height="2" fill="#F472B6"/>
+  <!-- Right ear inner -->
+  <rect x="14" y="3" width="1" height="1" fill="#EC4899"/>
+
+  <!-- Face base (light pink) -->
+  <rect x="2" y="3" width="12" height="10" fill="#FBCFE8"/>
+  <rect x="1" y="4" width="14" height="8" fill="#FBCFE8"/>
+  <rect x="2" y="13" width="12" height="1" fill="#FBCFE8"/>
+
+  <!-- Eyes (black) -->
+  <rect x="4" y="6" width="2" height="2" fill="#1a1a1a"/>
+  <rect x="10" y="6" width="2" height="2" fill="#1a1a1a"/>
+
+  <!-- Eye shine left -->
+  <rect x="4" y="6" width="1" height="1" fill="#f0f0f0"/>
+  <!-- Eye shine right -->
+  <rect x="10" y="6" width="1" height="1" fill="#f0f0f0"/>
+
+  <!-- Cheeks (deeper pink blush) -->
+  <rect x="2" y="8" width="3" height="2" fill="#F472B6" fill-opacity="0.6"/>
+  <rect x="11" y="8" width="3" height="2" fill="#F472B6" fill-opacity="0.6"/>
+
+  <!-- Snout (medium pink oval) -->
+  <rect x="5" y="9" width="6" height="4" fill="#F472B6"/>
+  <rect x="4" y="10" width="8" height="2" fill="#F472B6"/>
+
+  <!-- Nostrils (dark) -->
+  <rect x="6" y="10" width="1" height="2" fill="#BE185D"/>
+  <rect x="9" y="10" width="1" height="2" fill="#BE185D"/>
+
+  <!-- Mouth (small smile) -->
+  <rect x="6" y="13" width="1" height="1" fill="#BE185D"/>
+  <rect x="9" y="13" width="1" height="1" fill="#BE185D"/>
+  <rect x="7" y="14" width="2" height="1" fill="#BE185D"/>
+
+</svg>
