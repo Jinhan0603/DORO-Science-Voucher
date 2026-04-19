@@ -1494,6 +1494,43 @@ body { font-size: 17px; }
 
   /* Scroll progress bar — thicker on mobile for visibility */
   .progress-bar { height: 4px; }
+
+  /* DOROLAND Character Card — mobile */
+  .doro-char-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.85rem;
+    padding: 1.1rem 1rem;
+    max-width: 100%;
+  }
+  .doro-char-info { text-align: center; }
+  .doro-char-name,
+  .doro-char-zone { justify-content: center; }
+  .doro-char-dialogue { border-left: none; padding-left: 0; border-top: 2px solid rgba(20,184,166,0.3); padding-top: 0.5rem; }
+
+  /* Zone story banner */
+  .doro-zone-story-inner { padding: 0.75rem 1rem; }
+  .doro-zone-badge { font-size: 0.46rem; }
+  .doro-zone-story p { font-size: 0.84rem; }
+
+  /* Pixel divider — lighter on mobile */
+  .px-divider { height: 12px; margin: 1rem 0; }
+  .px-divider-dot { width: 3px; height: 3px; }
+  .px-divider-dot:nth-child(even) { height: 5px; }
+
+  /* Quest progress walker — smaller on mobile */
+  .quest-progress-walker { width: 16px; height: 16px; top: -14px; }
+
+  /* Checklist checkbox — full 44px touch target */
+  .checklist-item { min-height: 44px; }
+  .checklist-item input[type="checkbox"] { width: 20px !important; height: 20px !important; }
+
+  /* Info label — slightly larger on mobile for readability */
+  .info-label { font-size: 0.52rem !important; }
+
+  /* Pixel sparkle dots smaller on mobile */
+  .quest-blink-dot { width: 5px; height: 5px; }
 }
 
 /* ============================================
@@ -1503,12 +1540,45 @@ body { font-size: 17px; }
   html { font-size: 15px; }
   .hero h1 { font-size: clamp(1.6rem, 8vw, 2.4rem); }
   .detail-hero h1 { font-size: clamp(1.2rem, 6vw, 1.6rem); }
+
+  /* Info bar: 1열 */
   .info-bar .info-item { width: 100%; border-right: none; }
+  .info-bar::before { font-size: 0.44rem; letter-spacing: 0.06em; }
+
+  /* Kit photos */
   .detail-kit-thumb-row { grid-template-columns: 1fr; }
+  .detail-kit-thumb img { height: 200px; }
+
+  /* Character grid */
   .chars-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Quest tabs */
   .quest-tabs { justify-content: center; }
-  .mission-step-title { font-size: 0.85rem !important; }
-  .step-quest-label { font-size: 0.48rem; }
-  .panel-badge { font-size: 0.44rem; }
-  .panel-title { font-size: 0.85rem; }
+  .quest-tab { font-size: 0.5rem; padding: 0.5rem 0.65rem; }
+
+  /* Mission step */
+  .mission-step-title { font-size: 0.85rem !important; line-height: 1.4 !important; }
+  .mission-step-body p { font-size: 0.84rem !important; }
+  .mission-step-body ul li { font-size: 0.82rem !important; }
+  .step-quest-label { font-size: 0.46rem; padding: 0.28rem 0.65rem; }
+
+  /* Game panel header */
+  .panel-badge { font-size: 0.42rem; }
+  .panel-title { font-size: 0.84rem; }
+  .game-panel-header { padding: 0.4rem 0.75rem; gap: 0.55rem; }
+
+  /* Character card — small phone */
+  .doro-char-sprite { width: 64px; height: 64px; }
+  .pixel-char-img { width: 56px; height: 56px; }
+  .doro-char-value { font-size: 0.88rem; }
+  .doro-char-dialogue { font-size: 0.72rem; }
+
+  /* Zone story */
+  .doro-zone-story p { font-size: 0.8rem; }
+
+  /* Pixel divider — minimal on small phones */
+  .px-divider { display: none; }
+
+  /* FAQ */
+  .faq-question { font-size: 0.82rem !important; min-height: 48px; }
 }
