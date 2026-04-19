@@ -509,64 +509,109 @@
   <!-- ============ STORY SECTION ============ -->
   <section id="story">
     <div class="story-section">
-      <div class="story-image fade-in">
-        <img src="assets/images/doroland/characters.png" alt="도로랜드 캐릭터">
-      </div>
-      <div class="story-text fade-in">
+      <div class="story-text fade-in" style="grid-column:1/-1;max-width:900px;margin:0 auto;text-align:center;">
         <div class="section-badge">📖 DOROLAND STORY</div>
-        <h2 data-i18n="story.title">도로랜드의 이야기</h2>
-        <div class="story-quote" data-i18n="story.quote">
+        <h2 data-i18n="story.title" style="margin-bottom:0.75rem;">도로랜드의 이야기</h2>
+        <div class="story-quote" data-i18n="story.quote" style="display:inline-block;text-align:left;max-width:600px;">
           "기술은 자연을 해치지 않아, 우리가 올바르게 사용한다면.."
         </div>
-        <p data-i18n="story.p1">
-          도로랜드는 기술과 자연이 조화롭게 공존하던 테마파크.
-          어느 날 갑자기 모든 것이 멈추고, 도로랜드를 되살리기 위한 모험이 시작됩니다.
-          각 키트는 도로랜드의 구역을 복구하는 미션과 연결되어 있습니다.
+        <p style="margin-top:0.85rem;color:var(--text-secondary);font-size:0.9rem;max-width:680px;margin-left:auto;margin-right:auto;" data-i18n="story.p1">
+          도로랜드는 기술과 자연이 조화롭게 공존하던 테마파크. 어느 날 갑자기 모든 것이 멈추고, 도로랜드를 되살리기 위한 모험이 시작됩니다.
         </p>
-        <p style="margin-top:1rem;" data-i18n="story.p2">
-          사파리 구역의 센서를 살리고, 하모니아의 기계를 수리하고,
-          잊혀진 시간 속 비밀을 밝히세요.
+        <p style="margin-top:0.6rem;color:var(--text-secondary);font-size:0.9rem;max-width:680px;margin-left:auto;margin-right:auto;" data-i18n="story.p2">
+          사파리 구역의 센서를 살리고, 하모니아의 기계를 수리하고, 잊혀진 시간 속 비밀을 밝히세요.
           <strong style="color:var(--emerald);">당신이 도로랜드를 다시 움직이게 할 수 있는 유일한 사람입니다.</strong>
         </p>
+      </div>
+    </div>
 
-        <!-- 6개 캐릭터 스프라이트 (실제 키트 사진 썸네일) -->
-        <div class="character-sprites">
-          <div class="character-sprite-wrap">
-            <a href="programs/1-bluetooth-speaker/index.html" class="character-sprite" title="도블투스">
-              <img src="assets/images/kits/kit-speaker-white.png" alt="도블투스">
-            </a>
-            <div class="character-sprite-label">🐼 도블투스</div>
+    <!-- DOROLAND 5 캐릭터 픽셀 아트 쇼케이스 -->
+    <div class="doroland-chars-section">
+      <div class="pixel-divider" style="max-width:900px;margin:0 auto 1.5rem;">
+        <div class="pixel-divider-line"></div>
+        <span class="pixel-divider-icon" style="font-family:var(--font-pixel);font-size:0.55rem;color:var(--emerald);" data-i18n="story.chars.title">DOROLAND 캐릭터</span>
+        <div class="pixel-divider-line"></div>
+      </div>
+      <div class="doroland-chars">
+        <div class="doroland-char-wrap">
+          <div class="doroland-char-frame emerald">
+            <img src="assets/images/doroland/char-rico.png" alt="리코">
           </div>
-          <div class="character-sprite-wrap">
-            <a href="programs/2-mood-light/index.html" class="character-sprite" title="도도무드">
-              <img src="assets/images/kits/kit-moodlight-white.png" alt="도도무드">
-            </a>
-            <div class="character-sprite-label">🐱 도도무드</div>
+          <div class="doroland-char-name">리코</div>
+          <div class="doroland-char-role">RICO</div>
+        </div>
+        <div class="doroland-char-wrap">
+          <div class="doroland-char-frame purple">
+            <img src="assets/images/doroland/char-xylo.png" alt="자일로">
           </div>
-          <div class="character-sprite-wrap">
-            <a href="programs/3-walking-robot/index.html" class="character-sprite" title="도봇">
-              <img src="assets/images/kits/kit-robot-white.png" alt="도봇">
-            </a>
-            <div class="character-sprite-label">🐶 도봇</div>
+          <div class="doroland-char-name">자일로</div>
+          <div class="doroland-char-role">XYLO</div>
+        </div>
+        <div class="doroland-char-wrap">
+          <div class="doroland-char-frame rose">
+            <img src="assets/images/doroland/char-naty.png" alt="네이티">
           </div>
-          <div class="character-sprite-wrap">
-            <a href="programs/4-ir-car/index.html" class="character-sprite" title="도카">
-              <img src="assets/images/kits/kit-car-white.png" alt="도카">
-            </a>
-            <div class="character-sprite-label">🚗 도카</div>
+          <div class="doroland-char-name">네이티</div>
+          <div class="doroland-char-role">NATY</div>
+        </div>
+        <div class="doroland-char-wrap">
+          <div class="doroland-char-frame amber">
+            <img src="assets/images/doroland/char-codex.png" alt="코덱스">
           </div>
-          <div class="character-sprite-wrap">
-            <a href="programs/5-arduino-game/index.html" class="character-sprite" title="도텐도">
-              <img src="assets/images/kits/kit-game-white.png" alt="도텐도">
-            </a>
-            <div class="character-sprite-label">🐷 도텐도</div>
+          <div class="doroland-char-name">코덱스</div>
+          <div class="doroland-char-role">CODEX</div>
+        </div>
+        <div class="doroland-char-wrap">
+          <div class="doroland-char-frame sky">
+            <img src="assets/images/doroland/char-zero.png" alt="제로">
           </div>
-          <div class="character-sprite-wrap">
-            <a href="programs/6-ultrasonic-piano/index.html" class="character-sprite" title="도짜르트">
-              <img src="assets/images/kits/kit-piano-white.png" alt="도짜르트">
-            </a>
-            <div class="character-sprite-label">🐸 도짜르트</div>
-          </div>
+          <div class="doroland-char-name">제로</div>
+          <div class="doroland-char-role">ZERO</div>
+        </div>
+      </div>
+
+      <!-- 6개 키트 퀘스트 아이콘 -->
+      <div class="pixel-divider" style="max-width:900px;margin:1.5rem auto 1rem;">
+        <div class="pixel-divider-line"></div>
+        <span class="pixel-divider-icon" style="font-family:var(--font-pixel);font-size:0.52rem;color:var(--text-muted);">QUEST KITS</span>
+        <div class="pixel-divider-line"></div>
+      </div>
+      <div class="character-sprites" style="justify-content:center;">
+        <div class="character-sprite-wrap">
+          <a href="programs/1-bluetooth-speaker/index.html" class="character-sprite" title="도블투스">
+            <img src="assets/images/kits/kit-speaker-white.png" alt="도블투스">
+          </a>
+          <div class="character-sprite-label">🐼 도블투스</div>
+        </div>
+        <div class="character-sprite-wrap">
+          <a href="programs/2-mood-light/index.html" class="character-sprite" title="도도무드">
+            <img src="assets/images/kits/kit-moodlight-white.png" alt="도도무드">
+          </a>
+          <div class="character-sprite-label">🐱 도도무드</div>
+        </div>
+        <div class="character-sprite-wrap">
+          <a href="programs/3-walking-robot/index.html" class="character-sprite" title="도봇">
+            <img src="assets/images/kits/kit-robot-white.png" alt="도봇">
+          </a>
+          <div class="character-sprite-label">🐶 도봇</div>
+        </div>
+        <div class="character-sprite-wrap">
+          <a href="programs/4-ir-car/index.html" class="character-sprite" title="도카">
+            <img src="assets/images/kits/kit-car-white.png" alt="도카">
+          </a>
+          <div class="character-sprite-label">🚗 도카</div>
+        </div>
+        <div class="character-sprite-wrap">
+          <a href="programs/5-arduino-game/index.html" class="character-sprite" title="도텐도">
+            <img src="assets/images/kits/kit-game-white.png" alt="도텐도">
+          </a>
+          <div class="character-sprite-label">🐷 도텐도</div>
+        </div>
+        <div class="character-sprite-wrap">
+          <a href="programs/6-ultrasonic-piano/index.html" class="character-sprite" title="도짜르트">
+            <img src="assets/images/kits/kit-piano-white.png" alt="도짜르트">
+          </a>
+          <div class="character-sprite-label">🐸 도짜르트</div>
         </div>
       </div>
     </div>

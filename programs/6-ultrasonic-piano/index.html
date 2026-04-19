@@ -11,6 +11,7 @@
   <div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
   <div class="bg-scanlines"></div>
   <div class="progress-bar" id="progress"></div>
+  <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" title="Switch to English">EN</button>
   <nav class="nav" id="navbar">
     <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
       <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;">프로그램 목록</span>
@@ -23,19 +24,19 @@
     <a href="#photos" class="toc-item active"><span class="toc-dot"></span> 키트 사진</a>
     <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
     <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
-    <a href="#media" class="toc-item"><span class="toc-dot"></span> 조립 영상</a>
+    <a href="#media" class="toc-item"><span class="toc-dot"></span> 데모 영상</a>
     <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
     <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
   </div>
 
   <section class="detail-hero">
-    <span class="chapter-badge" style="background:var(--coral);color:#fff;">🐸 DORO 피지컬 컴퓨팅 키트</span>
-    <h1>🎹 도짜르트 — 초음파 피아노</h1>
-    <p class="hero-desc">
+    <span class="chapter-badge" data-i18n="p6.kit" style="background:var(--coral);color:#fff;">🐸 DORO 피지컬 컴퓨팅 키트</span>
+    <h1 data-i18n="p6.title">🎹 도짜르트 — 초음파 피아노</h1>
+    <p class="hero-desc" data-i18n="p6.desc">
       개구리 캐릭터 피아노 건반을 조립하고, 초음파 센서 앞에서 손 거리를 조절하면
       음높이가 바뀌는 인터랙티브 악기를 코딩합니다. 아두이노 UNO + 조건문 기반.
     </p>
-    <div class="science-badge">🔬 핵심 과학 개념: 초음파 센서 · 거리-음높이 매핑 · 조건문 코딩 · 사운드 인터랙션</div>
+    <div class="science-badge" data-i18n="p6.science">🔬 핵심 과학 개념: 초음파 센서 · 거리-음높이 매핑 · 조건문 코딩 · 사운드 인터랙션</div>
   </section>
 
   <div class="info-bar">
@@ -49,7 +50,7 @@
   <div class="detail-content">
 
     <section id="photos" style="margin-bottom:2.5rem;">
-      <h2 style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
+      <h2 data-i18n="prog.photos" style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
       <div class="detail-kit-photos">
         <div class="detail-kit-hero">
           <img src="../../assets/images/kits/kit-piano-hero.jpg" alt="도짜르트 완성품 — 개구리 초음파 피아노">
@@ -66,7 +67,7 @@
     </section>
 
     <section id="checklist" class="checklist-section fade-in">
-      <h2 class="checklist-title">🔧 준비물 체크리스트</h2>
+      <h2 class="checklist-title" data-i18n="prog.checklist.title">🔧 준비물 체크리스트</h2>
       <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. <span id="checklist-progress"></span></p>
       <div class="checklist-item"><input type="checkbox"><span>🐸 피아노 건반 보드 (개구리 디자인 그린)</span></div>
       <div class="checklist-item"><input type="checkbox"><span>💻 아두이노 UNO 보드 × 1</span></div>
@@ -81,7 +82,7 @@
     </section>
 
     <section id="missions" class="mission-section fade-in">
-      <h2>📖 STEP-BY-STEP 교육 과정</h2>
+      <h2 data-i18n="prog.missions">📖 STEP-BY-STEP 교육 과정</h2>
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--coral);">1</span>
@@ -169,13 +170,14 @@
     </section>
 
     <section id="media" class="media-section fade-in">
-      <h2>🎬 조립 영상 + 교육 자료</h2>
+      <h2 data-i18n="prog.demo.title">🎬 키트 작동 데모 영상</h2>
       <div class="assembly-video">
         <video controls preload="metadata" poster="../../assets/images/kits/kit-piano-hero.jpg">
           <source src="../../assets/media/kit-piano-assembly.mp4" type="video/mp4">
           브라우저가 비디오를 지원하지 않습니다.
         </video>
-        <div class="assembly-video-caption">📹 도짜르트 초음파 피아노 조립 영상 — 선생님 사전 준비 가이드</div>
+        <div class="assembly-video-caption"><span data-i18n="p6.demo.caption">📹 도짜르트 초음파 피아노 작동 데모</span></div>
+      <p class="demo-note" data-i18n="prog.demo.note">&#8251; 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.</p>
       </div>
       <div class="media-downloads">
         <a href="../../assets/media/kit-piano-assembly.mp4" download class="media-download-btn">
@@ -185,14 +187,14 @@
     </section>
 
     <section id="ai-ext" class="ai-extension fade-in">
-      <span class="extension-label">선택형 확장 활동</span>
-      <h3>🎵 AI 작곡 + 피아노 연주</h3>
+      <span class="extension-label" data-i18n="prog.ai.label">선택형 확장 활동</span>
+      <h3 data-i18n="p6.ai.title">🎵 AI 작곡 + 피아노 연주</h3>
       <p>AI 작곡 도구 Suno로 멜로디를 만들고, 도짜르트 피아노로 그 멜로디를 재현하는 창작 확장 활동이 가능합니다.</p>
       <a href="https://suno.com" target="_blank" class="ai-link">Suno 바로가기 →</a>
     </section>
 
     <section id="faq" class="faq-section fade-in">
-      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;">❓ 자주 묻는 질문</h2>
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;"><span data-i18n="prog.faq.title">❓ 자주 묻는 질문</span></h2>
       <div class="faq-item">
         <button class="faq-question">손을 움직여도 소리가 안 날 때는?</button>
         <div class="faq-answer"><div class="faq-answer-inner">초음파 센서의 Trig/Echo 핀 연결을 확인하고, 피에조 부저 핀 번호가 코드와 일치하는지 확인하세요.</div></div>
@@ -214,6 +216,7 @@
       <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
     </div>
   </footer>
+  <script src="../../assets/js/i18n.js"></script>
   <script src="../../assets/js/main.js"></script>
 </body>
 </html>

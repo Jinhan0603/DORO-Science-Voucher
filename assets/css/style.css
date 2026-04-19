@@ -468,7 +468,7 @@ body {
 .story-text p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.8; }
 
 /* Character sprites (kit thumbnail portraits) */
-.character-sprites { display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap; }
+.character-sprites { display: flex; gap: 0.75rem; flex-wrap: wrap; }
 .character-sprite-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
 .character-sprite {
   width: 60px; height: 60px; border-radius: 8px; overflow: hidden;
@@ -477,6 +477,55 @@ body {
 .character-sprite:hover { transform: scale(1.12); border-color: var(--emerald); }
 .character-sprite img { width: 100%; height: 100%; object-fit: cover; }
 .character-sprite-label { font-family: var(--font-pixel); font-size: 0.42rem; color: var(--text-muted); text-align: center; }
+
+/* DOROLAND Character Pixel Art Showcase */
+.doroland-chars-section {
+  padding: 1.5rem 2rem 3rem;
+  text-align: center;
+}
+.doroland-chars {
+  display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+.doroland-char-wrap {
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+}
+.doroland-char-frame {
+  width: 110px; height: 130px; overflow: hidden;
+  border: 3px solid rgba(255,255,255,0.15);
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.4);
+  image-rendering: pixelated;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer; background: rgba(11,21,40,0.8);
+  position: relative;
+}
+.doroland-char-frame::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 1;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 3px,
+    rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px
+  );
+  pointer-events: none;
+}
+.doroland-char-frame img {
+  width: 100%; height: 100%; object-fit: contain;
+  image-rendering: -webkit-optimize-contrast;
+  display: block;
+}
+.doroland-char-frame:hover { transform: translateY(-6px) scale(1.05); }
+.doroland-char-frame.emerald { border-color: var(--emerald); box-shadow: 4px 4px 0 rgba(0,0,0,0.7), 0 0 18px var(--emerald-glow); }
+.doroland-char-frame.purple  { border-color: var(--purple);  box-shadow: 4px 4px 0 rgba(0,0,0,0.7), 0 0 18px var(--purple-glow); }
+.doroland-char-frame.rose    { border-color: var(--rose);    box-shadow: 4px 4px 0 rgba(0,0,0,0.7), 0 0 18px var(--rose-glow); }
+.doroland-char-frame.amber   { border-color: var(--amber);   box-shadow: 4px 4px 0 rgba(0,0,0,0.7), 0 0 18px var(--amber-glow); }
+.doroland-char-frame.sky     { border-color: var(--sky);     box-shadow: 4px 4px 0 rgba(0,0,0,0.7), 0 0 18px var(--sky-glow); }
+.doroland-char-name {
+  font-family: var(--font-display); font-size: 0.88rem; font-weight: 800;
+  color: var(--text-primary);
+}
+.doroland-char-role {
+  font-family: var(--font-pixel); font-size: 0.42rem; color: var(--text-muted);
+}
 
 /* ============================================
    SCIENCE × MAKING SECTION
@@ -670,6 +719,7 @@ body {
 }
 .media-download-btn:hover { border-color: var(--emerald); color: var(--emerald); }
 .media-download-btn .dl-icon { font-size: 1.1rem; }
+.demo-note { font-size: 0.75rem; color: var(--text-muted); margin: 0.5rem 0 0; font-style: italic; }
 
 /* Locked quest section (camp-only) */
 .locked-section-header {

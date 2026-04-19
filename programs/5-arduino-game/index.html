@@ -11,6 +11,7 @@
   <div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
   <div class="bg-scanlines"></div>
   <div class="progress-bar" id="progress"></div>
+  <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" title="Switch to English">EN</button>
   <nav class="nav" id="navbar">
     <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
       <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;">프로그램 목록</span>
@@ -23,19 +24,19 @@
     <a href="#photos" class="toc-item active"><span class="toc-dot"></span> 키트 사진</a>
     <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
     <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
-    <a href="#media" class="toc-item"><span class="toc-dot"></span> 조립 영상</a>
+    <a href="#media" class="toc-item"><span class="toc-dot"></span> 데모 영상</a>
     <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
     <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
   </div>
 
   <section class="detail-hero">
-    <span class="chapter-badge" style="background:var(--sky);color:#000;">🐷 DORO 게임 코딩 키트</span>
-    <h1>🎮 도텐도 — 아두이노 게임기</h1>
-    <p class="hero-desc">
+    <span class="chapter-badge" data-i18n="p5.kit" style="background:var(--sky);color:#000;">🐷 DORO 게임 코딩 키트</span>
+    <h1 data-i18n="p5.title">🎮 도텐도 — 아두이노 게임기</h1>
+    <p class="hero-desc" data-i18n="p5.desc">
       파란 돼지 캐릭터 디자인의 목재 게임기를 조립하고, LCD 화면과 버튼으로
       러닝 점프 게임을 코딩하며 피지컬 컴퓨팅을 체험합니다. 아두이노 UNO 기반.
     </p>
-    <div class="science-badge">🔬 핵심 과학 개념: 디지털 입력 · LCD 출력 · 아두이노 코딩 · 피지컬 컴퓨팅</div>
+    <div class="science-badge" data-i18n="p5.science">🔬 핵심 과학 개념: 디지털 입력 · LCD 출력 · 아두이노 코딩 · 피지컬 컴퓨팅</div>
   </section>
 
   <div class="info-bar">
@@ -49,7 +50,7 @@
   <div class="detail-content">
 
     <section id="photos" style="margin-bottom:2.5rem;">
-      <h2 style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
+      <h2 data-i18n="prog.photos" style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
       <div class="detail-kit-photos">
         <div class="detail-kit-hero">
           <img src="../../assets/images/kits/kit-game-white.png" alt="도텐도 완성품 — 파란 돼지 게임기 (흰 배경)">
@@ -66,7 +67,7 @@
     </section>
 
     <section id="checklist" class="checklist-section fade-in">
-      <h2 class="checklist-title">🔧 준비물 체크리스트</h2>
+      <h2 class="checklist-title" data-i18n="prog.checklist.title">🔧 준비물 체크리스트</h2>
       <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. <span id="checklist-progress"></span></p>
       <div class="checklist-item"><input type="checkbox"><span>🐷 게임기 본체 (파란 돼지 디자인 목재 프레임)</span></div>
       <div class="checklist-item"><input type="checkbox"><span>💻 아두이노 UNO 보드 × 1</span></div>
@@ -80,7 +81,7 @@
     </section>
 
     <section id="missions" class="mission-section fade-in">
-      <h2>📖 STEP-BY-STEP 교육 과정</h2>
+      <h2 data-i18n="prog.missions">📖 STEP-BY-STEP 교육 과정</h2>
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--sky);">1</span>
@@ -168,13 +169,14 @@
     </section>
 
     <section id="media" class="media-section fade-in">
-      <h2>🎬 조립 영상 + 교육 자료</h2>
+      <h2 data-i18n="prog.demo.title">🎬 키트 작동 데모 영상</h2>
       <div class="assembly-video">
         <video controls preload="metadata" poster="../../assets/images/kits/kit-game-white.png">
           <source src="../../assets/media/kit-game-assembly.mp4" type="video/mp4">
           브라우저가 비디오를 지원하지 않습니다.
         </video>
-        <div class="assembly-video-caption">📹 도텐도 게임기 조립 영상 — 선생님 사전 준비 가이드</div>
+        <div class="assembly-video-caption"><span data-i18n="p5.demo.caption">📹 도텐도 아두이노 게임기 작동 데모</span></div>
+      <p class="demo-note" data-i18n="prog.demo.note">&#8251; 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.</p>
       </div>
       <div class="media-downloads">
         <a href="../../assets/media/kit-game-assembly.pdf" download class="media-download-btn">
@@ -187,13 +189,13 @@
     </section>
 
     <section id="ai-ext" class="ai-extension fade-in">
-      <span class="extension-label">선택형 확장 활동</span>
-      <h3>🤖 AI 난이도 적응 게임 설계</h3>
+      <span class="extension-label" data-i18n="prog.ai.label">선택형 확장 활동</span>
+      <h3 data-i18n="p5.ai.title">🤖 AI 난이도 적응 게임 설계</h3>
       <p>플레이어 점수에 따라 난이도가 자동으로 올라가는 AI 적응형 게임 로직을 설계하는 심화 확장 활동이 가능합니다.</p>
     </section>
 
     <section id="faq" class="faq-section fade-in">
-      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;">❓ 자주 묻는 질문</h2>
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;"><span data-i18n="prog.faq.title">❓ 자주 묻는 질문</span></h2>
       <div class="faq-item">
         <button class="faq-question">LCD에 아무것도 표시되지 않을 때는?</button>
         <div class="faq-answer"><div class="faq-answer-inner">LCD 뒷면의 I2C 주소(보통 0x27 또는 0x3F)를 코드에서 확인하세요. 밝기 조절 나사를 돌려 대비를 조정해볼 수도 있습니다.</div></div>
@@ -215,6 +217,7 @@
       <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
     </div>
   </footer>
+  <script src="../../assets/js/i18n.js"></script>
   <script src="../../assets/js/main.js"></script>
 </body>
 </html>
