@@ -571,23 +571,94 @@ body {
 /* ============================================
    DETAIL PAGE
    ============================================ */
-/* ── Pixel Character in Hero ── */
-.pixel-char-hero {
-  display: flex; justify-content: center; margin-bottom: 1.25rem;
+/* ══ DOROLAND Character Card ══ */
+.doro-char-card {
+  display: flex; align-items: center; gap: 1.25rem;
+  background: rgba(11,21,40,0.7);
+  border: 2px solid var(--zone-color, var(--emerald));
+  padding: 1rem 1.25rem;
+  margin: 0 auto 1.5rem;
+  max-width: 520px;
+  position: relative;
+}
+.doro-char-card::before {
+  content: 'DOROLAND CHARACTER';
+  font-family: var(--font-pixel);
+  font-size: 0.45rem;
+  color: var(--zone-color, var(--emerald));
+  position: absolute;
+  top: -0.6rem; left: 1rem;
+  background: var(--bg-deep);
+  padding: 0 0.5rem;
+  letter-spacing: 0.1em;
+}
+.doro-char-sprite {
+  flex-shrink: 0;
+  width: 80px; height: 80px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex; align-items: center; justify-content: center;
+  position: relative;
 }
 .pixel-char-img {
-  width: 96px; height: 96px;
+  width: 72px; height: 72px;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-  filter: drop-shadow(0 0 16px var(--emerald)) drop-shadow(0 0 40px rgba(20,184,166,0.3));
-  animation: pixel-char-float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px var(--emerald));
+  animation: pixel-char-float 2.8s ease-in-out infinite;
 }
 @keyframes pixel-char-float {
   0%, 100% { transform: translateY(0px); }
-  50%       { transform: translateY(-8px); }
+  50%       { transform: translateY(-5px); }
+}
+.doro-char-info { flex: 1; text-align: left; }
+.doro-char-name,
+.doro-char-zone {
+  display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.4rem;
+}
+.doro-char-label {
+  font-family: var(--font-pixel);
+  font-size: 0.42rem;
+  color: var(--zone-color, var(--emerald));
+  flex-shrink: 0;
+  letter-spacing: 0.08em;
+}
+.doro-char-value {
+  font-family: var(--font-display);
+  font-size: 1rem; font-weight: 800;
+  color: var(--text-primary);
+}
+.zone-name { font-size: 0.82rem; color: var(--text-secondary); font-weight: 600; }
+.doro-char-dialogue {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  border-left: 2px solid var(--zone-color, var(--emerald));
+  padding-left: 0.65rem;
+  margin-top: 0.35rem;
+  line-height: 1.6;
 }
 
-/* ── Pixel icons used as decorative elements ── */
+/* ══ DOROLAND Zone Story Card ══ */
+.doro-zone-story {
+  background: linear-gradient(135deg, rgba(20,184,166,0.06) 0%, rgba(11,21,40,0.4) 100%);
+  border-left: 4px solid var(--emerald);
+  margin-bottom: 0;
+}
+.doro-zone-story-inner { max-width: 780px; margin: 0 auto; padding: 0.85rem 1.5rem; }
+.doro-zone-badge {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  color: var(--emerald);
+  display: block; margin-bottom: 0.4rem;
+  letter-spacing: 0.08em;
+}
+.doro-zone-story p {
+  color: var(--text-secondary);
+  font-size: 0.88rem; line-height: 1.75;
+}
+
+/* ── Pixel icons ── */
 .pixel-icon {
   width: 24px; height: 24px;
   image-rendering: pixelated; vertical-align: middle;
