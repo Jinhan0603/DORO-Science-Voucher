@@ -3,81 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>도봇 — DORO 기구학 로봇 키트 | DOROLAND</title>
-  <meta name="description" content="2족 보행 로봇을 조립하며 기구학과 원운동-보행운동 변환 원리를 탐구합니다.">
+  <title>🐶 도봇 — DORO 기구학 로봇 키트 | DOROLAND V2</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-  <div class="bg-fantasy"></div><div class="bg-overlay"></div><div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="bg-fantasy"></div><div class="bg-overlay"></div>
+  <div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="bg-scanlines"></div>
   <div class="progress-bar" id="progress"></div>
-
   <nav class="nav" id="navbar">
-    <a href="../../index.html" class="nav-brand" style="gap:0.5rem;"><span style="font-size:1.2rem;">←</span><span class="nav-brand-text">프로그램 목록</span></a>
-    <a href="../../index.html" class="nav-brand"><span class="nav-brand-text">DORO<span>LAND</span></span></a>
+    <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
+      <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;">프로그램 목록</span>
+    </a>
+    <a href="../../index.html" class="nav-brand">
+      <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V2</span>
+    </a>
   </nav>
-
   <div class="toc-sidebar">
-    <a href="#checklist" class="toc-item active"><span class="toc-dot"></span> 준비물</a>
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> 키트 사진</a>
+    <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
     <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
+    <a href="#media" class="toc-item"><span class="toc-dot"></span> 조립 영상</a>
     <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
     <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
   </div>
 
   <section class="detail-hero">
-    <span class="chapter-badge" style="background: var(--rose);">DORO 기구학 로봇 키트</span>
+    <span class="chapter-badge" style="background:var(--rose);color:#fff;">🐶 DORO 기구학 로봇 키트</span>
     <h1>🤖 도봇 — 2족 보행 로봇</h1>
-    <p class="hero-desc">두 발로 걷는 로봇을 직접 조립하며, 기구학(원운동→보행운동 변환)과 로봇 구조의 핵심 원리를 체험합니다.</p>
-    <div class="science-badge">🔬 핵심 과학 개념: 기구학 · 원운동-보행운동 변환 · 전자회로 · 로봇 구조</div>
+    <p class="hero-desc">
+      강아지 캐릭터 목재 프레임의 2족 보행 로봇을 조립하며 기구학과 원운동-보행운동 변환 원리를 탐구합니다.
+      컬러 점퍼 와이어가 두 발이 되어 걷는 심화형 과학키트.
+    </p>
+    <div class="science-badge">🔬 핵심 과학 개념: 기구학 · 원운동→보행운동 변환 · 모터 제어 · 전자 회로</div>
   </section>
 
   <div class="info-bar">
-    <div class="info-item"><span class="info-label">소요시간</span><span class="info-value">⏱ 120분</span></div>
-    <div class="info-item"><span class="info-label">대상</span><span class="info-value">👤 초등 4~중등</span></div>
-    <div class="info-item"><span class="info-label">난이도</span><span class="info-value">⭐⭐⭐</span></div>
-    <div class="info-item"><span class="info-label">AI 확장</span><span class="info-value">🎬 Vrew (선택)</span></div>
-    <div class="info-item"><span class="info-label">운영형태</span><span class="info-value">🚌 DOROBUS</span></div>
+    <div class="info-item"><span class="info-label">⏱ 소요시간</span><span class="info-value">120분</span></div>
+    <div class="info-item"><span class="info-label">👤 대상</span><span class="info-value">초등 4~중등</span></div>
+    <div class="info-item"><span class="info-label">⭐ 난이도</span><span class="info-value">★★★</span></div>
+    <div class="info-item"><span class="info-label">🚌 운영형태</span><span class="info-value">DOROBUS</span></div>
+    <div class="info-item"><span class="info-label">🐶 캐릭터</span><span class="info-value">강아지</span></div>
   </div>
 
   <div class="detail-content">
+
+    <section id="photos" style="margin-bottom:2.5rem;">
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
+      <div class="detail-kit-photos">
+        <div class="detail-kit-hero">
+          <img src="../../assets/images/kits/kit-robot-white.png" alt="도봇 완성품 — 강아지 2족 보행 로봇 (흰 배경)">
+        </div>
+        <div class="detail-kit-thumb-row">
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-robot-hand.jpg" alt="도봇 손으로 들기">
+          </div>
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-robot-parts.jpg" alt="도봇 구성품 전체">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="checklist" class="checklist-section fade-in">
       <h2 class="checklist-title">🔧 준비물 체크리스트</h2>
-      <p class="checklist-desc">키트 구성품을 확인하세요. <span id="checklist-progress"></span></p>
-      <div class="checklist-item"><input type="checkbox"><span>워킹 로봇 프레임 부품 세트</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>DC 모터 × 1</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>기어 세트 (크랭크/링크 구조)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>배터리 홀더 + 건전지</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>스위치 + 연결선</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>조립 나사/볼트 세트</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>학생용 활동지 + 보행 분석 카드</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>조립 설명서</span></div>
+      <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. <span id="checklist-progress"></span></p>
+      <div class="checklist-item"><input type="checkbox"><span>🐶 로봇 바디 (강아지 디자인 목재 프레임)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>⚙️ DC 모터 × 1 (원운동 발생)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🦵 플라스틱 크랭크 레그 세트 (기구 메커니즘)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔋 배터리 홀더 + AA 배터리 × 2</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔌 스위치</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔗 색깔 점퍼 케이블 세트</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔩 조립 나사 + 드라이버</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📄 학생용 활동지</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📖 조립 설명서</span></div>
     </section>
 
     <section id="missions" class="mission-section fade-in">
       <h2>📖 STEP-BY-STEP 교육 과정</h2>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--rose);">1</span><div class="mission-step-header"><span class="mission-step-title">왜 이 키트를 배우는가</span><span class="mission-step-time">⏱ 15분</span></div><div class="mission-step-body"><p>로봇은 어떻게 걸을까? 원운동이 어떻게 보행운동으로 바뀌는지 소개합니다.</p><ul><li>실제 2족 보행 로봇 영상 감상</li><li>크랭크-링크 메커니즘 소개</li><li>기구학이란? 움직임을 설계하는 학문</li></ul><div class="mission-step-image"><img src="../../assets/images/programs/walking-robot.png" alt="워킹 로봇" loading="lazy"></div></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--rose);">2</span><div class="mission-step-header"><span class="mission-step-title">오늘의 과학 개념</span><span class="mission-step-time">⏱ 10분</span></div><div class="mission-step-body"><p>원운동과 직선운동의 차이, 모터의 회전이 다리의 움직임이 되는 과정을 학습합니다.</p><ul><li>원운동 → 왕복운동 → 보행운동 변환</li><li>모터-기어-크랭크 연결 구조</li><li>활동지 보행 메커니즘 분석 카드 작성</li></ul></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--rose);">3</span><div class="mission-step-header"><span class="mission-step-title">조립 — 로봇 만들기</span><span class="mission-step-time">⏱ 40분</span></div><div class="mission-step-body"><p>설명서를 따라 프레임, 기어, 모터를 조립합니다.</p><ul><li>다리 프레임 조립</li><li>기어/크랭크 메커니즘 설치</li><li>DC 모터 연결</li><li>배터리/스위치 배선</li><li>⚡ 안전 주의: 기어 맞물림 확인</li></ul></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--rose);">4</span><div class="mission-step-header"><span class="mission-step-title">작동 확인 + 보행 관찰</span><span class="mission-step-time">⏱ 25분</span></div><div class="mission-step-body"><p>로봇을 작동시키고, 보행 패턴을 관찰·비교합니다.</p><ul><li>평지에서 보행 테스트</li><li>경사면에서 보행 관찰</li><li>보행 속도/안정성 기록</li><li>원운동↔보행운동 비교 활동지 작성</li></ul></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--rose);">5</span><div class="mission-step-header"><span class="mission-step-title">정리 + 발표</span><span class="mission-step-time">⏱ 30분</span></div><div class="mission-step-body"><p>보행 원리를 정리하고, 로봇을 시연하며 발표합니다.</p><ul><li>기구학 핵심 정리</li><li>로봇 보행 시연</li><li>확장 미션: 다른 보행 구조 설계 아이디어</li></ul></div></div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">1</span>
+          <span class="mission-step-title">도입 — 어떻게 걷는가?</span>
+          <span class="mission-step-time">⏱ 15분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>사람과 동물이 걷는 원리를 분석하고, 기계가 이것을 어떻게 모방하는지 살펴봅니다.</p>
+          <ul>
+            <li>완성된 강아지 로봇 보행 시연</li>
+            <li>기구학: 회전 운동을 직선 운동으로 바꾸는 원리</li>
+            <li>크랭크 메커니즘 개념 소개</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-robot-white.png" alt="도봇 완성품" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">2</span>
+          <span class="mission-step-title">과학 개념 — 기구학과 모터</span>
+          <span class="mission-step-time">⏱ 15분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>기구학(Kinematics): 물체의 운동을 분석하는 학문</li>
+            <li>DC 모터: 전기 에너지 → 회전 운동</li>
+            <li>크랭크-레그 메커니즘: 회전 → 보행 운동</li>
+            <li>활동지 기구도 그리기</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">3</span>
+          <span class="mission-step-title">조립 — 강아지 로봇 제작</span>
+          <span class="mission-step-time">⏱ 50분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>목재 바디에 모터와 크랭크 레그를 조립하여 2족 보행 로봇을 완성합니다.</p>
+          <ul>
+            <li>목재 강아지 바디 조립</li>
+            <li>DC 모터 장착</li>
+            <li>크랭크 레그 연결 (기구 메커니즘)</li>
+            <li>배터리 홀더 및 스위치 연결</li>
+            <li>색깔 케이블 정리 (두발 표현)</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-robot-parts.jpg" alt="도봇 구성품 배열" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">4</span>
+          <span class="mission-step-title">작동 + 탐구</span>
+          <span class="mission-step-time">⏱ 20분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>스위치 ON → 보행 확인</li>
+            <li>평평한 면 vs 약간 기울어진 면 보행 비교</li>
+            <li>보폭과 속도 관찰 기록</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-robot-hand.jpg" alt="도봇 손으로 들기" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">5</span>
+          <span class="mission-step-title">정리 + 발표</span>
+          <span class="mission-step-time">⏱ 20분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>기구학 개념 정리</li>
+            <li>내 강아지 로봇 소개</li>
+            <li>실제 로봇 공학에 쓰이는 보행 메커니즘 탐구</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="media-section fade-in">
+      <h2>🎬 조립 영상 + 교육 자료</h2>
+      <div class="assembly-video">
+        <video controls preload="metadata" poster="../../assets/images/kits/kit-robot-white.png">
+          <source src="../../assets/media/kit-robot-assembly.mp4" type="video/mp4">
+          브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <div class="assembly-video-caption">📹 도봇 보행 로봇 조립 영상 — 선생님 사전 준비 가이드</div>
+      </div>
+      <div class="media-downloads">
+        <a href="../../assets/media/kit-robot-assembly.mp4" download class="media-download-btn">
+          <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
+        </a>
+      </div>
     </section>
 
     <section id="ai-ext" class="ai-extension fade-in">
       <span class="extension-label">선택형 확장 활동</span>
-      <h3>🎬 Vrew 영상 편집 체험</h3>
-      <p>기본 키트만으로도 학습이 완결됩니다. 추가로 Vrew를 활용하면, 로봇의 보행 영상을 촬영·편집하고 자동 자막과 내레이션을 추가하는 미디어 제작 활동이 가능합니다.</p>
-      <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--text-muted);">※ Vrew 미사용 시에도 관찰 기록지와 발표 활동으로 동일한 학습 목표를 달성합니다.</p>
-      <a href="https://vrew.voyagerx.com" target="_blank" class="ai-link">Vrew 바로가기 →</a>
+      <h3>🤖 Teachable Machine으로 보행 패턴 인식</h3>
+      <p>Google Teachable Machine으로 로봇의 보행 모션을 학습시키고, 걷는 상태와 멈춘 상태를 AI가 구별하는 확장 활동이 가능합니다.</p>
+      <a href="https://teachablemachine.withgoogle.com" target="_blank" class="ai-link">Teachable Machine →</a>
     </section>
 
     <section id="faq" class="faq-section fade-in">
-      <h2 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:1.5rem;">❓ 자주 묻는 질문</h2>
-      <div class="faq-item"><button class="faq-question">로봇이 걷지 않아요</button><div class="faq-answer"><div class="faq-answer-inner">기어가 정확히 맞물려 있는지, 모터 연결이 제대로 되었는지 확인하세요. 배터리 충전 상태도 점검합니다. 기어 간 유격이 있으면 정상 보행이 어렵습니다.</div></div></div>
-      <div class="faq-item"><button class="faq-question">한쪽으로만 기울어져요</button><div class="faq-answer"><div class="faq-answer-inner">좌우 다리 크랭크의 위치가 대칭인지 확인하세요. 미세한 조정이 보행 안정성에 큰 영향을 줍니다.</div></div></div>
-      <div class="faq-item"><button class="faq-question">조립 난이도가 높은가요?</button><div class="faq-answer"><div class="faq-answer-inner">도봇은 DORO 키트 중 심화형에 해당합니다. 초등 4학년 이상 권장하며, 보호자 도움이 있으면 저학년도 가능합니다.</div></div></div>
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;">❓ 자주 묻는 질문</h2>
+      <div class="faq-item">
+        <button class="faq-question">로봇이 걷지 않고 한 자리에서 돌 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">두 발의 크랭크 위상이 맞지 않은 경우입니다. 크랭크 레그의 연결 각도를 90도 엇갈리게 조정해 보세요.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">모터가 돌지 않을 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">배터리 방향과 스위치 연결을 확인하세요. 케이블이 모터 단자에 제대로 접촉되어 있는지도 확인합니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">조립 시간이 부족할 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">사전에 바디 프레임을 미리 반조립해두면 수업 시간 내에 충분히 완성할 수 있습니다. 교사 가이드에 단계별 시간 배분이 안내되어 있습니다.</div></div>
+      </div>
     </section>
   </div>
 
-  <footer class="footer"><div class="footer-container"><div class="footer-brand">DOROLAND</div><p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p></div></footer>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">⚔ DOROLAND V2 ⚔</div>
+      <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
+    </div>
+  </footer>
   <script src="../../assets/js/main.js"></script>
 </body>
 </html>

@@ -43,20 +43,22 @@ function initQuestTabs() {
   const tabs = document.querySelectorAll('.quest-tab');
   if (!tabs.length) return;
 
+  const questGrid = document.getElementById('quest-grid');
+  const lockedQuests = document.getElementById('locked-quests');
+
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
       const tabType = tab.dataset.tab;
-      const cards = document.querySelectorAll('.quest-card');
-      cards.forEach(card => {
-        if (tabType === 'active') {
-          card.style.display = card.classList.contains('locked') ? 'none' : '';
-        } else {
-          card.style.display = card.classList.contains('locked') ? '' : 'none';
-        }
-      });
+      if (tabType === 'active') {
+        if (questGrid) questGrid.style.display = '';
+        if (lockedQuests) lockedQuests.style.display = 'none';
+      } else {
+        if (questGrid) questGrid.style.display = 'none';
+        if (lockedQuests) lockedQuests.style.display = '';
+      }
     });
   });
 }

@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>도블투스 — DORO IoT 사운드 키트 | DOROLAND</title>
-  <meta name="description" content="블루투스 통신과 소리의 원리를 체험하는 IoT 스피커 조립 키트. DORO DIMC 홈러닝.">
+  <title>🐼 도블투스 — DORO IoT 사운드 키트 | DOROLAND V2</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -12,91 +11,115 @@
   <div class="bg-overlay"></div>
   <div class="bg-glow-teal"></div>
   <div class="bg-glow-purple"></div>
+  <div class="bg-scanlines"></div>
   <div class="progress-bar" id="progress"></div>
 
-  <!-- Nav -->
   <nav class="nav" id="navbar">
     <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
-      <span style="font-size:1.2rem;">←</span>
-      <span class="nav-brand-text">프로그램 목록</span>
+      <span style="font-size:1rem;">←</span>
+      <span class="nav-brand-text" style="font-size:0.55rem;">프로그램 목록</span>
     </a>
     <a href="../../index.html" class="nav-brand">
       <span class="nav-brand-text">DORO<span>LAND</span></span>
+      <span class="nav-version">V2</span>
     </a>
   </nav>
 
-  <!-- TOC Sidebar -->
   <div class="toc-sidebar">
-    <a href="#checklist" class="toc-item active"><span class="toc-dot"></span> 준비물</a>
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> 키트 사진</a>
+    <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
     <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
+    <a href="#media" class="toc-item"><span class="toc-dot"></span> 조립 영상</a>
     <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
     <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
   </div>
 
   <!-- Hero -->
   <section class="detail-hero">
-    <span class="chapter-badge" style="background: var(--emerald);">DORO IoT 사운드 키트</span>
+    <span class="chapter-badge" style="background:var(--emerald);color:#000;">🐼 DORO IoT 사운드 키트</span>
     <h1>🔊 도블투스 — 블루투스 스피커</h1>
     <p class="hero-desc">
-      IoT 블루투스 스피커를 직접 조립하고, 블루투스 통신의 원리와 소리가 만들어지는 과정을 체험하며 사물인터넷의 기초를 학습합니다.
+      판다 디자인 목재 프레임의 IoT 블루투스 스피커를 직접 조립하고,
+      블루투스 통신의 원리와 소리가 만들어지는 과정을 체험하며 사물인터넷의 기초를 학습합니다.
     </p>
-    <div class="science-badge">🔬 핵심 과학 개념: 블루투스 통신 · 사물인터넷 · 소리의 원리 · 모듈 연결</div>
+    <div class="science-badge">🔬 핵심 과학 개념: 블루투스 통신 · 사물인터넷 · 소리의 원리 · 앰프 신호 증폭</div>
   </section>
 
   <!-- Info Bar -->
   <div class="info-bar">
-    <div class="info-item"><span class="info-label">소요시간</span><span class="info-value">⏱ 90분</span></div>
-    <div class="info-item"><span class="info-label">대상</span><span class="info-value">👤 초등 4~6학년</span></div>
-    <div class="info-item"><span class="info-label">난이도</span><span class="info-value">⭐⭐☆</span></div>
-    <div class="info-item"><span class="info-label">AI 확장</span><span class="info-value">🎵 Suno (선택)</span></div>
-    <div class="info-item"><span class="info-label">운영형태</span><span class="info-value">🚌 DOROBUS</span></div>
+    <div class="info-item"><span class="info-label">⏱ 소요시간</span><span class="info-value">90분</span></div>
+    <div class="info-item"><span class="info-label">👤 대상</span><span class="info-value">초등 4~6학년</span></div>
+    <div class="info-item"><span class="info-label">⭐ 난이도</span><span class="info-value">★★☆</span></div>
+    <div class="info-item"><span class="info-label">🎵 AI 확장</span><span class="info-value">Suno (선택)</span></div>
+    <div class="info-item"><span class="info-label">🚌 운영형태</span><span class="info-value">DOROBUS</span></div>
+    <div class="info-item"><span class="info-label">🐼 캐릭터</span><span class="info-value">판다</span></div>
   </div>
 
   <!-- Main Content -->
   <div class="detail-content">
 
-    <!-- Checklist -->
+    <!-- ═══ KIT PHOTOS ═══ -->
+    <section id="photos" style="margin-bottom:2.5rem;">
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
+      <!-- Hero photo -->
+      <div class="detail-kit-photos">
+        <div class="detail-kit-hero">
+          <img src="../../assets/images/kits/kit-speaker-hero.jpg" alt="도블투스 완성품 — 판다 블루투스 스피커">
+        </div>
+        <!-- Thumb row: hand shot + parts -->
+        <div class="detail-kit-thumb-row">
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-speaker-hand.jpg" alt="도블투스 손으로 들기">
+          </div>
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-speaker-parts.jpg" alt="도블투스 구성품 전체">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CHECKLIST ═══ -->
     <section id="checklist" class="checklist-section fade-in">
       <h2 class="checklist-title">🔧 준비물 체크리스트</h2>
       <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. 체크 상태는 자동 저장됩니다. <span id="checklist-progress"></span></p>
-      <div class="checklist-item"><input type="checkbox"><span>블루투스 스피커 본체 (판다 디자인 프레임)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>스피커 유닛 × 2</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>블루투스 모듈</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>앰프 보드</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>배터리 팩 + 충전 케이블</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>연결 케이블 세트</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>조립 나사 + 드라이버</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>학생용 활동지</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>조립 설명서</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🐼 블루투스 스피커 본체 (판다 디자인 목재 프레임)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔈 스피커 유닛 × 2 (판다 눈 = 스피커)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📡 블루투스 모듈</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔌 앰프 보드</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔋 배터리 팩 + 충전 케이블</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔗 연결 케이블 세트</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔩 조립 나사 + 드라이버</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📄 학생용 활동지</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📖 조립 설명서</span></div>
     </section>
 
-    <!-- Mission Steps -->
+    <!-- ═══ MISSION STEPS ═══ -->
     <section id="missions" class="mission-section fade-in">
       <h2>📖 STEP-BY-STEP 교육 과정</h2>
 
       <div class="mission-step">
-        <span class="mission-step-number" style="background:var(--emerald);">1</span>
         <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--emerald);">1</span>
           <span class="mission-step-title">왜 이 키트를 배우는가 — 도입</span>
           <span class="mission-step-time">⏱ 10분</span>
         </div>
         <div class="mission-step-body">
-          <p>오늘 우리가 만들 것을 소개합니다. 블루투스 스피커가 어떻게 작동하는지, 소리가 어떻게 만들어지는지 간단히 알아봅니다.</p>
+          <p>판다 블루투스 스피커가 어떻게 작동하는지, 소리가 어떻게 만들어지는지 간단히 알아봅니다.</p>
           <ul>
             <li>블루투스 통신의 기본 원리 소개</li>
             <li>스피커가 소리를 내는 원리 (전기 신호 → 진동 → 소리)</li>
-            <li>완성된 스피커 샘플 시연</li>
+            <li>완성된 판다 스피커 샘플 시연</li>
             <li>사물인터넷(IoT) 개념 소개</li>
           </ul>
           <div class="mission-step-image">
-            <img src="../../assets/images/programs/speaker.jpeg" alt="블루투스 스피커 키트" loading="lazy">
+            <img src="../../assets/images/kits/kit-speaker-hero.jpg" alt="도블투스 판다 스피커" loading="lazy">
           </div>
         </div>
       </div>
 
       <div class="mission-step">
-        <span class="mission-step-number" style="background:var(--emerald);">2</span>
         <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--emerald);">2</span>
           <span class="mission-step-title">오늘의 과학 개념</span>
           <span class="mission-step-time">⏱ 10분</span>
         </div>
@@ -112,31 +135,34 @@
       </div>
 
       <div class="mission-step">
-        <span class="mission-step-number" style="background:var(--emerald);">3</span>
         <div class="mission-step-header">
-          <span class="mission-step-title">조립 — 스피커 만들기</span>
+          <span class="mission-step-number" style="background:var(--emerald);">3</span>
+          <span class="mission-step-title">조립 — 판다 스피커 만들기</span>
           <span class="mission-step-time">⏱ 30분</span>
         </div>
         <div class="mission-step-body">
-          <p>설명서를 따라 나만의 블루투스 스피커를 조립합니다.</p>
+          <p>설명서를 따라 나만의 판다 블루투스 스피커를 조립합니다.</p>
           <ul>
-            <li>프레임에 스피커 유닛 설치</li>
+            <li>목재 프레임에 스피커 유닛 설치 (판다 눈 위치)</li>
             <li>블루투스 모듈과 앰프 보드 연결</li>
             <li>배터리 팩 연결 및 케이블 정리</li>
             <li>외부 케이스 조립 및 고정</li>
             <li>⚡ 안전 주의: 전선 연결 방향 확인</li>
           </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-speaker-parts.jpg" alt="스피커 구성품 배열" loading="lazy">
+          </div>
         </div>
       </div>
 
       <div class="mission-step">
-        <span class="mission-step-number" style="background:var(--emerald);">4</span>
         <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--emerald);">4</span>
           <span class="mission-step-title">작동 확인 + 소리 탐구</span>
           <span class="mission-step-time">⏱ 20분</span>
         </div>
         <div class="mission-step-body">
-          <p>완성된 스피커를 스마트폰과 연결하고, 소리의 변화를 관찰합니다.</p>
+          <p>완성된 판다 스피커를 스마트폰과 연결하고, 소리의 변화를 관찰합니다.</p>
           <ul>
             <li>블루투스 페어링 실습</li>
             <li>음악 재생 및 소리 크기/음질 비교</li>
@@ -144,14 +170,14 @@
             <li>활동지 실험 결과 기록</li>
           </ul>
           <div class="mission-step-image">
-            <img src="../../assets/images/programs/suno.jpeg" alt="소리 탐구" loading="lazy">
+            <img src="../../assets/images/kits/kit-speaker-hand.jpg" alt="완성된 스피커 확인" loading="lazy">
           </div>
         </div>
       </div>
 
       <div class="mission-step">
-        <span class="mission-step-number" style="background:var(--emerald);">5</span>
         <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--emerald);">5</span>
           <span class="mission-step-title">정리 + 발표</span>
           <span class="mission-step-time">⏱ 20분</span>
         </div>
@@ -159,7 +185,7 @@
           <p>활동을 정리하고, 배운 과학 개념을 발표합니다.</p>
           <ul>
             <li>오늘 배운 과학 개념 정리 (활동지)</li>
-            <li>내 스피커의 특징 소개</li>
+            <li>내 판다 스피커의 특징 소개</li>
             <li>사후 질문 카드 작성</li>
             <li>확장 미션 카드 안내</li>
           </ul>
@@ -167,24 +193,43 @@
       </div>
     </section>
 
-    <!-- AI Extension -->
+    <section id="media" class="media-section fade-in">
+      <h2>🎬 조립 영상 + 교육 자료</h2>
+      <div class="assembly-video">
+        <video controls preload="metadata" poster="../../assets/images/kits/kit-speaker-hero.jpg">
+          <source src="../../assets/media/kit-speaker-assembly.mp4" type="video/mp4">
+          브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <div class="assembly-video-caption">📹 도로 스피커 조립 영상 — 선생님 사전 준비 가이드</div>
+      </div>
+      <div class="media-downloads">
+        <a href="../../assets/media/kit-speaker-assembly.pdf" download class="media-download-btn">
+          <span class="dl-icon">📄</span> 조립 가이드 PDF 다운로드
+        </a>
+        <a href="../../assets/media/kit-speaker-assembly.mp4" download class="media-download-btn">
+          <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══ AI EXTENSION ═══ -->
     <section id="ai-ext" class="ai-extension fade-in">
-      <span class="extension-label">선택형 확장 활동</span>
-      <h3>🎵 AI 작곡 도구 Suno 체험</h3>
+      <span class="extension-label">🎵 선택형 확장 활동</span>
+      <h3>AI 작곡 도구 Suno 체험</h3>
       <p>
-        기본 키트만으로도 학습이 완결됩니다. 
-        추가로 AI 작곡 도구 Suno를 활용하면, 가사를 입력해 나만의 음악을 만들고 
-        내가 만든 스피커로 재생하는 창작 확장 활동이 가능합니다.
+        기본 키트만으로도 학습이 완결됩니다.
+        추가로 AI 작곡 도구 Suno를 활용하면, 가사를 입력해 나만의 음악을 만들고
+        내가 만든 판다 스피커로 재생하는 창작 확장 활동이 가능합니다.
       </p>
-      <p style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--text-muted);">
+      <p style="margin-top:0.5rem;font-size:0.8rem;color:var(--text-muted);">
         ※ Suno 미사용 시에도 스마트폰 음악 재생으로 동일한 과학 탐구가 가능합니다.
       </p>
       <a href="https://suno.com" target="_blank" class="ai-link">Suno 바로가기 →</a>
     </section>
 
-    <!-- FAQ -->
+    <!-- ═══ FAQ ═══ -->
     <section id="faq" class="faq-section fade-in">
-      <h2 style="font-family:var(--font-display); font-size:1.3rem; margin-bottom:1.5rem;">❓ 자주 묻는 질문</h2>
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;">❓ 자주 묻는 질문</h2>
       <div class="faq-item">
         <button class="faq-question">블루투스 연결이 안 될 때는 어떻게 하나요?</button>
         <div class="faq-answer"><div class="faq-answer-inner">
@@ -200,22 +245,22 @@
       <div class="faq-item">
         <button class="faq-question">Suno를 꼭 사용해야 하나요?</button>
         <div class="faq-answer"><div class="faq-answer-inner">
-          아닙니다. Suno는 선택형 확장 활동입니다. 키트 조립과 과학 탐구만으로도 학습 목표를 충분히 달성할 수 있습니다. 스마트폰에 저장된 음악으로 동일한 작동 테스트가 가능합니다.
+          아닙니다. Suno는 선택형 확장 활동입니다. 키트 조립과 과학 탐구만으로도 학습 목표를 충분히 달성할 수 있습니다.
         </div></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">보호자/교사 지도 가이드가 있나요?</button>
         <div class="faq-answer"><div class="faq-answer-inner">
-          네, 키트에 보호자/교사용 지도 가이드가 포함되어 있습니다. 지도 포인트, 질문 예시, 확장 활동 안내가 정리되어 있어 비전문가도 쉽게 가이드할 수 있습니다.
+          네, 키트에 보호자/교사용 지도 가이드가 포함되어 있습니다. 지도 포인트, 질문 예시, 확장 활동 안내가 정리되어 있습니다.
         </div></div>
       </div>
     </section>
 
-  </div>
+  </div><!-- /.detail-content -->
 
   <footer class="footer">
     <div class="footer-container">
-      <div class="footer-brand">DOROLAND</div>
+      <div class="footer-brand">⚔ DOROLAND V2 ⚔</div>
       <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
     </div>
   </footer>

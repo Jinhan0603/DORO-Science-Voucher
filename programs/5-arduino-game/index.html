@@ -3,71 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>도텐도 — DORO 게임 코딩 키트 | DOROLAND</title>
-  <meta name="description" content="입력장치와 출력장치를 연결해 나만의 러닝 점프 게임기를 만들며 피지컬 컴퓨팅을 체험합니다.">
+  <title>🐷 도텐도 — DORO 게임 코딩 키트 | DOROLAND V2</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-  <div class="bg-fantasy"></div><div class="bg-overlay"></div><div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="bg-fantasy"></div><div class="bg-overlay"></div>
+  <div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="bg-scanlines"></div>
   <div class="progress-bar" id="progress"></div>
-  <nav class="nav" id="navbar"><a href="../../index.html" class="nav-brand" style="gap:0.5rem;"><span style="font-size:1.2rem;">←</span><span class="nav-brand-text">프로그램 목록</span></a><a href="../../index.html" class="nav-brand"><span class="nav-brand-text">DORO<span>LAND</span></span></a></nav>
-  <div class="toc-sidebar"><a href="#checklist" class="toc-item active"><span class="toc-dot"></span> 준비물</a><a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a><a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a><a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a></div>
+  <nav class="nav" id="navbar">
+    <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
+      <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;">프로그램 목록</span>
+    </a>
+    <a href="../../index.html" class="nav-brand">
+      <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V2</span>
+    </a>
+  </nav>
+  <div class="toc-sidebar">
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> 키트 사진</a>
+    <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
+    <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
+    <a href="#media" class="toc-item"><span class="toc-dot"></span> 조립 영상</a>
+    <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
+    <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
+  </div>
 
   <section class="detail-hero">
-    <span class="chapter-badge" style="background: var(--sky);">DORO 게임 코딩 키트</span>
+    <span class="chapter-badge" style="background:var(--sky);color:#000;">🐷 DORO 게임 코딩 키트</span>
     <h1>🎮 도텐도 — 아두이노 게임기</h1>
-    <p class="hero-desc">버튼, 조이스틱 등 입력장치와 OLED 출력장치를 연결해 나만의 러닝 점프 게임기를 만들며 피지컬 컴퓨팅을 체험합니다.</p>
-    <div class="science-badge">🔬 핵심 과학 개념: 입력장치 · 출력장치 · 게임 로직 · 피지컬 컴퓨팅</div>
+    <p class="hero-desc">
+      파란 돼지 캐릭터 디자인의 목재 게임기를 조립하고, LCD 화면과 버튼으로
+      러닝 점프 게임을 코딩하며 피지컬 컴퓨팅을 체험합니다. 아두이노 UNO 기반.
+    </p>
+    <div class="science-badge">🔬 핵심 과학 개념: 디지털 입력 · LCD 출력 · 아두이노 코딩 · 피지컬 컴퓨팅</div>
   </section>
 
   <div class="info-bar">
-    <div class="info-item"><span class="info-label">소요시간</span><span class="info-value">⏱ 120분</span></div>
-    <div class="info-item"><span class="info-label">대상</span><span class="info-value">👤 초등 4~중등</span></div>
-    <div class="info-item"><span class="info-label">난이도</span><span class="info-value">⭐⭐⭐</span></div>
-    <div class="info-item"><span class="info-label">AI 확장</span><span class="info-value">🧩 MakeCode (선택)</span></div>
-    <div class="info-item"><span class="info-label">운영형태</span><span class="info-value">🚌 DOROBUS</span></div>
+    <div class="info-item"><span class="info-label">⏱ 소요시간</span><span class="info-value">120분</span></div>
+    <div class="info-item"><span class="info-label">👤 대상</span><span class="info-value">초등 4~중등</span></div>
+    <div class="info-item"><span class="info-label">⭐ 난이도</span><span class="info-value">★★★</span></div>
+    <div class="info-item"><span class="info-label">💻 코딩</span><span class="info-value">MakeCode/아두이노</span></div>
+    <div class="info-item"><span class="info-label">🐷 캐릭터</span><span class="info-value">돼지</span></div>
   </div>
 
   <div class="detail-content">
+
+    <section id="photos" style="margin-bottom:2.5rem;">
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
+      <div class="detail-kit-photos">
+        <div class="detail-kit-hero">
+          <img src="../../assets/images/kits/kit-game-white.png" alt="도텐도 완성품 — 파란 돼지 게임기 (흰 배경)">
+        </div>
+        <div class="detail-kit-thumb-row">
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-game-hand.jpg" alt="도텐도 손으로 들기">
+          </div>
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-game-parts.jpg" alt="도텐도 구성품 전체">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="checklist" class="checklist-section fade-in">
       <h2 class="checklist-title">🔧 준비물 체크리스트</h2>
-      <p class="checklist-desc">키트 구성품을 확인하세요. <span id="checklist-progress"></span></p>
-      <div class="checklist-item"><input type="checkbox"><span>아두이노 나노 호환 보드</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>OLED 디스플레이 (128×64)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>푸시 버튼 × 3</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>부저 모듈</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>브레드보드 + 점퍼선</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>USB 케이블</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>게임기 케이스 (아크릴)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>학생용 활동지 + 게임 설계 카드</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>조립 설명서</span></div>
+      <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. <span id="checklist-progress"></span></p>
+      <div class="checklist-item"><input type="checkbox"><span>🐷 게임기 본체 (파란 돼지 디자인 목재 프레임)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>💻 아두이노 UNO 보드 × 1</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📺 16×2 LCD 디스플레이 × 1</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔵 푸시 버튼 × 1 (점프 버튼)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔌 USB 케이블 (아두이노 연결용)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔋 배터리 홀더 + AA 배터리 × 2</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔗 점퍼 케이블 세트</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📄 학생용 활동지</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📖 조립 + 코딩 설명서</span></div>
     </section>
 
     <section id="missions" class="mission-section fade-in">
       <h2>📖 STEP-BY-STEP 교육 과정</h2>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--sky);">1</span><div class="mission-step-header"><span class="mission-step-title">왜 이 키트를 배우는가</span><span class="mission-step-time">⏱ 15분</span></div><div class="mission-step-body"><p>게임기는 어떤 과학 원리로 작동하는지, 입력-출력 구조를 소개합니다.</p><ul><li>게임기의 구성: 입력(버튼) + 처리(코드) + 출력(화면/소리)</li><li>아두이노란? 피지컬 컴퓨팅의 기본</li><li>완성 게임 시연</li></ul><div class="mission-step-image"><img src="../../assets/images/programs/makecode-student.jpeg" alt="게임기 키트" loading="lazy"></div></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--sky);">2</span><div class="mission-step-header"><span class="mission-step-title">오늘의 과학 개념</span><span class="mission-step-time">⏱ 10분</span></div><div class="mission-step-body"><p>입력장치와 출력장치의 종류, 디지털 신호의 개념을 학습합니다.</p><ul><li>입력: 버튼, 센서, 조이스틱</li><li>출력: LED, 화면, 부저</li><li>디지털 신호: 0과 1의 세계</li><li>활동지 입력-출력 분류 카드</li></ul></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--sky);">3</span><div class="mission-step-header"><span class="mission-step-title">조립 + 코딩</span><span class="mission-step-time">⏱ 45분</span></div><div class="mission-step-body"><p>하드웨어를 조립하고, 미리 준비된 코드를 업로드합니다.</p><ul><li>OLED + 버튼 + 부저 브레드보드 연결</li><li>아두이노 보드 USB 연결</li><li>게임 코드 업로드 (QR 코드 → 다운로드)</li><li>케이스 조립</li></ul></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--sky);">4</span><div class="mission-step-header"><span class="mission-step-title">게임 플레이 + 탐구</span><span class="mission-step-time">⏱ 20분</span></div><div class="mission-step-body"><p>내가 만든 게임기로 직접 게임을 플레이하고, 작동 원리를 분석합니다.</p><ul><li>러닝 점프 게임 플레이</li><li>버튼 입력 → 화면 반응 관찰</li><li>점수 시스템 작동 원리 분석</li><li>활동지 게임 동작 분석 카드</li></ul></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--sky);">5</span><div class="mission-step-header"><span class="mission-step-title">정리 + 발표</span><span class="mission-step-time">⏱ 30분</span></div><div class="mission-step-body"><p>피지컬 컴퓨팅 개념을 정리하고, 내 게임기를 소개합니다.</p><ul><li>입력-처리-출력 흐름 정리</li><li>내 게임기 시연 발표</li><li>확장 미션: 나만의 게임 아이디어 설계</li></ul></div></div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--sky);">1</span>
+          <span class="mission-step-title">도입 — 게임기의 원리</span>
+          <span class="mission-step-time">⏱ 10분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>완성된 파란 돼지 게임기 시연</li>
+            <li>입력(버튼) → 처리(아두이노) → 출력(LCD) 구조 소개</li>
+            <li>피지컬 컴퓨팅 개념 소개</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-game-hand.jpg" alt="도텐도 게임기" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--sky);">2</span>
+          <span class="mission-step-title">과학·코딩 개념</span>
+          <span class="mission-step-time">⏱ 15분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>아두이노: 마이크로컨트롤러 기반 오픈소스 보드</li>
+            <li>디지털 입력: 버튼 누름 = 0 또는 1</li>
+            <li>LCD: 문자와 숫자를 표시하는 출력 장치</li>
+            <li>게임 로직: 조건문과 반복문으로 구현</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--sky);">3</span>
+          <span class="mission-step-title">조립 — 게임기 제작</span>
+          <span class="mission-step-time">⏱ 35분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>파란 돼지 목재 케이스 조립</li>
+            <li>아두이노 UNO 장착</li>
+            <li>LCD 디스플레이 연결 (I2C 방식)</li>
+            <li>점프 버튼 장착 및 연결</li>
+            <li>배터리 홀더 연결</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-game-parts.jpg" alt="도텐도 구성품" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--sky);">4</span>
+          <span class="mission-step-title">코딩 — 러닝 점프 게임 만들기</span>
+          <span class="mission-step-time">⏱ 30분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>제공된 예시 코드를 수정하며 나만의 게임을 만듭니다.</p>
+          <ul>
+            <li>USB로 아두이노와 노트북 연결</li>
+            <li>기본 코드 업로드 → 게임 작동 확인</li>
+            <li>장애물 속도 변경 / 점수 규칙 수정</li>
+            <li>코드 수정 → 업로드 → 테스트 반복</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--sky);">5</span>
+          <span class="mission-step-title">게임 대회 + 발표</span>
+          <span class="mission-step-time">⏱ 30분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>친구와 점수 경쟁</li>
+            <li>내가 수정한 규칙 발표</li>
+            <li>피지컬 컴퓨팅 개념 정리</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-game-white.png" alt="완성된 게임기" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="media-section fade-in">
+      <h2>🎬 조립 영상 + 교육 자료</h2>
+      <div class="assembly-video">
+        <video controls preload="metadata" poster="../../assets/images/kits/kit-game-white.png">
+          <source src="../../assets/media/kit-game-assembly.mp4" type="video/mp4">
+          브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <div class="assembly-video-caption">📹 도텐도 게임기 조립 영상 — 선생님 사전 준비 가이드</div>
+      </div>
+      <div class="media-downloads">
+        <a href="../../assets/media/kit-game-assembly.pdf" download class="media-download-btn">
+          <span class="dl-icon">📄</span> 조립 가이드 PDF 다운로드
+        </a>
+        <a href="../../assets/media/kit-game-assembly.mp4" download class="media-download-btn">
+          <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
+        </a>
+      </div>
     </section>
 
     <section id="ai-ext" class="ai-extension fade-in">
       <span class="extension-label">선택형 확장 활동</span>
-      <h3>🧩 MakeCode 블록 코딩</h3>
-      <p>기본 키트만으로도 학습이 완결됩니다. 추가로 MakeCode Arcade를 활용하면, 블록 코딩으로 게임 로직을 수정하고 나만의 게임을 설계하는 코딩 확장 활동이 가능합니다.</p>
-      <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--text-muted);">※ MakeCode 미사용 시에도 하드웨어 조립과 작동 원리 분석만으로 학습 목표를 달성합니다.</p>
-      <a href="https://arcade.makecode.com" target="_blank" class="ai-link">MakeCode Arcade 바로가기 →</a>
+      <h3>🤖 AI 난이도 적응 게임 설계</h3>
+      <p>플레이어 점수에 따라 난이도가 자동으로 올라가는 AI 적응형 게임 로직을 설계하는 심화 확장 활동이 가능합니다.</p>
     </section>
 
     <section id="faq" class="faq-section fade-in">
-      <h2 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:1.5rem;">❓ 자주 묻는 질문</h2>
-      <div class="faq-item"><button class="faq-question">OLED 화면에 아무것도 안 나와요</button><div class="faq-answer"><div class="faq-answer-inner">OLED의 SDA, SCL 핀이 아두이노의 A4, A5에 정확히 연결되었는지 확인하세요. USB 케이블을 통해 전원이 공급되어야 합니다.</div></div></div>
-      <div class="faq-item"><button class="faq-question">버튼을 눌러도 반응이 없어요</button><div class="faq-answer"><div class="faq-answer-inner">버튼의 네 다리가 브레드보드에 올바르게 꽂혀 있는지 확인하세요. 점퍼선 연결 핀 번호가 코드와 일치해야 합니다.</div></div></div>
-      <div class="faq-item"><button class="faq-question">코드 업로드가 안 돼요</button><div class="faq-answer"><div class="faq-answer-inner">USB 케이블이 데이터 전송 가능한 케이블인지 확인하세요 (충전 전용은 불가). 아두이노 IDE에서 보드와 포트가 올바르게 선택되어 있는지 점검합니다.</div></div></div>
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;">❓ 자주 묻는 질문</h2>
+      <div class="faq-item">
+        <button class="faq-question">LCD에 아무것도 표시되지 않을 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">LCD 뒷면의 I2C 주소(보통 0x27 또는 0x3F)를 코드에서 확인하세요. 밝기 조절 나사를 돌려 대비를 조정해볼 수도 있습니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">버튼을 눌러도 점프가 안 될 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">버튼의 핀 연결 방향을 확인하고, 코드의 digitalRead 핀 번호가 실제 연결 핀과 일치하는지 확인합니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">코딩을 전혀 모르는 학생도 할 수 있나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">네. 제공된 기본 코드를 업로드하면 즉시 게임이 작동합니다. 수치 값만 바꿔도 게임이 달라지므로 코딩 경험이 없어도 창작 활동이 가능합니다.</div></div>
+      </div>
     </section>
   </div>
-  <footer class="footer"><div class="footer-container"><div class="footer-brand">DOROLAND</div><p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p></div></footer>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">⚔ DOROLAND V2 ⚔</div>
+      <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
+    </div>
+  </footer>
   <script src="../../assets/js/main.js"></script>
 </body>
 </html>

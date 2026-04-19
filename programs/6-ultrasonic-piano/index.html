@@ -3,71 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>도짜르트 — DORO 피지컬 컴퓨팅 키트 | DOROLAND</title>
-  <meta name="description" content="초음파 센서와 조건문으로 거리별 음 높이를 제어하는 인터랙티브 피아노를 코딩합니다.">
+  <title>🐸 도짜르트 — DORO 피지컬 컴퓨팅 키트 | DOROLAND V2</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-  <div class="bg-fantasy"></div><div class="bg-overlay"></div><div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="bg-fantasy"></div><div class="bg-overlay"></div>
+  <div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="bg-scanlines"></div>
   <div class="progress-bar" id="progress"></div>
-  <nav class="nav" id="navbar"><a href="../../index.html" class="nav-brand" style="gap:0.5rem;"><span style="font-size:1.2rem;">←</span><span class="nav-brand-text">프로그램 목록</span></a><a href="../../index.html" class="nav-brand"><span class="nav-brand-text">DORO<span>LAND</span></span></a></nav>
-  <div class="toc-sidebar"><a href="#checklist" class="toc-item active"><span class="toc-dot"></span> 준비물</a><a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a><a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a><a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a></div>
+  <nav class="nav" id="navbar">
+    <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
+      <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;">프로그램 목록</span>
+    </a>
+    <a href="../../index.html" class="nav-brand">
+      <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V2</span>
+    </a>
+  </nav>
+  <div class="toc-sidebar">
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> 키트 사진</a>
+    <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
+    <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
+    <a href="#media" class="toc-item"><span class="toc-dot"></span> 조립 영상</a>
+    <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
+    <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
+  </div>
 
   <section class="detail-hero">
-    <span class="chapter-badge" style="background: var(--coral);">DORO 피지컬 컴퓨팅 키트</span>
+    <span class="chapter-badge" style="background:var(--coral);color:#fff;">🐸 DORO 피지컬 컴퓨팅 키트</span>
     <h1>🎹 도짜르트 — 초음파 피아노</h1>
-    <p class="hero-desc">초음파 센서와 조건문으로 거리별 음 높이를 제어하는 인터랙티브 피아노를 만들며, 사운드 인터랙션과 피지컬 컴퓨팅을 탐구합니다.</p>
-    <div class="science-badge">🔬 핵심 과학 개념: 초음파 센서 · 조건문(if/else) · 주파수와 음높이 · 사운드 인터랙션</div>
+    <p class="hero-desc">
+      개구리 캐릭터 피아노 건반을 조립하고, 초음파 센서 앞에서 손 거리를 조절하면
+      음높이가 바뀌는 인터랙티브 악기를 코딩합니다. 아두이노 UNO + 조건문 기반.
+    </p>
+    <div class="science-badge">🔬 핵심 과학 개념: 초음파 센서 · 거리-음높이 매핑 · 조건문 코딩 · 사운드 인터랙션</div>
   </section>
 
   <div class="info-bar">
-    <div class="info-item"><span class="info-label">소요시간</span><span class="info-value">⏱ 90분</span></div>
-    <div class="info-item"><span class="info-label">대상</span><span class="info-value">👤 초등 4~중등</span></div>
-    <div class="info-item"><span class="info-label">난이도</span><span class="info-value">⭐⭐☆</span></div>
-    <div class="info-item"><span class="info-label">AI 확장</span><span class="info-value">🎵 Suno/ChatGPT (선택)</span></div>
-    <div class="info-item"><span class="info-label">운영형태</span><span class="info-value">🏠 홈러닝</span></div>
+    <div class="info-item"><span class="info-label">⏱ 소요시간</span><span class="info-value">90분</span></div>
+    <div class="info-item"><span class="info-label">👤 대상</span><span class="info-value">초등 4~중등</span></div>
+    <div class="info-item"><span class="info-label">⭐ 난이도</span><span class="info-value">★★★</span></div>
+    <div class="info-item"><span class="info-label">🎵 특징</span><span class="info-value">손으로 연주</span></div>
+    <div class="info-item"><span class="info-label">🐸 캐릭터</span><span class="info-value">개구리</span></div>
   </div>
 
   <div class="detail-content">
+
+    <section id="photos" style="margin-bottom:2.5rem;">
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
+      <div class="detail-kit-photos">
+        <div class="detail-kit-hero">
+          <img src="../../assets/images/kits/kit-piano-hero.jpg" alt="도짜르트 완성품 — 개구리 초음파 피아노">
+        </div>
+        <div class="detail-kit-thumb-row">
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-piano-play.jpg" alt="도짜르트 양손으로 연주">
+          </div>
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-piano-parts.jpg" alt="도짜르트 구성품 전체">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="checklist" class="checklist-section fade-in">
       <h2 class="checklist-title">🔧 준비물 체크리스트</h2>
-      <p class="checklist-desc">키트 구성품을 확인하세요. <span id="checklist-progress"></span></p>
-      <div class="checklist-item"><input type="checkbox"><span>아두이노 나노 호환 보드</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>초음파 센서 (HC-SR04)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>피에조 부저</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>LED × 8 (도레미파솔라시도)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>저항 세트 (220Ω × 8)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>브레드보드 + 점퍼선</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>USB 케이블</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>피아노 케이스 프레임</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>학생용 활동지 + 음계 카드</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>조립 설명서</span></div>
+      <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. <span id="checklist-progress"></span></p>
+      <div class="checklist-item"><input type="checkbox"><span>🐸 피아노 건반 보드 (개구리 디자인 그린)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>💻 아두이노 UNO 보드 × 1</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📡 초음파 센서 (HC-SR04) × 1</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📺 16×2 LCD 디스플레이 × 1</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔊 피에조 부저 × 1</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔌 미니 브레드보드</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔗 점퍼 케이블 세트</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>💡 LED × 2 (장식용)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📄 학생용 활동지</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📖 조립 + 코딩 설명서</span></div>
     </section>
 
     <section id="missions" class="mission-section fade-in">
       <h2>📖 STEP-BY-STEP 교육 과정</h2>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--coral);">1</span><div class="mission-step-header"><span class="mission-step-title">왜 이 키트를 배우는가</span><span class="mission-step-time">⏱ 10분</span></div><div class="mission-step-body"><p>초음파 센서가 어떻게 거리를 재는지, 소리와 주파수의 관계를 소개합니다.</p><ul><li>초음파란? 사람이 들을 수 없는 높은 소리</li><li>초음파 → 반사 → 시간 차이 = 거리</li><li>피아노 건반과 주파수의 관계</li><li>완성된 피아노 시연</li></ul><div class="mission-step-image"><img src="../../assets/images/doroland/harmonia-score.png" alt="하모니아의 노래 악보" loading="lazy"></div></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--coral);">2</span><div class="mission-step-header"><span class="mission-step-title">오늘의 과학 개념</span><span class="mission-step-time">⏱ 10분</span></div><div class="mission-step-body"><p>초음파 거리 측정의 수학적 원리와 조건문의 개념을 학습합니다.</p><ul><li>거리 = 속도 × 시간 / 2</li><li>조건문: if (거리 &lt; 5cm) → 도, else if (거리 &lt; 10cm) → 레…</li><li>주파수(Hz)와 음높이의 관계</li><li>활동지 음계-거리 매핑 카드 작성</li></ul></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--coral);">3</span><div class="mission-step-header"><span class="mission-step-title">조립 + 코딩</span><span class="mission-step-time">⏱ 30분</span></div><div class="mission-step-body"><p>초음파 센서, 부저, LED를 연결하고 코드를 업로드합니다.</p><ul><li>브레드보드에 초음파 센서 연결 (Trig/Echo)</li><li>피에조 부저 연결</li><li>LED 8개 음계별 연결</li><li>피아노 코드 업로드 (QR 코드 → 다운로드)</li><li>케이스 프레임 조립</li></ul></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--coral);">4</span><div class="mission-step-header"><span class="mission-step-title">연주 + 실험</span><span class="mission-step-time">⏱ 25분</span></div><div class="mission-step-body"><p>손의 거리를 조절하며 피아노를 연주하고, 음계 실험을 합니다.</p><ul><li>손을 가까이/멀리 하며 음 높이 변화 확인</li><li>도레미파솔라시도 연주 시도</li><li>LED가 음계에 맞춰 점등되는지 관찰</li><li>'학교 종이 땡땡땡' 같은 간단한 곡 도전</li><li>활동지 실험 기록지 작성</li></ul></div></div>
-      <div class="mission-step"><span class="mission-step-number" style="background:var(--coral);">5</span><div class="mission-step-header"><span class="mission-step-title">정리 + 발표</span><span class="mission-step-time">⏱ 15분</span></div><div class="mission-step-body"><p>초음파 센서와 사운드 인터랙션 원리를 정리합니다.</p><ul><li>초음파 거리 측정 핵심 정리</li><li>조건문과 음계 매핑 복습</li><li>확장 미션: 도로랜드 '하모니아의 노래' 연주</li></ul></div></div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--coral);">1</span>
+          <span class="mission-step-title">도입 — 손이 악기가 되다</span>
+          <span class="mission-step-time">⏱ 10분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>완성된 개구리 피아노 시연 (손 거리로 음 조절)</li>
+            <li>초음파가 거리를 측정하는 원리 소개</li>
+            <li>테레민이나 에어 기타 같은 비접촉 악기 사례</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-piano-play.jpg" alt="도짜르트 연주" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--coral);">2</span>
+          <span class="mission-step-title">과학·코딩 개념</span>
+          <span class="mission-step-time">⏱ 15분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>초음파 센서: 음파 발사 → 반사 → 시간으로 거리 계산</li>
+            <li>소리의 높낮이: 진동수(Hz)에 따라 결정</li>
+            <li>조건문: 거리 구간별 다른 음 재생</li>
+            <li>활동지 음계 매핑 표 작성</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--coral);">3</span>
+          <span class="mission-step-title">조립 — 개구리 피아노 제작</span>
+          <span class="mission-step-time">⏱ 20분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>개구리 피아노 건반 보드 조립</li>
+            <li>아두이노 UNO 장착</li>
+            <li>초음파 센서 연결</li>
+            <li>피에조 부저 + LED 연결</li>
+            <li>LCD 디스플레이 연결</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-piano-parts.jpg" alt="도짜르트 구성품" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--coral);">4</span>
+          <span class="mission-step-title">코딩 — 거리-음 매핑</span>
+          <span class="mission-step-time">⏱ 25분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>조건문으로 손의 거리에 따라 다른 음이 나오도록 코딩합니다.</p>
+          <ul>
+            <li>기본 코드 업로드 → 손으로 거리 조절 테스트</li>
+            <li>if-else 조건문으로 음계 구간 설정</li>
+            <li>tone() 함수로 피에조 부저 주파수 제어</li>
+            <li>LCD에 현재 음 이름 표시하기</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--coral);">5</span>
+          <span class="mission-step-title">연주 + 발표</span>
+          <span class="mission-step-time">⏱ 20분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>간단한 멜로디 연주 도전</li>
+            <li>친구와 합주 시도</li>
+            <li>사운드 인터랙션 개념 정리</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-piano-hero.jpg" alt="도짜르트 완성" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="media-section fade-in">
+      <h2>🎬 조립 영상 + 교육 자료</h2>
+      <div class="assembly-video">
+        <video controls preload="metadata" poster="../../assets/images/kits/kit-piano-hero.jpg">
+          <source src="../../assets/media/kit-piano-assembly.mp4" type="video/mp4">
+          브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <div class="assembly-video-caption">📹 도짜르트 초음파 피아노 조립 영상 — 선생님 사전 준비 가이드</div>
+      </div>
+      <div class="media-downloads">
+        <a href="../../assets/media/kit-piano-assembly.mp4" download class="media-download-btn">
+          <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
+        </a>
+      </div>
     </section>
 
     <section id="ai-ext" class="ai-extension fade-in">
       <span class="extension-label">선택형 확장 활동</span>
-      <h3>🎵 AI 도구로 나만의 곡 만들기</h3>
-      <p>기본 키트만으로도 학습이 완결됩니다. 추가로 Suno나 ChatGPT를 활용하면 AI가 생성한 멜로디를 초음파 피아노로 연주하거나, 나만의 작곡 스토리를 만드는 창작 활동이 가능합니다.</p>
-      <p style="margin-top:0.5rem;font-size:0.85rem;color:var(--text-muted);">※ AI 도구 미사용 시에도 기존 곡 연주와 음계 실험만으로 학습 목표를 달성합니다.</p>
+      <h3>🎵 AI 작곡 + 피아노 연주</h3>
+      <p>AI 작곡 도구 Suno로 멜로디를 만들고, 도짜르트 피아노로 그 멜로디를 재현하는 창작 확장 활동이 가능합니다.</p>
+      <a href="https://suno.com" target="_blank" class="ai-link">Suno 바로가기 →</a>
     </section>
 
     <section id="faq" class="faq-section fade-in">
-      <h2 style="font-family:var(--font-display);font-size:1.3rem;margin-bottom:1.5rem;">❓ 자주 묻는 질문</h2>
-      <div class="faq-item"><button class="faq-question">소리가 나지 않아요</button><div class="faq-answer"><div class="faq-answer-inner">피에조 부저의 +/- 극성과 연결 핀 번호를 확인하세요. 부저가 제대로 꽂혀 있는지 브레드보드 확인도 필요합니다.</div></div></div>
-      <div class="faq-item"><button class="faq-question">거리에 따른 음이 정확하지 않아요</button><div class="faq-answer"><div class="faq-answer-inner">초음파 센서 앞에 장애물이 없는지 확인하세요. 센서와 손 사이에 3~30cm 범위가 가장 정확합니다. 코드의 거리 구간 값을 조절해 볼 수도 있습니다.</div></div></div>
-      <div class="faq-item"><button class="faq-question">LED가 음에 맞춰 점등되지 않아요</button><div class="faq-answer"><div class="faq-answer-inner">각 LED의 연결 핀 번호가 코드에 지정된 핀과 일치하는지 확인하세요. LED 극성(긴 다리가 +)과 저항 연결도 점검합니다.</div></div></div>
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;">❓ 자주 묻는 질문</h2>
+      <div class="faq-item">
+        <button class="faq-question">손을 움직여도 소리가 안 날 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">초음파 센서의 Trig/Echo 핀 연결을 확인하고, 피에조 부저 핀 번호가 코드와 일치하는지 확인하세요.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">소리가 계속 같은 음만 날 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">초음파 센서 정면에 장애물이 고정되어 있지는 않은지 확인하세요. 센서 앞 30cm 이내에 아무것도 없는 공간이 필요합니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">특정 음을 더 쉽게 내려면?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">코드의 if 조건문에서 각 음의 거리 구간을 더 넓게 설정하면 원하는 음을 더 안정적으로 낼 수 있습니다.</div></div>
+      </div>
     </section>
   </div>
-  <footer class="footer"><div class="footer-container"><div class="footer-brand">DOROLAND</div><p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p></div></footer>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">⚔ DOROLAND V2 ⚔</div>
+      <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
+    </div>
+  </footer>
   <script src="../../assets/js/main.js"></script>
 </body>
 </html>
