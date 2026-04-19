@@ -14,14 +14,14 @@
   <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" title="Switch to English">EN</button>
   <nav class="nav" id="navbar">
     <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
-      <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;">프로그램 목록</span>
+      <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;" data-i18n="prog.nav.back">프로그램 목록</span>
     </a>
     <a href="../../index.html" class="nav-brand">
       <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V2</span>
     </a>
   </nav>
   <div class="toc-sidebar">
-    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> 키트 사진</a>
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 사진</span></a>
     <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
     <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
     <a href="#media" class="toc-item"><span class="toc-dot"></span> 데모 영상</a>
@@ -85,8 +85,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--amber);">1</span>
-          <span class="mission-step-title">도입 — 자동차가 스스로 움직이다?</span>
-          <span class="mission-step-time">⏱ 15분</span>
+          <span class="mission-step-title" data-i18n="p4.step1.title">도입 — 자동차가 스스로 움직이다?</span>
+          <span class="mission-step-time" data-i18n="time.15">⏱ 15분</span>
         </div>
         <div class="mission-step-body">
           <p>현실의 자율주행 자동차가 어떻게 주변 물체를 감지하는지 소개합니다.</p>
@@ -103,8 +103,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--amber);">2</span>
-          <span class="mission-step-title">과학 개념 — IR 센서와 거리 측정</span>
-          <span class="mission-step-time">⏱ 15분</span>
+          <span class="mission-step-title" data-i18n="p4.step2.title">과학 개념 — IR 센서와 거리 측정</span>
+          <span class="mission-step-time" data-i18n="time.15">⏱ 15분</span>
         </div>
         <div class="mission-step-body">
           <ul>
@@ -118,8 +118,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--amber);">3</span>
-          <span class="mission-step-title">조립 — DORO 로봇 자동차 제작</span>
-          <span class="mission-step-time">⏱ 50분</span>
+          <span class="mission-step-title" data-i18n="p4.step3.title">조립 — DORO 로봇 자동차 제작</span>
+          <span class="mission-step-time" data-i18n="time.50">⏱ 50분</span>
         </div>
         <div class="mission-step-body">
           <p>목재 차체에 모터, 바퀴, IR 센서를 조립합니다.</p>
@@ -138,8 +138,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--amber);">4</span>
-          <span class="mission-step-title">작동 + 탐구</span>
-          <span class="mission-step-time">⏱ 20분</span>
+          <span class="mission-step-title" data-i18n="p4.step4.title">작동 + 탐구</span>
+          <span class="mission-step-time" data-i18n="time.20">⏱ 20분</span>
         </div>
         <div class="mission-step-body">
           <ul>
@@ -155,8 +155,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--amber);">5</span>
-          <span class="mission-step-title">정리 + 발표</span>
-          <span class="mission-step-time">⏱ 20분</span>
+          <span class="mission-step-title" data-i18n="p4.step5.title">정리 + 발표</span>
+          <span class="mission-step-time" data-i18n="time.20">⏱ 20분</span>
         </div>
         <div class="mission-step-body">
           <ul><li>자율주행 기초 개념 정리</li><li>내 자동차 소개</li><li>미래 모빌리티 상상하기</li></ul>
@@ -211,5 +211,6 @@
   </footer>
   <script src="../../assets/js/i18n.js"></script>
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/pixel.js"></script>
 </body>
 </html>

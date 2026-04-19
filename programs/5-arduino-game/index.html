@@ -14,14 +14,14 @@
   <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" title="Switch to English">EN</button>
   <nav class="nav" id="navbar">
     <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
-      <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;">프로그램 목록</span>
+      <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;" data-i18n="prog.nav.back">프로그램 목록</span>
     </a>
     <a href="../../index.html" class="nav-brand">
       <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V2</span>
     </a>
   </nav>
   <div class="toc-sidebar">
-    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> 키트 사진</a>
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 사진</span></a>
     <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
     <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
     <a href="#media" class="toc-item"><span class="toc-dot"></span> 데모 영상</a>
@@ -85,8 +85,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--sky);">1</span>
-          <span class="mission-step-title">도입 — 게임기의 원리</span>
-          <span class="mission-step-time">⏱ 10분</span>
+          <span class="mission-step-title" data-i18n="p5.step1.title">도입 — 게임기의 원리</span>
+          <span class="mission-step-time" data-i18n="time.10">⏱ 10분</span>
         </div>
         <div class="mission-step-body">
           <ul>
@@ -102,8 +102,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--sky);">2</span>
-          <span class="mission-step-title">과학·코딩 개념</span>
-          <span class="mission-step-time">⏱ 15분</span>
+          <span class="mission-step-title" data-i18n="p5.step2.title">과학·코딩 개념</span>
+          <span class="mission-step-time" data-i18n="time.15">⏱ 15분</span>
         </div>
         <div class="mission-step-body">
           <ul>
@@ -117,8 +117,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--sky);">3</span>
-          <span class="mission-step-title">조립 — 게임기 제작</span>
-          <span class="mission-step-time">⏱ 35분</span>
+          <span class="mission-step-title" data-i18n="p5.step3.title">조립 — 게임기 제작</span>
+          <span class="mission-step-time" data-i18n="time.35">⏱ 35분</span>
         </div>
         <div class="mission-step-body">
           <ul>
@@ -136,8 +136,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--sky);">4</span>
-          <span class="mission-step-title">코딩 — 러닝 점프 게임 만들기</span>
-          <span class="mission-step-time">⏱ 30분</span>
+          <span class="mission-step-title" data-i18n="p5.step4.title">코딩 — 러닝 점프 게임 만들기</span>
+          <span class="mission-step-time" data-i18n="time.30">⏱ 30분</span>
         </div>
         <div class="mission-step-body">
           <p>제공된 예시 코드를 수정하며 나만의 게임을 만듭니다.</p>
@@ -152,8 +152,8 @@
       <div class="mission-step">
         <div class="mission-step-header">
           <span class="mission-step-number" style="background:var(--sky);">5</span>
-          <span class="mission-step-title">게임 대회 + 발표</span>
-          <span class="mission-step-time">⏱ 30분</span>
+          <span class="mission-step-title" data-i18n="p5.step5.title">게임 대회 + 발표</span>
+          <span class="mission-step-time" data-i18n="time.30">⏱ 30분</span>
         </div>
         <div class="mission-step-body">
           <ul>
@@ -219,5 +219,6 @@
   </footer>
   <script src="../../assets/js/i18n.js"></script>
   <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/pixel.js"></script>
 </body>
 </html>

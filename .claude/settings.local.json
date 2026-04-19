@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(C:/Users/User/Documents/Jindex/proposal/2026science-voucher/DORO-Science-Voucher-V2/*)",
+      "Write(C:/Users/User/Documents/Jindex/proposal/2026science-voucher/DORO-Science-Voucher-V2/*)",
+      "Edit(C:/Users/User/Documents/Jindex/proposal/2026science-voucher/DORO-Science-Voucher-V2/*)"
+    ]
+  }
+}
