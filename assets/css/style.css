@@ -252,18 +252,6 @@ body {
   margin: 1rem 0 1.5rem; position: relative;
 }
 .hero-kit-showcase img { width: 100%; display: block; }
-.hero-kit-overlay {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  background: linear-gradient(transparent, rgba(4,8,20,0.92));
-  padding: 2rem 1rem 1rem;
-  display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: center;
-}
-.kit-chip {
-  font-family: var(--font-pixel); font-size: 0.52rem;
-  padding: 0.22rem 0.55rem;
-  background: rgba(0,0,0,0.7);
-  border: 1px solid currentColor; border-radius: 2px;
-}
 
 .scroll-indicator {
   display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
@@ -490,17 +478,6 @@ body {
   border-left: 3px solid var(--emerald); padding-left: 1rem; margin-bottom: 1rem; line-height: 1.7;
 }
 .story-text p { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.8; }
-
-/* Character sprites (kit thumbnail portraits) */
-.character-sprites { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-.character-sprite-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
-.character-sprite {
-  width: 60px; height: 60px; border-radius: 8px; overflow: hidden;
-  border: 2px solid rgba(255,255,255,0.12); transition: transform 0.2s, border-color 0.2s; cursor: pointer;
-}
-.character-sprite:hover { transform: scale(1.12); border-color: var(--emerald); }
-.character-sprite img { width: 100%; height: 100%; object-fit: cover; }
-.character-sprite-label { font-family: var(--font-pixel); font-size: 0.42rem; color: var(--text-muted); text-align: center; }
 
 /* DOROLAND Character Pixel Art Showcase */
 .doroland-chars-section {
@@ -2452,11 +2429,6 @@ body {
   font-weight: 700;
 }
 
-.kit-chip {
-  font-size: var(--fs-xs);
-  padding: 0.42rem 0.78rem;
-}
-
 .scroll-indicator {
   font-size: var(--fs-xs);
 }
@@ -3257,4 +3229,780 @@ body {
 
 .cert-print-btn {
   border-radius: 999px;
+}
+
+/* ============================================
+   V3.2 COMPACT + CLEAN LEARNING UI
+   ============================================ */
+
+.hero-kit-showcase {
+  max-width: min(940px, calc(100vw - 3rem));
+  margin: 1.1rem auto 0;
+}
+
+.lang-toggle,
+.text-scale-toggle,
+.quest-tab,
+.hero-game-badge,
+.variant-note {
+  font-family: var(--font-body);
+  letter-spacing: 0;
+}
+
+.lang-toggle,
+.text-scale-toggle {
+  font-size: 0.94rem !important;
+  font-weight: 800;
+}
+
+.hero-game-badge,
+.variant-note,
+.quest-tab {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.quest-tab {
+  min-height: 2.5rem;
+  border-radius: 999px;
+}
+
+.hero-kit-showcase img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+#quests .quest-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.82rem;
+  align-items: start;
+}
+
+#quests .quest-card,
+#locked-quests .quest-card {
+  min-height: 0;
+  border-radius: 1rem;
+  background: rgba(10, 18, 34, 0.88);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
+}
+
+.quest-card:hover {
+  transform: translateY(-3px);
+}
+
+#quests .quest-banner {
+  height: clamp(140px, 11.4vw, 165px);
+  min-height: 0;
+  aspect-ratio: auto;
+}
+
+.quest-number {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.quest-animal {
+  width: 1.95rem;
+  height: 1.95rem;
+  font-size: 1.1rem;
+}
+
+.quest-photo-hint {
+  padding: 0.28rem 0.4rem;
+  font-size: 0.88rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+#quests .quest-content {
+  padding: 0.72rem 0.82rem 0.82rem;
+  gap: 0.36rem;
+}
+
+#quests .quest-chapter-label {
+  display: none;
+}
+
+.quest-chapter-label {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+#quests .quest-content h3 {
+  font-family: var(--font-body);
+  font-size: clamp(0.98rem, 0.94rem + 0.16vw, 1.06rem);
+  line-height: 1.38;
+}
+
+#quests .quest-desc {
+  font-size: var(--fs-xs);
+  line-height: 1.52;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+#quests .quest-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.38rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+#quests .quest-stat-label,
+#quests .quest-stat-value,
+#quests .quest-meta,
+#quests .quest-tag {
+  font-family: var(--font-body);
+}
+
+#quests .quest-stat-item {
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.34rem 0.52rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+#quests .quest-stat-label {
+  font-size: 0.82rem;
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+#quests .quest-stat-value {
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+#quests .stat-bar {
+  display: none;
+}
+
+#quests .quest-tags {
+  gap: 0.4rem;
+  margin-top: 0.08rem;
+}
+
+#quests .quest-tag {
+  font-size: 0.88rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+}
+
+#quests .quest-tag:nth-child(n + 3) {
+  display: none;
+}
+
+#quests .quest-footer {
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#quests .quest-meta {
+  display: none;
+}
+
+.quest-cta,
+.locked-quest-link {
+  min-height: 2.4rem;
+  padding: 0.45rem 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  border-radius: 999px;
+}
+
+.story-section {
+  display: block;
+  max-width: 1100px;
+  padding: 4rem 1.5rem 1.5rem;
+}
+
+.story-center-block {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.story-text h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: 0.65rem;
+}
+
+.story-intro-copy {
+  max-width: 860px;
+  font-size: var(--fs-sm);
+  line-height: 1.7;
+}
+
+.story-cards-grid {
+  margin-top: 1.25rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.story-card {
+  background: rgba(11, 21, 40, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1rem 1rem 0.95rem;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
+}
+
+.story-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 0.55rem;
+}
+
+.story-card-chip {
+  align-self: flex-start;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--emerald);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.story-card h3 {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: 1.4;
+}
+
+.story-card p {
+  color: var(--text-secondary);
+  font-size: var(--fs-xs);
+  line-height: 1.68;
+}
+
+.story-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
+}
+
+.story-card-tag {
+  padding: 0.18rem 0.48rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.doroland-chars-section {
+  padding: 0.5rem 1.5rem 3rem;
+}
+
+.doroland-char-frame {
+  width: 92px;
+  height: 110px;
+}
+
+.doroland-char-name {
+  font-size: 1rem;
+}
+
+.doroland-char-role {
+  font-size: 0.88rem;
+  font-family: var(--font-body);
+}
+
+.detail-hero-clean,
+.detail-content-clean {
+  position: relative;
+}
+
+.detail-hero,
+.detail-hero-clean {
+  padding: 4.45rem 1.35rem 0.8rem;
+  max-width: 760px;
+}
+
+.detail-hero h1 {
+  font-family: var(--font-body);
+  font-size: clamp(1.52rem, 1.34rem + 0.7vw, 1.96rem);
+  line-height: 1.28;
+  margin-bottom: 0.7rem;
+}
+
+.chapter-badge,
+.science-badge {
+  font-family: var(--font-body);
+  font-size: 0.94rem !important;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.hero-desc {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.doro-zone-story {
+  margin: 0 auto 0.85rem;
+  max-width: 980px;
+}
+
+.doro-zone-story-inner {
+  max-width: 980px;
+  padding: 0.75rem 1rem;
+  border-radius: 0.95rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.doro-zone-badge {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.doro-zone-story p {
+  margin-top: 0.35rem;
+  font-size: var(--fs-sm);
+  line-height: 1.62;
+  color: var(--text-primary);
+}
+
+.info-bar {
+  max-width: 1040px;
+  margin: 0 auto 1.2rem;
+  padding: 1rem 0;
+  background: rgba(10, 18, 34, 0.82);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-bar .info-item {
+  padding: 0.9rem 1rem;
+}
+
+.info-label {
+  font-family: var(--font-body);
+  font-size: 0.88rem !important;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.info-value {
+  font-size: 0.96rem !important;
+}
+
+.detail-content {
+  max-width: 980px;
+}
+
+.detail-kit-hero,
+.detail-kit-thumb,
+.student-section,
+.student-group-section > .student-section,
+.student-group-section > .docs-section,
+.student-group-section > .media-section,
+.student-group-section > .ai-extension {
+  background: rgba(9, 17, 32, 0.88);
+}
+
+.detail-kit-hero,
+.detail-kit-thumb {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.student-section,
+.student-group-section {
+  border-radius: 1rem;
+}
+
+.student-group-header {
+  margin-bottom: 0.95rem;
+}
+
+.student-section-title,
+.student-group-title {
+  font-family: var(--font-body);
+  font-size: var(--fs-lg);
+  line-height: 1.35;
+}
+
+.student-section-desc,
+.student-group-desc,
+.lab-explanation,
+.lab-experiment,
+.lab-concept,
+.cert-note,
+.doc-card-desc,
+.demo-note,
+.ai-extension p,
+.media-download-btn,
+.notebook-form label,
+.trouble-parent-note {
+  font-size: var(--fs-xs);
+  line-height: 1.65;
+}
+
+.parts-toolbar,
+.mission-summary-bar,
+.safety-complete-actions,
+.parts-toolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.parts-progress-chip,
+.mission-progress-chip,
+.safety-progress-chip {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.parts-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.part-card {
+  padding: 0.78rem;
+  gap: 0.62rem;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.part-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.part-emoji {
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.18rem;
+  border-radius: 0.7rem;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.part-name {
+  font-size: 0.96rem;
+  line-height: 1.35;
+}
+
+.part-meta {
+  display: grid;
+  gap: 0.52rem;
+}
+
+.part-copy {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.part-copy-label {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+
+.part-role,
+.part-check {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.part-btns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.part-btn,
+.parts-reset-btn,
+.parts-next-btn,
+.mission-check-btn,
+.mission-reset-btn,
+.build-btn,
+.build-reset-btn,
+.safety-btn,
+.safety-reset-btn,
+.build-jump-btn,
+.cert-reset-btn {
+  min-height: 2.45rem;
+  padding: 0.5rem 0.74rem;
+  border-radius: 0.8rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.parts-reset-btn,
+.mission-reset-btn,
+.build-reset-btn,
+.safety-reset-btn,
+.cert-reset-btn {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+}
+
+.parts-next-btn,
+.build-jump-btn {
+  border: 1px solid rgba(20, 184, 166, 0.5);
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--emerald);
+}
+
+.part-missing-msg,
+.parts-summary-copy,
+.mission-complete-banner {
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.build-step-card,
+.mission-card,
+.trouble-steps-card {
+  border-radius: 1rem;
+}
+
+.build-step-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.build-step-num {
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.build-step-title {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: 1.35;
+}
+
+.build-step-detail,
+.build-step-tip {
+  font-size: var(--fs-xs);
+  line-height: 1.65;
+}
+
+.build-step-btns {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-top: 0.9rem;
+}
+
+.trouble-item {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.trouble-symptom-btn {
+  min-height: 2.6rem;
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.trouble-steps-list li {
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+}
+
+.mission-card {
+  gap: 0.7rem;
+}
+
+.mission-text {
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+}
+
+.mission-type-badge {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.docs-grid,
+.media-downloads {
+  gap: 0.85rem;
+}
+
+.doc-card,
+.media-download-btn,
+.ai-extension {
+  border-radius: 1rem;
+}
+
+.toc-sidebar {
+  top: 6rem;
+  right: 1rem;
+  width: 188px;
+  padding: 0.8rem;
+  gap: 0.35rem;
+  background: rgba(7, 14, 28, 0.92);
+}
+
+.toc-item {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  white-space: normal;
+  word-break: keep-all;
+  padding: 0.48rem 0.55rem;
+}
+
+.toc-item .toc-dot {
+  flex-shrink: 0;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--emerald);
+  outline-offset: 2px;
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  #quests .quest-grid {
+    gap: 0.9rem;
+  }
+
+  .detail-content {
+    max-width: 920px;
+  }
+}
+
+@media (max-height: 820px) and (min-width: 1024px) {
+  .hero {
+    padding-top: 5.6rem;
+    padding-bottom: 2.4rem;
+  }
+
+  .hero-logo {
+    width: clamp(120px, 10vw, 160px);
+  }
+
+  .hero-tagline {
+    margin-bottom: 0.85rem;
+  }
+
+  .detail-hero {
+    padding-top: 4.7rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .toc-sidebar {
+    display: none !important;
+  }
+
+  .parts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  #quests .quest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .story-cards-grid,
+  .mission-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .parts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .story-cards-grid,
+  .parts-grid,
+  .mission-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .build-step-btns,
+  .parts-toolbar,
+  .mission-summary-bar,
+  .safety-complete-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-kit-showcase {
+    max-width: calc(100vw - 2rem);
+  }
+
+  #quests .quest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quest-content,
+  .story-card,
+  .part-card {
+    padding: 0.9rem;
+  }
+
+  .parts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .part-btns {
+    grid-template-columns: 1fr;
+  }
 }

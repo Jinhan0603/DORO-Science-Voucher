@@ -5,12 +5,17 @@
 document.addEventListener('DOMContentLoaded', () => {
   normalizeBaseBranding();
   initVariantBranding();
+  renderDorolandStories();
   initScrollAnimations();
   initNavScroll();
   initQuestTabs();
   initFAQAccordion();
   initChecklist();
   initProgressBar();
+});
+
+window.addEventListener('doro:languagechange', () => {
+  renderDorolandStories();
 });
 
 function normalizeBaseBranding() {
@@ -63,6 +68,32 @@ function initVariantBranding() {
 
   const baseTitle = document.title.replace(/^DOROLAND\s+V[^\|]*\|\s*/i, '');
   document.title = `${label} | ${baseTitle}`;
+}
+
+function renderDorolandStories() {
+  const mount = document.getElementById('doroland-story-cards');
+  const stories = Array.isArray(window.DOROLAND_STORIES) ? window.DOROLAND_STORIES : [];
+  if (!mount || !stories.length) return;
+
+  const lang = (localStorage.getItem('doro-lang') || 'ko').startsWith('en') ? 'en' : 'ko';
+  const chipLabel = lang === 'en' ? 'Chapter' : '대표 스토리';
+
+  mount.innerHTML = stories.map((story, index) => `
+    <article class="story-card fade-in stagger-${Math.min(index + 1, 5)}" data-story-id="${story.id}">
+      <div class="story-card-top">
+        <span class="story-card-chip">${chipLabel}</span>
+        <h3>${lang === 'en' ? story.titleEn : story.titleKo}</h3>
+      </div>
+      <p>${lang === 'en' ? story.summaryEn : story.summaryKo}</p>
+      <div class="story-card-tags">
+        ${(story.keywords || []).slice(0, 3).map(keyword => `<span class="story-card-tag">#${keyword}</span>`).join('')}
+      </div>
+    </article>
+  `).join('');
+
+  document.querySelectorAll('#doroland-story-cards .fade-in').forEach(card => {
+    card.classList.add('visible');
+  });
 }
 
 /* --- Scroll Animations (Intersection Observer) --- */
