@@ -11,7 +11,7 @@ const i18n = {
     // Hero
     'hero.tagline1': '기술은 자연을 해치지 않아,', 'hero.tagline2': '우리가 올바르게 사용한다면..',
     'hero.tagline3': '도로랜드가 멈춘 지금,', 'hero.tagline4': '다시 움직이게 할 수 있는 건 너뿐이야',
-    'hero.badge.label': 'DORO DIMC 홈러닝 키트', 'hero.badge.desc': '2026 과학문화바우처 선정 프로그램',
+    'hero.badge.label': 'DORO DIMC 홈러닝 키트', 'hero.badge.desc': '2026 과학문화바우처 신청 예정 상품',
     'hero.scroll': 'SCROLL',
 
     // DIMC Section
@@ -47,7 +47,7 @@ const i18n = {
 
     // ── Info Bar Common Labels ──
     'info.time.label': '⏱ 소요시간', 'info.age.label': '👤 대상',
-    'info.level.label': '⭐ 난이도', 'info.type.label': '🚌 운영형태',
+    'info.level.label': '⭐ 난이도', 'info.type.label': '🏠 학습형태',
 
     // ── Program Page Common ──
     'prog.nav.back': '프로그램 목록',
@@ -56,6 +56,8 @@ const i18n = {
     'prog.demo.title': '🎬 키트 작동 데모 영상',
     'prog.demo.note': '※ 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.',
     'prog.ai.label': '선택형 확장 활동', 'prog.faq.title': '❓ 자주 묻는 질문',
+    'prog.docs.title': '📚 교육 자료 다운로드',
+    'prog.docs.overview': '교육 개요서', 'prog.docs.guide': '교육 지도서',
     'prog.toc.photos': '키트 사진', 'prog.toc.checklist': '준비물',
     'prog.toc.missions': '교육 과정', 'prog.toc.media': '데모 영상',
     'prog.toc.ai': 'AI 확장', 'prog.toc.faq': 'FAQ',
@@ -74,7 +76,7 @@ const i18n = {
     'p1.card.meta': '⏱ 90분 · 초등 4~6학년',
     'p1.info.time': '90분', 'p1.info.age': '초등 4~6학년', 'p1.info.level': '★★☆',
     'p1.info.ai.label': '🎵 AI 확장', 'p1.info.ai': 'Suno (선택)',
-    'p1.info.type': 'DOROBUS', 'p1.info.char.label': '🐼 캐릭터', 'p1.info.char': '판다',
+    'p1.info.type': '홈러닝 키트', 'p1.info.char.label': '🐼 캐릭터', 'p1.info.char': '판다',
     'p1.step1.title': '왜 이 키트를 배우는가 — 도입', 'p1.step2.title': '오늘의 과학 개념',
     'p1.step3.title': '조립 — 판다 스피커 만들기', 'p1.step4.title': '작동 확인 + 소리 탐구',
     'p1.step5.title': '정리 + 발표',
@@ -95,7 +97,7 @@ const i18n = {
     'p2.card.meta': '⏱ 90분 · 초등 3~6학년',
     'p2.info.time': '90분', 'p2.info.age': '초등 3~6학년', 'p2.info.level': '★★☆',
     'p2.info.ai.label': '🎨 AI 확장', 'p2.info.ai': '없음 (기본)',
-    'p2.info.type': 'DOROBUS', 'p2.info.char.label': '🐱 캐릭터', 'p2.info.char': '고양이',
+    'p2.info.type': '홈러닝 키트', 'p2.info.char.label': '🐱 캐릭터', 'p2.info.char': '고양이',
     'p2.step1.title': '도입 — 빛과 센서의 세계', 'p2.step2.title': '과학 개념 — 회로와 센서',
     'p2.step3.title': '조립 — 고양이 무드등 제작', 'p2.step4.title': '작동 확인 + 탐구',
     'p2.step5.title': '정리 + 발표',
@@ -114,7 +116,7 @@ const i18n = {
     'p3.age': '4~중등', 'p3.tag1': '#기구학', 'p3.tag2': '#보행메커니즘', 'p3.tag3': '#전자회로',
     'p3.card.meta': '⏱ 120분 · 초등 4~중등',
     'p3.info.time': '120분', 'p3.info.age': '초등 4~중등', 'p3.info.level': '★★★',
-    'p3.info.type': 'DOROBUS', 'p3.info.char.label': '🐶 캐릭터', 'p3.info.char': '강아지',
+    'p3.info.type': '홈러닝 키트', 'p3.info.char.label': '🐶 캐릭터', 'p3.info.char': '강아지',
     'p3.step1.title': '도입 — 어떻게 걷는가?', 'p3.step2.title': '과학 개념 — 기구학과 모터',
     'p3.step3.title': '조립 — 강아지 로봇 제작', 'p3.step4.title': '작동 + 탐구',
     'p3.step5.title': '정리 + 발표',
@@ -133,7 +135,7 @@ const i18n = {
     'p4.age': '4~중등', 'p4.tag1': '#IR센서', 'p4.tag2': '#거리측정', 'p4.tag3': '#자율주행기초',
     'p4.card.meta': '⏱ 120분 · 초등 4~중등',
     'p4.info.time': '120분', 'p4.info.age': '초등 4~중등', 'p4.info.level': '★★★',
-    'p4.info.type': 'DOROBUS', 'p4.info.feat.label': '🚗 특징', 'p4.info.feat': '4바퀴 구동',
+    'p4.info.type': '홈러닝 키트', 'p4.info.feat.label': '🚗 특징', 'p4.info.feat': '4바퀴 구동',
     'p4.step1.title': '도입 — 자동차가 스스로 움직이다?', 'p4.step2.title': '과학 개념 — IR 센서와 거리 측정',
     'p4.step3.title': '조립 — DORO 로봇 자동차 제작', 'p4.step4.title': '작동 + 탐구',
     'p4.step5.title': '정리 + 발표',
@@ -182,6 +184,30 @@ const i18n = {
     'p6.faq1.q': '손을 움직여도 소리가 안 날 때는?',
     'p6.faq2.q': '소리가 계속 같은 음만 날 때는?',
     'p6.faq3.q': '특정 음을 더 쉽게 내려면?',
+
+    // ── V3 Learning Portal ──
+    'learning.parts.title': '🔍 부품 탐정',
+    'learning.safety.title': '🛡 안전 퀘스트',
+    'learning.build.title': '🔨 한 단계씩 만들기',
+    'learning.trouble.title': '🤔 왜 안 되지?',
+    'learning.lab.title': '🔬 과학 원리 실험실',
+    'learning.mission.title': '🎯 미션 카드',
+    'learning.notebook.title': '📓 나만의 실험 기록장',
+    'learning.certificate.title': '🏆 완성 인증서',
+    'learning.parts.found': '찾았어요! ✓',
+    'learning.parts.missing': '없어요 — 보호자에게 알려주세요',
+    'learning.safety.correct': '맞아요! 안전 대원이에요 ✓',
+    'learning.safety.wrong': '다시 확인해볼까요?',
+    'learning.safety.pass': '🎖 안전 대원 배지를 얻었어요!',
+    'learning.build.done': '완료했어요 ✓',
+    'learning.build.redo': '다시 볼래요',
+    'learning.build.help': '도와줘요',
+    'learning.trouble.select': '무엇이 문제인가요?',
+    'learning.notebook.save': '기록 저장하기',
+    'learning.notebook.saved': '저장됐어요 ✓',
+    'learning.certificate.print': '인증서 출력하기',
+    'learning.nickname.prompt': '닉네임을 입력하세요 (선택)',
+    'learning.parent.note': '👨‍👩‍👧 보호자/교사와 함께하기',
   },
 
   en: {
@@ -191,7 +217,7 @@ const i18n = {
     // Hero
     'hero.tagline1': 'Technology doesn\'t harm nature,', 'hero.tagline2': 'if we use it the right way..',
     'hero.tagline3': 'DOROLAND has stopped.', 'hero.tagline4': 'You are the only one who can bring it back.',
-    'hero.badge.label': 'DORO DIMC Home Learning Kit', 'hero.badge.desc': '2026 Science & Culture Voucher Program',
+    'hero.badge.label': 'DORO DIMC Home Learning Kit', 'hero.badge.desc': '2026 Science Culture Voucher Application Product',
     'hero.scroll': 'SCROLL',
 
     // DIMC
@@ -227,7 +253,7 @@ const i18n = {
 
     // Info Bar Common Labels
     'info.time.label': '⏱ Duration', 'info.age.label': '👤 Target Age',
-    'info.level.label': '⭐ Difficulty', 'info.type.label': '🚌 Program Type',
+    'info.level.label': '⭐ Difficulty', 'info.type.label': '🏠 Learning Type',
 
     // Program Page Common
     'prog.nav.back': 'Program List',
@@ -236,6 +262,8 @@ const i18n = {
     'prog.demo.title': '🎬 Kit Demo Video',
     'prog.demo.note': '※ This video shows the completed kit in action (not an assembly guide).',
     'prog.ai.label': 'Optional Extension Activity', 'prog.faq.title': '❓ FAQ',
+    'prog.docs.title': '📚 Educational Resources',
+    'prog.docs.overview': 'Program Overview', 'prog.docs.guide': 'Teaching Guide',
     'prog.toc.photos': 'Kit Photos', 'prog.toc.checklist': 'Materials',
     'prog.toc.missions': 'Curriculum', 'prog.toc.media': 'Demo Video',
     'prog.toc.ai': 'AI Extension', 'prog.toc.faq': 'FAQ',
@@ -254,7 +282,7 @@ const i18n = {
     'p1.card.meta': '⏱ 90 min · Grades 4–6',
     'p1.info.time': '90 min', 'p1.info.age': 'Grades 4–6', 'p1.info.level': '★★☆',
     'p1.info.ai.label': '🎵 AI Ext.', 'p1.info.ai': 'Suno (optional)',
-    'p1.info.type': 'DOROBUS', 'p1.info.char.label': '🐼 Character', 'p1.info.char': 'Panda',
+    'p1.info.type': 'Home Learning Kit', 'p1.info.char.label': '🐼 Character', 'p1.info.char': 'Panda',
     'p1.step1.title': 'Introduction — Why This Kit?', 'p1.step2.title': 'Science Concepts',
     'p1.step3.title': 'Assembly — Build the Panda Speaker', 'p1.step4.title': 'Test & Sound Exploration',
     'p1.step5.title': 'Wrap-up & Presentation',
@@ -275,7 +303,7 @@ const i18n = {
     'p2.card.meta': '⏱ 90 min · Grades 3–6',
     'p2.info.time': '90 min', 'p2.info.age': 'Grades 3–6', 'p2.info.level': '★★☆',
     'p2.info.ai.label': '🎨 AI Ext.', 'p2.info.ai': 'None (basic)',
-    'p2.info.type': 'DOROBUS', 'p2.info.char.label': '🐱 Character', 'p2.info.char': 'Cat',
+    'p2.info.type': 'Home Learning Kit', 'p2.info.char.label': '🐱 Character', 'p2.info.char': 'Cat',
     'p2.step1.title': 'Intro — The World of Light & Sensors', 'p2.step2.title': 'Science — Circuits & Sensors',
     'p2.step3.title': 'Assembly — Build the Cat Mood Light', 'p2.step4.title': 'Test & Explore',
     'p2.step5.title': 'Wrap-up & Presentation',
@@ -294,7 +322,7 @@ const i18n = {
     'p3.age': 'Gr. 4–9', 'p3.tag1': '#kinematics', 'p3.tag2': '#gaitdesign', 'p3.tag3': '#electronics',
     'p3.card.meta': '⏱ 120 min · Grades 4–9',
     'p3.info.time': '120 min', 'p3.info.age': 'Grades 4–9', 'p3.info.level': '★★★',
-    'p3.info.type': 'DOROBUS', 'p3.info.char.label': '🐶 Character', 'p3.info.char': 'Dog',
+    'p3.info.type': 'Home Learning Kit', 'p3.info.char.label': '🐶 Character', 'p3.info.char': 'Dog',
     'p3.step1.title': 'Intro — How Do We Walk?', 'p3.step2.title': 'Science — Kinematics & Motors',
     'p3.step3.title': 'Assembly — Build the Dog Robot', 'p3.step4.title': 'Test & Explore',
     'p3.step5.title': 'Wrap-up & Presentation',
@@ -313,7 +341,7 @@ const i18n = {
     'p4.age': 'Gr. 4–9', 'p4.tag1': '#IRsensor', 'p4.tag2': '#distance', 'p4.tag3': '#autonomousdriving',
     'p4.card.meta': '⏱ 120 min · Grades 4–9',
     'p4.info.time': '120 min', 'p4.info.age': 'Grades 4–9', 'p4.info.level': '★★★',
-    'p4.info.type': 'DOROBUS', 'p4.info.feat.label': '🚗 Feature', 'p4.info.feat': '4-Wheel Drive',
+    'p4.info.type': 'Home Learning Kit', 'p4.info.feat.label': '🚗 Feature', 'p4.info.feat': '4-Wheel Drive',
     'p4.step1.title': 'Intro — Cars That Drive Themselves?', 'p4.step2.title': 'Science — IR Sensors & Distance',
     'p4.step3.title': 'Assembly — Build the DORO Robot Car', 'p4.step4.title': 'Test & Explore',
     'p4.step5.title': 'Wrap-up & Presentation',
@@ -362,6 +390,30 @@ const i18n = {
     'p6.faq1.q': 'Moving hand but no sound?',
     'p6.faq2.q': 'Only one note keeps playing?',
     'p6.faq3.q': 'How to make a specific note easier to hit?',
+
+    // ── V3 Learning Portal ──
+    'learning.parts.title': '🔍 Parts Detective',
+    'learning.safety.title': '🛡 Safety Quest',
+    'learning.build.title': '🔨 Step-by-Step Build',
+    'learning.trouble.title': '🤔 Why Won\'t It Work?',
+    'learning.lab.title': '🔬 Science Lab',
+    'learning.mission.title': '🎯 Mission Cards',
+    'learning.notebook.title': '📓 My Experiment Journal',
+    'learning.certificate.title': '🏆 Completion Certificate',
+    'learning.parts.found': 'Found it! ✓',
+    'learning.parts.missing': 'Missing — please tell a parent',
+    'learning.safety.correct': 'Correct! You\'re a safety cadet ✓',
+    'learning.safety.wrong': 'Let\'s check again?',
+    'learning.safety.pass': '🎖 You earned the Safety Cadet badge!',
+    'learning.build.done': 'Done ✓',
+    'learning.build.redo': 'See again',
+    'learning.build.help': 'Help me',
+    'learning.trouble.select': 'What is the problem?',
+    'learning.notebook.save': 'Save notes',
+    'learning.notebook.saved': 'Saved ✓',
+    'learning.certificate.print': 'Print certificate',
+    'learning.nickname.prompt': 'Enter a nickname (optional)',
+    'learning.parent.note': '👨‍👩‍👧 Do this with a parent/teacher',
   }
 };
 

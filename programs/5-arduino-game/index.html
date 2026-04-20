@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🐷 도텐도 — DORO 게임 코딩 키트 | DOROLAND V2</title>
+  <title>🐷 도텐도 — DORO 게임 코딩 키트 | DOROLAND V3-CODEX</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
@@ -17,13 +17,15 @@
       <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;" data-i18n="prog.nav.back">프로그램 목록</span>
     </a>
     <a href="../../index.html" class="nav-brand">
-      <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V2</span>
+      <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V3</span>
     </a>
   </nav>
   <div class="toc-sidebar">
     <a href="#photos" class="toc-item active"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 사진</span></a>
     <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
+    <a href="#learning-hub" class="toc-item"><span class="toc-dot"></span> 학생 학습 모드</a>
     <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
+    <a href="#docs" class="toc-item"><span class="toc-dot"></span> 교육 자료</a>
     <a href="#media" class="toc-item"><span class="toc-dot"></span> 데모 영상</a>
     <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
     <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
@@ -168,6 +170,33 @@
       </div>
     </section>
 
+    <!-- ═══ DOCS DOWNLOAD ═══ -->
+    <section id="docs" class="docs-section fade-in">
+      <h2 data-i18n="prog.docs.title">📚 교육 자료 다운로드</h2>
+      <div class="docs-grid">
+        <div class="doc-card">
+          <div class="doc-card-icon">📄</div>
+          <div class="doc-card-info">
+            <div class="doc-card-title" data-i18n="prog.docs.overview">교육 개요서</div>
+            <div class="doc-card-desc">프로그램 목표 · 준비물 · 수업 흐름 요약 (Notion 연결)</div>
+          </div>
+          <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
+            <span>🔗</span> Notion
+          </a>
+        </div>
+        <div class="doc-card">
+          <div class="doc-card-icon">📖</div>
+          <div class="doc-card-info">
+            <div class="doc-card-title" data-i18n="prog.docs.guide">교육 지도서</div>
+            <div class="doc-card-desc">교사·강사용 진행 가이드 (Notion 연결)</div>
+          </div>
+          <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
+            <span>🔗</span> Notion
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section id="media" class="media-section fade-in">
       <h2 data-i18n="prog.demo.title">🎬 키트 작동 데모 영상</h2>
       <div class="assembly-video">
@@ -208,18 +237,51 @@
         <button class="faq-question" data-i18n="p5.faq3.q">코딩을 전혀 모르는 학생도 할 수 있나요?</button>
         <div class="faq-answer"><div class="faq-answer-inner">네. 제공된 기본 코드를 업로드하면 즉시 게임이 작동합니다. 수치 값만 바꿔도 게임이 달라지므로 코딩 경험이 없어도 창작 활동이 가능합니다.</div></div>
       </div>
+      <div class="faq-item">
+        <button class="faq-question">아두이노 IDE 설치와 코드 업로드는 어떻게 하나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          arduino.cc에서 Arduino IDE 2.x를 설치하고, USB 케이블로 연결 후 「도구 → 포트」에서 아두이노가 연결된 COM 포트를 선택합니다. Windows에서 포트가 보이지 않으면 CH340 USB 드라이버를 별도 설치하세요. 수업용 코드 파일은 교사 지도서에 포함되어 있습니다.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">아두이노 보드 사용 시 주의사항은?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          아두이노 보드에 5V 이상의 전압을 직접 연결하지 마세요. 핀 번호를 잘못 연결하면 부품이 손상될 수 있으니 회로도를 꼼꼼히 확인합니다. USB 연결 상태에서 도선이 단락(쇼트)되지 않도록 주의하고, 작업 전 정전기 방지를 위해 손을 닦아주세요.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">어떤 교육과정과 연계되나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          중학교 정보 교과 「프로그래밍」·「피지컬 컴퓨팅」 영역과 직결됩니다. 변수, 조건문, 반복문 등 알고리즘 기초 개념을 게임 코드로 직접 체험하며, 초등 실과 「소프트웨어와 생활」 단원의 확장 활동으로도 적합합니다.
+        </div></div>
+      </div>
     </section>
+
+    <!-- ═══ V3 LEARNING SECTIONS ═══ -->
+    <section id="parts-detective" class="student-section fade-in"></section>
+    <section id="safety-quest" class="student-section fade-in"></section>
+    <section id="build-guide" class="student-section fade-in"></section>
+    <section id="troubleshooting" class="student-section fade-in"></section>
+    <section id="science-lab" class="student-section fade-in"></section>
+    <section id="mission-cards" class="student-section fade-in"></section>
+    <section id="lab-notebook" class="student-section fade-in"></section>
+    <section id="certificate" class="student-section fade-in"></section>
   </div>
 
   <footer class="footer">
     <div class="footer-container">
-      <div class="footer-brand">⚔ DOROLAND V2 ⚔</div>
+      <div class="footer-brand">⚔ DOROLAND V3-CODEX ⚔</div>
       <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
     </div>
   </footer>
   <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/kit-data.js"></script>
+  <script src="../../assets/js/learning.js"></script>
   <script src="../../assets/js/main.js"></script>
   <script src="../../assets/js/pixel.js"></script>
   <script src="../../assets/js/detail.js"></script>
 </body>
 </html>
+
+
+
