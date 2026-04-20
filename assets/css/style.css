@@ -2478,6 +2478,7 @@ body {
 
 .section-desc,
 .dimc-subtitle,
+.dimc-card p,
 .story-text p,
 .story-quote,
 .hero-desc,
@@ -3198,4 +3199,62 @@ body {
   html {
     font-size: 16px;
   }
+}
+
+/* ============================================
+   V3.1 Review Pass
+   ============================================ */
+.nav-brand-text,
+.nav-version,
+.variant-note,
+.section-badge,
+.chapter-badge,
+.science-badge,
+.quest-chapter-label,
+.doro-zone-badge,
+.kit-gallery-label,
+.parts-progress,
+.safety-progress,
+.panel-badge,
+.extension-label {
+  font-family: var(--font-body) !important;
+  font-size: var(--fs-xs) !important;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.section-badge,
+.chapter-badge,
+.science-badge,
+.quest-chapter-label,
+.doro-zone-badge,
+.kit-gallery-label,
+.panel-badge,
+.extension-label {
+  text-transform: none;
+}
+
+.variant-note,
+.parts-progress,
+.safety-progress {
+  color: var(--text-secondary);
+}
+
+.doc-download-btn,
+.cert-print-btn {
+  min-height: var(--control-height);
+  padding: 0.72rem 1rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm) !important;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.doc-download-btn {
+  border-radius: 12px;
+}
+
+.cert-print-btn {
+  border-radius: 999px;
 }
