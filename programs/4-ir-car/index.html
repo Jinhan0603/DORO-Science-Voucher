@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🚗 도카 — DORO AI 모빌리티 키트 | DOROLAND V3-CODEX</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="icon" href="../../assets/images/kits/kit-car-white.jpg">
 </head>
 <body>
   <div class="bg-fantasy"></div><div class="bg-overlay"></div>
@@ -21,13 +22,15 @@
     </a>
   </nav>
   <div class="toc-sidebar">
-    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 사진</span></a>
-    <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
-    <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
-    <a href="#docs" class="toc-item"><span class="toc-dot"></span> 교육 자료</a>
-    <a href="#media" class="toc-item"><span class="toc-dot"></span> 데모 영상</a>
-    <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
-    <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 보기</span></a>
+    <a href="#parts-detective" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.components">구성품 확인</span></a>
+    <a href="#safety-quest" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.safety">안전 약속</span></a>
+    <a href="#build-guide" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.build">한 단계씩 만들기</span></a>
+    <a href="#troubleshooting" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.trouble">왜 안 되지?</span></a>
+    <a href="#science-lab" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.lab">과학 실험</span></a>
+    <a href="#mission-cards" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.mission">도전 미션</span></a>
+    <a href="#record-verify" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.record">기록·인증</span></a>
+    <a href="#resources-media" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.resources">자료·영상</span></a>
   </div>
 
   <section class="detail-hero">
@@ -67,196 +70,80 @@
       </div>
     </section>
 
-    <section id="checklist" class="checklist-section fade-in">
-      <h2 class="checklist-title" data-i18n="prog.checklist.title">🔧 준비물 체크리스트</h2>
-      <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. <span id="checklist-progress"></span></p>
-      <div class="checklist-item"><input type="checkbox"><span>🚗 자동차 차체 (DORO 로고 목재 프레임)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>🔴 IR 적외선 센서 모듈 × 1</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>⚙️ DC 모터 + 기어박스 × 2</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>🔵 미니 브레드보드</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>⚫ 바퀴 × 4 (타이어 포함)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>🔋 배터리 홀더 + AA 배터리 × 2</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>🔗 점퍼 케이블 세트</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>📄 학생용 활동지</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>📖 조립 설명서</span></div>
-    </section>
-
-    <section id="missions" class="mission-section fade-in">
-      <h2 data-i18n="prog.missions">📖 STEP-BY-STEP 교육 과정</h2>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--amber);">1</span>
-          <span class="mission-step-title" data-i18n="p4.step1.title">도입 — 자동차가 스스로 움직이다?</span>
-          <span class="mission-step-time" data-i18n="time.15">⏱ 15분</span>
-        </div>
-        <div class="mission-step-body">
-          <p>현실의 자율주행 자동차가 어떻게 주변 물체를 감지하는지 소개합니다.</p>
-          <ul>
-            <li>테슬라, 현대차 등 자율주행 사례</li>
-            <li>IR 센서로 손을 따라가는 도카 시연</li>
-            <li>자율주행의 3단계: 감지 → 판단 → 행동</li>
-          </ul>
-          <div class="mission-step-image">
-            <img decoding="async" src="../../assets/images/kits/kit-car-white.jpg" alt="도카 로봇 자동차" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--amber);">2</span>
-          <span class="mission-step-title" data-i18n="p4.step2.title">과학 개념 — IR 센서와 거리 측정</span>
-          <span class="mission-step-time" data-i18n="time.15">⏱ 15분</span>
-        </div>
-        <div class="mission-step-body">
-          <ul>
-            <li>적외선(IR): 눈에 보이지 않는 빛</li>
-            <li>IR 센서: 발광부(발사) + 수광부(수신) 원리</li>
-            <li>반사 강도로 거리 측정하는 원리</li>
-            <li>활동지 센서 원리 카드 작성</li>
-          </ul>
-        </div>
-      </div>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--amber);">3</span>
-          <span class="mission-step-title" data-i18n="p4.step3.title">조립 — DORO 로봇 자동차 제작</span>
-          <span class="mission-step-time" data-i18n="time.50">⏱ 50분</span>
-        </div>
-        <div class="mission-step-body">
-          <p>목재 차체에 모터, 바퀴, IR 센서를 조립합니다.</p>
-          <ul>
-            <li>차체 프레임 조립</li>
-            <li>DC 모터 + 기어박스 장착</li>
-            <li>4개 바퀴 연결</li>
-            <li>IR 센서 모듈 전면 장착</li>
-            <li>배터리 홀더 및 케이블 연결</li>
-          </ul>
-          <div class="mission-step-image">
-            <img decoding="async" src="../../assets/images/kits/kit-car-parts.jpg" alt="도카 구성품 배열" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--amber);">4</span>
-          <span class="mission-step-title" data-i18n="p4.step4.title">작동 + 탐구</span>
-          <span class="mission-step-time" data-i18n="time.20">⏱ 20분</span>
-        </div>
-        <div class="mission-step-body">
-          <ul>
-            <li>손을 센서 앞에 대고 → 따라오는지 확인</li>
-            <li>손의 거리에 따른 속도 변화 관찰</li>
-            <li>다양한 표면에서의 반응 차이 실험</li>
-          </ul>
-          <div class="mission-step-image">
-            <img decoding="async" src="../../assets/images/kits/kit-car-hand.jpg" alt="도카 작동 확인" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--amber);">5</span>
-          <span class="mission-step-title" data-i18n="p4.step5.title">정리 + 발표</span>
-          <span class="mission-step-time" data-i18n="time.20">⏱ 20분</span>
-        </div>
-        <div class="mission-step-body">
-          <ul><li>자율주행 기초 개념 정리</li><li>내 자동차 소개</li><li>미래 모빌리티 상상하기</li></ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ DOCS DOWNLOAD ═══ -->
-    <section id="docs" class="docs-section fade-in">
-      <h2 data-i18n="prog.docs.title">📚 교육 자료 다운로드</h2>
-      <div class="docs-grid">
-        <div class="doc-card">
-          <div class="doc-card-icon">📄</div>
-          <div class="doc-card-info">
-            <div class="doc-card-title" data-i18n="prog.docs.overview">교육 개요서</div>
-            <div class="doc-card-desc">프로그램 목표 · 준비물 · 수업 흐름 요약 (Notion 연결)</div>
-          </div>
-          <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
-            <span>🔗</span> Notion
-          </a>
-        </div>
-        <div class="doc-card">
-          <div class="doc-card-icon">📖</div>
-          <div class="doc-card-info">
-            <div class="doc-card-title" data-i18n="prog.docs.guide">교육 지도서</div>
-            <div class="doc-card-desc">교사·강사용 진행 가이드 (Notion 연결)</div>
-          </div>
-          <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
-            <span>🔗</span> Notion
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="media" class="media-section fade-in">
-      <h2 data-i18n="prog.demo.title">🎬 키트 작동 데모 영상</h2>
-      <div class="assembly-video">
-        <video controls preload="metadata" poster="../../assets/images/kits/kit-car-hand.jpg">
-          <source src="../../assets/media/kit-car-assembly.mp4" type="video/mp4">
-          브라우저가 비디오를 지원하지 않습니다.
-        </video>
-        <div class="assembly-video-caption"><span data-i18n="p4.demo.caption">📹 도카 IR 자동차 작동 데모</span></div>
-      <p class="demo-note" data-i18n="prog.demo.note">&#8251; 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.</p>
-      </div>
-      <div class="media-downloads">
-        <a href="../../assets/media/kit-moodlight-assembly.pdf" download class="media-download-btn">
-          <span class="dl-icon">📄</span> 조립 가이드 PDF 다운로드
-        </a>
-        <a href="../../assets/media/kit-car-assembly.mp4" download class="media-download-btn">
-          <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
-        </a>
-      </div>
-    </section>
-
-    <section id="ai-ext" class="ai-extension fade-in">
-      <span class="extension-label" data-i18n="prog.ai.label">선택형 확장 활동</span>
-      <h3 data-i18n="p4.ai.title">🤖 자율주행 시뮬레이션</h3>
-      <p>도카가 실제 자율주행 차량처럼 장애물을 감지하고 멈추는 시나리오를 직접 설계하는 확장 활동이 가능합니다.</p>
-    </section>
-
-    <section id="faq" class="faq-section fade-in">
-      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;"><span data-i18n="prog.faq.title">❓ 자주 묻는 질문</span></h2>
-      <div class="faq-item">
-        <button class="faq-question" data-i18n="p4.faq1.q">자동차가 손을 따라가지 않을 때는?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">IR 센서의 감도 조절 나사를 돌려 민감도를 조정하세요. 너무 밝은 환경에서는 IR 신호가 간섭받을 수 있습니다.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" data-i18n="p4.faq2.q">한쪽 바퀴만 돌 때는?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">모터 케이블 연결을 확인하세요. 두 모터의 연결이 대칭적으로 되어 있는지 점검합니다.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">전혀 작동하지 않을 때 어디서부터 확인해야 하나요?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          ① 배터리 잔량 및 +/- 방향 확인 → ② 메인 전원 스위치 ON 여부 → ③ 모터 케이블 양쪽 단자 접촉 확인 → ④ IR 센서 LED(적색)가 켜지는지 확인 순서로 점검하세요. 단계별로 확인하면 대부분 해결됩니다.
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">배터리 사용 시 안전 주의사항은?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          AA 배터리의 +/- 방향을 배터리 박스 표시에 맞게 삽입하세요. 오래된 배터리와 새 배터리를 혼용하지 마세요. 배터리 연결은 조립 완료 후 마지막 단계에서 진행하며, 장시간 미사용 시 배터리를 분리해 보관합니다.
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">어떤 교육과정과 연계되나요?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          초등 과학 「빛과 파동」(적외선 원리), 실과 「수송 기술 시스템」 영역과 연계됩니다. 라인 추종·장애물 감지 등 자율주행 개념은 중학교 정보 교과의 피지컬 컴퓨팅 및 알고리즘 단원과 직결됩니다.
-        </div></div>
-      </div>
-    </section>
-
-    <!-- ═══ V3 LEARNING SECTIONS ═══ -->
     <section id="parts-detective" class="student-section fade-in"></section>
     <section id="safety-quest" class="student-section fade-in"></section>
     <section id="build-guide" class="student-section fade-in"></section>
     <section id="troubleshooting" class="student-section fade-in"></section>
     <section id="science-lab" class="student-section fade-in"></section>
     <section id="mission-cards" class="student-section fade-in"></section>
-    <section id="lab-notebook" class="student-section fade-in"></section>
-    <section id="certificate" class="student-section fade-in"></section>
+
+    <section id="record-verify" class="student-group-section fade-in">
+      <div class="student-group-header">
+        <h2 class="student-group-title" data-i18n="prog.record.title">📝 기록·인증</h2>
+        <p class="student-group-desc" data-i18n="prog.record.desc">만든 과정과 배운 내용을 기록하고, 완성 인증서를 저장해요.</p>
+      </div>
+      <section id="lab-notebook" class="student-section fade-in"></section>
+      <section id="certificate" class="student-section fade-in"></section>
+    </section>
+
+    <section id="resources-media" class="student-group-section fade-in">
+      <div class="student-group-header">
+        <h2 class="student-group-title" data-i18n="prog.resources.title">📚 자료·영상</h2>
+        <p class="student-group-desc" data-i18n="prog.resources.desc">조립 가이드, 데모 영상, 추가 자료를 이곳에서 확인해요.</p>
+      </div>
+
+      <section id="docs" class="docs-section fade-in">
+        <h2 data-i18n="prog.docs.title">📚 교육 자료 다운로드</h2>
+        <div class="docs-grid">
+          <div class="doc-card">
+            <div class="doc-card-icon">📄</div>
+            <div class="doc-card-info">
+              <div class="doc-card-title" data-i18n="prog.docs.overview">교육 개요서</div>
+              <div class="doc-card-desc">프로그램 목표 · 준비물 · 수업 흐름 요약 (Notion 연결)</div>
+            </div>
+            <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
+              <span>🔗</span> Notion
+            </a>
+          </div>
+          <div class="doc-card">
+            <div class="doc-card-icon">📖</div>
+            <div class="doc-card-info">
+              <div class="doc-card-title" data-i18n="prog.docs.guide">교육 지도서</div>
+              <div class="doc-card-desc">교사·강사용 진행 가이드 (Notion 연결)</div>
+            </div>
+            <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
+              <span>🔗</span> Notion
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="media" class="media-section fade-in">
+        <h2 data-i18n="prog.demo.title">🎬 키트 작동 데모 영상</h2>
+        <div class="assembly-video">
+          <video controls preload="metadata" poster="../../assets/images/kits/kit-car-hand.jpg">
+            <source src="../../assets/media/kit-car-assembly.mp4" type="video/mp4">
+            브라우저가 비디오를 지원하지 않습니다.
+          </video>
+          <div class="assembly-video-caption"><span data-i18n="p4.demo.caption">📹 도카 IR 자동차 작동 데모</span></div>
+        <p class="demo-note" data-i18n="prog.demo.note">&#8251; 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.</p>
+        </div>
+        <div class="media-downloads">
+          <a href="../../assets/media/kit-moodlight-assembly.pdf" download class="media-download-btn">
+            <span class="dl-icon">📄</span> 조립 가이드 PDF 다운로드
+          </a>
+          <a href="../../assets/media/kit-car-assembly.mp4" download class="media-download-btn">
+            <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
+          </a>
+        </div>
+      </section>
+
+      <section id="ai-ext" class="ai-extension fade-in">
+        <span class="extension-label" data-i18n="prog.ai.label">선택형 확장 활동</span>
+        <h3 data-i18n="p4.ai.title">🤖 자율주행 시뮬레이션</h3>
+        <p>도카가 실제 자율주행 차량처럼 장애물을 감지하고 멈추는 시나리오를 직접 설계하는 확장 활동이 가능합니다.</p>
+      </section>
+    </section>
   </div>
 
   <footer class="footer">

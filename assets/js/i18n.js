@@ -3,7 +3,7 @@
    index.html + 6 program pages
    ============================================ */
 
-const i18n = {
+const i18n = window.i18n = {
   ko: {
     // Nav
     'nav.quests': '퀘스트', 'nav.story': '스토리', 'nav.home': 'DORO 홈', 'nav.back': '← 프로그램 목록',
@@ -51,16 +51,24 @@ const i18n = {
 
     // ── Program Page Common ──
     'prog.nav.back': '프로그램 목록',
-    'prog.photos': '📸 키트 사진', 'prog.checklist.title': '🔧 준비물 확인 체크리스트',
-    'prog.missions': '📖 STEP-BY-STEP 교육 과정',
+    'prog.photos': '📸 키트 보기', 'prog.checklist.title': '🔍 구성품 확인',
+    'prog.missions': '🔨 한 단계씩 만들기',
     'prog.demo.title': '🎬 키트 작동 데모 영상',
     'prog.demo.note': '※ 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.',
     'prog.ai.label': '선택형 확장 활동', 'prog.faq.title': '❓ 자주 묻는 질문',
     'prog.docs.title': '📚 교육 자료 다운로드',
     'prog.docs.overview': '교육 개요서', 'prog.docs.guide': '교육 지도서',
-    'prog.toc.photos': '키트 사진', 'prog.toc.checklist': '준비물 확인',
-    'prog.toc.missions': '교육 과정', 'prog.toc.media': '데모 영상',
+    'prog.toc.photos': '키트 보기', 'prog.toc.checklist': '구성품 확인',
+    'prog.toc.missions': '한 단계씩 만들기', 'prog.toc.media': '데모 영상',
     'prog.toc.ai': 'AI 확장', 'prog.toc.faq': 'FAQ',
+    'prog.toc.components': '구성품 확인', 'prog.toc.safety': '안전 약속',
+    'prog.toc.build': '한 단계씩 만들기', 'prog.toc.trouble': '왜 안 되지?',
+    'prog.toc.lab': '과학 실험', 'prog.toc.mission': '도전 미션',
+    'prog.toc.record': '기록·인증', 'prog.toc.resources': '자료·영상',
+    'prog.record.title': '📝 기록·인증',
+    'prog.record.desc': '만든 과정과 배운 내용을 기록하고, 완성 인증서를 저장해요.',
+    'prog.resources.title': '📚 자료·영상',
+    'prog.resources.desc': '조립 가이드, 데모 영상, 추가 자료를 이곳에서 확인해요.',
 
     // Step Times
     'time.10': '⏱ 10분', 'time.15': '⏱ 15분', 'time.20': '⏱ 20분',
@@ -186,16 +194,21 @@ const i18n = {
     'p6.faq3.q': '특정 음을 더 쉽게 내려면?',
 
     // ── V3 Learning Portal ──
-    'learning.parts.title': '🔍 부품 확인 미션',
-    'learning.safety.title': '🛡 안전 퀘스트',
+    'learning.parts.title': '🔍 구성품 확인',
+    'learning.parts.desc': '상자 안의 부품을 하나씩 찾아요. 부품의 이름, 역할, 찾는 힌트를 확인하고 ‘있어요’ 또는 ‘없어요’를 선택하세요.',
+    'learning.parts.role': '역할',
+    'learning.parts.check': '찾는 힌트',
+    'learning.safety.title': '🛡 안전 약속',
     'learning.build.title': '🔨 한 단계씩 만들기',
     'learning.trouble.title': '🤔 왜 안 되지?',
-    'learning.lab.title': '🔬 과학 원리 실험실',
-    'learning.mission.title': '🎯 미션 카드',
-    'learning.notebook.title': '📓 나만의 실험 기록장',
-    'learning.certificate.title': '🏆 완성 인증서',
-    'learning.parts.found': '찾았어요! ✓',
-    'learning.parts.missing': '없어요 — 보호자에게 알려주세요',
+    'learning.lab.title': '🔬 과학 실험',
+    'learning.mission.title': '🎯 도전 미션',
+    'learning.notebook.title': '📝 기록하기',
+    'learning.certificate.title': '🏆 인증하기',
+    'learning.parts.found': '있어요 ✓',
+    'learning.parts.missing': '없어요',
+    'learning.parts.complete': '🎉 모든 부품을 찾았어요! 안전 약속으로 이동해요!',
+    'learning.parts.progress': '확인한 부품',
     'learning.safety.correct': '맞아요! 안전 대원이에요 ✓',
     'learning.safety.wrong': '다시 확인해볼까요?',
     'learning.safety.pass': '🎖 안전 대원 배지를 얻었어요!',
@@ -257,16 +270,24 @@ const i18n = {
 
     // Program Page Common
     'prog.nav.back': 'Program List',
-    'prog.photos': '📸 Kit Photos', 'prog.checklist.title': '🔧 Materials Verification Checklist',
-    'prog.missions': '📖 STEP-BY-STEP Curriculum',
+    'prog.photos': '📸 Kit View', 'prog.checklist.title': '🔍 Component Check',
+    'prog.missions': '🔨 Step-by-Step Build',
     'prog.demo.title': '🎬 Kit Demo Video',
     'prog.demo.note': '※ This video shows the completed kit in action (not an assembly guide).',
     'prog.ai.label': 'Optional Extension Activity', 'prog.faq.title': '❓ FAQ',
     'prog.docs.title': '📚 Educational Resources',
     'prog.docs.overview': 'Program Overview', 'prog.docs.guide': 'Teaching Guide',
-    'prog.toc.photos': 'Kit Photos', 'prog.toc.checklist': 'Materials Check',
-    'prog.toc.missions': 'Curriculum', 'prog.toc.media': 'Demo Video',
+    'prog.toc.photos': 'Kit View', 'prog.toc.checklist': 'Component Check',
+    'prog.toc.missions': 'Step-by-Step Build', 'prog.toc.media': 'Demo Video',
     'prog.toc.ai': 'AI Extension', 'prog.toc.faq': 'FAQ',
+    'prog.toc.components': 'Component Check', 'prog.toc.safety': 'Safety Promise',
+    'prog.toc.build': 'Step-by-Step Build', 'prog.toc.trouble': 'Why Won\'t It Work?',
+    'prog.toc.lab': 'Science Lab', 'prog.toc.mission': 'Challenge Missions',
+    'prog.toc.record': 'Record & Verify', 'prog.toc.resources': 'Resources & Videos',
+    'prog.record.title': '📝 Record & Verify',
+    'prog.record.desc': 'Save what you built, what you learned, and generate a completion certificate.',
+    'prog.resources.title': '📚 Resources & Videos',
+    'prog.resources.desc': 'Find the build guide, demo video, and extra materials here.',
 
     // Step Times
     'time.10': '⏱ 10 min', 'time.15': '⏱ 15 min', 'time.20': '⏱ 20 min',
@@ -392,16 +413,21 @@ const i18n = {
     'p6.faq3.q': 'How to make a specific note easier to hit?',
 
     // ── V3 Learning Portal ──
-    'learning.parts.title': '🔍 Parts Check Mission',
-    'learning.safety.title': '🛡 Safety Quest',
+    'learning.parts.title': '🔍 Component Check',
+    'learning.parts.desc': 'Find each item in the box one by one. Check the part name, what it does, and the hint for finding it, then choose “Have it ✓” or “Missing.”',
+    'learning.parts.role': 'What it does',
+    'learning.parts.check': 'Find hint',
+    'learning.safety.title': '🛡 Safety Promise',
     'learning.build.title': '🔨 Step-by-Step Build',
     'learning.trouble.title': '🤔 Why Won\'t It Work?',
     'learning.lab.title': '🔬 Science Lab',
-    'learning.mission.title': '🎯 Mission Cards',
-    'learning.notebook.title': '📓 My Experiment Journal',
-    'learning.certificate.title': '🏆 Completion Certificate',
-    'learning.parts.found': 'Found it! ✓',
-    'learning.parts.missing': 'Missing — please tell a parent',
+    'learning.mission.title': '🎯 Challenge Missions',
+    'learning.notebook.title': '📝 Record It',
+    'learning.certificate.title': '🏆 Verify It',
+    'learning.parts.found': 'Have it ✓',
+    'learning.parts.missing': 'Missing',
+    'learning.parts.complete': '🎉 You found every part! Move on to the Safety Promise.',
+    'learning.parts.progress': 'Checked parts',
     'learning.safety.correct': 'Correct! You\'re a safety cadet ✓',
     'learning.safety.wrong': 'Let\'s check again?',
     'learning.safety.pass': '🎖 You earned the Safety Cadet badge!',
@@ -436,6 +462,7 @@ function applyLanguage(lang) {
     btn.title = lang === 'ko' ? 'Switch to English' : '한국어로 전환';
   }
   document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
+  window.dispatchEvent(new CustomEvent('doro:languagechange', { detail: { lang } }));
 }
 
 function toggleLanguage() { applyLanguage(currentLang === 'ko' ? 'en' : 'ko'); }

@@ -1688,6 +1688,36 @@ body { font-size: 17px; }
   margin-bottom: 1.25rem;
   line-height: 1.6;
 }
+.student-group-section {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+}
+.student-group-header {
+  margin-bottom: 1.25rem;
+}
+.student-group-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+.student-group-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.student-group-section > .student-section,
+.student-group-section > .docs-section,
+.student-group-section > .media-section,
+.student-group-section > .ai-extension,
+.student-group-section > .faq-section {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
 
 /* QR 진입 배너 */
 .qr-entry-banner {
@@ -1745,6 +1775,7 @@ body { font-size: 17px; }
 .part-card.missing { border-color: var(--rose); background: rgba(244,63,94,0.08); }
 .part-emoji { font-size: 2rem; margin-bottom: 0.5rem; }
 .part-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; color: var(--text-primary); }
+.part-role-label,
 .part-check-label { font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 0.2rem; }
 .part-role { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.3rem; line-height: 1.4; }
 .part-check { font-size: 0.75rem; color: var(--cyan); margin-bottom: 0.75rem; line-height: 1.4; }

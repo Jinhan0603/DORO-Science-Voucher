@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🐸 도짜르트 — DORO 피지컬 컴퓨팅 키트 | DOROLAND V3-CODEX</title>
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="icon" href="../../assets/images/kits/kit-piano-white.jpg">
 </head>
 <body>
   <div class="bg-fantasy"></div><div class="bg-overlay"></div>
@@ -21,13 +22,15 @@
     </a>
   </nav>
   <div class="toc-sidebar">
-    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 사진</span></a>
-    <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
-    <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
-    <a href="#docs" class="toc-item"><span class="toc-dot"></span> 교육 자료</a>
-    <a href="#media" class="toc-item"><span class="toc-dot"></span> 데모 영상</a>
-    <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
-    <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 보기</span></a>
+    <a href="#parts-detective" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.components">구성품 확인</span></a>
+    <a href="#safety-quest" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.safety">안전 약속</span></a>
+    <a href="#build-guide" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.build">한 단계씩 만들기</span></a>
+    <a href="#troubleshooting" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.trouble">왜 안 되지?</span></a>
+    <a href="#science-lab" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.lab">과학 실험</span></a>
+    <a href="#mission-cards" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.mission">도전 미션</span></a>
+    <a href="#record-verify" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.record">기록·인증</span></a>
+    <a href="#resources-media" class="toc-item"><span class="toc-dot"></span> <span data-i18n="prog.toc.resources">자료·영상</span></a>
   </div>
 
   <section class="detail-hero">
@@ -67,203 +70,78 @@
       </div>
     </section>
 
-    <section id="checklist" class="checklist-section fade-in">
-      <h2 class="checklist-title" data-i18n="prog.checklist.title">🔧 준비물 체크리스트</h2>
-      <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. <span id="checklist-progress"></span></p>
-      <div class="checklist-item"><input type="checkbox"><span>🐸 피아노 건반 보드 (개구리 디자인 그린)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>💻 아두이노 UNO 보드 × 1</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>📡 초음파 센서 (HC-SR04) × 1</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>📺 16×2 LCD 디스플레이 × 1</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>🔊 피에조 부저 × 1</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>🔌 미니 브레드보드</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>🔗 점퍼 케이블 세트</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>💡 LED × 2 (장식용)</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>📄 학생용 활동지</span></div>
-      <div class="checklist-item"><input type="checkbox"><span>📖 조립 + 코딩 설명서</span></div>
-    </section>
-
-    <section id="missions" class="mission-section fade-in">
-      <h2 data-i18n="prog.missions">📖 STEP-BY-STEP 교육 과정</h2>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--coral);">1</span>
-          <span class="mission-step-title" data-i18n="p6.step1.title">도입 — 손이 악기가 되다</span>
-          <span class="mission-step-time" data-i18n="time.10">⏱ 10분</span>
-        </div>
-        <div class="mission-step-body">
-          <ul>
-            <li>완성된 개구리 피아노 시연 (손 거리로 음 조절)</li>
-            <li>초음파가 거리를 측정하는 원리 소개</li>
-            <li>테레민이나 에어 기타 같은 비접촉 악기 사례</li>
-          </ul>
-          <div class="mission-step-image">
-            <img decoding="async" src="../../assets/images/kits/kit-piano-play.jpg" alt="도짜르트 연주" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--coral);">2</span>
-          <span class="mission-step-title" data-i18n="p6.step2.title">과학·코딩 개념</span>
-          <span class="mission-step-time" data-i18n="time.15">⏱ 15분</span>
-        </div>
-        <div class="mission-step-body">
-          <ul>
-            <li>초음파 센서: 음파 발사 → 반사 → 시간으로 거리 계산</li>
-            <li>소리의 높낮이: 진동수(Hz)에 따라 결정</li>
-            <li>조건문: 거리 구간별 다른 음 재생</li>
-            <li>활동지 음계 매핑 표 작성</li>
-          </ul>
-        </div>
-      </div>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--coral);">3</span>
-          <span class="mission-step-title" data-i18n="p6.step3.title">조립 — 개구리 피아노 제작</span>
-          <span class="mission-step-time" data-i18n="time.20">⏱ 20분</span>
-        </div>
-        <div class="mission-step-body">
-          <ul>
-            <li>개구리 피아노 건반 보드 조립</li>
-            <li>아두이노 UNO 장착</li>
-            <li>초음파 센서 연결</li>
-            <li>피에조 부저 + LED 연결</li>
-            <li>LCD 디스플레이 연결</li>
-          </ul>
-          <div class="mission-step-image">
-            <img decoding="async" src="../../assets/images/kits/kit-piano-parts.jpg" alt="도짜르트 구성품" loading="lazy">
-          </div>
-        </div>
-      </div>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--coral);">4</span>
-          <span class="mission-step-title" data-i18n="p6.step4.title">코딩 — 거리-음 매핑</span>
-          <span class="mission-step-time" data-i18n="time.25">⏱ 25분</span>
-        </div>
-        <div class="mission-step-body">
-          <p>조건문으로 손의 거리에 따라 다른 음이 나오도록 코딩합니다.</p>
-          <ul>
-            <li>기본 코드 업로드 → 손으로 거리 조절 테스트</li>
-            <li>if-else 조건문으로 음계 구간 설정</li>
-            <li>tone() 함수로 피에조 부저 주파수 제어</li>
-            <li>LCD에 현재 음 이름 표시하기</li>
-          </ul>
-        </div>
-      </div>
-      <div class="mission-step">
-        <div class="mission-step-header">
-          <span class="mission-step-number" style="background:var(--coral);">5</span>
-          <span class="mission-step-title" data-i18n="p6.step5.title">연주 + 발표</span>
-          <span class="mission-step-time" data-i18n="time.20">⏱ 20분</span>
-        </div>
-        <div class="mission-step-body">
-          <ul>
-            <li>간단한 멜로디 연주 도전</li>
-            <li>친구와 합주 시도</li>
-            <li>사운드 인터랙션 개념 정리</li>
-          </ul>
-          <div class="mission-step-image">
-            <img decoding="async" src="../../assets/images/kits/kit-piano-hero.jpg" alt="도짜르트 완성" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ DOCS DOWNLOAD ═══ -->
-    <section id="docs" class="docs-section fade-in">
-      <h2 data-i18n="prog.docs.title">📚 교육 자료 다운로드</h2>
-      <div class="docs-grid">
-        <div class="doc-card">
-          <div class="doc-card-icon">📄</div>
-          <div class="doc-card-info">
-            <div class="doc-card-title" data-i18n="prog.docs.overview">교육 개요서</div>
-            <div class="doc-card-desc">프로그램 목표 · 준비물 · 수업 흐름 요약 (Notion 연결)</div>
-          </div>
-          <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
-            <span>🔗</span> Notion
-          </a>
-        </div>
-        <div class="doc-card">
-          <div class="doc-card-icon">📖</div>
-          <div class="doc-card-info">
-            <div class="doc-card-title" data-i18n="prog.docs.guide">교육 지도서</div>
-            <div class="doc-card-desc">교사·강사용 진행 가이드 (Notion 연결)</div>
-          </div>
-          <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
-            <span>🔗</span> Notion
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="media" class="media-section fade-in">
-      <h2 data-i18n="prog.demo.title">🎬 키트 작동 데모 영상</h2>
-      <div class="assembly-video">
-        <video controls preload="metadata" poster="../../assets/images/kits/kit-piano-hero.jpg">
-          <source src="../../assets/media/kit-piano-assembly.mp4" type="video/mp4">
-          브라우저가 비디오를 지원하지 않습니다.
-        </video>
-        <div class="assembly-video-caption"><span data-i18n="p6.demo.caption">📹 도짜르트 초음파 피아노 작동 데모</span></div>
-      <p class="demo-note" data-i18n="prog.demo.note">&#8251; 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.</p>
-      </div>
-      <div class="media-downloads">
-        <a href="../../assets/media/kit-piano-assembly.mp4" download class="media-download-btn">
-          <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
-        </a>
-      </div>
-    </section>
-
-    <section id="ai-ext" class="ai-extension fade-in">
-      <span class="extension-label" data-i18n="prog.ai.label">선택형 확장 활동</span>
-      <h3 data-i18n="p6.ai.title">🎵 AI 작곡 + 피아노 연주</h3>
-      <p>AI 작곡 도구 Suno로 멜로디를 만들고, 도짜르트 피아노로 그 멜로디를 재현하는 창작 확장 활동이 가능합니다.</p>
-      <a href="https://suno.com" target="_blank" class="ai-link">Suno 바로가기 →</a>
-    </section>
-
-    <section id="faq" class="faq-section fade-in">
-      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;"><span data-i18n="prog.faq.title">❓ 자주 묻는 질문</span></h2>
-      <div class="faq-item">
-        <button class="faq-question" data-i18n="p6.faq1.q">손을 움직여도 소리가 안 날 때는?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">초음파 센서의 Trig/Echo 핀 연결을 확인하고, 피에조 부저 핀 번호가 코드와 일치하는지 확인하세요.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" data-i18n="p6.faq2.q">소리가 계속 같은 음만 날 때는?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">초음파 센서 정면에 장애물이 고정되어 있지는 않은지 확인하세요. 센서 앞 30cm 이내에 아무것도 없는 공간이 필요합니다.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" data-i18n="p6.faq3.q">특정 음을 더 쉽게 내려면?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">코드의 if 조건문에서 각 음의 거리 구간을 더 넓게 설정하면 원하는 음을 더 안정적으로 낼 수 있습니다.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">아두이노 IDE 설치와 코드 업로드는 어떻게 하나요?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          arduino.cc에서 Arduino IDE 2.x를 설치 후 USB로 연결하고, 「도구 → 포트」에서 아두이노 COM 포트를 선택합니다. Windows에서 포트가 보이지 않으면 CH340 USB 드라이버를 별도 설치하세요. NewPing 라이브러리가 필요한 경우 「도구 → 라이브러리 관리」에서 설치합니다.
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">피에조 부저 소리가 너무 크거나 날카로울 때는?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          코드에서 tone() 함수의 주파수 값을 낮추거나, 피에조 부저 위에 작은 스티커를 붙이면 소리가 부드러워집니다. 수업 환경에 따라 음량을 미리 조절해 두는 것을 권장합니다.
-        </div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">어떤 교육과정과 연계되나요?</button>
-        <div class="faq-answer"><div class="faq-answer-inner">
-          초등·중학교 과학 「파동과 소리」 영역, 중학교 정보 교과 「피지컬 컴퓨팅」 단원과 연계됩니다. 초음파 거리 측정과 주파수 매핑은 수학 교과의 함수·비례 개념과도 자연스럽게 연결됩니다.
-        </div></div>
-      </div>
-    </section>
-
-    <!-- ═══ V3 LEARNING SECTIONS ═══ -->
     <section id="parts-detective" class="student-section fade-in"></section>
     <section id="safety-quest" class="student-section fade-in"></section>
     <section id="build-guide" class="student-section fade-in"></section>
     <section id="troubleshooting" class="student-section fade-in"></section>
     <section id="science-lab" class="student-section fade-in"></section>
     <section id="mission-cards" class="student-section fade-in"></section>
-    <section id="lab-notebook" class="student-section fade-in"></section>
-    <section id="certificate" class="student-section fade-in"></section>
+
+    <section id="record-verify" class="student-group-section fade-in">
+      <div class="student-group-header">
+        <h2 class="student-group-title" data-i18n="prog.record.title">📝 기록·인증</h2>
+        <p class="student-group-desc" data-i18n="prog.record.desc">만든 과정과 배운 내용을 기록하고, 완성 인증서를 저장해요.</p>
+      </div>
+      <section id="lab-notebook" class="student-section fade-in"></section>
+      <section id="certificate" class="student-section fade-in"></section>
+    </section>
+
+    <section id="resources-media" class="student-group-section fade-in">
+      <div class="student-group-header">
+        <h2 class="student-group-title" data-i18n="prog.resources.title">📚 자료·영상</h2>
+        <p class="student-group-desc" data-i18n="prog.resources.desc">조립 가이드, 데모 영상, 추가 자료를 이곳에서 확인해요.</p>
+      </div>
+
+      <section id="docs" class="docs-section fade-in">
+        <h2 data-i18n="prog.docs.title">📚 교육 자료 다운로드</h2>
+        <div class="docs-grid">
+          <div class="doc-card">
+            <div class="doc-card-icon">📄</div>
+            <div class="doc-card-info">
+              <div class="doc-card-title" data-i18n="prog.docs.overview">교육 개요서</div>
+              <div class="doc-card-desc">프로그램 목표 · 준비물 · 수업 흐름 요약 (Notion 연결)</div>
+            </div>
+            <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
+              <span>🔗</span> Notion
+            </a>
+          </div>
+          <div class="doc-card">
+            <div class="doc-card-icon">📖</div>
+            <div class="doc-card-info">
+              <div class="doc-card-title" data-i18n="prog.docs.guide">교육 지도서</div>
+              <div class="doc-card-desc">교사·강사용 진행 가이드 (Notion 연결)</div>
+            </div>
+            <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
+              <span>🔗</span> Notion
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="media" class="media-section fade-in">
+        <h2 data-i18n="prog.demo.title">🎬 키트 작동 데모 영상</h2>
+        <div class="assembly-video">
+          <video controls preload="metadata" poster="../../assets/images/kits/kit-piano-hero.jpg">
+            <source src="../../assets/media/kit-piano-assembly.mp4" type="video/mp4">
+            브라우저가 비디오를 지원하지 않습니다.
+          </video>
+          <div class="assembly-video-caption"><span data-i18n="p6.demo.caption">📹 도짜르트 초음파 피아노 작동 데모</span></div>
+        <p class="demo-note" data-i18n="prog.demo.note">&#8251; 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.</p>
+        </div>
+        <div class="media-downloads">
+          <a href="../../assets/media/kit-piano-assembly.mp4" download class="media-download-btn">
+            <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
+          </a>
+        </div>
+      </section>
+
+      <section id="ai-ext" class="ai-extension fade-in">
+        <span class="extension-label" data-i18n="prog.ai.label">선택형 확장 활동</span>
+        <h3 data-i18n="p6.ai.title">🎵 AI 작곡 + 피아노 연주</h3>
+        <p>AI 작곡 도구 Suno로 멜로디를 만들고, 도짜르트 피아노로 그 멜로디를 재현하는 창작 확장 활동이 가능합니다.</p>
+        <a href="https://suno.com" target="_blank" class="ai-link">Suno 바로가기 →</a>
+      </section>
+    </section>
   </div>
 
   <footer class="footer">

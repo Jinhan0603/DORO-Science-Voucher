@@ -228,8 +228,8 @@
 
     const section = document.querySelector('.checklist-section');
     const title = section && section.querySelector('.checklist-title');
-    const titleText = title ? title.textContent.replace(/^[^\w가-힣A-Z]+/, '').trim() : (en ? 'Checklist' : '준비물 체크리스트');
-    if (title) injectPanelHeader(title, en ? 'DOROLAND INVENTORY' : '도로랜드 인벤토리', titleText, 'amber-theme');
+    const titleText = title ? title.textContent.replace(/^[^\w가-힣A-Z]+/, '').trim() : (en ? 'Component Check' : '구성품 확인');
+    if (title) injectPanelHeader(title, en ? 'DORO COMPONENT CHECK' : 'DORO 구성품 확인', titleText, 'amber-theme');
 
     function syncAll() {
       let checked = 0;
@@ -307,9 +307,10 @@
   function initGalleryLabel() {
     const photos = document.getElementById('photos');
     if (!photos || photos.querySelector('.kit-gallery-label')) return;
+    const en = isEn();
     const label = document.createElement('div');
     label.className = 'kit-gallery-label';
-    label.textContent = '▸ KIT GALLERY';
+    label.textContent = en ? '▸ KIT VIEW' : '▸ 키트 보기';
     photos.prepend(label);
   }
 
@@ -428,7 +429,7 @@
     const toc = document.querySelector('.toc-sidebar');
     const checklistLink = toc && toc.querySelector('a[href="#checklist"]');
     if (checklistLink) {
-      checklistLink.innerHTML = `<span class="toc-dot"></span> ${en ? 'Materials Check' : '준비물 확인'}`;
+      checklistLink.innerHTML = `<span class="toc-dot"></span> ${en ? 'Component Check' : '구성품 확인'}`;
     }
 
     const checklistSection = document.getElementById('checklist');
@@ -438,44 +439,21 @@
     const desc = checklistSection.querySelector('.checklist-desc');
 
     if (title) {
-      title.textContent = en ? '🔧 Materials Verification Checklist' : '🔧 준비물 확인 체크리스트';
+      title.textContent = en ? '🔍 Component Check' : '🔍 구성품 확인';
     }
 
     if (desc) {
       const progressHtml = '<span id="checklist-progress"></span>';
       desc.innerHTML = en
-        ? `Before starting, check the required kit materials and basic hand tools first. ${progressHtml}`
-        : `만들기를 시작하기 전에, 키트 구성품과 기본 준비물을 먼저 확인해요. ${progressHtml}`;
+        ? `Find each item in the box and confirm what is included. ${progressHtml}`
+        : `상자 안의 부품을 하나씩 찾아 포함 여부를 확인해요. ${progressHtml}`;
     }
   }
 
   function streamlineLearningHub() {
-    const en = isEn();
     const toc = document.querySelector('.toc-sidebar');
     const learningHubLink = toc && toc.querySelector('a[href="#learning-hub"]');
     if (learningHubLink) learningHubLink.remove();
-
-    const partsSection = document.getElementById('parts-detective');
-    if (partsSection) {
-      const title = partsSection.querySelector('.student-section-title');
-      const desc = partsSection.querySelector('.student-section-desc');
-      if (title) title.textContent = en ? '🔍 Parts Check Mission' : '🔍 부품 확인 미션';
-      if (desc) {
-        desc.textContent = en
-          ? 'After checking the materials list, find the same parts in the box and mark them here. This step shows only names and find hints.'
-          : '준비물 확인이 끝나면, 같은 부품을 상자 안에서 다시 찾아 체크해요. 이 단계에서는 역할 설명 없이 이름과 찾기 힌트만 확인합니다.';
-      }
-
-      partsSection.querySelectorAll('.part-role').forEach(el => el.remove());
-      partsSection.querySelectorAll('.part-card').forEach(card => {
-        const check = card.querySelector('.part-check');
-        if (!check || card.querySelector('.part-check-label')) return;
-        const label = document.createElement('div');
-        label.className = 'part-check-label';
-        label.textContent = en ? 'Find Hint' : '찾기 힌트';
-        check.parentNode.insertBefore(label, check);
-      });
-    }
   }
 
   /* ── INIT ── */
