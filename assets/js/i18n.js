@@ -44,6 +44,8 @@ const i18n = window.i18n = {
     // Footer
     'footer.copy': '© 2026 DOROLAND · Do Challenge. To Ask. Be Together · 주식회사 도로(DORO)',
     'lang.toggle': 'EN',
+    'ui.text.large': '글자 크게',
+    'ui.text.normal': '기본 글자',
 
     // ── Info Bar Common Labels ──
     'info.time.label': '⏱ 소요시간', 'info.age.label': '👤 대상',
@@ -200,6 +202,7 @@ const i18n = window.i18n = {
     'learning.parts.check': '찾는 힌트',
     'learning.safety.title': '🛡 안전 약속',
     'learning.build.title': '🔨 한 단계씩 만들기',
+    'learning.build.start': '만들기 시작',
     'learning.trouble.title': '🤔 왜 안 되지?',
     'learning.lab.title': '🔬 과학 실험',
     'learning.mission.title': '🎯 도전 미션',
@@ -263,6 +266,8 @@ const i18n = window.i18n = {
     // Footer
     'footer.copy': '© 2026 DOROLAND · Do Challenge. To Ask. Be Together · DORO Inc.',
     'lang.toggle': '한',
+    'ui.text.large': 'Larger Text',
+    'ui.text.normal': 'Normal Text',
 
     // Info Bar Common Labels
     'info.time.label': '⏱ Duration', 'info.age.label': '👤 Target Age',
@@ -419,6 +424,7 @@ const i18n = window.i18n = {
     'learning.parts.check': 'Find hint',
     'learning.safety.title': '🛡 Safety Promise',
     'learning.build.title': '🔨 Step-by-Step Build',
+    'learning.build.start': 'Start Building',
     'learning.trouble.title': '🤔 Why Won\'t It Work?',
     'learning.lab.title': '🔬 Science Lab',
     'learning.mission.title': '🎯 Challenge Missions',
@@ -444,6 +450,56 @@ const i18n = window.i18n = {
 };
 
 let currentLang = localStorage.getItem('doro-lang') || 'ko';
+let currentTextScale = localStorage.getItem('doro-text-scale') === 'large' ? 'large' : 'normal';
+
+function ensureTopControls() {
+  const langBtn = document.getElementById('lang-toggle');
+  if (!langBtn) return;
+
+  let wrapper = document.querySelector('.top-controls');
+  if (!wrapper) {
+    wrapper = document.createElement('div');
+    wrapper.className = 'top-controls';
+    langBtn.parentNode.insertBefore(wrapper, langBtn);
+  }
+
+  if (!wrapper.contains(langBtn)) {
+    wrapper.appendChild(langBtn);
+  }
+
+  let textBtn = document.getElementById('text-scale-toggle');
+  if (!textBtn) {
+    textBtn = document.createElement('button');
+    textBtn.id = 'text-scale-toggle';
+    textBtn.className = 'text-scale-toggle';
+    textBtn.type = 'button';
+    textBtn.addEventListener('click', toggleTextScale);
+    wrapper.appendChild(textBtn);
+  }
+}
+
+function applyTextScale(mode) {
+  currentTextScale = mode === 'large' ? 'large' : 'normal';
+  localStorage.setItem('doro-text-scale', currentTextScale);
+  document.documentElement.classList.toggle('text-large', currentTextScale === 'large');
+  updateTextScaleButton();
+}
+
+function updateTextScaleButton() {
+  const btn = document.getElementById('text-scale-toggle');
+  if (!btn) return;
+  const lang = currentLang;
+  const isLarge = currentTextScale === 'large';
+  const labelKey = isLarge ? 'ui.text.normal' : 'ui.text.large';
+  const fallback = lang === 'en' ? (isLarge ? 'Normal Text' : 'Larger Text') : (isLarge ? '기본 글자' : '글자 크게');
+  btn.textContent = (i18n[lang] && i18n[lang][labelKey]) || fallback;
+  btn.title = btn.textContent;
+  btn.setAttribute('aria-pressed', isLarge ? 'true' : 'false');
+}
+
+function toggleTextScale() {
+  applyTextScale(currentTextScale === 'large' ? 'normal' : 'large');
+}
 
 function applyLanguage(lang) {
   currentLang = lang;
@@ -462,9 +518,15 @@ function applyLanguage(lang) {
     btn.title = lang === 'ko' ? 'Switch to English' : '한국어로 전환';
   }
   document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
+  updateTextScaleButton();
   window.dispatchEvent(new CustomEvent('doro:languagechange', { detail: { lang } }));
 }
 
 function toggleLanguage() { applyLanguage(currentLang === 'ko' ? 'en' : 'ko'); }
+window.toggleTextScale = toggleTextScale;
 
-document.addEventListener('DOMContentLoaded', () => applyLanguage(currentLang));
+document.addEventListener('DOMContentLoaded', () => {
+  ensureTopControls();
+  applyTextScale(currentTextScale);
+  applyLanguage(currentLang);
+});

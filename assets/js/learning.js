@@ -51,9 +51,11 @@
     var existing = document.querySelector('.qr-entry-banner');
     if (existing) existing.remove();
     var qrTitle = getLang() === 'en' ? 'Did you get your kit?' : '키트를 받으셨나요?';
+    var componentLabel = t('learning.parts.title', '구성품 확인', 'Component Check').replace(/^[^\s가-힣A-Za-z0-9]+/, '');
+    var buildStartLabel = t('learning.build.start', '만들기 시작', 'Start Building');
     var banner = document.createElement('div');
     banner.className = 'qr-entry-banner';
-    banner.innerHTML = '<div class="qr-entry-inner"><p class="qr-entry-title">📦 ' + qrTitle + '</p><div class="qr-entry-btns"><button onclick="document.getElementById(\'parts-detective\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-primary">🔍 ' + t('learning.parts.title', '구성품 확인', 'Component Check').replace(/^[^\s가-힣A-Za-z0-9]+/, '') + '</button><button onclick="document.getElementById(\'build-guide\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-help">🚀 ' + t('learning.build.title', '만들기 시작', 'Start Building').replace('🔨 ', '').replace('Step-by-Step Build', 'Start Building') + '</button></div></div>';
+    banner.innerHTML = '<div class="qr-entry-inner"><p class="qr-entry-title">📦 ' + qrTitle + '</p><div class="qr-entry-btns"><button onclick="document.getElementById(\'parts-detective\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-primary">🔍 ' + componentLabel + '</button><button onclick="document.getElementById(\'build-guide\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-help">🚀 ' + buildStartLabel + '</button></div></div>';
     var hero = document.querySelector('.detail-hero');
     if (hero) hero.insertAdjacentElement('afterend', banner);
   }

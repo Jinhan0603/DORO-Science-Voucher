@@ -145,10 +145,11 @@
         backdrop-filter: blur(10px);
       }
       .part-check-label {
-        font-size: 0.72rem;
+        font-size: var(--fs-xs);
+        font-family: var(--font-body);
         font-weight: 700;
         color: var(--text-secondary);
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.35rem;
       }
       @media (max-width: 480px) {
         .quest-progress-panel {

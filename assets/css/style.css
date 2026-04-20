@@ -27,11 +27,12 @@
   --sky-glow: rgba(56, 189, 248, 0.35);
   --coral: #FB7185;
   --coral-glow: rgba(251, 113, 133, 0.35);
+  --cyan: #67E8F9;
 
   /* Text */
   --text-primary: #F1F5F9;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
+  --text-secondary: #B8C7DA;
+  --text-muted: #8FA2BA;
 
   /* Pixel UI */
   --pixel-shadow: 4px 4px 0px rgba(0,0,0,0.6);
@@ -45,6 +46,20 @@
   --radius-sm: 0.375rem;
   --radius-md: 0.75rem;
   --radius-lg: 1.25rem;
+
+  /* Readability tokens */
+  --fs-xs: clamp(0.875rem, 0.84rem + 0.14vw, 0.94rem);
+  --fs-sm: clamp(0.97rem, 0.93rem + 0.18vw, 1.02rem);
+  --fs-base: clamp(1.02rem, 0.98rem + 0.2vw, 1.08rem);
+  --fs-md: clamp(1.12rem, 1.04rem + 0.32vw, 1.24rem);
+  --fs-lg: clamp(1.26rem, 1.12rem + 0.52vw, 1.48rem);
+  --fs-xl: clamp(1.52rem, 1.28rem + 0.95vw, 1.96rem);
+  --fs-2xl: clamp(1.9rem, 1.48rem + 1.55vw, 2.7rem);
+  --lh-body: 1.68;
+  --card-padding: clamp(1rem, 0.86rem + 0.44vw, 1.28rem);
+  --section-padding: clamp(1.1rem, 0.92rem + 0.72vw, 1.6rem);
+  --control-height: 2.75rem;
+  --content-width: min(1180px, calc(100vw - 4rem));
 }
 
 /* --- Reset --- */
@@ -2320,5 +2335,867 @@ body { font-size: 17px; }
   .symptom-btn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* ============================================
+   V3.1 Readability Refresh
+   ============================================ */
+html {
+  scroll-padding-top: 6.25rem;
+}
+
+html.text-large {
+  font-size: 18px;
+}
+
+body {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  text-rendering: optimizeLegibility;
+}
+
+.bg-overlay {
+  background: rgba(4, 8, 20, 0.86);
+}
+
+.bg-scanlines {
+  opacity: 0.5;
+}
+
+.top-controls {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 130;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.top-controls .lang-toggle,
+.text-scale-toggle {
+  position: static !important;
+  min-height: var(--control-height);
+  padding: 0.72rem 1rem !important;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(4, 8, 20, 0.88);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs) !important;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+}
+
+.top-controls .lang-toggle:hover,
+.text-scale-toggle:hover {
+  border-color: rgba(20, 184, 166, 0.55);
+  background: rgba(11, 21, 40, 0.94);
+  color: var(--text-primary);
+}
+
+.nav {
+  padding: 0.95rem 1.5rem;
+  backdrop-filter: blur(14px);
+}
+
+.nav-brand-text {
+  font-size: 0.82rem;
+}
+
+.nav-version {
+  font-size: 0.8rem;
+  padding: 0.24rem 0.52rem;
+}
+
+.nav-links a {
+  font-size: var(--fs-xs);
+  line-height: 1.4;
+}
+
+.hero {
+  min-height: min(78vh, 740px);
+  padding: 6.65rem 1.5rem 2.6rem;
+}
+
+.hero-logo {
+  width: min(360px, 68vw);
+  margin-bottom: 1.4rem;
+}
+
+.hero-game-badge {
+  font-size: var(--fs-xs);
+  padding: 0.55rem 1rem;
+}
+
+.hero-tagline {
+  max-width: 920px;
+  font-size: var(--fs-xl);
+  line-height: 1.42;
+}
+
+.hero-badge {
+  flex-wrap: wrap;
+  row-gap: 0.35rem;
+  padding: 0.72rem 1.3rem;
+  font-size: var(--fs-sm);
+  margin-bottom: 1.6rem;
+}
+
+.badge-label,
+.badge-desc {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+}
+
+.kit-chip {
+  font-size: var(--fs-xs);
+  padding: 0.42rem 0.78rem;
+}
+
+.scroll-indicator {
+  font-size: var(--fs-xs);
+}
+
+.section,
+.dimc-section,
+.story-section,
+.doroland-chars-section {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.section-title,
+.dimc-title,
+.story-text h2 {
+  font-size: var(--fs-xl);
+  line-height: 1.3;
+}
+
+.section-desc,
+.dimc-subtitle,
+.story-text p,
+.story-quote,
+.hero-desc,
+.doro-zone-story p,
+.checklist-desc,
+.assembly-video-caption,
+.demo-note,
+.doc-card-desc,
+.gallery-desc,
+.quick-start-note,
+.feature-desc,
+.detail-note,
+.locked-quests-copy,
+.story-copy,
+.footer-copy {
+  font-size: var(--fs-sm);
+  line-height: 1.72;
+}
+
+.quest-grid {
+  gap: 1.25rem;
+}
+
+.quest-tab {
+  min-height: 2.7rem;
+  padding: 0.65rem 1rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+}
+
+.quest-content {
+  padding: 1.35rem;
+  gap: 0.82rem;
+}
+
+.quest-content h3 {
+  font-size: var(--fs-md);
+  line-height: 1.35;
+}
+
+.quest-desc {
+  font-size: var(--fs-sm);
+  line-height: 1.72;
+}
+
+.quest-stat-label,
+.quest-meta,
+.quest-tag,
+.quest-photo-hint,
+.mission-step-time,
+.info-label,
+.part-role-label,
+.part-check-label,
+.mission-type-badge,
+.build-step-num,
+.nav-back-text,
+.locked-quest-badge,
+.pixel-divider-label,
+.pixel-divider-label-muted {
+  font-size: var(--fs-xs) !important;
+}
+
+.quest-stat-label,
+.quest-meta,
+.quest-tag,
+.quest-photo-hint,
+.mission-step-time,
+.info-label,
+.part-role-label,
+.part-check-label,
+.mission-type-badge,
+.build-step-num,
+.nav-back-text,
+.locked-quest-badge {
+  font-family: var(--font-body) !important;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.quest-stat-value,
+.info-value,
+.demo-note,
+.cert-kit,
+.cert-date,
+.cert-footer,
+.cert-note,
+.optional {
+  font-size: var(--fs-xs) !important;
+}
+
+.quest-stat-value,
+.quest-meta,
+.quest-tag,
+.quest-cta,
+.media-download-btn,
+.doc-link {
+  font-family: var(--font-body);
+}
+
+.quest-tag {
+  padding: 0.32rem 0.58rem;
+}
+
+.quest-meta {
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+}
+
+.quest-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.4rem;
+  padding: 0.52rem 0.82rem;
+  border-radius: 999px;
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.quest-number {
+  font-size: 1.5rem;
+}
+
+.quest-animal {
+  font-size: 1.55rem;
+}
+
+.section-badge,
+.chapter-badge,
+.science-badge,
+.quest-chapter-label,
+.doro-zone-badge,
+.extension-label {
+  font-size: 0.82rem !important;
+}
+
+.science-badge,
+.extension-label {
+  font-family: var(--font-body) !important;
+}
+
+.doro-char-card {
+  max-width: min(680px, 100%);
+  padding: 1.1rem 1.35rem;
+  gap: 1rem;
+  background: rgba(11, 21, 40, 0.82);
+}
+
+.doro-char-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.doro-char-value {
+  font-size: var(--fs-md);
+}
+
+.zone-name {
+  font-size: var(--fs-sm);
+}
+
+.doro-char-dialogue {
+  font-size: var(--fs-sm);
+  line-height: 1.68;
+}
+
+.doro-zone-story-inner {
+  max-width: 860px;
+  padding: 1rem 1.5rem;
+}
+
+.detail-hero {
+  max-width: min(900px, calc(100vw - 4rem));
+  padding: 5.2rem 1.5rem 1.85rem;
+}
+
+.detail-hero h1 {
+  font-size: var(--fs-xl);
+  line-height: 1.28;
+}
+
+.info-bar {
+  padding-top: 1.8rem;
+}
+
+.info-item {
+  min-width: 132px;
+  padding: 1rem 1.35rem;
+}
+
+.detail-kit-photos,
+.detail-content {
+  max-width: min(920px, calc(100vw - 4rem));
+}
+
+.detail-content {
+  padding: 0 1.25rem 4rem;
+}
+
+.detail-kit-photos {
+  padding: 0 1.25rem;
+}
+
+.detail-kit-thumb img {
+  height: 220px;
+}
+
+.detail-section-title,
+.mission-section > h2,
+.media-section h2,
+.checklist-title,
+.student-section-title,
+.feature-title {
+  font-size: var(--fs-lg);
+  line-height: 1.34;
+}
+
+.student-section,
+.mission-step,
+.faq-question,
+.faq-answer-inner,
+.doc-card,
+.media-download-btn,
+.ai-extension,
+.safety-quiz-card,
+.build-step-card,
+.mission-card,
+.certificate-card,
+.lab-card,
+.trouble-steps-card {
+  border-radius: 16px;
+}
+
+.student-section {
+  padding: 1.25rem 1.35rem;
+}
+
+.student-section-desc,
+.faq-answer-inner,
+.mission-step-body p,
+.mission-step-body ul,
+.trouble-steps-list li,
+.lab-explanation,
+.lab-experiment,
+.lab-concept,
+.mission-text,
+.part-role,
+.part-check,
+.build-step-detail,
+.build-step-tip,
+.trouble-parent-note,
+.notebook-form label,
+.nb-input,
+.nb-saved-msg,
+.cert-text {
+  font-size: var(--fs-sm) !important;
+  line-height: 1.72;
+}
+
+.part-card,
+.science-card,
+.mission-card,
+.build-step-card {
+  padding: 1rem;
+  background: rgba(3, 10, 24, 0.72);
+}
+
+.part-name,
+.doc-card-title,
+.lab-question,
+.safety-q-text {
+  font-size: var(--fs-md);
+  line-height: 1.5;
+}
+
+.part-btns,
+.build-step-btns,
+.qr-entry-btns,
+.mission-actions,
+.trouble-symptoms {
+  gap: 0.75rem;
+}
+
+.part-btn,
+.build-btn,
+.mission-check-btn,
+.nb-save-btn,
+.qr-btn,
+.trouble-close-btn,
+.safety-btn,
+.trouble-symptom-btn,
+.doc-link,
+.media-download-btn,
+.camp-apply-btn,
+.locked-quest-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--control-height);
+  padding: 0.7rem 1rem;
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.part-btn {
+  min-width: 7rem;
+}
+
+.qr-entry-banner {
+  max-width: min(920px, calc(100vw - 2rem));
+  margin: 0 auto 1.25rem;
+}
+
+.qr-entry-inner {
+  padding: 1rem 1.15rem;
+}
+
+.qr-entry-title {
+  font-size: var(--fs-md);
+}
+
+.build-step-card {
+  padding: 1.15rem 1.2rem;
+}
+
+.build-step-title {
+  font-size: var(--fs-lg);
+  line-height: 1.4;
+}
+
+.build-step-tip {
+  margin-top: 0.85rem;
+  padding: 0.8rem 0.95rem;
+  border-radius: 12px;
+}
+
+.lab-card {
+  padding: 1.15rem 1.2rem;
+}
+
+.mission-cards-grid {
+  gap: 1rem;
+}
+
+.mission-card {
+  padding: 1rem;
+}
+
+.notebook-form label {
+  font-weight: 700;
+}
+
+.nb-input {
+  min-height: 2.85rem;
+  padding: 0.75rem 0.9rem;
+}
+
+.certificate-card {
+  padding: 1.2rem 1.3rem;
+}
+
+.cert-title {
+  font-size: var(--fs-sm);
+}
+
+.cert-name {
+  font-size: var(--fs-xl);
+}
+
+.doc-card {
+  padding: 1rem 1.05rem;
+}
+
+.ai-link,
+.character-sprite-label,
+.doroland-char-name,
+.doroland-char-role,
+.footer-brand {
+  font-size: var(--fs-xs);
+}
+
+.character-sprite-label,
+.doroland-char-role,
+.footer-brand {
+  font-family: var(--font-body);
+}
+
+.ai-link {
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+.faq-question {
+  font-size: var(--fs-sm);
+  line-height: 1.55;
+  padding: 1rem 1.05rem;
+}
+
+.faq-answer-inner {
+  padding: 1rem 1.05rem;
+}
+
+.toc-sidebar {
+  scrollbar-width: none;
+}
+
+.toc-sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.toc-item {
+  align-items: flex-start;
+  gap: 0.55rem;
+  min-width: 0;
+  padding: 0.58rem 0.72rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(11, 21, 40, 0.74);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  line-height: 1.4;
+  white-space: normal;
+}
+
+.toc-item:hover,
+.toc-item.active {
+  color: var(--text-primary);
+  border-color: rgba(20, 184, 166, 0.56);
+  background: rgba(9, 27, 35, 0.92);
+}
+
+.toc-dot {
+  width: 7px;
+  height: 7px;
+  margin-top: 0.35rem;
+}
+
+.nav-back-link {
+  gap: 0.6rem;
+}
+
+.nav-back-arrow {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.nav-back-text {
+  font-weight: 800;
+}
+
+.detail-note {
+  margin-top: 0.65rem;
+  color: var(--text-muted);
+}
+
+.locked-quests-copy {
+  max-width: 600px;
+  margin: 0.9rem auto 0;
+  color: var(--text-secondary);
+}
+
+.camp-apply-btn {
+  margin-top: 0.9rem;
+  background: var(--amber);
+  color: #000;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: var(--pixel-shadow);
+}
+
+.locked-quest-card {
+  opacity: 0.68;
+  cursor: default;
+}
+
+.locked-quest-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.locked-quest-banner.emerald {
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(4, 8, 20, 0.8));
+}
+
+.locked-quest-banner.purple {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(4, 8, 20, 0.8));
+}
+
+.locked-quest-banner.sky {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(4, 8, 20, 0.8));
+}
+
+.locked-quest-icon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.locked-quest-link {
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.locked-quest-link.emerald {
+  color: var(--emerald);
+}
+
+.locked-quest-link.purple {
+  color: var(--purple);
+}
+
+.locked-quest-link.sky {
+  color: var(--sky);
+}
+
+.story-center-block {
+  grid-column: 1 / -1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-quote-inline {
+  display: inline-block;
+  max-width: 600px;
+  text-align: left;
+}
+
+.story-copy {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text-secondary);
+}
+
+.story-copy + .story-copy {
+  margin-top: 0.8rem;
+}
+
+.pixel-divider-label,
+.pixel-divider-label-muted {
+  font-family: var(--font-body);
+  font-weight: 800;
+}
+
+.pixel-divider-label {
+  color: var(--emerald);
+}
+
+.pixel-divider-label-muted {
+  color: var(--text-muted);
+}
+
+@media (min-width: 1281px) {
+  .toc-sidebar {
+    position: fixed;
+    top: 6.8rem;
+    right: 1.1rem;
+    transform: none;
+    width: 212px;
+    max-height: calc(100vh - 8rem);
+    padding: 0.85rem;
+    background: rgba(4, 8, 20, 0.84);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 18px 32px rgba(0, 0, 0, 0.28);
+    overflow-y: auto;
+  }
+
+  .detail-hero,
+  .detail-content,
+  .detail-kit-photos,
+  .doro-zone-story-inner {
+    max-width: min(900px, calc(100vw - 320px));
+  }
+}
+
+@media (max-width: 1280px) {
+  .toc-sidebar {
+    position: sticky;
+    top: 4.9rem;
+    right: auto;
+    left: auto;
+    transform: none;
+    width: min(calc(100vw - 2rem), 980px);
+    margin: 0 auto 1rem;
+    padding: 0.75rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(8.5rem, 1fr);
+    gap: 0.55rem;
+    overflow-x: auto;
+    background: rgba(4, 8, 20, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+  }
+
+  .detail-hero,
+  .detail-content,
+  .detail-kit-photos,
+  .doro-zone-story-inner {
+    max-width: min(920px, calc(100vw - 2rem));
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .hero {
+    min-height: min(72vh, 700px);
+    padding-top: 6.1rem;
+  }
+
+  #quests .quest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quest-content {
+    padding: 1.2rem;
+  }
+
+  .section,
+  .dimc-section,
+  .story-section,
+  .doroland-chars-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .student-section,
+  .doc-card,
+  .mission-card {
+    padding: 1.1rem;
+  }
+}
+
+@media (max-height: 820px) {
+  .hero {
+    min-height: auto;
+    padding-top: 5.95rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-logo {
+    width: min(300px, 60vw);
+    margin-bottom: 1rem;
+  }
+
+  .hero-badge {
+    margin-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .top-controls {
+    top: 0.75rem;
+    right: 0.75rem;
+    gap: 0.45rem;
+  }
+
+  .top-controls .lang-toggle,
+  .text-scale-toggle {
+    min-height: 2.5rem;
+    padding: 0.62rem 0.84rem !important;
+  }
+
+  .nav {
+    padding: 0.9rem 1rem;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .hero {
+    padding: 6rem 1rem 2rem;
+  }
+
+  #quests .quest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-kit-thumb-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .toc-sidebar {
+    top: 4.55rem;
+    width: calc(100vw - 1rem);
+    margin-bottom: 0.85rem;
+    padding: 0.55rem;
+  }
+
+  .toc-item {
+    min-height: 2.8rem;
+    padding: 0.5rem 0.62rem;
+  }
+
+  .hero-badge,
+  .qr-entry-btns,
+  .build-step-btns {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 16px;
   }
 }
