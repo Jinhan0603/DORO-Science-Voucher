@@ -133,6 +133,32 @@
     beforeEl.parentElement.insertBefore(div, beforeEl);
   }
 
+  function injectCodexOverrides() {
+    if (document.getElementById('doro-codex-overrides')) return;
+    const style = document.createElement('style');
+    style.id = 'doro-codex-overrides';
+    style.textContent = `
+      .quest-progress-panel {
+        position: sticky;
+        top: 5.5rem;
+        z-index: 15;
+        backdrop-filter: blur(10px);
+      }
+      .part-check-label {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--text-secondary);
+        margin-bottom: 0.2rem;
+      }
+      @media (max-width: 480px) {
+        .quest-progress-panel {
+          top: 4.75rem;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
   /* ── Mission Steps ── */
   function initMissionSteps(zoneData) {
     const steps = document.querySelectorAll('.mission-step');
@@ -379,18 +405,66 @@
     return wrap;
   }
 
+  /* ── Docs Download Section Header ── */
+  function initDocsHeader() {
+    const docs = document.querySelector('.docs-section');
+    if (!docs) return;
+    const h2 = docs.querySelector('h2');
+    const en = isEn();
+    if (h2) injectPanelHeader(h2, en ? 'RESOURCES' : '자료', en ? 'Educational Materials' : '교육 자료 다운로드', 'sky-theme');
+  }
+
+  /* ── Teaching Gallery Header ── */
+  function initGalleryHeader() {
+    const gallery = document.querySelector('.teaching-gallery-section');
+    if (!gallery) return;
+    const h2 = gallery.querySelector('h2');
+    const en = isEn();
+    if (h2) injectPanelHeader(h2, en ? 'FIELD LOG' : '교육 현장', en ? 'Classroom Photos' : '실제 교육 현장', 'amber-theme');
+  }
+
+  function streamlineLearningHub() {
+    const toc = document.querySelector('.toc-sidebar');
+    const learningHubLink = toc && toc.querySelector('a[href="#learning-hub"]');
+    if (learningHubLink) learningHubLink.remove();
+
+    const partsSection = document.getElementById('parts-detective');
+    if (partsSection) {
+      const title = partsSection.querySelector('.student-section-title');
+      const desc = partsSection.querySelector('.student-section-desc');
+      if (title) title.textContent = '🔍 부품 확인 미션';
+      if (desc) {
+        desc.textContent = '위 준비물 체크리스트를 보고, 상자 안에서 실제 부품을 다시 찾아 표시해요. 여기서는 역할 설명 대신 찾기 힌트만 보여줘요.';
+      }
+
+      partsSection.querySelectorAll('.part-role').forEach(el => el.remove());
+      partsSection.querySelectorAll('.part-card').forEach(card => {
+        const check = card.querySelector('.part-check');
+        if (!check || card.querySelector('.part-check-label')) return;
+        const label = document.createElement('div');
+        label.className = 'part-check-label';
+        label.textContent = '찾기 힌트';
+        check.parentNode.insertBefore(label, check);
+      });
+    }
+  }
+
   /* ── INIT ── */
   function init() {
     const zone = detectZone();
     const zoneData = zone ? zone.data : null;
 
+    injectCodexOverrides();
     injectCharCard(zoneData);
     initMissionSteps(zoneData);
     initInventoryChecklist(zoneData);
+    initDocsHeader();
+    initGalleryHeader();
     initFaqHeader();
     initMediaHeader();
     initGalleryLabel();
     initPixelAnimations(zoneData);
+    streamlineLearningHub();
   }
 
   if (document.readyState === 'loading') {
