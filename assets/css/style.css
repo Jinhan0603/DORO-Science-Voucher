@@ -243,16 +243,6 @@ body {
 .badge-label { color: var(--text-primary); font-weight: 600; }
 .badge-sep { color: var(--text-muted); }
 
-/* Hero kit showcase */
-.hero-kit-showcase {
-  width: min(680px, 90vw);
-  border-radius: var(--radius-lg); overflow: hidden;
-  border: 2px solid rgba(20,184,166,0.25);
-  box-shadow: 0 0 50px rgba(20,184,166,0.12), var(--pixel-shadow);
-  margin: 1rem 0 1.5rem; position: relative;
-}
-.hero-kit-showcase img { width: 100%; display: block; }
-
 .scroll-indicator {
   display: flex; flex-direction: column; align-items: center; gap: 0.4rem;
   color: var(--text-muted); font-size: 0.65rem; letter-spacing: 0.2em;
@@ -1748,47 +1738,6 @@ body { font-size: 17px; }
 .qr-btn-secondary { background: var(--purple); color: #fff; }
 .qr-btn-help { background: rgba(255,255,255,0.1); color: var(--text-primary); border: 1px solid rgba(255,255,255,0.2); }
 
-/* 부품 탐정 */
-.parts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-.part-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 12px;
-  padding: 1rem;
-  text-align: center;
-  transition: border-color 0.2s;
-}
-.part-card.found { border-color: var(--emerald); background: rgba(16,185,129,0.08); }
-.part-card.missing { border-color: var(--rose); background: rgba(244,63,94,0.08); }
-.part-emoji { font-size: 2rem; margin-bottom: 0.5rem; }
-.part-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; color: var(--text-primary); }
-.part-role-label,
-.part-check-label { font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 0.2rem; }
-.part-role { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.3rem; line-height: 1.4; }
-.part-check { font-size: 0.75rem; color: var(--cyan); margin-bottom: 0.75rem; line-height: 1.4; }
-.part-btns { display: flex; gap: 0.4rem; justify-content: center; flex-wrap: wrap; }
-.part-btn {
-  padding: 0.45rem 0.8rem;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 8px;
-  font-size: 0.75rem;
-  cursor: pointer;
-  background: rgba(255,255,255,0.05);
-  color: var(--text-primary);
-  font-family: var(--font-display);
-  transition: background 0.15s;
-}
-.part-btn.found-btn.active { background: var(--emerald); color: #000; border-color: var(--emerald); }
-.part-btn.missing-btn.active { background: var(--rose); color: #fff; border-color: var(--rose); }
-.part-missing-msg { margin-top: 0.5rem; font-size: 0.72rem; color: var(--rose); line-height: 1.4; }
-.parts-complete { color: var(--emerald); font-weight: 700; text-align: center; padding: 1rem; font-size: 1rem; }
-.parts-progress { color: var(--text-muted); text-align: center; font-size: 0.85rem; }
-
 /* 안전 퀘스트 */
 .safety-quiz-card {
   background: rgba(255,200,0,0.06);
@@ -1891,47 +1840,6 @@ body { font-size: 17px; }
 .lab-experiment { font-size: 0.88rem; color: var(--text-secondary); background: rgba(255,255,255,0.04); border-radius: 10px; padding: 0.9rem 1rem; margin-bottom: 0.9rem; line-height: 1.7; }
 .lab-concept { font-size: 0.85rem; color: var(--emerald); font-weight: 600; }
 
-/* 미션 카드 */
-.mission-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}
-.mission-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px;
-  padding: 1.1rem;
-  transition: border-color 0.2s;
-}
-.mission-card.done { border-color: var(--emerald); background: rgba(16,185,129,0.07); }
-.mission-type-badge {
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  margin-bottom: 0.6rem;
-}
-.mission-required { background: rgba(16,185,129,0.2); color: var(--emerald); }
-.mission-inquiry { background: rgba(34,211,238,0.2); color: var(--cyan); }
-.mission-creative { background: rgba(139,92,246,0.2); color: var(--purple); }
-.mission-text { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 0.75rem; }
-.mission-check-btn {
-  width: 100%;
-  padding: 0.55rem;
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
-  background: rgba(255,255,255,0.05);
-  color: var(--text-primary);
-  font-family: var(--font-display);
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.15s;
-}
-.mission-card.done .mission-check-btn { background: var(--emerald); color: #000; border-color: var(--emerald); }
-
 /* 실험 기록장 */
 .notebook-form { display: flex; flex-direction: column; gap: 0.6rem; }
 .notebook-form label { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); margin-top: 0.4rem; }
@@ -2008,8 +1916,6 @@ body { font-size: 17px; }
 
 /* 모바일 대응 */
 @media (max-width: 480px) {
-  .parts-grid { grid-template-columns: repeat(2, 1fr); }
-  .mission-cards-grid { grid-template-columns: 1fr; }
   .safety-q-btns { flex-direction: column; align-items: center; }
   .safety-btn { width: 80%; }
   .build-step-btns { flex-direction: column; }
@@ -2105,14 +2011,12 @@ body { font-size: 17px; }
   font-size: 0.78rem;
 }
 
-.parts-grid,
 .science-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 0.7rem;
 }
 
-.part-card,
 .science-card {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 10px;
@@ -2120,21 +2024,6 @@ body { font-size: 17px; }
   background: rgba(0, 0, 0, 0.25);
 }
 
-.part-card.state-found {
-  border-color: rgba(66, 245, 184, 0.7);
-}
-
-.part-card.state-missing {
-  border-color: rgba(255, 136, 136, 0.7);
-}
-
-.part-name {
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 0.35rem;
-}
-
-.part-role,
 .science-card p {
   font-size: 0.78rem;
   color: var(--text-muted);
@@ -2503,9 +2392,6 @@ body {
 .quest-photo-hint,
 .mission-step-time,
 .info-label,
-.part-role-label,
-.part-check-label,
-.mission-type-badge,
 .build-step-num,
 .nav-back-text,
 .locked-quest-badge,
@@ -2520,9 +2406,6 @@ body {
 .quest-photo-hint,
 .mission-step-time,
 .info-label,
-.part-role-label,
-.part-check-label,
-.mission-type-badge,
 .build-step-num,
 .nav-back-text,
 .locked-quest-badge {
@@ -2681,7 +2564,6 @@ body {
 .ai-extension,
 .safety-quiz-card,
 .build-step-card,
-.mission-card,
 .certificate-card,
 .lab-card,
 .trouble-steps-card {
@@ -2700,9 +2582,6 @@ body {
 .lab-explanation,
 .lab-experiment,
 .lab-concept,
-.mission-text,
-.part-role,
-.part-check,
 .build-step-detail,
 .build-step-tip,
 .trouble-parent-note,
@@ -2714,15 +2593,12 @@ body {
   line-height: 1.72;
 }
 
-.part-card,
 .science-card,
-.mission-card,
 .build-step-card {
   padding: 1rem;
   background: rgba(3, 10, 24, 0.72);
 }
 
-.part-name,
 .doc-card-title,
 .lab-question,
 .safety-q-text {
@@ -2730,7 +2606,6 @@ body {
   line-height: 1.5;
 }
 
-.part-btns,
 .build-step-btns,
 .qr-entry-btns,
 .mission-actions,
@@ -2738,9 +2613,7 @@ body {
   gap: 0.75rem;
 }
 
-.part-btn,
 .build-btn,
-.mission-check-btn,
 .nb-save-btn,
 .qr-btn,
 .trouble-close-btn,
@@ -2759,10 +2632,6 @@ body {
   font-size: var(--fs-sm);
   font-weight: 800;
   line-height: 1.25;
-}
-
-.part-btn {
-  min-width: 7rem;
 }
 
 .qr-entry-banner {
@@ -2795,14 +2664,6 @@ body {
 
 .lab-card {
   padding: 1.15rem 1.2rem;
-}
-
-.mission-cards-grid {
-  gap: 1rem;
-}
-
-.mission-card {
-  padding: 1rem;
 }
 
 .notebook-form label {
@@ -3232,12 +3093,22 @@ body {
 }
 
 /* ============================================
-   V3.2 COMPACT + CLEAN LEARNING UI
+   V3.3 CLEAN LEARNING UI
    ============================================ */
 
 .hero-kit-showcase {
-  max-width: min(940px, calc(100vw - 3rem));
-  margin: 1.1rem auto 0;
+  width: min(860px, calc(100vw - 3rem));
+  max-height: min(52vh, 500px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem;
+  margin: 1rem auto 0.4rem;
+  border-radius: 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(7, 14, 28, 0.92);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .lang-toggle,
@@ -3269,9 +3140,11 @@ body {
 
 .hero-kit-showcase img {
   display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: min(52vh, 480px);
+  object-fit: contain;
 }
 
 #quests .quest-grid {
@@ -3670,6 +3543,16 @@ body {
   justify-content: space-between;
   gap: 0.75rem;
   flex-wrap: wrap;
+  position: static;
+}
+
+.parts-toolbar,
+.mission-summary-bar {
+  margin: 0.75rem 0 1rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .parts-progress-chip,
@@ -3683,26 +3566,40 @@ body {
   background: rgba(255, 255, 255, 0.06);
   font-size: 0.94rem;
   font-weight: 800;
+  min-height: 2.35rem;
+  white-space: nowrap;
+}
+
+.parts-toolbar-actions {
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-left: auto;
 }
 
 .parts-grid {
+  display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.85rem;
 }
 
 .part-card {
-  padding: 0.78rem;
-  gap: 0.62rem;
-  min-height: 0;
+  min-height: 230px;
+  padding: 0.8rem;
+  gap: 0.56rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  text-align: left;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(8, 16, 31, 0.86);
 }
 
 .part-card-head {
   display: flex;
   align-items: center;
   gap: 0.55rem;
+  min-height: 2.4rem;
 }
 
 .part-emoji {
@@ -3719,11 +3616,15 @@ body {
 .part-name {
   font-size: 0.96rem;
   line-height: 1.35;
+  margin: 0;
+  word-break: keep-all;
 }
 
 .part-meta {
+  flex: 1;
   display: grid;
-  gap: 0.52rem;
+  gap: 0.45rem;
+  margin-top: 0.65rem;
 }
 
 .part-copy {
@@ -3739,8 +3640,9 @@ body {
 
 .part-role,
 .part-check {
-  font-size: 0.88rem;
-  line-height: 1.5;
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.45;
   color: var(--text-secondary);
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -3752,6 +3654,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.45rem;
+  margin-top: auto;
 }
 
 .part-btn,
@@ -3765,6 +3668,8 @@ body {
 .safety-reset-btn,
 .build-jump-btn,
 .cert-reset-btn {
+  width: 100%;
+  min-width: 0;
   min-height: 2.45rem;
   padding: 0.5rem 0.74rem;
   border-radius: 0.8rem;
@@ -3772,6 +3677,37 @@ body {
   font-size: 0.95rem;
   font-weight: 800;
   cursor: pointer;
+}
+
+.parts-toolbar-actions .parts-reset-btn,
+.parts-toolbar-actions .parts-next-btn,
+.mission-summary-bar .mission-reset-btn {
+  width: auto;
+}
+
+.part-btn {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--text-primary);
+}
+
+.part-btn.found-btn.active {
+  background: var(--emerald);
+  border-color: var(--emerald);
+  color: #001b18;
+}
+
+.part-btn.missing-btn.active {
+  background: rgba(244, 114, 182, 0.22);
+  border-color: var(--rose);
+  color: var(--text-primary);
+}
+
+.part-btn:hover,
+.mission-check-btn:hover,
+.parts-reset-btn:hover,
+.mission-reset-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .parts-reset-btn,
@@ -3796,6 +3732,10 @@ body {
 .mission-complete-banner {
   font-size: 0.9rem;
   line-height: 1.55;
+}
+
+.parts-summary {
+  margin-top: 0.7rem;
 }
 
 .build-step-card,
@@ -3855,20 +3795,58 @@ body {
   line-height: 1.6;
 }
 
+.mission-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
 .mission-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 178px;
   gap: 0.7rem;
+  padding: 0.95rem;
+  border-radius: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(8, 16, 31, 0.86);
+}
+
+.mission-card.done {
+  border-color: rgba(20, 184, 166, 0.5);
+  background: rgba(20, 184, 166, 0.07);
 }
 
 .mission-text {
-  font-size: var(--fs-xs);
+  flex: 1;
+  margin: 0 0 0.85rem;
+  font-size: var(--fs-sm);
   line-height: 1.6;
 }
 
 .mission-type-badge {
+  align-self: flex-start;
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 800;
   letter-spacing: 0;
+  margin-bottom: 0.65rem;
+  border-radius: 999px;
+  padding: 0.22rem 0.58rem;
+}
+
+.mission-check-btn {
+  margin-top: auto;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.045);
+  color: var(--text-primary);
+  border-radius: 0.75rem;
+}
+
+.mission-card.done .mission-check-btn {
+  background: var(--emerald);
+  border-color: var(--emerald);
+  color: #001b18;
 }
 
 .docs-grid,
@@ -3968,12 +3946,6 @@ a:focus-visible {
 }
 
 @media (max-width: 900px) {
-  .story-cards-grid,
-  .parts-grid,
-  .mission-cards-grid {
-    grid-template-columns: 1fr;
-  }
-
   .build-step-btns,
   .parts-toolbar,
   .mission-summary-bar,
@@ -3986,6 +3958,8 @@ a:focus-visible {
 @media (max-width: 600px) {
   .hero-kit-showcase {
     max-width: calc(100vw - 2rem);
+    max-height: min(44vh, 360px);
+    padding: 0.5rem;
   }
 
   #quests .quest-grid {
@@ -4002,7 +3976,16 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
+  .mission-cards-grid,
+  .story-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
   .part-btns {
     grid-template-columns: 1fr;
+  }
+
+  .hero-kit-showcase img {
+    max-height: min(42vh, 320px);
   }
 }

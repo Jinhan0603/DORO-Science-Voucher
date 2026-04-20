@@ -122,7 +122,7 @@
       '<h2 class="student-section-title">' + buildSectionTitle('learning.parts.title', '🔍 구성품 확인', '🔍 Component Check') + '</h2>' +
       '<p class="student-section-desc">' + t('learning.parts.desc.short', '상자 안의 부품을 하나씩 찾아요. 이름, 역할, 찾는 힌트를 확인하고 표시하세요.', 'Find each item in the box. Check its name, role, and hint, then mark it.') + '</p>' +
       '<div class="parts-toolbar">' +
-        '<div class="parts-progress-chip">' + t('learning.parts.progress', '확인 완료', 'Checked') + ' <strong>' + checkedCount + ' / ' + total + '</strong></div>' +
+        '<div class="parts-progress-chip">' + t('learning.parts.progress', '확인한 부품', 'Checked parts') + ' <strong>' + checkedCount + ' / ' + total + '</strong></div>' +
         '<div class="parts-toolbar-actions">' +
           '<button type="button" class="parts-reset-btn">' + t('learning.parts.clear', '전체 선택 해제', 'Clear all') + '</button>' +
           (foundCount === total ? '<button type="button" class="parts-next-btn">' + t('learning.parts.next', '안전 약속으로 이동', 'Go to Safety Promise') + '</button>' : '') +
