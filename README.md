@@ -8,7 +8,8 @@
 
 | 버전 | 링크 | 설명 |
 |------|------|------|
-| **V2** (최신) | [DOROLAND V2 →](https://jinhan0603.github.io/DORO-Science-Voucher/) | 픽셀 RPG 테마 · 와디즈 실제 사진 · 조립 영상 포함 |
+| **V3** ✨ 최신 | [DOROLAND V3 →](https://jinhan0603.github.io/DORO-Science-Voucher/) | 초등학생 학습 포털 · 부품탐정 · 안전퀘스트 · 단계별 조립 · 인증서 |
+| V2 | [DOROLAND V2 (브랜치) →](https://github.com/Jinhan0603/DORO-Science-Voucher/tree/v2) | 픽셀 RPG 테마 · 와디즈 실제 사진 · 조립 영상 포함 |
 
 ## 🚀 프로그램 목록
 
@@ -20,7 +21,7 @@
 | 4 | IR 자동차 × Teachable Machine | IR 장애물 인식 자동차 | [Teachable Machine](https://teachablemachine.withgoogle.com/) | 120분 |
 | 5 | 아두이노 게임기 × MakeCode Arcade | 휴대용 게임기 | [MakeCode Arcade](https://arcade.makecode.com/) | 90분 |
 
-🚌 **모든 프로그램은 DOROBUS에서 체험 가능!**
+🏠 **DORO DIMC 홈러닝 키트 — QR 접속으로 단계별 학습 가능!**
 
 ## 🔗 Links
 
