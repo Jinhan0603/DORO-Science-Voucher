@@ -9,6 +9,7 @@
 | 버전 | 링크 | 설명 |
 |------|------|------|
 | **V3** ✨ 최신 | [DOROLAND V3 →](https://jinhan0603.github.io/DORO-Science-Voucher/) | 초등학생 학습 포털 · 부품탐정 · 안전퀘스트 · 단계별 조립 · 인증서 |
+| **V3-codex** | [DOROLAND V3-codex →](https://jinhan0603.github.io/DORO-Science-Voucher/v3-codex.html) | AI지침 + V3 보완안 기반 Codex 작업 진입 링크 |
 | V2 | [DOROLAND V2 (브랜치) →](https://github.com/Jinhan0603/DORO-Science-Voucher/tree/v2) | 픽셀 RPG 테마 · 와디즈 실제 사진 · 조립 영상 포함 |
 
 ## 🚀 프로그램 목록
@@ -27,6 +28,7 @@
 
 - [DORO Change X](https://www.changex.org/kr/doro)
 - [DORO 홈페이지](https://www.doro-robot.com)
+- [V3-codex 작업 파일](./V3-codex.md)
 
 ## 📦 기술 스택
 
