@@ -3,6 +3,8 @@
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  normalizeBaseBranding();
+  initVariantBranding();
   initScrollAnimations();
   initNavScroll();
   initQuestTabs();
@@ -10,6 +12,58 @@ document.addEventListener('DOMContentLoaded', () => {
   initChecklist();
   initProgressBar();
 });
+
+function normalizeBaseBranding() {
+  document.title = document.title.replace(/V3-CODEX/gi, 'V3').replace(/V2\s+\|/i, 'V3 |');
+
+  const footerBrand = document.querySelector('.footer-brand');
+  if (footerBrand && /V3-CODEX/i.test(footerBrand.textContent)) {
+    footerBrand.textContent = '⚔ DOROLAND V3 ⚔';
+  }
+}
+
+function getVariant() {
+  const params = new URLSearchParams(window.location.search);
+  return (params.get('v') || '').trim().toLowerCase();
+}
+
+function initVariantBranding() {
+  const variant = getVariant();
+  if (!variant) return;
+
+  let label = '';
+  let note = '';
+
+  if (variant === 'v3.1-codex') {
+    label = 'V3.1-codex';
+    note = '문구 통일 · 진행도 고정 · 로딩 최적화';
+  } else if (variant === 'v3-codex') {
+    label = 'V3-codex';
+    note = 'Codex 작업 버전';
+  }
+
+  if (!label) return;
+
+  document.querySelectorAll('.nav-version').forEach(el => {
+    el.textContent = label;
+  });
+
+  const footerBrand = document.querySelector('.footer-brand');
+  if (footerBrand) {
+    footerBrand.textContent = `⚔ DOROLAND ${label} ⚔`;
+  }
+
+  const badge = document.querySelector('.hero-game-badge');
+  if (badge && !document.querySelector('.variant-note')) {
+    const noteEl = document.createElement('div');
+    noteEl.className = 'variant-note';
+    noteEl.textContent = `${label} · ${note}`;
+    badge.insertAdjacentElement('afterend', noteEl);
+  }
+
+  const baseTitle = document.title.replace(/^DOROLAND\s+V[^\|]*\|\s*/i, '');
+  document.title = `${label} | ${baseTitle}`;
+}
 
 /* --- Scroll Animations (Intersection Observer) --- */
 function initScrollAnimations() {

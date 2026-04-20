@@ -136,6 +136,7 @@ body {
   font-family: var(--font-pixel); font-size: 0.42rem;
   padding: 0.18rem 0.45rem;
   background: var(--emerald); color: #000; border-radius: 2px;
+  white-space: nowrap;
 }
 .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
 .nav-links a {
@@ -196,6 +197,14 @@ body {
   background: rgba(20,184,166,0.1);
   border: 2px solid var(--emerald); color: var(--emerald);
   margin-bottom: 1.5rem; letter-spacing: 0.08em;
+}
+.variant-note {
+  font-family: var(--font-pixel);
+  font-size: 0.5rem;
+  color: var(--amber);
+  margin-top: -0.75rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.04em;
 }
 
 .hero-tagline {
@@ -1011,6 +1020,10 @@ body {
   padding: 0.85rem 1.1rem;
   margin-bottom: 1.25rem;
   border-radius: 0;
+  position: sticky;
+  top: 5.5rem;
+  z-index: 15;
+  backdrop-filter: blur(10px);
 }
 .quest-progress-top {
   font-family: var(--font-pixel);
@@ -1732,6 +1745,7 @@ body { font-size: 17px; }
 .part-card.missing { border-color: var(--rose); background: rgba(244,63,94,0.08); }
 .part-emoji { font-size: 2rem; margin-bottom: 0.5rem; }
 .part-name { font-weight: 700; font-size: 0.9rem; margin-bottom: 0.3rem; color: var(--text-primary); }
+.part-check-label { font-size: 0.72rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 0.2rem; }
 .part-role { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.3rem; line-height: 1.4; }
 .part-check { font-size: 0.75rem; color: var(--cyan); margin-bottom: 0.75rem; line-height: 1.4; }
 .part-btns { display: flex; gap: 0.4rem; justify-content: center; flex-wrap: wrap; }
@@ -1980,6 +1994,7 @@ body { font-size: 17px; }
   .qr-entry-btns { flex-direction: column; }
   .qr-btn { width: 100%; }
   .cert-name { font-size: 1.2rem; }
+  .quest-progress-panel { top: 4.75rem; }
 }
 
 /* ============================================

@@ -423,7 +423,34 @@
     if (h2) injectPanelHeader(h2, en ? 'FIELD LOG' : '교육 현장', en ? 'Classroom Photos' : '실제 교육 현장', 'amber-theme');
   }
 
+  function normalizeChecklistCopy() {
+    const en = isEn();
+    const toc = document.querySelector('.toc-sidebar');
+    const checklistLink = toc && toc.querySelector('a[href="#checklist"]');
+    if (checklistLink) {
+      checklistLink.innerHTML = `<span class="toc-dot"></span> ${en ? 'Materials Check' : '준비물 확인'}`;
+    }
+
+    const checklistSection = document.getElementById('checklist');
+    if (!checklistSection) return;
+
+    const title = checklistSection.querySelector('.checklist-title');
+    const desc = checklistSection.querySelector('.checklist-desc');
+
+    if (title) {
+      title.textContent = en ? '🔧 Materials Verification Checklist' : '🔧 준비물 확인 체크리스트';
+    }
+
+    if (desc) {
+      const progressHtml = '<span id="checklist-progress"></span>';
+      desc.innerHTML = en
+        ? `Before starting, check the required kit materials and basic hand tools first. ${progressHtml}`
+        : `만들기를 시작하기 전에, 키트 구성품과 기본 준비물을 먼저 확인해요. ${progressHtml}`;
+    }
+  }
+
   function streamlineLearningHub() {
+    const en = isEn();
     const toc = document.querySelector('.toc-sidebar');
     const learningHubLink = toc && toc.querySelector('a[href="#learning-hub"]');
     if (learningHubLink) learningHubLink.remove();
@@ -432,9 +459,11 @@
     if (partsSection) {
       const title = partsSection.querySelector('.student-section-title');
       const desc = partsSection.querySelector('.student-section-desc');
-      if (title) title.textContent = '🔍 부품 확인 미션';
+      if (title) title.textContent = en ? '🔍 Parts Check Mission' : '🔍 부품 확인 미션';
       if (desc) {
-        desc.textContent = '위 준비물 체크리스트를 보고, 상자 안에서 실제 부품을 다시 찾아 표시해요. 여기서는 역할 설명 대신 찾기 힌트만 보여줘요.';
+        desc.textContent = en
+          ? 'After checking the materials list, find the same parts in the box and mark them here. This step shows only names and find hints.'
+          : '준비물 확인이 끝나면, 같은 부품을 상자 안에서 다시 찾아 체크해요. 이 단계에서는 역할 설명 없이 이름과 찾기 힌트만 확인합니다.';
       }
 
       partsSection.querySelectorAll('.part-role').forEach(el => el.remove());
@@ -443,7 +472,7 @@
         if (!check || card.querySelector('.part-check-label')) return;
         const label = document.createElement('div');
         label.className = 'part-check-label';
-        label.textContent = '찾기 힌트';
+        label.textContent = en ? 'Find Hint' : '찾기 힌트';
         check.parentNode.insertBefore(label, check);
       });
     }
@@ -458,6 +487,7 @@
     injectCharCard(zoneData);
     initMissionSteps(zoneData);
     initInventoryChecklist(zoneData);
+    normalizeChecklistCopy();
     initDocsHeader();
     initGalleryHeader();
     initFaqHeader();

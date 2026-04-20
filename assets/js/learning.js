@@ -1,6 +1,6 @@
 /* ============================================
    DOROLAND V3 — Learning Portal JavaScript
-   학생용 학습 기능: 부품탐정, 안전퀘스트, 조립, 트러블슈팅, 과학실험실, 미션카드, 기록장, 인증서
+   학생용 학습 기능: 부품 확인 미션, 안전퀘스트, 조립, 트러블슈팅, 과학실험실, 미션카드, 기록장, 인증서
    localStorage 기반, 백엔드 없음, GitHub Pages 동작
    ============================================ */
 
@@ -39,24 +39,24 @@
     if (params.get('from') !== 'qr') return;
     var banner = document.createElement('div');
     banner.className = 'qr-entry-banner';
-    banner.innerHTML = '<div class="qr-entry-inner"><p class="qr-entry-title">📦 키트를 받으셨나요?</p><div class="qr-entry-btns"><button onclick="document.getElementById(\'parts-detective\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-primary">🔍 부품부터 확인하기</button><button onclick="document.getElementById(\'build-guide\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-secondary">🚀 미션 시작하기</button><button onclick="document.getElementById(\'troubleshooting\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-help">🤔 도와줘요</button></div></div>';
+    banner.innerHTML = '<div class="qr-entry-inner"><p class="qr-entry-title">📦 키트를 받으셨나요?</p><div class="qr-entry-btns"><button onclick="document.getElementById(\'checklist\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-primary">🔧 준비물 확인하기</button><button onclick="document.getElementById(\'parts-detective\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-secondary">🔍 부품 확인 미션</button><button onclick="document.getElementById(\'build-guide\').scrollIntoView({behavior:\'smooth\'})" class="qr-btn qr-btn-help">🚀 만들기 시작</button></div></div>';
     var hero = document.querySelector('.detail-hero');
     if (hero) hero.insertAdjacentElement('afterend', banner);
   }
 
-  // ── 1. 부품 탐정 ──────────────────────────────────
+  // ── 1. 부품 확인 미션 ─────────────────────────────
   function renderPartsDetective(kitId, kit, progress) {
     var sec = document.getElementById('parts-detective');
     if (!sec || !kit) return;
     var saved = progress.parts || {};
-    sec.innerHTML = '<h2 class="student-section-title">🔍 부품 탐정</h2><p class="student-section-desc">상자에서 부품을 꺼내 하나씩 확인해요! 찾으면 버튼을 눌러요.</p><div class="parts-grid" id="parts-grid"></div><div class="parts-summary" id="parts-summary"></div>';
+    sec.innerHTML = '<h2 class="student-section-title">🔍 부품 확인 미션</h2><p class="student-section-desc">준비물 확인이 끝나면, 같은 부품을 상자 안에서 다시 찾아 체크해요. 이 단계에서는 역할 설명 없이 이름과 찾기 힌트만 확인합니다.</p><div class="parts-grid" id="parts-grid"></div><div class="parts-summary" id="parts-summary"></div>';
     var grid = sec.querySelector('#parts-grid');
     kit.parts.forEach(function(part, i) {
       var found = saved[i] === 'found';
       var missing = saved[i] === 'missing';
       var card = document.createElement('div');
       card.className = 'part-card' + (found ? ' found' : missing ? ' missing' : '');
-      card.innerHTML = '<div class="part-emoji">' + part.emoji + '</div><div class="part-name">' + part.name + '</div><div class="part-role">' + part.role + '</div><div class="part-check">💡 ' + part.check + '</div><div class="part-btns"><button class="part-btn found-btn' + (found ? ' active' : '') + '" data-idx="' + i + '" data-state="found">찾았어요! ✓</button><button class="part-btn missing-btn' + (missing ? ' active' : '') + '" data-idx="' + i + '" data-state="missing">없어요</button></div>' + (missing ? '<div class="part-missing-msg">👨‍👩‍👧 보호자에게 알려주세요. 고객지원: doroedu.net</div>' : '');
+      card.innerHTML = '<div class="part-emoji">' + part.emoji + '</div><div class="part-name">' + part.name + '</div><div class="part-check-label">찾기 힌트</div><div class="part-check">💡 ' + part.check + '</div><div class="part-btns"><button class="part-btn found-btn' + (found ? ' active' : '') + '" data-idx="' + i + '" data-state="found">찾았어요! ✓</button><button class="part-btn missing-btn' + (missing ? ' active' : '') + '" data-idx="' + i + '" data-state="missing">없어요</button></div>' + (missing ? '<div class="part-missing-msg">👨‍👩‍👧 보호자에게 알려주세요. 고객지원: doroedu.net</div>' : '');
       grid.appendChild(card);
     });
     grid.addEventListener('click', function(e) {
@@ -278,8 +278,10 @@
   function addLearningTOC() {
     var toc = document.querySelector('.toc-sidebar');
     if (!toc) return;
+    var learningHubLink = toc.querySelector('a[href="#learning-hub"]');
+    if (learningHubLink) learningHubLink.remove();
     var items = [
-      { href: '#parts-detective', label: '🔍 부품 탐정' },
+      { href: '#parts-detective', label: '🔍 부품 확인' },
       { href: '#safety-quest', label: '🛡 안전 퀘스트' },
       { href: '#build-guide', label: '🔨 만들기' },
       { href: '#troubleshooting', label: '🤔 왜 안 되지?' },

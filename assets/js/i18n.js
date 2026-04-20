@@ -51,14 +51,14 @@ const i18n = {
 
     // ── Program Page Common ──
     'prog.nav.back': '프로그램 목록',
-    'prog.photos': '📸 키트 사진', 'prog.checklist.title': '🔧 준비물 체크리스트',
+    'prog.photos': '📸 키트 사진', 'prog.checklist.title': '🔧 준비물 확인 체크리스트',
     'prog.missions': '📖 STEP-BY-STEP 교육 과정',
     'prog.demo.title': '🎬 키트 작동 데모 영상',
     'prog.demo.note': '※ 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.',
     'prog.ai.label': '선택형 확장 활동', 'prog.faq.title': '❓ 자주 묻는 질문',
     'prog.docs.title': '📚 교육 자료 다운로드',
     'prog.docs.overview': '교육 개요서', 'prog.docs.guide': '교육 지도서',
-    'prog.toc.photos': '키트 사진', 'prog.toc.checklist': '준비물',
+    'prog.toc.photos': '키트 사진', 'prog.toc.checklist': '준비물 확인',
     'prog.toc.missions': '교육 과정', 'prog.toc.media': '데모 영상',
     'prog.toc.ai': 'AI 확장', 'prog.toc.faq': 'FAQ',
 
@@ -186,7 +186,7 @@ const i18n = {
     'p6.faq3.q': '특정 음을 더 쉽게 내려면?',
 
     // ── V3 Learning Portal ──
-    'learning.parts.title': '🔍 부품 탐정',
+    'learning.parts.title': '🔍 부품 확인 미션',
     'learning.safety.title': '🛡 안전 퀘스트',
     'learning.build.title': '🔨 한 단계씩 만들기',
     'learning.trouble.title': '🤔 왜 안 되지?',
@@ -257,14 +257,14 @@ const i18n = {
 
     // Program Page Common
     'prog.nav.back': 'Program List',
-    'prog.photos': '📸 Kit Photos', 'prog.checklist.title': '🔧 Materials Checklist',
+    'prog.photos': '📸 Kit Photos', 'prog.checklist.title': '🔧 Materials Verification Checklist',
     'prog.missions': '📖 STEP-BY-STEP Curriculum',
     'prog.demo.title': '🎬 Kit Demo Video',
     'prog.demo.note': '※ This video shows the completed kit in action (not an assembly guide).',
     'prog.ai.label': 'Optional Extension Activity', 'prog.faq.title': '❓ FAQ',
     'prog.docs.title': '📚 Educational Resources',
     'prog.docs.overview': 'Program Overview', 'prog.docs.guide': 'Teaching Guide',
-    'prog.toc.photos': 'Kit Photos', 'prog.toc.checklist': 'Materials',
+    'prog.toc.photos': 'Kit Photos', 'prog.toc.checklist': 'Materials Check',
     'prog.toc.missions': 'Curriculum', 'prog.toc.media': 'Demo Video',
     'prog.toc.ai': 'AI Extension', 'prog.toc.faq': 'FAQ',
 
@@ -392,7 +392,7 @@ const i18n = {
     'p6.faq3.q': 'How to make a specific note easier to hit?',
 
     // ── V3 Learning Portal ──
-    'learning.parts.title': '🔍 Parts Detective',
+    'learning.parts.title': '🔍 Parts Check Mission',
     'learning.safety.title': '🛡 Safety Quest',
     'learning.build.title': '🔨 Step-by-Step Build',
     'learning.trouble.title': '🤔 Why Won\'t It Work?',
