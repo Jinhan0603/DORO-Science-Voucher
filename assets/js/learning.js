@@ -304,6 +304,7 @@
     var progressPct = Math.max(8, Math.round(((idx + 1) / total) * 100));
     var stepNum = step.step || (idx + 1);
     var hasVideo = guide && guide.assemblyVideo;
+    var videoHint = step.videoTime || step.videoHint || '';
     var mission = step.mission || step.detail || '';
     var check = step.check || step.tip || '';
     var caution = step.caution || '';
@@ -327,7 +328,7 @@
         (caution
           ? '<div class="build-step-caution"><strong>' + t('learning.build.caution', '주의', 'Caution') + '</strong><p>' + caution + '</p></div>'
           : '') +
-        (hasVideo
+        (hasVideo && videoHint
           ? '<div class="build-video-panel">' +
               '<div class="build-video-title">' + t('learning.build.video.title', '조립 영상 힌트', 'Assembly Video Hint') + '</div>' +
               '<p>' + t('learning.build.video.desc', '막히면 아래 조립 영상에서 같은 장면을 다시 확인할 수 있어요.', 'If you get stuck, review the matching scene in the assembly video below.') + '</p>' +
