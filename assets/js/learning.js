@@ -271,27 +271,80 @@
     });
   }
 
-  function renderBuildStep(step, idx, total) {
+  function getAssemblyGuide(kitId) {
+    return window.DORO_ASSEMBLY_GUIDES && window.DORO_ASSEMBLY_GUIDES[kitId]
+      ? window.DORO_ASSEMBLY_GUIDES[kitId]
+      : null;
+  }
+
+  function getAssemblySteps(kitId, kit) {
+    var guide = getAssemblyGuide(kitId);
+    if (guide && guide.steps && guide.steps.length) return guide.steps;
+    return (kit.assemblySteps || []).map(function (step, idx) {
+      return {
+        step: idx + 1,
+        title: step.title,
+        mission: step.detail,
+        check: step.tip || '',
+        caution: ''
+      };
+    });
+  }
+
+  function parseVideoTime(value) {
+    if (!value || typeof value !== 'string') return null;
+    var parts = value.split(':').map(function (chunk) { return Number(chunk); });
+    if (parts.some(function (n) { return Number.isNaN(n); })) return null;
+    if (parts.length === 2) return (parts[0] * 60) + parts[1];
+    if (parts.length === 3) return (parts[0] * 3600) + (parts[1] * 60) + parts[2];
+    return null;
+  }
+
+  function renderBuildStep(step, idx, total, guide) {
     var progressPct = Math.max(8, Math.round(((idx + 1) / total) * 100));
+    var stepNum = step.step || (idx + 1);
+    var hasVideo = guide && guide.assemblyVideo;
+    var mission = step.mission || step.detail || '';
+    var check = step.check || step.tip || '';
+    var caution = step.caution || '';
     return '' +
       '<div class="build-step-card">' +
         '<div class="build-step-head">' +
-          '<div class="build-step-num">' + t('learning.build.step', '단계', 'Step') + ' ' + step.step + ' / ' + total + '</div>' +
+          '<div class="build-step-num">' + t('learning.build.step', '단계', 'Step') + ' ' + stepNum + ' / ' + total + '</div>' +
           '<button type="button" class="build-reset-btn">' + t('learning.build.reset', '처음부터', 'Restart') + '</button>' +
         '</div>' +
         '<div class="build-step-title">' + step.title + '</div>' +
-        '<div class="build-step-detail">' + step.detail + '</div>' +
-        (step.tip ? '<div class="build-step-tip">💡 ' + step.tip + '</div>' : '') +
+        (step.image
+          ? '<div class="build-step-media"><figure class="build-step-image"><img src="' + step.image + '" alt="' + (step.alt || step.title) + '" loading="lazy"></figure></div>'
+          : '') +
+        '<div class="build-step-block">' +
+          '<div class="build-step-label">' + t('learning.build.today', '오늘의 미션', 'Today\'s Mission') + '</div>' +
+          '<div class="build-step-mission">' + mission + '</div>' +
+        '</div>' +
+        (check
+          ? '<div class="build-step-check"><strong>' + t('learning.build.check', '이렇게 되었나요?', 'Check This') + '</strong><p>' + check + '</p></div>'
+          : '') +
+        (caution
+          ? '<div class="build-step-caution"><strong>' + t('learning.build.caution', '주의', 'Caution') + '</strong><p>' + caution + '</p></div>'
+          : '') +
+        (hasVideo
+          ? '<div class="build-video-panel">' +
+              '<div class="build-video-title">' + t('learning.build.video.title', '조립 영상 힌트', 'Assembly Video Hint') + '</div>' +
+              '<p>' + t('learning.build.video.desc', '막히면 아래 조립 영상에서 같은 장면을 다시 확인할 수 있어요.', 'If you get stuck, review the matching scene in the assembly video below.') + '</p>' +
+              (step.videoTime ? '<div class="build-video-time">' + t('learning.build.video.from', '추천 구간', 'Suggested time') + ': ' + step.videoTime + '</div>' : '') +
+            '</div>'
+          : '') +
         '<div class="build-step-progress-bar"><div class="build-step-progress-fill" style="width:' + progressPct + '%"></div></div>' +
       '</div>' +
       '<div class="build-step-btns">' +
-        '<button type="button" class="build-btn build-done-btn">✅ ' + t('learning.build.done', '완료했어요 ✓', 'Done ✓') + '</button>' +
         (idx > 0 ? '<button type="button" class="build-btn build-redo-btn">↩ ' + t('learning.build.redo', '이전 단계', 'Previous Step') + '</button>' : '') +
+        '<button type="button" class="build-btn build-done-btn">✅ ' + t('learning.build.done', '완료했어요 ✓', 'Done ✓') + '</button>' +
+        (hasVideo ? '<button type="button" class="build-btn build-video-btn">🎬 ' + t('learning.build.video.cta', '조립 영상 보기', 'Watch Assembly Video') + '</button>' : '') +
         '<button type="button" class="build-btn build-help-btn">🤔 ' + t('learning.build.help', '도와줘요', 'Help me') + '</button>' +
       '</div>';
   }
 
-  function renderBuildComplete(kit) {
+  function renderBuildComplete(kit, guide) {
     return '' +
       '<div class="build-complete">' +
         '🎉 ' + t('learning.build.complete', '모든 단계를 완료했어요!', 'You finished every step!') +
@@ -299,6 +352,10 @@
       '</div>' +
       '<div class="build-step-btns">' +
         '<button type="button" class="build-btn build-lab-btn">🔬 ' + t('learning.lab.title', '과학 실험', 'Science Lab') + '</button>' +
+        '<button type="button" class="build-btn build-mission-btn">🎯 ' + t('learning.mission.title', '도전 미션', 'Challenge Missions') + '</button>' +
+        (guide && (guide.guidePdf || guide.assemblyVideo || guide.demoVideo)
+          ? '<button type="button" class="build-btn build-resource-btn">📚 ' + t('prog.toc.resources', '자료·영상', 'Resources & Videos') + '</button>'
+          : '') +
         '<button type="button" class="build-btn build-reset-btn">↺ ' + t('learning.build.reset', '처음부터', 'Restart') + '</button>' +
       '</div>';
   }
@@ -310,12 +367,15 @@
 
     var saved = progress.build || {};
     var currentStep = saved.step || 0;
-    var steps = kit.assemblySteps || [];
+    var guide = getAssemblyGuide(kitId);
+    var steps = getAssemblySteps(kitId, kit);
     var isComplete = currentStep >= steps.length;
 
     sec.innerHTML =
       '<h2 class="student-section-title">' + buildSectionTitle('learning.build.title', '🔨 한 단계씩 만들기', '🔨 Step-by-Step Build') + '</h2>' +
-      (isComplete ? renderBuildComplete(kit) : renderBuildStep(steps[currentStep], currentStep, steps.length));
+      (steps.length
+        ? (isComplete ? renderBuildComplete(kit, guide) : renderBuildStep(steps[currentStep], currentStep, steps.length, guide))
+        : '<div class="build-complete">🧩 ' + t('learning.build.empty', '조립 가이드를 준비하고 있어요.', 'The assembly guide is being prepared.') + '</div>');
 
     sec.onclick = function (event) {
       if (event.target.closest('.build-done-btn')) {
@@ -336,9 +396,42 @@
         return;
       }
 
+      if (event.target.closest('.build-video-btn')) {
+        var assemblyPanel = document.getElementById('assembly-video-player');
+        if (assemblyPanel) {
+          assemblyPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          var assemblyVideo = assemblyPanel.querySelector('video');
+          var step = steps[currentStep] || {};
+          var targetTime = parseVideoTime(step.videoTime);
+          if (assemblyVideo && targetTime !== null) {
+            var seekToTime = function () {
+              assemblyVideo.currentTime = targetTime;
+            };
+            if (assemblyVideo.readyState >= 1) {
+              seekToTime();
+            } else {
+              assemblyVideo.addEventListener('loadedmetadata', seekToTime, { once: true });
+            }
+          }
+        }
+        return;
+      }
+
       if (event.target.closest('.build-lab-btn')) {
         var lab = document.getElementById('science-lab');
         if (lab) lab.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      if (event.target.closest('.build-mission-btn')) {
+        var mission = document.getElementById('mission-cards');
+        if (mission) mission.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+
+      if (event.target.closest('.build-resource-btn')) {
+        var resources = document.getElementById('resources-media');
+        if (resources) resources.scrollIntoView({ behavior: 'smooth' });
         return;
       }
 
@@ -349,6 +442,98 @@
         }
       }
     };
+  }
+
+  function renderResourcesMedia(kitId, kit) {
+    var sec = document.getElementById('resources-media');
+    if (!sec || !kit) return;
+
+    var guide = getAssemblyGuide(kitId);
+    if (!guide) {
+      sec.innerHTML =
+        '<div class="student-group-header">' +
+          '<h2 class="student-group-title">' + t('prog.resources.title', '📚 자료·영상', '📚 Resources & Videos') + '</h2>' +
+          '<p class="student-group-desc">' + t('prog.resources.empty', '이 키트의 자료는 준비 중입니다.', 'Resources for this kit are being prepared.') + '</p>' +
+        '</div>';
+      return;
+    }
+
+    var cards = [];
+    if (guide.guidePdf) {
+      cards.push(
+        '<article class="resource-card">' +
+          '<div class="resource-card-icon">📄</div>' +
+          '<div class="resource-card-body">' +
+            '<h3 class="resource-card-title">' + t('learning.resources.pdf.title', '조립 설명서 PDF', 'Assembly Guide PDF') + '</h3>' +
+            '<p class="resource-card-desc">' + t('learning.resources.pdf.desc', '슬라이드 순서를 한 번에 보며 따라갈 수 있는 조립 설명서예요.', 'A printable guide that shows the full slide-by-slide build order.') + '</p>' +
+          '</div>' +
+          '<div class="resource-card-actions">' +
+            '<a href="' + guide.guidePdf + '" download class="resource-link-btn">⬇ ' + t('learning.resources.pdf.cta', 'PDF 다운로드', 'Download PDF') + '</a>' +
+          '</div>' +
+        '</article>'
+      );
+    }
+    if (guide.assemblyVideo) {
+      cards.push(
+        '<article class="resource-card">' +
+          '<div class="resource-card-icon">🎬</div>' +
+          '<div class="resource-card-body">' +
+            '<h3 class="resource-card-title">' + t('learning.resources.assembly.title', '조립 영상', 'Assembly Video') + '</h3>' +
+            '<p class="resource-card-desc">' + t('learning.resources.assembly.desc', '순서가 헷갈릴 때 같은 장면을 영상으로 다시 확인해요.', 'Review the build in motion when a step feels unclear.') + '</p>' +
+          '</div>' +
+          '<div class="resource-card-actions">' +
+            '<a href="#assembly-video-player" class="resource-link-btn">▶ ' + t('learning.resources.video.cta', '영상 보기', 'Open Video') + '</a>' +
+            '<a href="' + guide.assemblyVideo + '" download class="resource-link-btn resource-link-btn-muted">⬇ MP4</a>' +
+          '</div>' +
+        '</article>'
+      );
+    }
+    if (guide.demoVideo) {
+      cards.push(
+        '<article class="resource-card">' +
+          '<div class="resource-card-icon">📹</div>' +
+          '<div class="resource-card-body">' +
+            '<h3 class="resource-card-title">' + t('learning.resources.demo.title', '작동 데모 영상', 'Demo Video') + '</h3>' +
+            '<p class="resource-card-desc">' + t('learning.resources.demo.desc', '완성 후 어떤 모습으로 작동하는지 먼저 확인해 볼 수 있어요.', 'See what the finished kit should look like when it works.') + '</p>' +
+          '</div>' +
+          '<div class="resource-card-actions">' +
+            '<a href="#demo-video-player" class="resource-link-btn">▶ ' + t('learning.resources.video.cta', '영상 보기', 'Open Video') + '</a>' +
+            '<a href="' + guide.demoVideo + '" download class="resource-link-btn resource-link-btn-muted">⬇ MP4</a>' +
+          '</div>' +
+        '</article>'
+      );
+    }
+
+    sec.innerHTML =
+      '<div class="student-group-header">' +
+        '<h2 class="student-group-title">' + t('prog.resources.title', '📚 자료·영상', '📚 Resources & Videos') + '</h2>' +
+        '<p class="student-group-desc">' + t('prog.resources.desc', '조립 가이드, 데모 영상, 추가 자료를 이곳에서 확인해요.', 'Find the guide, assembly video, and demo video here.') + '</p>' +
+      '</div>' +
+      '<div class="resource-card-grid">' + cards.join('') + '</div>' +
+      (guide.assemblyVideo
+        ? '<article class="resource-video-panel" id="assembly-video-player">' +
+            '<div class="resource-video-head">' +
+              '<div><h3>' + t('learning.resources.assembly.title', '조립 영상', 'Assembly Video') + '</h3><p>' + t('learning.resources.assembly.desc', '순서가 헷갈릴 때 같은 장면을 영상으로 다시 확인해요.', 'Review the build in motion when a step feels unclear.') + '</p></div>' +
+              '<a href="' + guide.assemblyVideo + '" download class="resource-inline-link">⬇ MP4</a>' +
+            '</div>' +
+            '<video controls preload="metadata">' +
+              '<source src="' + guide.assemblyVideo + '" type="video/mp4">' +
+              'Your browser does not support the video tag.' +
+            '</video>' +
+          '</article>'
+        : '') +
+      (guide.demoVideo
+        ? '<article class="resource-video-panel" id="demo-video-player">' +
+            '<div class="resource-video-head">' +
+              '<div><h3>' + t('learning.resources.demo.title', '작동 데모 영상', 'Demo Video') + '</h3><p>' + t('learning.resources.demo.desc', '완성 후 어떤 모습으로 작동하는지 먼저 확인해 볼 수 있어요.', 'See what the finished kit should look like when it works.') + '</p></div>' +
+              '<a href="' + guide.demoVideo + '" download class="resource-inline-link">⬇ MP4</a>' +
+            '</div>' +
+            '<video controls preload="metadata">' +
+              '<source src="' + guide.demoVideo + '" type="video/mp4">' +
+              'Your browser does not support the video tag.' +
+            '</video>' +
+          '</article>'
+        : '');
   }
 
   function renderTroubleshooter(kitId, kit, progress) {
@@ -603,6 +788,7 @@
     renderMissionCards(kitId, kit, progress);
     renderNotebook(kitId, kit, progress);
     renderCertificate(kitId, kit, progress);
+    renderResourcesMedia(kitId, kit);
     addLearningTOC();
   }
 

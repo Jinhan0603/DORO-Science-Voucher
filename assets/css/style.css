@@ -4042,3 +4042,259 @@ a:focus-visible {
     height: 188px;
   }
 }
+
+/* ============================================
+   V3.4 Assembly Guide + Resources
+   ============================================ */
+.build-step-card {
+  display: grid;
+  gap: 0.95rem;
+  text-align: left;
+  padding: 1.15rem;
+  background: rgba(8, 16, 31, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.build-step-head .build-reset-btn {
+  width: auto;
+}
+
+.build-step-num {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.build-step-media {
+  width: 100%;
+}
+
+.build-step-image {
+  margin: 0;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.95rem;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.build-step-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: rgba(7, 14, 28, 0.92);
+}
+
+.build-step-block,
+.build-step-check,
+.build-step-caution,
+.build-video-panel {
+  border-radius: 0.95rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.038);
+}
+
+.build-step-label,
+.build-video-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.38rem;
+}
+
+.build-step-mission,
+.build-step-check p,
+.build-step-caution p,
+.build-video-panel p {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.build-step-check strong,
+.build-step-caution strong {
+  display: block;
+  margin-bottom: 0.28rem;
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+.build-step-caution {
+  border-color: rgba(251, 191, 36, 0.28);
+  background: rgba(251, 191, 36, 0.08);
+}
+
+.build-step-caution strong {
+  color: #f7d774;
+}
+
+.build-video-panel {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.build-video-time {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--emerald);
+}
+
+.build-step-btns {
+  margin-top: 0.95rem;
+  justify-content: flex-start;
+}
+
+.build-step-btns .build-btn {
+  width: auto;
+}
+
+.build-btn.build-video-btn,
+.build-btn.build-resource-btn {
+  border: 1px solid rgba(34, 211, 238, 0.3);
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--text-primary);
+}
+
+.resource-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  min-height: 208px;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(8, 16, 31, 0.86);
+}
+
+.resource-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.85rem;
+  background: rgba(255, 255, 255, 0.06);
+  font-size: 1.2rem;
+}
+
+.resource-card-body {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.resource-card-title {
+  margin: 0;
+  font-size: var(--fs-md);
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+
+.resource-card-desc {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.resource-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: auto;
+}
+
+.resource-link-btn,
+.resource-inline-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.resource-link-btn-muted {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.resource-video-panel {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(8, 16, 31, 0.86);
+}
+
+.resource-video-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.resource-video-head h3 {
+  margin: 0 0 0.3rem;
+  font-size: var(--fs-md);
+  color: var(--text-primary);
+}
+
+.resource-video-head p {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.resource-video-panel video {
+  width: 100%;
+  display: block;
+  border-radius: 0.95rem;
+  background: rgba(7, 14, 28, 0.95);
+}
+
+@media (max-width: 1024px) {
+  .resource-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .build-step-card {
+    padding: 1rem;
+  }
+
+  .build-step-btns {
+    flex-direction: column;
+  }
+
+  .build-step-btns .build-btn,
+  .build-step-head .build-reset-btn {
+    width: 100%;
+  }
+
+  .resource-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .resource-video-head {
+    flex-direction: column;
+  }
+}
