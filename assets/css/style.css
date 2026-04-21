@@ -3154,6 +3154,12 @@ body {
   object-position: center 79%;
 }
 
+@media (min-width: 769px) {
+  .hero-kit-showcase > img {
+    transform: translateY(8px);
+  }
+}
+
 #quests .quest-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.82rem;
@@ -3388,6 +3394,55 @@ body {
 
 .story-kit-world .story-text {
   text-align: center;
+}
+
+.doroland-intro-card {
+  max-width: 980px;
+  margin: 0 auto 1rem;
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  background: rgba(9, 17, 32, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.doroland-intro-visual {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.doroland-intro-visual img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.18));
+}
+
+.doroland-intro-copy {
+  text-align: left;
+}
+
+.doroland-intro-copy h2 {
+  margin: 0 0 0.45rem;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.3;
+  word-break: keep-all;
+  text-wrap: balance;
+}
+
+.doroland-intro-copy p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  word-break: keep-all;
+  text-wrap: pretty;
 }
 
 .story-kit-role-map {
@@ -4005,6 +4060,7 @@ a:focus-visible {
   }
 
   .hero-kit-showcase > img {
+    transform: none;
     object-position: center 79%;
   }
 }
@@ -4017,6 +4073,7 @@ a:focus-visible {
   }
 
   .hero-kit-showcase > img {
+    transform: none;
     object-position: center 80%;
   }
 
@@ -4036,6 +4093,15 @@ a:focus-visible {
 
   .mission-cards-grid {
     grid-template-columns: 1fr;
+  }
+
+  .doroland-intro-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .doroland-intro-copy {
+    text-align: center;
   }
 
   .story-kit-role-map {

@@ -44,10 +44,11 @@ function renderDorolandStories() {
   if (!mount || !stories.length) return;
 
   const lang = (localStorage.getItem('doro-lang') || 'ko').startsWith('en') ? 'en' : 'ko';
+  const dict = window.i18n && window.i18n[lang] ? window.i18n[lang] : {};
 
   mount.innerHTML = stories.map((story, index) => `
     <div class="story-role-chip fade-in stagger-${Math.min(index + 1, 5)}" data-story-id="${story.id}">
-      ${lang === 'en' ? story.labelEn : story.labelKo}
+      ${dict[story.labelKey] || story.labelKey}
     </div>
   `).join('');
 

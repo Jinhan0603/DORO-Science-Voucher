@@ -30,7 +30,14 @@ const i18n = window.i18n = {
 
     // Story Section
     'story.badge': '도로랜드 이야기', 'story.title': '6개의 키트가 멈춘 도로랜드를 다시 움직여요',
-    'story.intro': '도로랜드의 구역들이 하나씩 멈췄어요. 소리, 빛, 움직임, 주행, 게임, 음악을 되살리는 6개의 키트를 완성하며 도로랜드를 다시 움직여 보세요.',
+    'story.intro.title': '도로랜드는 어떤 곳인가요?',
+    'story.intro.desc': '도로랜드는 기술과 자연이 함께 움직이던 상상 속 테마파크예요. 여러분이 만든 6개의 키트가 멈춘 구역들을 하나씩 다시 움직이게 합니다.',
+    'story.role.sound': '🔊 도블투스 · 소리 복구',
+    'story.role.light': '💡 도도무드 · 빛 복구',
+    'story.role.motion': '🤖 도봇 · 움직임 복구',
+    'story.role.drive': '🚗 도카 · 주행 복구',
+    'story.role.game': '🎮 도텐도 · 게임 복구',
+    'story.role.music': '🎹 도짜르트 · 음악 복구',
     'story.chars.title': '주요 캐릭터',
 
     // Science Section
@@ -310,7 +317,14 @@ const i18n = window.i18n = {
 
     // Story Section
     'story.badge': 'DOROLAND Story', 'story.title': 'Six kits help DOROLAND move again',
-    'story.intro': 'Parts of DOROLAND have stopped. Complete the six kits that bring back sound, light, movement, driving, games, and music.',
+    'story.intro.title': 'What is DOROLAND?',
+    'story.intro.desc': 'DOROLAND is an imaginary theme park where technology and nature used to move together. The six kits you build help the stopped zones move again, one by one.',
+    'story.role.sound': '🔊 Dobluetooth · Restore Sound',
+    'story.role.light': '💡 Dodo Mood · Restore Light',
+    'story.role.motion': '🤖 Dobot · Restore Motion',
+    'story.role.drive': '🚗 Doca · Restore Driving',
+    'story.role.game': '🎮 Dotendo · Restore Game',
+    'story.role.music': '🎹 Dozzart · Restore Music',
     'story.chars.title': 'Main Characters',
 
     // Science Section
