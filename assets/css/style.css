@@ -371,6 +371,7 @@ body {
 
 /* Photo flip hint */
 .quest-photo-hint {
+  display: none;
   position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
   padding: 0.35rem; background: rgba(4,8,20,0.8);
   font-family: var(--font-pixel); font-size: 0.5rem;
@@ -2301,6 +2302,8 @@ body {
   max-width: 920px;
   font-size: var(--fs-xl);
   line-height: 1.42;
+  text-wrap: balance;
+  word-break: keep-all;
 }
 
 .hero-badge {
@@ -2335,6 +2338,8 @@ body {
 .story-text h2 {
   font-size: var(--fs-xl);
   line-height: 1.3;
+  text-wrap: balance;
+  word-break: keep-all;
 }
 
 .section-desc,
@@ -2357,6 +2362,7 @@ body {
 .footer-copy {
   font-size: var(--fs-sm);
   line-height: 1.72;
+  word-break: keep-all;
 }
 
 .quest-grid {
@@ -3154,8 +3160,7 @@ body {
   align-items: start;
 }
 
-#quests .quest-card,
-#locked-quests .quest-card {
+#quests .quest-card {
   min-height: 0;
   border-radius: 1rem;
   background: rgba(10, 18, 34, 0.88);
@@ -3196,8 +3201,7 @@ body {
   padding: 0;
 }
 
-#quests .quest-card-speaker .photo-front,
-#locked-quests .quest-card-speaker .photo-front {
+#quests .quest-card-speaker .photo-front {
   object-fit: cover;
   object-position: center 68%;
   padding: 0;
@@ -3205,27 +3209,22 @@ body {
 }
 
 #quests .quest-card-moodlight .photo-front,
-#quests .quest-card-car .photo-front,
-#locked-quests .quest-card-moodlight .photo-front,
-#locked-quests .quest-card-car .photo-front {
+#quests .quest-card-car .photo-front {
   object-position: center 58%;
 }
 
-#quests .quest-card-robot .photo-front,
-#locked-quests .quest-card-robot .photo-front {
+#quests .quest-card-robot .photo-front {
   object-fit: cover;
   object-position: center 72%;
   padding: 0;
   background: rgba(11, 20, 38, 0.96);
 }
 
-#quests .quest-card-game .photo-front,
-#locked-quests .quest-card-game .photo-front {
+#quests .quest-card-game .photo-front {
   object-position: center 63%;
 }
 
-#quests .quest-card-piano .photo-front,
-#locked-quests .quest-card-piano .photo-front {
+#quests .quest-card-piano .photo-front {
   object-fit: contain;
   object-position: center center;
   padding: 0.28rem;
@@ -3389,7 +3388,7 @@ body {
 .story-cards-grid {
   margin-top: 1.25rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
 }
 
@@ -3401,49 +3400,20 @@ body {
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.22);
 }
 
-.story-card-top {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  margin-bottom: 0.55rem;
-}
-
-.story-card-chip {
-  align-self: flex-start;
-  padding: 0.2rem 0.55rem;
-  border-radius: 999px;
-  background: rgba(20, 184, 166, 0.12);
-  color: var(--emerald);
-  font-size: 0.88rem;
-  font-weight: 800;
-}
-
 .story-card h3 {
   font-family: var(--font-body);
   font-size: var(--fs-md);
   line-height: 1.4;
+  margin-bottom: 0.55rem;
 }
 
 .story-card p {
   color: var(--text-secondary);
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
   line-height: 1.68;
+  margin: 0;
 }
 
-.story-card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.8rem;
-}
-
-.story-card-tag {
-  padding: 0.18rem 0.48rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--text-muted);
-  font-size: 0.88rem;
-}
 
 .doroland-chars-section {
   padding: 0.5rem 1.5rem 3rem;

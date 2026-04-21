@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   renderDorolandStories();
   initScrollAnimations();
   initNavScroll();
-  initQuestTabs();
   initFAQAccordion();
   initChecklist();
   initProgressBar();
@@ -36,38 +35,7 @@ function initVariantBranding() {
   const variant = getVariant();
   if (!variant) return;
 
-  let label = '';
-  let note = '';
-
-  if (variant === 'v3.1-codex') {
-    label = 'V3.1-codex';
-    note = '문구 통일 · 진행도 고정 · 로딩 최적화';
-  } else if (variant === 'v3-codex') {
-    label = 'V3-codex';
-    note = 'Codex 작업 버전';
-  }
-
-  if (!label) return;
-
-  document.querySelectorAll('.nav-version').forEach(el => {
-    el.textContent = label;
-  });
-
-  const footerBrand = document.querySelector('.footer-brand');
-  if (footerBrand) {
-    footerBrand.textContent = `⚔ DOROLAND ${label} ⚔`;
-  }
-
-  const badge = document.querySelector('.hero-game-badge');
-  if (badge && !document.querySelector('.variant-note')) {
-    const noteEl = document.createElement('div');
-    noteEl.className = 'variant-note';
-    noteEl.textContent = `${label} · ${note}`;
-    badge.insertAdjacentElement('afterend', noteEl);
-  }
-
-  const baseTitle = document.title.replace(/^DOROLAND\s+V[^\|]*\|\s*/i, '');
-  document.title = `${label} | ${baseTitle}`;
+  document.documentElement.dataset.variant = variant;
 }
 
 function renderDorolandStories() {
@@ -76,18 +44,11 @@ function renderDorolandStories() {
   if (!mount || !stories.length) return;
 
   const lang = (localStorage.getItem('doro-lang') || 'ko').startsWith('en') ? 'en' : 'ko';
-  const chipLabel = lang === 'en' ? 'Chapter' : '대표 스토리';
 
-  mount.innerHTML = stories.map((story, index) => `
+  mount.innerHTML = stories.slice(0, 3).map((story, index) => `
     <article class="story-card fade-in stagger-${Math.min(index + 1, 5)}" data-story-id="${story.id}">
-      <div class="story-card-top">
-        <span class="story-card-chip">${chipLabel}</span>
-        <h3>${lang === 'en' ? story.titleEn : story.titleKo}</h3>
-      </div>
+      <h3>${lang === 'en' ? story.titleEn : story.titleKo}</h3>
       <p>${lang === 'en' ? story.summaryEn : story.summaryKo}</p>
-      <div class="story-card-tags">
-        ${(story.keywords || []).slice(0, 3).map(keyword => `<span class="story-card-tag">#${keyword}</span>`).join('')}
-      </div>
     </article>
   `).join('');
 
@@ -120,31 +81,6 @@ function initNavScroll() {
     } else {
       nav.classList.remove('scrolled');
     }
-  });
-}
-
-/* --- Quest Tabs --- */
-function initQuestTabs() {
-  const tabs = document.querySelectorAll('.quest-tab');
-  if (!tabs.length) return;
-
-  const questGrid = document.getElementById('quest-grid');
-  const lockedQuests = document.getElementById('locked-quests');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-      const tabType = tab.dataset.tab;
-      if (tabType === 'active') {
-        if (questGrid) questGrid.style.display = '';
-        if (lockedQuests) lockedQuests.style.display = 'none';
-      } else {
-        if (questGrid) questGrid.style.display = 'none';
-        if (lockedQuests) lockedQuests.style.display = '';
-      }
-    });
   });
 }
 

@@ -9,33 +9,31 @@ const i18n = window.i18n = {
     'nav.quests': '퀘스트', 'nav.story': '스토리', 'nav.home': 'DORO 홈', 'nav.back': '← 프로그램 목록',
 
     // Hero
-    'hero.tagline1': '기술은 자연을 해치지 않아,', 'hero.tagline2': '우리가 올바르게 사용한다면..',
-    'hero.tagline3': '도로랜드가 멈춘 지금,', 'hero.tagline4': '다시 움직이게 할 수 있는 건 너뿐이야',
-    'hero.badge.label': 'DORO DIMC 홈러닝 키트', 'hero.badge.desc': '2026 과학문화바우처 신청 예정 상품',
+    'hero.kicker': 'STEP 1 · 키트 선택',
+    'hero.tagline1': '받은 DORO 키트를 선택하고 바로 시작하세요.', 'hero.tagline2': '구성품 확인부터 만들기까지 한 단계씩 따라할 수 있어요.',
+    'hero.tagline3': '', 'hero.tagline4': '',
+    'hero.badge.label': 'DORO 홈러닝 키트', 'hero.badge.desc': '구매한 키트를 선택해 바로 시작하세요',
     'hero.scroll': 'SCROLL',
 
     // DIMC Section
-    'dimc.badge': 'ABOUT DORO DIMC', 'dimc.title': 'DORO DIMC 홈러닝 디지털 키트',
-    'dimc.subtitle': '직접 조립하는 디지털 키트에 학생용 활동지, 조립 설명서, 보호자/교사용 가이드, QR 영상을 묶은 <strong style="color:var(--text-primary)">과학학습 패키지</strong>입니다.',
-    'dimc.card1.title': '과학 탐구', 'dimc.card1.desc': '센서, 회로, 기구학 — 교과서 속 과학 개념을 직접 만들며 체험',
-    'dimc.card2.title': '메이킹 경험', 'dimc.card2.desc': '설계부터 조립, 작동 확인까지 모든 과정을 학생이 직접 수행',
-    'dimc.card3.title': 'AI 확장 활동', 'dimc.card3.desc': '선택형 AI 도구로 창작·분석·코딩까지 자연스럽게 확장',
+    'dimc.badge': '키트 안내', 'dimc.title': '받은 키트로 바로 시작하세요',
+    'dimc.subtitle': '구매한 키트를 열고 구성품 확인, 만들기, 기록, 자료 확인까지 이 화면에서 차례대로 따라가면 됩니다.',
+    'dimc.card1.title': '구성품부터 확인', 'dimc.card1.desc': '상자 속 부품을 보고 빠진 것이 없는지 먼저 확인해요.',
+    'dimc.card2.title': '한 단계씩 만들기', 'dimc.card2.desc': '학생용 설명과 문제 해결 안내를 보며 혼자서도 진행할 수 있어요.',
+    'dimc.card3.title': '기록과 자료', 'dimc.card3.desc': '실험 기록, 인증서, PDF와 영상을 한곳에서 확인할 수 있어요.',
 
     // Quest Section
     'quest.badge': 'QUESTS', 'quest.title': '수행 가능한 퀘스트',
-    'quest.desc': '구매하신 키트를 선택하면 미션 가이드로 이동합니다',
+    'quest.desc': '구매한 키트를 누르면 바로 시작할 수 있어요.',
     'quest.tab.active': '🗡 수행 가능한 퀘스트 (6)',
-    'quest.tab.locked': '🔒 잠긴 퀘스트 (3)',
-    'quest.hover.hint': 'HOVER → 구성품 보기',
     'quest.cta': '미션 시작 →',
 
     // Story Section
-    'story.badge': 'DOROLAND CAMP STORIES', 'story.title': 'DOROLAND 캠프 스토리',
-    'story.intro': '도로랜드는 기술과 자연이 함께 숨 쉬도록 만들어진 곳이었지만, 오래된 선택의 흔적 때문에 곳곳에서 이상 현상이 시작됐습니다. 학생들은 새로운 탐험가가 되어 멈춘 구역을 복구하고, 코덱스가 남긴 기억의 단서를 따라 도로랜드의 진짜 이야기에 가까워집니다.',
+    'story.badge': '도로랜드 이야기', 'story.title': '키트와 함께 만나는 도로랜드 이야기',
+    'story.intro': '각 키트는 멈춘 구역을 다시 움직이는 미션과 연결되어 있습니다. 짧은 배경 이야기만 읽고 바로 키트를 시작해 보세요.',
     'story.chars.title': '주요 캐릭터',
 
     // Science Section
-    'science.badge': 'SCIENCE × MAKING',
     'science.title': 'DORO는 자체 설계된 디지털 키트에<br>교육자료를 결합한 <span class="text-gradient">과학문화상품</span>을 제공합니다',
     'science.desc': '각 상품은 센서, 입력-출력, 제어, 기구학, IoT, 피지컬 컴퓨팅 등 핵심 과학·공학 개념을 직접 만들고 체험하도록 설계되었습니다.',
 
@@ -77,9 +75,9 @@ const i18n = window.i18n = {
 
     // ── P1: 도블투스 ──
     'p1.kit': 'DORO IoT 사운드 키트', 'p1.title': '🔊 도블투스 — 블루투스 스피커',
-    'p1.desc': '판다 캐릭터 블루투스 스피커를 조립하고, 블루투스 통신 원리와 소리의 과학을 탐구합니다.',
+    'p1.desc': '도블투스를 조립해 블루투스로 음악을 재생해 보세요.',
     'p1.science': '🔬 핵심 과학 개념: 블루투스 통신 · 소리의 진동 · 전자기유도 · 사물인터넷(IoT)',
-    'p1.card.desc': 'IoT 블루투스 스피커를 직접 조립하고 블루투스 통신과 소리의 원리를 체험하는 과학탐구 키트. 판다 디자인 목재 프레임.',
+    'p1.card.desc': '블루투스 스피커를 만들며 무선 연결과 소리의 원리를 배웁니다.',
     'p1.age': '4~6학년', 'p1.tag1': '#블루투스통신', 'p1.tag2': '#사물인터넷', 'p1.tag3': '#소리의원리',
     'p1.card.meta': '⏱ 90분 · 초등 4~6학년',
     'p1.info.time': '90분', 'p1.info.age': '초등 4~6학년', 'p1.info.level': '★★☆',
@@ -98,9 +96,9 @@ const i18n = window.i18n = {
 
     // ── P2: 도도무드 ──
     'p2.kit': 'DORO 센서 탐구 키트', 'p2.title': '💡 도도무드 — 스마트 무드등',
-    'p2.desc': '고양이 캐릭터 무드등을 조립하고, 조도센서로 빛을 감지해 자동 점등되는 스마트 조명을 만듭니다.',
+    'p2.desc': '도도무드를 조립해 주변 밝기에 따라 빛이 바뀌는지 확인해 보세요.',
     'p2.science': '🔬 핵심 과학 개념: 조도센서 · LED 회로 · 입력-출력 · 전기 에너지 변환',
-    'p2.card.desc': '조도센서와 LED로 밝기 변화를 감지하는 스마트 무드등 제작. 고양이 디자인 목재 베이스 + 실리콘 캐릭터 갓.',
+    'p2.card.desc': '스마트 무드등을 만들며 빛 센서와 LED 작동을 배웁니다.',
     'p2.age': '3~6학년', 'p2.tag1': '#조도센서', 'p2.tag2': '#LED회로', 'p2.tag3': '#입력출력제어',
     'p2.card.meta': '⏱ 90분 · 초등 3~6학년',
     'p2.info.time': '90분', 'p2.info.age': '초등 3~6학년', 'p2.info.level': '★★☆',
@@ -118,9 +116,9 @@ const i18n = window.i18n = {
 
     // ── P3: 도봇 ──
     'p3.kit': 'DORO 기구학 로봇 키트', 'p3.title': '🤖 도봇 — 2족 보행 로봇',
-    'p3.desc': '강아지 캐릭터 목재 프레임의 2족 보행 로봇을 조립하며 기구학과 원운동-보행운동 변환 원리를 탐구합니다.',
+    'p3.desc': '도봇을 조립해 두 다리가 어떻게 걷는 움직임을 만드는지 살펴보세요.',
     'p3.science': '🔬 핵심 과학 개념: 기구학 · 원운동→보행운동 변환 · 모터 제어 · 전자 회로',
-    'p3.card.desc': '두 발로 걷는 강아지 로봇을 조립하며 기구학과 원운동-보행운동 변환 원리를 탐구. 색깔 점프 와이어가 두 발 역할.',
+    'p3.card.desc': '두 발 로봇을 만들며 모터와 보행 원리를 배웁니다.',
     'p3.age': '4~중등', 'p3.tag1': '#기구학', 'p3.tag2': '#보행메커니즘', 'p3.tag3': '#전자회로',
     'p3.card.meta': '⏱ 120분 · 초등 4~중등',
     'p3.info.time': '120분', 'p3.info.age': '초등 4~중등', 'p3.info.level': '★★★',
@@ -137,9 +135,9 @@ const i18n = window.i18n = {
 
     // ── P4: 도카 ──
     'p4.kit': 'DORO AI 모빌리티 키트', 'p4.title': '🚗 도카 — AI 로봇 자동차',
-    'p4.desc': 'DORO 브랜드가 새겨진 목재 로봇 자동차를 직접 조립하고, 적외선 센서로 손을 따라가는 자율주행 기초를 학습합니다.',
+    'p4.desc': '도카를 조립해 센서가 손의 움직임을 어떻게 따라가는지 확인해 보세요.',
     'p4.science': '🔬 핵심 과학 개념: IR 적외선 센서 · 거리 측정 · 모터 제어 · 자율주행 기초',
-    'p4.card.desc': '적외선 센서로 손을 따라가는 DORO 브랜드 로봇 자동차를 조립하며 거리 측정과 자율주행 기초를 학습.',
+    'p4.card.desc': '센서를 따라 움직이는 자동차를 만들며 거리 감지와 제어를 배웁니다.',
     'p4.age': '4~중등', 'p4.tag1': '#IR센서', 'p4.tag2': '#거리측정', 'p4.tag3': '#자율주행기초',
     'p4.card.meta': '⏱ 120분 · 초등 4~중등',
     'p4.info.time': '120분', 'p4.info.age': '초등 4~중등', 'p4.info.level': '★★★',
@@ -155,9 +153,9 @@ const i18n = window.i18n = {
 
     // ── P5: 도텐도 ──
     'p5.kit': 'DORO 게임 코딩 키트', 'p5.title': '🎮 도텐도 — 아두이노 게임기',
-    'p5.desc': '파란 돼지 캐릭터 디자인의 목재 게임기를 조립하고, LCD 화면과 버튼으로 러닝 점프 게임을 코딩합니다.',
+    'p5.desc': '도텐도를 조립하고 버튼으로 직접 게임을 움직여 보세요.',
     'p5.science': '🔬 핵심 과학 개념: 디지털 입력 · LCD 출력 · 아두이노 코딩 · 피지컬 컴퓨팅',
-    'p5.card.desc': '파란 돼지 캐릭터 목재 게임기를 조립하고 버튼 + LCD 화면으로 러닝 점프 게임을 코딩하며 피지컬 컴퓨팅 체험.',
+    'p5.card.desc': '버튼과 LCD가 있는 게임기를 만들며 입력·출력과 게임 코딩을 배웁니다.',
     'p5.age': '4~중등', 'p5.tag1': '#LCD디스플레이', 'p5.tag2': '#게임로직', 'p5.tag3': '#피지컬컴퓨팅',
     'p5.card.meta': '⏱ 120분 · 초등 4~중등',
     'p5.info.time': '120분', 'p5.info.age': '초등 4~중등', 'p5.info.level': '★★★',
@@ -175,9 +173,9 @@ const i18n = window.i18n = {
 
     // ── P6: 도짜르트 ──
     'p6.kit': 'DORO 피지컬 컴퓨팅 키트', 'p6.title': '🎹 도짜르트 — 초음파 피아노',
-    'p6.desc': '개구리 캐릭터 피아노 건반을 조립하고, 초음파 센서 앞에서 손 거리를 조절하면 음높이가 바뀌는 인터랙티브 악기를 코딩합니다.',
+    'p6.desc': '도짜르트를 조립하고 손 거리로 음높이가 바뀌는지 연주해 보세요.',
     'p6.science': '🔬 핵심 과학 개념: 초음파 센서 · 거리-음높이 매핑 · 조건문 코딩 · 사운드 인터랙션',
-    'p6.card.desc': '개구리 캐릭터 피아노 건반을 조립하고 초음파 센서 + 조건문으로 거리별 음높이를 코딩하는 인터랙티브 악기.',
+    'p6.card.desc': '초음파 피아노를 만들며 거리 센서와 소리 변화를 배웁니다.',
     'p6.age': '4~중등', 'p6.tag1': '#초음파센서', 'p6.tag2': '#조건문코딩', 'p6.tag3': '#사운드인터랙션',
     'p6.card.meta': '⏱ 90분 · 초등 4~중등',
     'p6.info.time': '90분', 'p6.info.age': '초등 4~중등', 'p6.info.level': '★★★',
@@ -277,33 +275,31 @@ const i18n = window.i18n = {
     'nav.quests': 'Quests', 'nav.story': 'Story', 'nav.home': 'DORO Home', 'nav.back': '← Program List',
 
     // Hero
-    'hero.tagline1': 'Technology doesn\'t harm nature,', 'hero.tagline2': 'if we use it the right way..',
-    'hero.tagline3': 'DOROLAND has stopped.', 'hero.tagline4': 'You are the only one who can bring it back.',
-    'hero.badge.label': 'DORO DIMC Home Learning Kit', 'hero.badge.desc': '2026 Science Culture Voucher Application Product',
+    'hero.kicker': 'STEP 1 · Pick Your Kit',
+    'hero.tagline1': 'Choose the DORO kit you received and start right away.', 'hero.tagline2': 'From component check to building, you can follow each step on your own.',
+    'hero.tagline3': '', 'hero.tagline4': '',
+    'hero.badge.label': 'DORO Home Learning Kit', 'hero.badge.desc': 'Select your kit and begin right away',
     'hero.scroll': 'SCROLL',
 
     // DIMC
-    'dimc.badge': 'ABOUT DORO DIMC', 'dimc.title': 'DORO DIMC Home Learning Digital Kit',
-    'dimc.subtitle': 'A <strong style="color:var(--text-primary)">science learning package</strong> combining hands-on digital kits with student worksheets, assembly guides, parent/teacher guides, and QR-linked video tutorials.',
-    'dimc.card1.title': 'Science Inquiry', 'dimc.card1.desc': 'Sensors, circuits, kinematics — experience textbook science by building it yourself',
-    'dimc.card2.title': 'Making Experience', 'dimc.card2.desc': 'Students lead the full process: design, assemble, and verify',
-    'dimc.card3.title': 'AI Extension', 'dimc.card3.desc': 'Optional AI tools to naturally extend into creation, analysis, and coding',
+    'dimc.badge': 'Kit Guide', 'dimc.title': 'Start with the kit you received',
+    'dimc.subtitle': 'Open your kit and follow this page in order: component check, build, record, and resources.',
+    'dimc.card1.title': 'Check Components First', 'dimc.card1.desc': 'Look through the box and confirm that nothing is missing before you begin.',
+    'dimc.card2.title': 'Build Step by Step', 'dimc.card2.desc': 'Follow the student guide and troubleshooting tips to keep moving on your own.',
+    'dimc.card3.title': 'Notes and Resources', 'dimc.card3.desc': 'Keep your notes, certificate, PDFs, and videos together in one place.',
 
     // Quest Section
     'quest.badge': 'QUESTS', 'quest.title': 'Available Quests',
-    'quest.desc': 'Select your kit to access the mission guide',
+    'quest.desc': 'Tap the kit you purchased to start right away.',
     'quest.tab.active': '🗡 Available Quests (6)',
-    'quest.tab.locked': '🔒 Locked Quests (3)',
-    'quest.hover.hint': 'HOVER → View Components',
     'quest.cta': 'Start Mission →',
 
     // Story Section
-    'story.badge': 'DOROLAND CAMP STORIES', 'story.title': 'DOROLAND Camp Stories',
-    'story.intro': 'DOROLAND was built as a place where technology and nature could live together, but traces of older choices began to cause anomalies across the park. Students step in as new explorers, restore each stopped zone, and follow Codex’s memory clues toward the real story of DOROLAND.',
+    'story.badge': 'DOROLAND Stories', 'story.title': 'Short stories behind each kit',
+    'story.intro': 'Each kit connects to a mission that helps a stopped zone move again. Read a short story, then start your kit.',
     'story.chars.title': 'Main Characters',
 
     // Science Section
-    'science.badge': 'SCIENCE × MAKING',
     'science.title': 'DORO provides <span class="text-gradient">science & culture products</span><br>combining self-designed digital kits with educational materials',
     'science.desc': 'Each product is designed for hands-on learning of core science & engineering: sensors, I/O, control, kinematics, IoT, and physical computing.',
 
@@ -345,9 +341,9 @@ const i18n = window.i18n = {
 
     // ── P1: DOBLETOOTH ──
     'p1.kit': 'DORO IoT Sound Kit', 'p1.title': '🔊 DOBLETOOTH — Bluetooth Speaker',
-    'p1.desc': 'Assemble a panda-themed Bluetooth speaker and explore Bluetooth communication and the science of sound.',
+    'p1.desc': 'Build Dobluetooth and try playing music over Bluetooth.',
     'p1.science': '🔬 Core Concepts: Bluetooth · Sound Vibration · Electromagnetic Induction · IoT',
-    'p1.card.desc': 'Assemble an IoT Bluetooth speaker and explore Bluetooth communication and the science of sound. Panda-design wooden frame.',
+    'p1.card.desc': 'Build a Bluetooth speaker and learn how wireless connection and sound work.',
     'p1.age': 'Gr. 4–6', 'p1.tag1': '#bluetooth', 'p1.tag2': '#IoT', 'p1.tag3': '#acoustics',
     'p1.card.meta': '⏱ 90 min · Grades 4–6',
     'p1.info.time': '90 min', 'p1.info.age': 'Grades 4–6', 'p1.info.level': '★★☆',
@@ -366,9 +362,9 @@ const i18n = window.i18n = {
 
     // ── P2: DODOMOOD ──
     'p2.kit': 'DORO Sensor Exploration Kit', 'p2.title': '💡 DODOMOOD — Smart Mood Light',
-    'p2.desc': 'Build a cat-themed mood light and create a smart lamp that automatically lights up in response to darkness.',
+    'p2.desc': 'Build Dodo Mood and see how the light changes with the room brightness.',
     'p2.science': '🔬 Core Concepts: Light Sensor · LED Circuit · Input-Output · Electrical Energy Conversion',
-    'p2.card.desc': 'Build a smart mood light that responds to darkness using a light sensor and LED. Cat-design wooden base + silicone shade.',
+    'p2.card.desc': 'Build a smart mood light and learn how a light sensor and LEDs work together.',
     'p2.age': 'Gr. 3–6', 'p2.tag1': '#lightsensor', 'p2.tag2': '#LEDcircuit', 'p2.tag3': '#inputoutput',
     'p2.card.meta': '⏱ 90 min · Grades 3–6',
     'p2.info.time': '90 min', 'p2.info.age': 'Grades 3–6', 'p2.info.level': '★★☆',
@@ -386,9 +382,9 @@ const i18n = window.i18n = {
 
     // ── P3: DOBOT ──
     'p3.kit': 'DORO Kinematics Robot Kit', 'p3.title': '🤖 DOBOT — Bipedal Walking Robot',
-    'p3.desc': 'Assemble a dog-themed wooden bipedal robot and explore kinematics and rotary-to-walking motion conversion.',
+    'p3.desc': 'Build Dobot and watch how two legs turn motor movement into walking.',
     'p3.science': '🔬 Core Concepts: Kinematics · Rotary→Walking Motion · Motor Control · Electronic Circuits',
-    'p3.card.desc': 'Assemble a dog-robot that walks on two legs and explore kinematics and rotary-to-walking motion conversion.',
+    'p3.card.desc': 'Build a two-legged robot and learn about motors and walking motion.',
     'p3.age': 'Gr. 4–9', 'p3.tag1': '#kinematics', 'p3.tag2': '#gaitdesign', 'p3.tag3': '#electronics',
     'p3.card.meta': '⏱ 120 min · Grades 4–9',
     'p3.info.time': '120 min', 'p3.info.age': 'Grades 4–9', 'p3.info.level': '★★★',
@@ -405,9 +401,9 @@ const i18n = window.i18n = {
 
     // ── P4: DOCA ──
     'p4.kit': 'DORO AI Mobility Kit', 'p4.title': '🚗 DOCA — AI Robot Car',
-    'p4.desc': 'Assemble a DORO-branded wooden robot car and learn autonomous driving basics using IR sensors.',
+    'p4.desc': 'Build Doca and see how the sensor follows the movement of your hand.',
     'p4.science': '🔬 Core Concepts: IR Sensor · Distance Measurement · Motor Control · Autonomous Driving Basics',
-    'p4.card.desc': 'Assemble a DORO-branded robot car that follows your hand via IR sensors and learn distance measurement and autonomous driving basics.',
+    'p4.card.desc': 'Build a sensor-following car and learn distance sensing and control.',
     'p4.age': 'Gr. 4–9', 'p4.tag1': '#IRsensor', 'p4.tag2': '#distance', 'p4.tag3': '#autonomousdriving',
     'p4.card.meta': '⏱ 120 min · Grades 4–9',
     'p4.info.time': '120 min', 'p4.info.age': 'Grades 4–9', 'p4.info.level': '★★★',
@@ -423,9 +419,9 @@ const i18n = window.i18n = {
 
     // ── P5: DOTENDO ──
     'p5.kit': 'DORO Game Coding Kit', 'p5.title': '🎮 DOTENDO — Arduino Game Console',
-    'p5.desc': 'Assemble a pig-themed wooden game console and code a running-jump game with LCD screen and buttons.',
+    'p5.desc': 'Build Dotendo and control the game yourself with the buttons.',
     'p5.science': '🔬 Core Concepts: Digital Input · LCD Output · Arduino Coding · Physical Computing',
-    'p5.card.desc': 'Assemble a pig-themed wooden game console and code a running-jump game using a button and LCD screen.',
+    'p5.card.desc': 'Build a game device and learn input, output, and simple game coding.',
     'p5.age': 'Gr. 4–9', 'p5.tag1': '#LCD', 'p5.tag2': '#gamelogic', 'p5.tag3': '#physicalcomputing',
     'p5.card.meta': '⏱ 120 min · Grades 4–9',
     'p5.info.time': '120 min', 'p5.info.age': 'Grades 4–9', 'p5.info.level': '★★★',
@@ -443,9 +439,9 @@ const i18n = window.i18n = {
 
     // ── P6: DOZZART ──
     'p6.kit': 'DORO Physical Computing Kit', 'p6.title': '🎹 DOZZART — Ultrasonic Piano',
-    'p6.desc': 'Assemble a frog-themed piano and code an interactive instrument where hand distance controls musical pitch.',
+    'p6.desc': 'Build Dozzart and play notes by changing the distance of your hand.',
     'p6.science': '🔬 Core Concepts: Ultrasonic Sensor · Distance-Pitch Mapping · Conditional Coding · Sound Interaction',
-    'p6.card.desc': 'Assemble a frog-themed piano and code an interactive instrument where hand distance controls musical pitch.',
+    'p6.card.desc': 'Build an ultrasonic piano and learn how distance sensing changes sound.',
     'p6.age': 'Gr. 4–9', 'p6.tag1': '#ultrasonics', 'p6.tag2': '#conditionalcode', 'p6.tag3': '#soundinteraction',
     'p6.card.meta': '⏱ 90 min · Grades 4–9',
     'p6.info.time': '90 min', 'p6.info.age': 'Grades 4–9', 'p6.info.level': '★★★',
