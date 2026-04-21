@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도카 | DORO 키트 가이드</title>
+  <meta name="description" content="센서와 모터를 연결해 손을 따라 움직이는 로봇 자동차를 만드는 DORO 키트 가이드입니다.">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body class="detail-page" data-kit-id="4-ir-car">
+  <div class="bg-fantasy"></div><div class="bg-overlay"></div><div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="progress-bar" id="progress"></div>
+
+  <nav class="nav" id="navbar">
+    <a href="../../index.html" class="nav-brand" style="gap:0.5rem;"><span style="font-size:1.2rem;">←</span><span class="nav-brand-text">키트 목록</span></a>
+    <a href="../../index.html" class="nav-brand"><span class="nav-brand-text">DORO<span> GUIDE</span></span></a>
+  </nav>
+
+  <nav class="toc-sidebar" aria-label="학습 목차"></nav>
+
+  <section class="detail-hero">
+    <span class="chapter-badge" style="background: var(--amber);">DORO AI 모빌리티 키트</span>
+    <h1>도카 — AI 로봇 자동차</h1>
+    <p class="hero-desc">센서와 모터를 연결해 손을 따라 움직이는 로봇 자동차를 만들어요.</p>
+    <div class="science-badge">구성품 확인 → 센서 연결 → 주행 테스트</div>
+  </section>
+
+  <div class="info-bar">
+    <div class="info-item"><span class="info-label">소요시간</span><span class="info-value">⏱ 120분</span></div>
+    <div class="info-item"><span class="info-label">대상</span><span class="info-value">👤 초등 4~중등</span></div>
+    <div class="info-item"><span class="info-label">난이도</span><span class="info-value">⭐⭐⭐</span></div>
+    <div class="info-item"><span class="info-label">작동 체크</span><span class="info-value">센서 감지 · 주행</span></div>
+    <div class="info-item"><span class="info-label">더 해보기</span><span class="info-value">장애물 코스 도전</span></div>
+  </div>
+
+  <main class="detail-content">
+    <section id="mission-brief" class="detail-panel fade-in" data-toc-label="미션 배경">
+      <div class="section-badge">MISSION BRIEF</div>
+      <h2>왜 이 키트를 만들까요?</h2>
+      <p class="section-summary">QR 코드를 찍고 바로 들어온 학생도 오늘 할 일을 이해할 수 있도록, 배경과 목표를 먼저 확인해요.</p>
+      <div class="brief-grid">
+        <article class="brief-card">
+          <h3>복구할 기능</h3>
+          <p data-brief-restore>주행</p>
+        </article>
+        <article class="brief-card">
+          <h3>배경</h3>
+          <p data-brief-background>도로랜드의 트랙에서는 자동차들이 신호를 따라 움직였어요. 그런데 거리와 방향을 감지하는 장치가 멈추면서 자동차들이 길을 잃었어요.</p>
+        </article>
+        <article class="brief-card brief-card-mission">
+          <h3>미션</h3>
+          <p data-brief-mission>도카를 완성하고, 트랙 위의 주행 미션을 다시 시작해 주세요.</p>
+        </article>
+      </div>
+      <div class="quick-entry-grid" style="margin-top: 0.8rem;">
+        <a href="#start-resources" class="quick-entry-link">
+          <strong>자료 확인</strong>
+          <span>설명서와 영상을 먼저 어디서 볼지 확인해요.</span>
+        </a>
+        <a href="#safety-quest" class="quick-entry-link">
+          <strong>안전 약속</strong>
+          <span>만들기 전에 꼭 지켜야 할 약속을 먼저 체크해요.</span>
+        </a>
+        <a href="#build-guide" class="quick-entry-link js-build-entry">
+          <strong>만들기 시작</strong>
+          <span>안전 약속이 끝나면 아래 만들기 순서로 바로 이동해요.</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="start-resources" class="detail-panel fade-in" data-toc-label="교육자료 다운로드&확인">
+      <div class="section-badge">START RESOURCES</div>
+      <h2>교육자료를 먼저 확인해요</h2>
+      <p class="section-summary">센서 위치와 바퀴 방향은 사진과 영상을 먼저 보고 시작하면 훨씬 덜 헷갈려요.</p>
+      <div class="resource-grid">
+        <article class="resource-card">
+          <h3>조립 설명서</h3>
+          <p>센서, 모터, 바퀴 위치를 먼저 훑어보고 시작하면 순서를 놓치지 않아요.</p>
+        </article>
+        <article class="resource-card">
+          <h3>조립 영상</h3>
+          <p>주행 방향과 센서 배치를 영상으로 먼저 보면 연결이 더 쉬워져요.</p>
+        </article>
+        <article class="resource-card">
+          <h3>작동 영상</h3>
+          <p>완성된 자동차가 어떻게 움직이는지 미리 보면 마지막 확인이 쉬워져요.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="start-check" class="detail-panel fade-in" data-toc-label="시작 전 이해 확인">
+      <div class="section-badge">START CHECK</div>
+      <h2>시작 전에 이것만 확인해요</h2>
+      <div class="prep-grid">
+        <article class="prep-card">
+          <h3>1. 작업 자리</h3>
+          <p>바퀴와 작은 나사가 떨어져도 바로 찾을 수 있게 책상 위를 넓게 정리해요.</p>
+        </article>
+        <article class="prep-card">
+          <h3>2. 전원 상태</h3>
+          <p>모터와 전선을 연결하기 전에는 전원이 꺼져 있는지 먼저 확인해요.</p>
+        </article>
+        <article class="prep-card">
+          <h3>3. 도움 요청</h3>
+          <p>센서 방향이나 배선 순서가 헷갈리면 혼자 억지로 하지 말고 도움을 요청해요.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="safety-quest" class="detail-panel fade-in" data-toc-label="안전 약속" data-check-group="safety-quest" data-progress-target="safety-progress">
+      <div class="section-badge">SAFETY</div>
+      <h2>안전 약속을 먼저 체크해요</h2>
+      <p class="section-summary">이 약속을 모두 확인해야 만들기 section이 열려요. <span id="safety-progress"></span></p>
+      <div class="checklist-item"><input type="checkbox" data-check-id="mdf"><span>MDF 판이나 프레임을 억지로 꺾지 않겠어요.</span></div>
+      <div class="checklist-item"><input type="checkbox" data-check-id="small-parts"><span>작은 부품을 입에 넣지 않겠어요.</span></div>
+      <div class="checklist-item"><input type="checkbox" data-check-id="power-off"><span>전선을 연결하기 전에는 전원이 꺼져 있는지 확인하겠어요.</span></div>
+      <div class="checklist-item"><input type="checkbox" data-check-id="battery"><span>배터리 + / - 방향을 꼭 확인하겠어요.</span></div>
+      <div class="checklist-item"><input type="checkbox" data-check-id="wet-hands"><span>젖은 손으로 전자 부품을 만지지 않겠어요.</span></div>
+      <div class="checklist-item"><input type="checkbox" data-check-id="sharp"><span>날카로운 모서리나 이상한 부품이 있으면 혼자 억지로 만지지 않겠어요.</span></div>
+      <div class="checklist-item"><input type="checkbox" data-check-id="tools"><span>드라이버와 나사를 사용할 때 손을 다치지 않게 천천히 하겠어요.</span></div>
+      <div class="checklist-item"><input type="checkbox" data-check-id="help"><span>부품이 없거나 부서졌으면 계속 만들지 않고 보호자나 선생님께 먼저 알리겠어요.</span></div>
+    </section>
+
+    <section id="component-check" class="detail-panel checklist-section fade-in" data-toc-label="구성품 확인" data-check-group="component-check" data-progress-target="component-check-progress">
+      <div class="section-badge">COMPONENTS</div>
+      <h2 class="checklist-title">구성품 확인</h2>
+      <p class="checklist-desc">상자 안의 부품을 하나씩 확인하고 빠진 것이 없는지 체크해 주세요. <span id="component-check-progress"></span></p>
+      <div class="checklist-item"><input type="checkbox"><span>자동차 섀시 프레임</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>DC 모터 × 2 + 바퀴</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>IR 적외선 센서 모듈 × 3</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>모터 드라이버 보드</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>배터리 팩 + 충전 케이블</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>연결 케이블 세트</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>학생용 활동지 + 주행 기록지</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>조립 설명서</span></div>
+    </section>
+
+    <section id="build-guide" class="detail-panel mission-section fade-in is-locked" data-toc-label="한 단계씩 만들기">
+      <div class="section-badge">BUILD GUIDE</div>
+      <h2>한 단계씩 만들기</h2>
+      <p class="section-summary">안전 약속을 끝내면 아래 만들기 흐름을 따라갈 수 있어요.</p>
+      <div class="build-gate-card">
+        <div>
+          <strong data-build-status>안전 약속을 먼저 모두 확인해 주세요.</strong>
+          <p data-build-help>안전 section에서 체크를 모두 마치면 만들기 section이 열려요.</p>
+        </div>
+        <button type="button" class="button-secondary js-jump-safety">안전 약속으로 이동</button>
+      </div>
+      <div class="build-guide-panel">
+        <div class="mission-step"><span class="mission-step-number" style="background:var(--amber);">1</span><div class="mission-step-header"><span class="mission-step-title">왜 이 키트를 배우는가</span><span class="mission-step-time">⏱ 15분</span></div><div class="mission-step-body"><p>자율주행 자동차가 어떻게 장애물을 피하고 길을 찾는지, 센서의 역할을 소개합니다.</p><ul><li>자율주행의 기본 원리</li><li>적외선 센서: 빛의 반사로 거리 측정</li><li>센서 → 판단 → 모터 제어 흐름</li></ul><div class="mission-step-image"><img src="../../assets/images/programs/ir-car.png" alt="도카 키트" loading="lazy"></div></div></div>
+        <div class="mission-step"><span class="mission-step-number" style="background:var(--amber);">2</span><div class="mission-step-header"><span class="mission-step-title">오늘의 과학 개념</span><span class="mission-step-time">⏱ 10분</span></div><div class="mission-step-body"><p>IR 센서의 측정 원리와 모터 제어 구조를 학습합니다.</p><ul><li>적외선(IR): 눈에 보이지 않는 빛</li><li>거리에 따른 반사량 변화</li><li>모터 드라이버의 역할</li><li>활동지 과학 개념 카드 작성</li></ul></div></div>
+        <div class="mission-step"><span class="mission-step-number" style="background:var(--amber);">3</span><div class="mission-step-header"><span class="mission-step-title">조립 — 자동차 만들기</span><span class="mission-step-time">⏱ 35분</span></div><div class="mission-step-body"><p>설명서를 따라 섀시, 모터, 센서를 조립합니다.</p><ul><li>섀시에 모터 + 바퀴 설치</li><li>IR 센서 전방 설치</li><li>모터 드라이버 연결</li><li>배터리/스위치 배선</li></ul></div></div>
+        <div class="mission-step"><span class="mission-step-number" style="background:var(--amber);">4</span><div class="mission-step-header"><span class="mission-step-title">주행 테스트 + 실험</span><span class="mission-step-time">⏱ 30분</span></div><div class="mission-step-body"><p>완성된 자동차의 센서 반응을 테스트하고, 주행 실험을 합니다.</p><ul><li>손 따라가기 테스트</li><li>장애물 회피 실험</li><li>거리별 반응 속도 비교</li><li>주행 기록지 작성</li></ul></div></div>
+        <div class="mission-step"><span class="mission-step-number" style="background:var(--amber);">5</span><div class="mission-step-header"><span class="mission-step-title">정리 + 발표</span><span class="mission-step-time">⏱ 30분</span></div><div class="mission-step-body"><p>자율주행 원리를 정리하고 발표합니다.</p><ul><li>센서-모터 제어 흐름 정리</li><li>자율주행 기술의 미래</li><li>확장 미션: 장애물 코스 설계</li></ul></div></div>
+      </div>
+    </section>
+
+    <section id="troubleshooting" class="detail-panel faq-section fade-in" data-toc-label="왜 안 되지?">
+      <div class="section-badge">TROUBLESHOOTING</div>
+      <h2>왜 안 되지?</h2>
+      <div class="faq-item"><button class="faq-question">자동차가 움직이지 않아요</button><div class="faq-answer"><div class="faq-answer-inner">배터리 충전 상태와 모터 드라이버 연결을 확인하세요. 모터 케이블의 +/- 방향이 바뀌면 역방향으로 움직일 수 있습니다.</div></div></div>
+      <div class="faq-item"><button class="faq-question">센서가 손을 감지하지 못해요</button><div class="faq-answer"><div class="faq-answer-inner">IR 센서 전방 5~15cm 범위에서 테스트해 보세요. 검은색 물체는 적외선을 흡수하므로 반응이 약합니다. 밝은 색상의 손이나 종이로 시도하세요.</div></div></div>
+    </section>
+
+    <section id="science-video" class="detail-panel fade-in" data-toc-label="과학 영상/실험">
+      <div class="section-badge">SCIENCE</div>
+      <h2>짧게 생각하고 실험해요</h2>
+      <p class="science-question">질문: 적외선 센서는 앞에 무엇이 있는지 어떻게 알아낼까요?</p>
+      <div class="detail-note">검증된 과학 영상과 직접 해보기 활동은 다음 단계에서 연결됩니다. 지금은 센서 반응과 주행 테스트를 먼저 정확히 확인해도 좋아요.</div>
+    </section>
+
+    <section id="challenge-missions" class="detail-panel ai-extension fade-in" data-toc-label="도전 미션">
+      <div class="section-badge">CHALLENGE</div>
+      <h2>도전 미션</h2>
+      <p>기본 키트만으로도 학습이 완결됩니다. 추가로 Teachable Machine을 활용하면, 웹캠으로 이미지 분류 모델을 학습시키고 AI의 인식 원리를 체험할 수 있습니다.</p>
+      <p style="margin-top:0.5rem;font-size:1rem;color:var(--text-muted);">※ Teachable Machine 미사용 시에도 센서 실험과 주행 기록만으로 학습 목표를 달성합니다.</p>
+      <a href="https://teachablemachine.withgoogle.com" target="_blank" rel="noreferrer" class="ai-link">Teachable Machine 바로가기 →</a>
+    </section>
+
+    <section id="record-verify" class="detail-panel fade-in" data-toc-label="기록·인증">
+      <div class="section-badge">RECORD</div>
+      <h2>완성 기록을 남겨요</h2>
+      <div class="record-grid">
+        <article class="record-card">
+          <strong>작동 결과</strong>
+          <p>센서를 가까이 댔을 때 자동차가 어떻게 움직였는지 한 줄로 적어 봐요.</p>
+        </article>
+        <article class="record-card">
+          <strong>완성 사진</strong>
+          <p>앞모습과 주행 중인 모습을 찍어 두면 다음 실험과 비교하기 좋아요.</p>
+        </article>
+        <article class="record-card">
+          <strong>주행 기록</strong>
+          <p>어떤 거리에서 반응이 가장 잘 되었는지 활동지에 정리해 보세요.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="resources-media" class="detail-panel fade-in" data-toc-label="자료·영상">
+      <div class="section-badge">RESOURCES</div>
+      <h2>자료·영상 모아보기</h2>
+      <div class="resource-grid">
+        <article class="resource-card">
+          <h3>조립 설명서</h3>
+          <p>공개용 조립 설명서가 연결되면 여기서 다시 볼 수 있어요.</p>
+          <span class="resource-chip">정리 중</span>
+        </article>
+        <article class="resource-card">
+          <h3>조립 영상</h3>
+          <p>공개용 조립 영상이 연결되면 헷갈리는 부분을 다시 볼 수 있어요.</p>
+          <span class="resource-chip">정리 중</span>
+        </article>
+        <article class="resource-card">
+          <h3>작동 영상</h3>
+          <p>완성 후 어떤 움직임이 맞는지 비교할 수 있도록 여기에 모아둘 거예요.</p>
+          <span class="resource-chip">정리 중</span>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="footer-container"><div class="footer-brand">DORO KIT GUIDE</div><p class="footer-copy">© 2026 DORO · DORO DIMC 홈러닝 키트 가이드</p></div></footer>
+  <script src="../../assets/js/learning.js"></script>
+  <script src="../../assets/js/quest-briefs.js"></script>
+  <script src="../../assets/js/assembly-guides.js"></script>
+  <script src="../../assets/js/detail.js"></script>
+</body>
+</html>

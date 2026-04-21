@@ -8,16 +8,10 @@
 
 | 버전 | 링크 | 설명 |
 |------|------|------|
-| **V3** ✨ 최신 | [DOROLAND V3 →](https://jinhan0603.github.io/DORO-Science-Voucher/) | 초등학생 학습 포털 · 안전퀘스트 · 단계별 조립 · 과학 실험실 · 인증서 |
-| **V3.1-codex** | [DOROLAND V3.1-codex →](https://jinhan0603.github.io/DORO-Science-Voucher/v3.1-codex.html) | 문구 통일 · 부품 확인 미션 정리 · 진행도 고정 · 로딩 최적화 반영 버전 |
-| **V3-codex** | [호환 링크 유지 →](https://jinhan0603.github.io/DORO-Science-Voucher/v3-codex.html) | 기존 공유 링크 호환용 리다이렉트 |
-| V2 | [DOROLAND V2 (브랜치) →](https://github.com/Jinhan0603/DORO-Science-Voucher/tree/v2) | 픽셀 RPG 테마 · 와디즈 실제 사진 · 조립 영상 포함 |
+| **V3** ✨ 운영 중 | [DOROLAND V3 →](https://jinhan0603.github.io/DORO-Science-Voucher/) | 기존 운영 버전 |
+| **V4** 🆕 미리보기 | [DORO V4 Guide →](https://jinhan0603.github.io/DORO-Science-Voucher/v4/) | QR 기반 키트 가이드 · 구성품 확인 · 안전 약속 · 단계별 조립 |
 
-## 📝 최근 변경
-
-- `V3.1-codex`: `준비물 확인`과 `부품 확인 미션` 문구를 공통 규칙으로 정리
-- `V3.1-codex`: `STEP-BY-STEP 교육 과정` 진행 패널을 스크롤 고정으로 변경
-- `V3.1-codex`: 대용량 키트 이미지를 경량화해 초기 로딩 속도 개선
+루트 `/`는 기존 V3를 유지하고, `/v4/`에서 새 가이드를 별도로 확인할 수 있습니다.
 
 ## 🚀 프로그램 목록
 
@@ -35,8 +29,6 @@
 
 - [DORO Change X](https://www.changex.org/kr/doro)
 - [DORO 홈페이지](https://www.doro-robot.com)
-- [V3.1-codex 작업 파일](./V3.1-codex.md)
-- [V3-codex 작업 파일](./V3-codex.md)
 
 ## 📦 기술 스택
 

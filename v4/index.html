@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DORO DIMC 홈러닝 키트 가이드 | DORO</title>
+  <meta
+    name="description"
+    content="DORO 키트를 받은 학생과 보호자를 위한 조립·작동 가이드입니다. 구성품 확인부터 만들기, 작동 테스트, 문제 해결까지 한 번에 확인하세요."
+  >
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="bg-fantasy"></div>
+  <div class="bg-overlay"></div>
+  <div class="bg-glow-teal"></div>
+  <div class="bg-glow-purple"></div>
+  <div class="bg-gradient-bottom"></div>
+
+  <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" title="Switch to English" data-i18n="lang.toggle">EN</button>
+
+  <nav class="nav" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-text">DORO GUIDE</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#quests" data-i18n="nav.kits">키트 선택</a></li>
+      <li><a href="#guide" data-i18n="nav.guide">이용 안내</a></li>
+      <li><a href="#story" data-i18n="nav.story">도로랜드</a></li>
+      <li><a href="https://doroedu.net" target="_blank" rel="noreferrer" data-i18n="nav.home">DORO 홈</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-layout">
+      <div class="hero-copy fade-in">
+        <p class="hero-kicker" data-i18n="hero.kicker">도로랜드가 멈춘 지금</p>
+        <h1 class="hero-tagline">
+          <span class="line" data-i18n="hero.title1">다시 움직이게 할 수 있는 건</span>
+          <span class="line text-gradient" data-i18n="hero.title2">너뿐이야</span>
+        </h1>
+        <div class="hero-badge">
+          <span class="badge-label" data-i18n="hero.badge.label">DORO DIMC 홈러닝 키트</span>
+          <span class="badge-sep">|</span>
+          <span class="badge-desc" data-i18n="hero.badge.desc">조립·작동 가이드</span>
+        </div>
+        <p class="hero-desc ko-copy" data-i18n="hero.desc">
+          키트를 선택하고, 구성품 확인부터 만들기·작동 테스트까지 차례대로 따라 해보세요.
+        </p>
+        <div class="hero-actions">
+          <a href="#quests" class="button-primary" data-i18n="hero.cta.primary">내 키트 찾기</a>
+          <a href="#guide" class="button-secondary" data-i18n="hero.cta.secondary">이용 방법 보기</a>
+        </div>
+      </div>
+
+      <div class="hero-visual fade-in">
+        <a href="programs/1-bluetooth-speaker/index.html" class="hero-visual-card">
+          <img src="assets/images/programs/speaker.jpeg" alt="도블투스 키트">
+          <span>도블투스</span>
+        </a>
+        <a href="programs/2-mood-light/index.html" class="hero-visual-card">
+          <img src="assets/images/programs/moodlight-circuit.jpeg" alt="도도무드 키트">
+          <span>도도무드</span>
+        </a>
+        <a href="programs/3-walking-robot/index.html" class="hero-visual-card">
+          <img src="assets/images/programs/walking-robot.png" alt="도봇 키트">
+          <span>도봇</span>
+        </a>
+        <a href="programs/4-ir-car/index.html" class="hero-visual-card">
+          <img src="assets/images/programs/ir-car.png" alt="도카 키트">
+          <span>도카</span>
+        </a>
+        <a href="programs/5-arduino-game/index.html" class="hero-visual-card">
+          <img src="assets/images/programs/makecode-student.jpeg" alt="도텐도 키트">
+          <span>도텐도</span>
+        </a>
+        <a href="programs/6-ultrasonic-piano/index.html" class="hero-visual-card">
+          <img src="assets/images/doroland/harmonia-score.png" alt="도짜르트 키트">
+          <span>도짜르트</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dimc-section" id="guide">
+    <div class="section-badge" data-i18n="dimc.badge">HOW TO USE</div>
+    <h2 class="dimc-title" data-i18n="dimc.title">이 사이트에서 할 수 있는 것</h2>
+    <p class="dimc-subtitle ko-copy" data-i18n="dimc.subtitle">
+      키트를 받은 뒤 바로 따라 할 수 있도록, 구성품 확인부터 만들기·작동 테스트·문제 해결까지 한 흐름으로 정리했습니다.
+    </p>
+    <div class="dimc-grid">
+      <div class="dimc-card fade-in">
+        <span class="dimc-icon">1</span>
+        <h3 data-i18n="dimc.card1.title">구성품 확인</h3>
+        <p data-i18n="dimc.card1.desc">상자 안의 부품을 하나씩 확인하고 빠진 부품이 있는지 체크해요.</p>
+      </div>
+      <div class="dimc-card fade-in">
+        <span class="dimc-icon">2</span>
+        <h3 data-i18n="dimc.card2.title">한 단계씩 만들기</h3>
+        <p data-i18n="dimc.card2.desc">조립 순서를 따라가며 직접 만들고, 필요한 실험과 작동 확인을 이어서 해요.</p>
+      </div>
+      <div class="dimc-card fade-in">
+        <span class="dimc-icon">3</span>
+        <h3 data-i18n="dimc.card3.title">작동·문제 해결</h3>
+        <p data-i18n="dimc.card3.desc">완성 후 작동을 테스트하고, 문제가 생기면 증상별 해결 방법을 바로 확인해요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quests">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge" data-i18n="quest.badge">KIT GUIDE</div>
+        <h2 class="section-title" data-i18n="quest.title">받은 키트를 선택해 바로 시작하세요</h2>
+        <p class="section-desc ko-copy" data-i18n="quest.desc">6개 키트 중 내 키트를 선택하면 구성품 확인부터 작동 테스트까지 바로 이어집니다.</p>
+      </div>
+
+      <div class="quest-grid" id="quest-grid">
+        <a href="programs/1-bluetooth-speaker/index.html" class="quest-card fade-in" data-chapter="emerald">
+          <div class="quest-banner">
+            <span class="quest-number emerald">1</span>
+            <img src="assets/images/programs/speaker.jpeg" alt="도블투스 키트">
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label emerald"><span data-i18n="quest1.kit">DORO IoT 사운드 키트</span></div>
+            <h3 data-i18n="quest1.title">도블투스 — 블루투스 스피커</h3>
+            <p class="quest-desc ko-copy" data-i18n="quest1.desc">블루투스 스피커를 조립하고 스마트폰과 연결해 소리가 나는 원리를 확인해요.</p>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="quest1.tag1">#블루투스</span>
+              <span class="quest-tag" data-i18n="quest1.tag2">#소리출력</span>
+              <span class="quest-tag" data-i18n="quest1.tag3">#연결테스트</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta">
+                <span data-i18n="quest1.time">⏱ 90분</span>
+                <span data-i18n="quest1.target">👤 초등 4~6학년</span>
+              </div>
+              <span class="quest-cta emerald" data-i18n="quest1.cta">가이드 열기 →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="programs/2-mood-light/index.html" class="quest-card fade-in" data-chapter="purple">
+          <div class="quest-banner">
+            <span class="quest-number purple">2</span>
+            <img src="assets/images/programs/moodlight-circuit.jpeg" alt="도도무드 키트">
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label purple"><span data-i18n="quest2.kit">DORO 센서 탐구 키트</span></div>
+            <h3 data-i18n="quest2.title">도도무드 — 스마트 무드등</h3>
+            <p class="quest-desc ko-copy" data-i18n="quest2.desc">조도센서와 LED를 연결해 어두워지면 반응하는 무드등을 만들어요.</p>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="quest2.tag1">#조도센서</span>
+              <span class="quest-tag" data-i18n="quest2.tag2">#LED</span>
+              <span class="quest-tag" data-i18n="quest2.tag3">#입력출력</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta">
+                <span data-i18n="quest2.time">⏱ 90분</span>
+                <span data-i18n="quest2.target">👤 초등 3~6학년</span>
+              </div>
+              <span class="quest-cta purple" data-i18n="quest2.cta">가이드 열기 →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="programs/3-walking-robot/index.html" class="quest-card fade-in" data-chapter="rose">
+          <div class="quest-banner">
+            <span class="quest-number rose">3</span>
+            <img src="assets/images/programs/walking-robot.png" alt="도봇 키트">
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label rose"><span data-i18n="quest3.kit">DORO 기구학 로봇 키트</span></div>
+            <h3 data-i18n="quest3.title">도봇 — 2족 보행 로봇</h3>
+            <p class="quest-desc ko-copy" data-i18n="quest3.desc">모터와 기구 구조를 조립해 두 발로 움직이는 로봇을 완성해요.</p>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="quest3.tag1">#기구학</span>
+              <span class="quest-tag" data-i18n="quest3.tag2">#보행구조</span>
+              <span class="quest-tag" data-i18n="quest3.tag3">#모터구동</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta">
+                <span data-i18n="quest3.time">⏱ 120분</span>
+                <span data-i18n="quest3.target">👤 초등 4~중등</span>
+              </div>
+              <span class="quest-cta rose" data-i18n="quest3.cta">가이드 열기 →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="programs/4-ir-car/index.html" class="quest-card fade-in" data-chapter="amber">
+          <div class="quest-banner">
+            <span class="quest-number amber">4</span>
+            <img src="assets/images/programs/ir-car.png" alt="도카 키트">
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label amber"><span data-i18n="quest4.kit">DORO AI 모빌리티 키트</span></div>
+            <h3 data-i18n="quest4.title">도카 — AI 로봇 자동차</h3>
+            <p class="quest-desc ko-copy" data-i18n="quest4.desc">센서와 모터를 연결해 손을 따라 움직이는 로봇 자동차를 만들어요.</p>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="quest4.tag1">#적외선센서</span>
+              <span class="quest-tag" data-i18n="quest4.tag2">#거리감지</span>
+              <span class="quest-tag" data-i18n="quest4.tag3">#주행실험</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta">
+                <span data-i18n="quest4.time">⏱ 120분</span>
+                <span data-i18n="quest4.target">👤 초등 4~중등</span>
+              </div>
+              <span class="quest-cta amber" data-i18n="quest4.cta">가이드 열기 →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="programs/5-arduino-game/index.html" class="quest-card fade-in" data-chapter="sky">
+          <div class="quest-banner">
+            <span class="quest-number sky">5</span>
+            <img src="assets/images/programs/makecode-student.jpeg" alt="도텐도 키트">
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label sky"><span data-i18n="quest5.kit">DORO 게임 코딩 키트</span></div>
+            <h3 data-i18n="quest5.title">도텐도 — 아두이노 게임기</h3>
+            <p class="quest-desc ko-copy" data-i18n="quest5.desc">버튼과 LCD를 연결해 직접 조작하는 아두이노 게임기를 만들어요.</p>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="quest5.tag1">#버튼입력</span>
+              <span class="quest-tag" data-i18n="quest5.tag2">#화면출력</span>
+              <span class="quest-tag" data-i18n="quest5.tag3">#게임로직</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta">
+                <span data-i18n="quest5.time">⏱ 120분</span>
+                <span data-i18n="quest5.target">👤 초등 4~중등</span>
+              </div>
+              <span class="quest-cta sky" data-i18n="quest5.cta">가이드 열기 →</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="programs/6-ultrasonic-piano/index.html" class="quest-card fade-in" data-chapter="coral">
+          <div class="quest-banner">
+            <span class="quest-number coral">6</span>
+            <img src="assets/images/doroland/harmonia-score.png" alt="도짜르트 키트">
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label coral"><span data-i18n="quest6.kit">DORO 피지컬 컴퓨팅 키트</span></div>
+            <h3 data-i18n="quest6.title">도짜르트 — 초음파 피아노</h3>
+            <p class="quest-desc ko-copy" data-i18n="quest6.desc">초음파 센서로 손의 거리를 감지해 소리를 내는 피아노를 만들어요.</p>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="quest6.tag1">#초음파센서</span>
+              <span class="quest-tag" data-i18n="quest6.tag2">#거리감지</span>
+              <span class="quest-tag" data-i18n="quest6.tag3">#음계반응</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta">
+                <span data-i18n="quest6.time">⏱ 90분</span>
+                <span data-i18n="quest6.target">👤 초등 4~중등</span>
+              </div>
+              <span class="quest-cta coral" data-i18n="quest6.cta">가이드 열기 →</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="story-section story-compact" id="story">
+    <div class="story-container story-compact-container">
+      <div class="story-text fade-in">
+        <div class="section-badge" data-i18n="story.badge">DOROLAND STORY</div>
+        <h2 data-i18n="story.title">6개의 키트로 도로랜드를 다시 움직여요</h2>
+        <p class="story-copy ko-copy" data-i18n="story.p1">
+          도로랜드의 구역들이 멈췄어요. 각 키트는 소리, 빛, 움직임, 이동, 게임, 음악을 되살리는 작은 복구 미션입니다.
+        </p>
+        <div class="story-points">
+          <div class="story-point" data-i18n="story.point1">멈춘 구역을 하나씩 다시 켜요.</div>
+          <div class="story-point" data-i18n="story.point2">6개 키트마다 복구해야 할 기능이 달라요.</div>
+          <div class="story-point" data-i18n="story.point3">완성 후 작동 테스트가 마지막 미션이에요.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">DORO KIT GUIDE</div>
+      <p class="footer-copy" data-i18n="footer.copy">© 2026 DORO · DORO DIMC 홈러닝 키트 가이드</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,3117 @@
+{
+  "1-bluetooth-speaker": {
+    "kitName": "블루투스 스피커",
+    "source": {
+      "pdf": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\3-1. 블루투스 스피커_조립설명서.pdf",
+      "pptx": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\3-2. 블루투스 스피커_조립설명서.pptx",
+      "assemblyVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\3-3. 블루투스 스피커_조립영상.mp4",
+      "demoVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\실제작동영상\\스피커.mp4"
+    },
+    "ppt": {
+      "slideCount": 22,
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "블루투스 스피커를 만들어 볼까요?",
+          "textSnippet": "블루투스 스피커를 만들어 볼까요?",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 4,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 172261
+            },
+            {
+              "shapeIndex": 5,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 75403
+            }
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "블루투스 스피커 조립영상",
+          "textSnippet": "블루투스 스피커 조립영상",
+          "pictureCount": 0,
+          "mediaCount": 1,
+          "pictures": []
+        },
+        {
+          "slideNumber": 3,
+          "title": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다",
+          "textSnippet": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다 제작 시 주의사항 블루투스 스피커 만들기 둘째 파손되면 스피커를 완벽하게 제작할 수 없습니다!! 셋째 잘 안되거나 모르는 부분이 생기면 바로 손들고 선생님께 질문해 주세요!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 7,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 49293
+            }
+          ]
+        },
+        {
+          "slideNumber": 4,
+          "title": "블루투스 모듈",
+          "textSnippet": "블루투스 모듈 스피커 X 2개 AAA 4구 배터리 홀더+배터리 4개 스위치 뒷면 앞면 스피커 고정대 X 2개 스피커 지지대 X 4개 옆면 스위치 전선 (빨강 검정) 스피커 전선 X 2개 (노랑 파랑) 블루투스 스피커 만들기 전체적인 재료 확인하기",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 525412
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 1826343
+            }
+          ]
+        },
+        {
+          "slideNumber": 5,
+          "title": "(+)(-) 전극 구분하기",
+          "textSnippet": "(+)(-) 전극 구분하기 블루투스 스피커 만들기",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 5,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 373744
+            }
+          ]
+        },
+        {
+          "slideNumber": 6,
+          "title": "전선 구별하기",
+          "textSnippet": "전선 구별하기 블루투스 스피커 만들기 스위치 전선 스피커 전선",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 8,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 204338
+            },
+            {
+              "shapeIndex": 9,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 204338
+            },
+            {
+              "shapeIndex": 10,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 299169
+            }
+          ]
+        },
+        {
+          "slideNumber": 7,
+          "title": "전선 꼬기",
+          "textSnippet": "전선 꼬기 블루투스 스피커 만들기 주어진 전선들을 모두 꼬아주세요. 너무 세게 꼬면 끊어질 수 있습니다!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 5,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 147808
+            }
+          ]
+        },
+        {
+          "slideNumber": 8,
+          "title": "스피커에 전선 연결",
+          "textSnippet": "스피커에 전선 연결 블루투스 스피커 만들기 1. 스피커 구멍에 전선을 연결 (+) 구멍 –노란색 전선 (-) 구멍 –파란색 전선 2. U자 형태로 걸어주고 전선을 돌려 꼬아줍니다 3. 스피커 두개 모두 전선을 연결합니다",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 6,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 359473
+            },
+            {
+              "shapeIndex": 7,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 263938
+            }
+          ]
+        },
+        {
+          "slideNumber": 9,
+          "title": "스위치 전선 – 확인 사항",
+          "textSnippet": "스위치 전선 – 확인 사항 블루투스 스피커 만들기 스위치 전선 반대로 색칠된 전선 반대는 색을 무시하고 왼쪽 선이 (+)극이다. 왼쪽선 (+)극 오른쪽선 (-)극",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 8,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 299169
+            },
+            {
+              "shapeIndex": 10,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 299169
+            }
+          ]
+        },
+        {
+          "slideNumber": 10,
+          "title": "두 전선 꼬기",
+          "textSnippet": "두 전선 꼬기 블루투스 스피커 만들기 배터리 빨간색 (+)선과 스위치 오른쪽 (-)선을 꼬아주세요. 너무 세게 꼬면 끊어질 수 있으니 주의!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 6,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 199347
+            }
+          ]
+        },
+        {
+          "slideNumber": 11,
+          "title": "선 꼬기",
+          "textSnippet": "선 꼬기 블루투스 스피커 만들기 배터리 빨간색 (+)선과 스위치 오른쪽 (-)선을 꼬아주세요. 너무 세게 꼬면 끊어질 수 있으니 주의!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 6,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 651023
+            }
+          ]
+        },
+        {
+          "slideNumber": 12,
+          "title": "스위치와 배선",
+          "textSnippet": "스위치와 배선 블루투스 스피커 만들기 꼬아준 선을 금색 구멍에 남은선은 은색 구멍에 각각 하나씩 연결합니다.",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 6,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 933010
+            },
+            {
+              "shapeIndex": 7,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 299905
+            }
+          ]
+        },
+        {
+          "slideNumber": 13,
+          "title": "블루투스 스피커 조립하기(1)",
+          "textSnippet": "블루투스 스피커 조립하기(1) 1 (아랫면) 앞면과 뒷면이 다르니 잘 구분해주세요! (앞면) 뒷면 앞면 홈에 맞추어서 정확하게 끼워주세요!",
+          "pictureCount": 6,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 36686
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 38321
+            },
+            {
+              "shapeIndex": 3,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 35588
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            },
+            {
+              "shapeIndex": 13,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 85204
+            },
+            {
+              "shapeIndex": 18,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81335
+            }
+          ]
+        },
+        {
+          "slideNumber": 14,
+          "title": "2",
+          "textSnippet": "2 블루투스 모듈은 아랫면의 빈 공간에 올려 두세요! 블루투스 스피커 조립하기(2) (블루투스 모듈) 꼭 위의 그림과 같이 배치할 필요는 없어요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 48126
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 42526
+            },
+            {
+              "shapeIndex": 8,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 118191
+            }
+          ]
+        },
+        {
+          "slideNumber": 15,
+          "title": "3",
+          "textSnippet": "3 (배터리 + 배터리 케이스) 블루투스 스피커 조립하기(3)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 147795
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 115556
+            }
+          ]
+        },
+        {
+          "slideNumber": 16,
+          "title": "4",
+          "textSnippet": "4 (고정대) 블루투스 스피커 조립하기(4)",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 114384
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 172810
+            },
+            {
+              "shapeIndex": 8,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 17,
+          "title": "5",
+          "textSnippet": "5 (옆면1) 블루투스 스피커 조립하기(5) (옆면2) 옆면(1)과 옆면(2)가잘 결합되도록 해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 180570
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 156018
+            },
+            {
+              "shapeIndex": 12,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 18,
+          "title": "6",
+          "textSnippet": "6 3개의 면을 다 알맞게 끼워야 해요! 블루투스 스피커 조립하기(6) (스피커 고정대)",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 159805
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 153496
+            },
+            {
+              "shapeIndex": 7,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 19,
+          "title": "7",
+          "textSnippet": "7 블루투스 스피커 조립하기(7) (스피커) 2개의 스피커 모두 스피커 고정대에 쏙 넣어주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 139711
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 166855
+            },
+            {
+              "shapeIndex": 3,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 118191
+            }
+          ]
+        },
+        {
+          "slideNumber": 20,
+          "title": "8",
+          "textSnippet": "8 블루투스 스피커 조립하기(8)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 163733
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 158314
+            }
+          ]
+        },
+        {
+          "slideNumber": 21,
+          "title": "9",
+          "textSnippet": "9 워킹로봇 조립하기(9) (윗면)",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 150295
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 150295
+            },
+            {
+              "shapeIndex": 3,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 145690
+            }
+          ]
+        },
+        {
+          "slideNumber": 22,
+          "title": "블루투스 스피커 완성!",
+          "textSnippet": "블루투스 스피커 완성!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 172261
+            }
+          ]
+        }
+      ]
+    },
+    "status": {
+      "missing": [],
+      "warnings": [
+        "Slide rendering tools not found on PATH; slide metadata is available, but rendered slide exports are not."
+      ]
+    }
+  },
+  "2-mood-light": {
+    "kitName": "스마트 무드등",
+    "source": {
+      "pdf": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\1-1. 스마트 무드등_조립설명서.pdf",
+      "pptx": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\1-2. 스마트 무드등_조립설명서.pptx",
+      "assemblyVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\1-3. 스마트 무드등_조립영상.mp4",
+      "demoVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\실제작동영상\\무드등.mp4"
+    },
+    "ppt": {
+      "slideCount": 26,
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "우리 함께 혼자서 내 방의 밝기를 조절해주는 스마트 무드등을 만들어 볼까요?",
+          "textSnippet": "우리 함께 혼자서 내 방의 밝기를 조절해주는 스마트 무드등을 만들어 볼까요?",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 4,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 199687
+            }
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "스마트 무드등 조립영상",
+          "textSnippet": "스마트 무드등 조립영상",
+          "pictureCount": 0,
+          "mediaCount": 2,
+          "pictures": []
+        },
+        {
+          "slideNumber": 3,
+          "title": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다.",
+          "textSnippet": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다. 제작 시 주의사항 스마트 무드등 만들기 둘째 파손되면 무드등을 완벽하게 제작할 수 없습니다!! 셋째 잘 안되거나 모르는 부분이 생기면 바로 손들고 선생님께 질문해 주세요!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 7,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 49293
+            }
+          ]
+        },
+        {
+          "slideNumber": 4,
+          "title": "스마트 무드등 전체 부품",
+          "textSnippet": "스마트 무드등 전체 부품 야옹이 등 건전지 홀더 건전지 다양한 전자 부품 브레드보드 (빵판) 윗면 바닥면 긴 옆면 짧은 옆면",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 1186493
+            }
+          ]
+        },
+        {
+          "slideNumber": 5,
+          "title": "1. 트렌지스터 다리 3개를 펴줍니다.",
+          "textSnippet": "1. 트렌지스터 다리 3개를 펴줍니다. 평평한 면이 앞입니다!",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 686018
+            },
+            {
+              "shapeIndex": 3,
+              "name": "",
+              "ext": "",
+              "contentType": "",
+              "size": 0,
+              "warning": "Picture shape has no embedded image payload."
+            },
+            {
+              "shapeIndex": 4,
+              "name": "",
+              "ext": "",
+              "contentType": "",
+              "size": 0,
+              "warning": "Picture shape has no embedded image payload."
+            },
+            {
+              "shapeIndex": 5,
+              "name": "",
+              "ext": "",
+              "contentType": "",
+              "size": 0,
+              "warning": "Picture shape has no embedded image payload."
+            }
+          ]
+        },
+        {
+          "slideNumber": 6,
+          "title": "2. 트렌지스터 다리 3개를 브레드보드(빵판)에 연결합니다.",
+          "textSnippet": "2. 트렌지스터 다리 3개를 브레드보드(빵판)에 연결합니다. 트렌지스터 배선 스마트 무드등 배선하기(1)",
+          "pictureCount": 5,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 114044
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 152840
+            },
+            {
+              "shapeIndex": 4,
+              "name": "",
+              "ext": "",
+              "contentType": "",
+              "size": 0,
+              "warning": "Picture shape has no embedded image payload."
+            },
+            {
+              "shapeIndex": 5,
+              "name": "",
+              "ext": "",
+              "contentType": "",
+              "size": 0,
+              "warning": "Picture shape has no embedded image payload."
+            },
+            {
+              "shapeIndex": 6,
+              "name": "",
+              "ext": "",
+              "contentType": "",
+              "size": 0,
+              "warning": "Picture shape has no embedded image payload."
+            }
+          ]
+        },
+        {
+          "slideNumber": 7,
+          "title": "3. LED를 연결하기 위해 LED 다리를 폅니다.",
+          "textSnippet": "3. LED를 연결하기 위해 LED 다리를 폅니다. 긴 다리(+) 짧은 다리 (-)",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 56900
+            }
+          ]
+        },
+        {
+          "slideNumber": 8,
+          "title": "긴 다리(+)",
+          "textSnippet": "긴 다리(+) 짧은 다리(-) 4. LED 다리 2개를 브레드보드(빵판)에 연결합니다. 긴 다리 (+) 짧은 다리 (-) LED 배선 스마트 무드등 배선하기(2)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 152840
+            },
+            {
+              "shapeIndex": 13,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 56900
+            }
+          ]
+        },
+        {
+          "slideNumber": 9,
+          "title": "5. 저항을 연결하기 위해 저항 다리를 폅니다.",
+          "textSnippet": "5. 저항을 연결하기 위해 저항 다리를 폅니다.",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 6151
+            }
+          ]
+        },
+        {
+          "slideNumber": 10,
+          "title": "6. 저항 다리 1개를 브레드보드(빵판)에 연결합니다.",
+          "textSnippet": "6. 저항 다리 1개를 브레드보드(빵판)에 연결합니다. 저항 다리 1개만! 연결 저항 배선 스마트 무드등 배선하기(3)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 152840
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 6151
+            }
+          ]
+        },
+        {
+          "slideNumber": 11,
+          "title": "7. 나머지 저항 다리 1개를 브레드보드(빵판)에 연결합니다.",
+          "textSnippet": "7. 나머지 저항 다리 1개를 브레드보드(빵판)에 연결합니다. 저항 배선 스마트 무드등 배선하기(3)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 152840
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 6151
+            }
+          ]
+        },
+        {
+          "slideNumber": 12,
+          "title": "8. 조도센서를 연결하기 위해 준비합니다.",
+          "textSnippet": "8. 조도센서를 연결하기 위해 준비합니다.",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 61067
+            }
+          ]
+        },
+        {
+          "slideNumber": 13,
+          "title": "9. 조도센서 다리 2개를 브레드보드(빵판)에 연결합니다.",
+          "textSnippet": "9. 조도센서 다리 2개를 브레드보드(빵판)에 연결합니다. 조도센서 배선 스마트 무드등 배선하기(4)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 152840
+            },
+            {
+              "shapeIndex": 14,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 61067
+            }
+          ]
+        },
+        {
+          "slideNumber": 14,
+          "title": "10. 건전지 홀더의 전선을 꼬아주세요!",
+          "textSnippet": "10. 건전지 홀더의 전선을 꼬아주세요! 전선 꼬기!",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 175240
+            },
+            {
+              "shapeIndex": 3,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 147808
+            }
+          ]
+        },
+        {
+          "slideNumber": 15,
+          "title": "11. 검은색 선을 브레드보드에 연결합니다.",
+          "textSnippet": "11. 검은색 선을 브레드보드에 연결합니다. 겹쳐서 넣어주세요! 배터리 배선 스마트 무드등 배선하기(5)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 55542
+            },
+            {
+              "shapeIndex": 3,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 152840
+            }
+          ]
+        },
+        {
+          "slideNumber": 16,
+          "title": "12. 빨간색 선을 브레드 보드에 연결합니다.",
+          "textSnippet": "12. 빨간색 선을 브레드 보드에 연결합니다. 겹쳐서 넣어주세요! 배터리 배선 스마트 무드등 배선하기(5)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 55542
+            },
+            {
+              "shapeIndex": 4,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 152840
+            }
+          ]
+        },
+        {
+          "slideNumber": 17,
+          "title": "13. 건전지 홀더에 건전지를 연결합니다.",
+          "textSnippet": "13. 건전지 홀더에 건전지를 연결합니다. 14. 나머지 건전지도 연결합니다.",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 18,
+          "title": "15. 잘 연결 되었는지 확인합니다.",
+          "textSnippet": "15. 잘 연결 되었는지 확인합니다. 조도 센서 앞으로 숙이기!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 3365657
+            }
+          ]
+        },
+        {
+          "slideNumber": 19,
+          "title": "15. 잘 연결 되었는지 확인합니다.",
+          "textSnippet": "15. 잘 연결 되었는지 확인합니다. 어때요? LED가 켜지나요?",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 3365657
+            }
+          ]
+        },
+        {
+          "slideNumber": 20,
+          "title": "스마트 무드등 조립하기(1)",
+          "textSnippet": "스마트 무드등 조립하기(1) 1 (아랫면) (앞면) (뒷면) (뒷면) 뒷면의 위아래를 헷갈리지 않도록 유의해요!",
+          "pictureCount": 5,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81959
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 40806
+            },
+            {
+              "shapeIndex": 18,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 90408
+            },
+            {
+              "shapeIndex": 20,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81335
+            },
+            {
+              "shapeIndex": 21,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 21,
+          "title": "2",
+          "textSnippet": "2 (구멍 뚫려있는 옆면) 스마트 무드등 조립하기(2) (구멍 없는 옆면) 구멍이 뚫려있는 면과 구멍이 없는 면을 잘 구분해서 조립해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 108937
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 90705
+            },
+            {
+              "shapeIndex": 16,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 118191
+            }
+          ]
+        },
+        {
+          "slideNumber": 22,
+          "title": "3",
+          "textSnippet": "3 (브레드 보드) 배터리선이 나오는 부분을 막지 않도록 브레드 보드를 배터리 케이스 끝 쪽에 맞추어 주세요! 스마트 무드등 조립하기(3) (배터리 + 배터리 케이스) (배터리선이 나오는 곳)",
+          "pictureCount": 5,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 138985
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 238310
+            },
+            {
+              "shapeIndex": 3,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 88959
+            },
+            {
+              "shapeIndex": 10,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            },
+            {
+              "shapeIndex": 14,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81335
+            }
+          ]
+        },
+        {
+          "slideNumber": 23,
+          "title": "4",
+          "textSnippet": "4 스마트 무드등 조립하기(4) 안에 쏙 집어넣어 주세요! (브레드 보드 + 배터리 케이스) 이 부분으로 조도 센서가 나올 예정이에요!",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 138985
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 145784
+            }
+          ]
+        },
+        {
+          "slideNumber": 24,
+          "title": "5",
+          "textSnippet": "5 (윗면) 모든 면 조립이 완료되었다면 잘 고정 되었는지 확인해주세요! 스마트 무드등 조립하기(5)",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 110947
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77492
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            },
+            {
+              "shapeIndex": 13,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81335
+            }
+          ]
+        },
+        {
+          "slideNumber": 25,
+          "title": "6",
+          "textSnippet": "6 원에 맞게 쏙 넣어주세요! 스마트 무드등 조립하기(6) (무드등) 실제로는 하얀색 고양이 무드등이 위에 올라갈거에요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 116390
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 118933
+            },
+            {
+              "shapeIndex": 13,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 26,
+          "title": "스마트 무드등 완성!",
+          "textSnippet": "스마트 무드등 완성!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 199687
+            }
+          ]
+        }
+      ]
+    },
+    "status": {
+      "missing": [],
+      "warnings": [
+        "Multiple demo video candidates found: 무드등 만드는과정.mp4, 무드등.mp4",
+        "Additional mood-light process video available: 무드등 만드는과정.mp4",
+        "Slide rendering tools not found on PATH; slide metadata is available, but rendered slide exports are not."
+      ]
+    }
+  },
+  "3-walking-robot": {
+    "kitName": "워킹 로봇",
+    "source": {
+      "pdf": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\4-1. 워킹로봇_조립설명서.pdf",
+      "pptx": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\4-2. 워킹로봇_조립설명서.pptx",
+      "assemblyVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\4-3. 워킹로봇_조립영상 (2).mp4",
+      "demoVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\실제작동영상\\워킹로봇.mp4"
+    },
+    "ppt": {
+      "slideCount": 22,
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "우리 함께 스스로 판단하고 걷는 워킹로봇을 만들어 볼까요?",
+          "textSnippet": "우리 함께 스스로 판단하고 걷는 워킹로봇을 만들어 볼까요?",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 4,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 192550
+            }
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다.",
+          "textSnippet": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다. 제작 시 주의사항 워킹로봇 제작 시작 둘째 파손되면 워킹로봇을 완벽하게 제작할 수 없습니다!! 셋째 잘 안되거나 모르는 부분이 생기면 바로 손들고 선생님께 질문해 주세요!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 7,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 49293
+            }
+          ]
+        },
+        {
+          "slideNumber": 3,
+          "title": "워킹로봇 조립영상",
+          "textSnippet": "워킹로봇 조립영상",
+          "pictureCount": 0,
+          "mediaCount": 1,
+          "pictures": []
+        },
+        {
+          "slideNumber": 4,
+          "title": "워킹로봇 전체 부품",
+          "textSnippet": "워킹로봇 전체 부품 IR 센서 다리 3D 프린터 부품 스위치 L293D 점퍼선 M-F 점퍼선 M-M 모터 건전지 미니 브레드 보드 M 점퍼선 MDF 전체 부품",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 6698351
+            }
+          ]
+        },
+        {
+          "slideNumber": 5,
+          "title": "워킹로봇 MDF",
+          "textSnippet": "워킹로봇 MDF 1 1 1 8 10 5 1 조립순서대로 숫자가 적혀 있습니다.조립 시 참고해서 조립해주세요!❖ 조립 시 그림이 그려진 부분이 바깥으로   위치하도록 조립해주세요. 부품 확인하기 ⭐️ 나무판(MDF) 한쪽면에는 000이 인쇄가 되어있습니다. 별도의 색칠 없이 고급스럽고 깔끔하게 완성가능한     워킹로봇을 조립하고, 작동 실험을 해보세요! 10",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 6,
+          "title": "건전지 홀더에 건전지를 연결합니다.",
+          "textSnippet": "건전지 홀더에 건전지를 연결합니다. 워킹로봇 만들기",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 1237386
+            }
+          ]
+        },
+        {
+          "slideNumber": 7,
+          "title": "워킹로봇 만들기",
+          "textSnippet": "워킹로봇 만들기",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 8,
+          "title": "모터에 있는 구멍에 점퍼선이  빠지지 않도록 꼬아서 고정시켜줍니다.",
+          "textSnippet": "모터에 있는 구멍에 점퍼선이  빠지지 않도록 꼬아서 고정시켜줍니다. 2개 다 해주기! 워킹로봇 만들기",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 9,
+          "title": "워킹로봇 조립하기(1)",
+          "textSnippet": "워킹로봇 조립하기(1) 1 (아랫면) (측면1) (후면) (측면2) 고리부분은 부서질 우려가 있으니 꽉 끼지 말아주세요!",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 716020
+            },
+            {
+              "shapeIndex": 15,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 10,
+          "title": "2",
+          "textSnippet": "2 워킹로봇 조립하기(2) (배터리 + 배터리 케이스) (배터리 케이스 윗면)",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 103115
+            },
+            {
+              "shapeIndex": 15,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 232690
+            },
+            {
+              "shapeIndex": 17,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81335
+            }
+          ]
+        },
+        {
+          "slideNumber": 11,
+          "title": "3",
+          "textSnippet": "3 워킹로봇 조립하기(3) (모터 고정축) 너무 강하게 끼우지 말아주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 104438
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 103134
+            },
+            {
+              "shapeIndex": 13,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 12,
+          "title": "4",
+          "textSnippet": "4 워킹로봇 조립하기(4) 모터에 튀어나온 부분을 동그란 부분에 맞춰주세요. (모터)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 113222
+            },
+            {
+              "shapeIndex": 5,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 88956
+            }
+          ]
+        },
+        {
+          "slideNumber": 13,
+          "title": "5",
+          "textSnippet": "5 워킹로봇 조립하기(5) (IR 센서) (정면) IR센서를 정면에 먼저 조립한 후에 본체에 조립해주세요! 조립이 완료되었다면 모든 면이 잘 고정 되었는지 확인해주세요!",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 150209
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 109202
+            },
+            {
+              "shapeIndex": 17,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            },
+            {
+              "shapeIndex": 18,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 14,
+          "title": "6",
+          "textSnippet": "6 워킹로봇 조립하기(6) 반대쪽도 동일하게! 4개의 부품을 양쪽 모두 조립 한 후에 한번에 본체에 연결해주세요! 오른쪽과 왼쪽 방향이 다르니 유의해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 136929
+            },
+            {
+              "shapeIndex": 13,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 840736
+            },
+            {
+              "shapeIndex": 14,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 15,
+          "title": "7",
+          "textSnippet": "7 워킹로봇 조립하기(7) 반대쪽도 동일하게 조립! 구멍 안쪽에 보이는 모터의 축과 알맞게 넣어서 조립해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 145436
+            },
+            {
+              "shapeIndex": 7,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 840736
+            },
+            {
+              "shapeIndex": 16,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 16,
+          "title": "워킹로봇 조립하기(7)",
+          "textSnippet": "워킹로봇 조립하기(7) 왼쪽 다리는 위로, 오른쪽 다리는 아래로 연결해주세요!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 1068404
+            }
+          ]
+        },
+        {
+          "slideNumber": 17,
+          "title": "8",
+          "textSnippet": "8 워킹로봇 조립하기(8) 방향에 유의해서 조립해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 131036
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 124393
+            },
+            {
+              "shapeIndex": 10,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 18,
+          "title": "9",
+          "textSnippet": "9 워킹로봇 조립하기(9) (오른쪽 발) (왼쪽 발)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 134829
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 159337
+            }
+          ]
+        },
+        {
+          "slideNumber": 19,
+          "title": "10",
+          "textSnippet": "10 워킹로봇 조립하기(10) (귀) (윗면) 브레드보드를 먼저 조립하면 귀가 들어갈 자리가 없으니 유의해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 159704
+            },
+            {
+              "shapeIndex": 12,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 125257
+            },
+            {
+              "shapeIndex": 15,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 20,
+          "title": "11",
+          "textSnippet": "11 워킹로봇 조립하기(11) (브레드 보드)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 150090
+            },
+            {
+              "shapeIndex": 9,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 153358
+            }
+          ]
+        },
+        {
+          "slideNumber": 21,
+          "title": "워킹로봇 배선하기",
+          "textSnippet": "워킹로봇 배선하기",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 22,
+          "title": "워킹로봇 완성!",
+          "textSnippet": "워킹로봇 완성!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 192550
+            }
+          ]
+        }
+      ]
+    },
+    "status": {
+      "missing": [],
+      "warnings": [
+        "Slide rendering tools not found on PATH; slide metadata is available, but rendered slide exports are not."
+      ]
+    }
+  },
+  "4-ir-car": {
+    "kitName": "IR 자동차",
+    "source": {
+      "pdf": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\5-1. IR자동차_조립설명서.pdf",
+      "pptx": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\5-2. IR자동차_조립설명서.pptx",
+      "assemblyVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\5-3. IR자동차_조립영상.mp4",
+      "demoVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\실제작동영상\\IR자동차.mp4"
+    },
+    "ppt": {
+      "slideCount": 27,
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "우리 함께 [스스로 움직이고 멈추는 IR 자동차]를 만들어 볼까요?",
+          "textSnippet": "우리 함께 [스스로 움직이고 멈추는 IR 자동차]를 만들어 볼까요?",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 4,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 222264
+            }
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "IR 자동차 조립영상",
+          "textSnippet": "IR 자동차 조립영상",
+          "pictureCount": 0,
+          "mediaCount": 1,
+          "pictures": []
+        },
+        {
+          "slideNumber": 3,
+          "title": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다.",
+          "textSnippet": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다. 제작 시 주의사항 IR 자동차 만들기 둘째 파손되면 자동차를 완벽하게 제작할 수 없습니다!! 셋째 잘 안되거나 모르는 부분이 생기면 바로 손들고 선생님께 질문해 주세요!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 7,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 31602
+            }
+          ]
+        },
+        {
+          "slideNumber": 4,
+          "title": "IR 자동차 전체 부품",
+          "textSnippet": "IR 자동차 전체 부품 점퍼선 케이스(파랑, 하양)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 5,
+          "title": "IR 자동차 배선하기(1)",
+          "textSnippet": "IR 자동차 배선하기(1)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 6,
+          "title": "모터에 있는 구멍에 점퍼선이  빠지지 않도록 꼬아서 고정시켜줍니다.",
+          "textSnippet": "모터에 있는 구멍에 점퍼선이  빠지지 않도록 꼬아서 고정시켜줍니다. 2개다 해주기! IR 자동차 배선하기(2)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 7,
+          "title": "회로를 구성할 부품들을 준비합니다!",
+          "textSnippet": "회로를 구성할 부품들을 준비합니다! IR 자동차 배선하기",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 8,
+          "title": "IR 자동차 배선하기(3)",
+          "textSnippet": "IR 자동차 배선하기(3)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 9,
+          "title": "IR 자동차 배선하기(4)",
+          "textSnippet": "IR 자동차 배선하기(4)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 10,
+          "title": "IR 자동차 배선하기(5)",
+          "textSnippet": "IR 자동차 배선하기(5)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 11,
+          "title": "점퍼선 케이스를 연결하면 위 사진처럼 됩니다!",
+          "textSnippet": "점퍼선 케이스를 연결하면 위 사진처럼 됩니다! IR 자동차 배선하기(6)",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 9380746
+            }
+          ]
+        },
+        {
+          "slideNumber": 12,
+          "title": "점퍼 케이블 케이스 안에서 회로 선과 모터 선을 연결합니다.",
+          "textSnippet": "점퍼 케이블 케이스 안에서 회로 선과 모터 선을 연결합니다. IR 자동차 배선하기(7)",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 469656
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 460507
+            },
+            {
+              "shapeIndex": 3,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 551313
+            }
+          ]
+        },
+        {
+          "slideNumber": 13,
+          "title": "각 케이스 별로 모터 움직임이 정상적인지 확인합니다!",
+          "textSnippet": "각 케이스 별로 모터 움직임이 정상적인지 확인합니다! IR 자동차 배선하기(8)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 14,
+          "title": "IR 자동차 조립하기(1)",
+          "textSnippet": "IR 자동차 조립하기(1) 1 (모터 고정대1) 앞, 뒷면을 잘 구분해주세요! (뒷면)",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 60034
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 37557
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81335
+            },
+            {
+              "shapeIndex": 12,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 16339
+            }
+          ]
+        },
+        {
+          "slideNumber": 15,
+          "title": "2",
+          "textSnippet": "2 (모터) IR 자동차 조립하기(2)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 76864
+            },
+            {
+              "shapeIndex": 10,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 63604
+            }
+          ]
+        },
+        {
+          "slideNumber": 16,
+          "title": "3",
+          "textSnippet": "3 (모터 고정대2) 모터 고정대의 구멍에 모터 뒤쪽이 쏙 들어가게 조립해주세요! IR 자동차 조립하기(3)",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 124771
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 84777
+            },
+            {
+              "shapeIndex": 9,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 17,
+          "title": "4",
+          "textSnippet": "4 (모터 고정대 덮개) IR 자동차 조립하기(4)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 66043
+            },
+            {
+              "shapeIndex": 9,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 44833
+            }
+          ]
+        },
+        {
+          "slideNumber": 18,
+          "title": "5",
+          "textSnippet": "5 (배터리 고정대) IR 자동차 조립하기(5)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 60386
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 53706
+            }
+          ]
+        },
+        {
+          "slideNumber": 19,
+          "title": "6",
+          "textSnippet": "6 IR 자동차 조립하기(6) (배터리 고정대 덮개)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 58248
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 100502
+            }
+          ]
+        },
+        {
+          "slideNumber": 20,
+          "title": "7",
+          "textSnippet": "7 옆면은 많은 면을 끼워야 하기 때문에 끼우기 어려워요! IR 자동차 조립하기(7) 눕혀서 끼우면 끼우기 조금 수월해요! (옆면1) (옆면2)",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 96149
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 122812
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            },
+            {
+              "shapeIndex": 16,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81335
+            }
+          ]
+        },
+        {
+          "slideNumber": 21,
+          "title": "8",
+          "textSnippet": "8 모든 면이 알맞게 조립되었는지 확인해주세요! IR 자동차 조립하기(8) (브레드보드 고정대)",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 108040
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 112362
+            },
+            {
+              "shapeIndex": 9,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 22,
+          "title": "9",
+          "textSnippet": "9 (브레드보드) IR 자동차 조립하기(9) 브레드보드가 중앙에 잘 부착되었는지 확인하세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 139251
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 138483
+            },
+            {
+              "shapeIndex": 12,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 23,
+          "title": "10",
+          "textSnippet": "10 (배터리 + 배터리 케이스) 배터리 선이 밖으로 나올 수 있도록 방향에 유의해서 배터리를 넣어주세요. IR 자동차 조립하기(10) 방향 확인할 것!",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 112897
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 101685
+            },
+            {
+              "shapeIndex": 9,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            },
+            {
+              "shapeIndex": 16,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81335
+            }
+          ]
+        },
+        {
+          "slideNumber": 24,
+          "title": "11",
+          "textSnippet": "11 (윗면) IR 자동차 조립하기(11) 동그란 부분으로 파란색, 흰색 케이스가 튀어나오도록 해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 128118
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 169005
+            },
+            {
+              "shapeIndex": 13,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 25,
+          "title": "12",
+          "textSnippet": "12 (바퀴2) IR 자동차 조립하기(12) (바퀴1) (짧은 축1) (짧은 축2) 바퀴랑 축을 먼저 연결한 후에 축을 모터에 연결해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 180759
+            },
+            {
+              "shapeIndex": 14,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 168089
+            },
+            {
+              "shapeIndex": 15,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 26,
+          "title": "12",
+          "textSnippet": "12 (바퀴4) IR 자동차 조립하기(13) (바퀴3) (긴 축)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 168755
+            },
+            {
+              "shapeIndex": 12,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 156569
+            }
+          ]
+        },
+        {
+          "slideNumber": 27,
+          "title": "IR 자동차 완성!",
+          "textSnippet": "IR 자동차 완성!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 3,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 222264
+            }
+          ]
+        }
+      ]
+    },
+    "status": {
+      "missing": [],
+      "warnings": [
+        "Slide rendering tools not found on PATH; slide metadata is available, but rendered slide exports are not."
+      ]
+    }
+  },
+  "5-arduino-game": {
+    "kitName": "아두이노 게임기",
+    "source": {
+      "pdf": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\2-1. 아두이노 게임기_조립설명서.pdf",
+      "pptx": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\2-2. 아두이노 게임기_조립설명서.pptx",
+      "assemblyVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\2-3. 아두이노게임기_조립영상.mp4",
+      "demoVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\실제작동영상\\게임기.mp4"
+    },
+    "ppt": {
+      "slideCount": 17,
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "우리 함께 내가 만든 나만의 아두이노 게임기를 만들어 볼까요?",
+          "textSnippet": "우리 함께 내가 만든 나만의 아두이노 게임기를 만들어 볼까요?",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 4,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 180026
+            }
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "아두이노 게임기 조립영상",
+          "textSnippet": "아두이노 게임기 조립영상",
+          "pictureCount": 0,
+          "mediaCount": 1,
+          "pictures": []
+        },
+        {
+          "slideNumber": 3,
+          "title": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다.",
+          "textSnippet": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다. 제작 시 주의사항 둘째 파손되면 게임기를 완벽하게 제작할 수 없습니다!! 셋째 잘 안되거나 모르는 부분이 생기면 바로 손들고 선생님께 질문해 주세요! 아두이노 게임기 만들기",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 6,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 49293
+            }
+          ]
+        },
+        {
+          "slideNumber": 4,
+          "title": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다.",
+          "textSnippet": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다. 제작 시 주의사항 아두이노 게임기 제작 시작 둘째 파손되면 게임기를 완벽하게 제작할 수 없습니다!! 셋째 잘 안되거나 모르는 부분이 생기면 바로 손들고 선생님께 질문해 주세요! ` 그럼, 만들어 볼까요?",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 7,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 49293
+            },
+            {
+              "shapeIndex": 10,
+              "name": "image.jpeg",
+              "ext": "jpg",
+              "contentType": "image/jpeg",
+              "size": 288163
+            }
+          ]
+        },
+        {
+          "slideNumber": 5,
+          "title": "아두이노 게임기 전체 부품",
+          "textSnippet": "아두이노 게임기 전체 부품 중간면 밑면 윗면 옆면 고정대 건전지 고정대",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 5,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 140156
+            }
+          ]
+        },
+        {
+          "slideNumber": 6,
+          "title": "하나씩 따라서 연결해봐요~",
+          "textSnippet": "하나씩 따라서 연결해봐요~ 여기서 더 집중하기!! 아두이노 게임기 배선하기 회로구성",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 7,
+          "title": "버튼연결하기",
+          "textSnippet": "버튼연결하기 다리가 4개인 버튼 한쪽 다리를 모두 안쪽으로 남을 다리를 바깥으로 굽힙니다. ① ② ③ 전선 2개를 각각 2번과 남은 GND에 연결해줍니다. ④ 아두이노에 연결한 전선 2개를 버튼 다리에 끼워줍니다. 아두이노 게임기 배선하기",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 6,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 10342171
+            },
+            {
+              "shapeIndex": 8,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 10789211
+            },
+            {
+              "shapeIndex": 12,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 42454
+            },
+            {
+              "shapeIndex": 15,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 11730294
+            }
+          ]
+        },
+        {
+          "slideNumber": 8,
+          "title": "아두이노 게임기 조립하기(1)",
+          "textSnippet": "아두이노 게임기 조립하기(1) 1 윗면(뒤) (스위치) 윗면의 앞 뒤 구분을 잘 해주세요!색 없는 면이 뒷면입니다. 윗면(앞)",
+          "pictureCount": 5,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 85288
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 94222
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            },
+            {
+              "shapeIndex": 13,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 102893
+            },
+            {
+              "shapeIndex": 16,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 81335
+            }
+          ]
+        },
+        {
+          "slideNumber": 9,
+          "title": "2",
+          "textSnippet": "2 (중간면) 아두이노 게임기 조립하기(2) 방향 잘 확인해서 끼워주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 144015
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 154912
+            },
+            {
+              "shapeIndex": 14,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 10,
+          "title": "3",
+          "textSnippet": "3 (고정면) 더 길쭉하게 튀어나온 부분을 윗면과 중간면에 모두 끼워지도록 해주세요! 아두이노 게임기 조립하기(3) 위보다 아래가 더 길어요!",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 135339
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 146150
+            },
+            {
+              "shapeIndex": 17,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 118191
+            },
+            {
+              "shapeIndex": 18,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 11,
+          "title": "4",
+          "textSnippet": "4 아두이노 게임기 조립하기(4) (옆면1) (옆면2) 옆면(1)과 옆면(2)가잘 결합되도록 해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 335479
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 409388
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 12,
+          "title": "5",
+          "textSnippet": "5 (고정면) 아두이노 게임기 조립하기(5) 더 길쭉하게 튀어나온 부분을 윗면과 중간면에 모두 끼워지도록 해주세요! 위보다 아래가 더 길어요!",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 317211
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 332856
+            },
+            {
+              "shapeIndex": 13,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 118191
+            },
+            {
+              "shapeIndex": 16,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 13,
+          "title": "6",
+          "textSnippet": "6 아두이노 게임기 조립하기(6) (LCD) (아두이노) LCD 초록색 면이 밑으로 가게 조립해야 해요! 색별로 구멍에 잘 맞게 아두이노를 끼워주세요.",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 485555
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 300300
+            },
+            {
+              "shapeIndex": 8,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            },
+            {
+              "shapeIndex": 14,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 14,
+          "title": "7",
+          "textSnippet": "7 아두이노 게임기 조립하기(7) 배터리는 남는 공간에 쏙 집어넣어 주세요! (배터리 + 배터리 케이스) 왼쪽에서 나온 배터리선을 오른쪽 아두이노 전원부에 연결하면 됩니다!",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 361856
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 393484
+            },
+            {
+              "shapeIndex": 9,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            },
+            {
+              "shapeIndex": 15,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 15,
+          "title": "8",
+          "textSnippet": "8 방향에 유의해서 조립해주세요! 아두이노 게임기 조립하기(8) (아랫면) (배터리 고정면) 아랫면의 방향을 잘보고 조립하세요!",
+          "pictureCount": 4,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 211415
+            },
+            {
+              "shapeIndex": 8,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            },
+            {
+              "shapeIndex": 10,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 210785
+            },
+            {
+              "shapeIndex": 16,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 16,
+          "title": "9",
+          "textSnippet": "9 (오른쪽 발) (왼쪽 발) 아두이노 게임기 조립하기(9) 조립이 완료되었다면 모든 면이 잘 고정 되었는지 확인해주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 290949
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 187204
+            },
+            {
+              "shapeIndex": 12,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 17,
+          "title": "아두이노 게임기 완성!",
+          "textSnippet": "아두이노 게임기 완성!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 180026
+            }
+          ]
+        }
+      ]
+    },
+    "status": {
+      "missing": [],
+      "warnings": [
+        "Slide rendering tools not found on PATH; slide metadata is available, but rendered slide exports are not."
+      ]
+    }
+  },
+  "6-ultrasonic-piano": {
+    "kitName": "초음파 피아노",
+    "source": {
+      "pdf": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\6-1. 초음파피아노_조립설명서.pdf",
+      "pptx": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\6-2. 초음파피아노_조립설명서.pptx",
+      "assemblyVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\6종_키트_안내서_조립PPT 및 영상\\6-3. 초음파피아노_조립영상.mp4",
+      "demoVideo": "C:\\Users\\User\\Documents\\Jindex\\proposal\\2026science-voucher\\reference\\실제작동영상\\피아노.mp4"
+    },
+    "ppt": {
+      "slideCount": 24,
+      "slides": [
+        {
+          "slideNumber": 1,
+          "title": "우리 함께 신비한 소리를 내는 초음파 피아노를 만들어 볼까요?",
+          "textSnippet": "우리 함께 신비한 소리를 내는 초음파 피아노를 만들어 볼까요?",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 358057
+            }
+          ]
+        },
+        {
+          "slideNumber": 2,
+          "title": "박수 소리에 선풍기가 돌아가는지 확인해 볼까요?",
+          "textSnippet": "박수 소리에 선풍기가 돌아가는지 확인해 볼까요? 초음파 피아노 시현 영상",
+          "pictureCount": 0,
+          "mediaCount": 1,
+          "pictures": []
+        },
+        {
+          "slideNumber": 3,
+          "title": "초음파 피아노 조립 영상",
+          "textSnippet": "초음파 피아노 조립 영상",
+          "pictureCount": 0,
+          "mediaCount": 1,
+          "pictures": []
+        },
+        {
+          "slideNumber": 4,
+          "title": "아두이노",
+          "textSnippet": "아두이노 점퍼선 부저 초음파 센서 브레드 보드 아래판 아두이노 벽 피아노 건반 초음파 가림막 초음파 피아노 전체 부품",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 11568938
+            }
+          ]
+        },
+        {
+          "slideNumber": 5,
+          "title": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다.",
+          "textSnippet": "첫째 장난치거나 과도한 힘으로 억지로 조립하지 않습니다. 제작 시 주의사항 초음파 피아노 만들기 둘째 파손되면 피아노를 완벽하게 제작할 수 없습니다!! 셋째 잘 안되거나 모르는 부분이 생기면 바로 손들고 선생님께 질문해 주세요!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 7,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 49293
+            }
+          ]
+        },
+        {
+          "slideNumber": 6,
+          "title": "초음파 피아노 조립하기(1)",
+          "textSnippet": "초음파 피아노 조립하기(1) 1 (아래판) (피아노건반) 알맞게 끼워주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 162821
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 177609
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 7,
+          "title": "2",
+          "textSnippet": "2 (아두이노 벽1) 초음파 피아노 조립하기(2)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 221616
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 244466
+            }
+          ]
+        },
+        {
+          "slideNumber": 8,
+          "title": "3",
+          "textSnippet": "3 (아두이노 벽2) 초음파 피아노 조립하기(3)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 203162
+            },
+            {
+              "shapeIndex": 9,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 239876
+            }
+          ]
+        },
+        {
+          "slideNumber": 9,
+          "title": "4",
+          "textSnippet": "4 (아두이노) 초음파 피아노 조립하기(4) 4개의 아두이노 벽에 알맞게 집어넣어 주세요!",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 383872
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 446134
+            },
+            {
+              "shapeIndex": 10,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 77103
+            }
+          ]
+        },
+        {
+          "slideNumber": 10,
+          "title": "5",
+          "textSnippet": "5 (IR 센서) (정면) 브레드보드 밑에 있는 테이프를 떼고 바닥면에 붙여주세요! 초음파 피아노 조립하기(5)",
+          "pictureCount": 3,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 452988
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 671894
+            },
+            {
+              "shapeIndex": 11,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 39296
+            }
+          ]
+        },
+        {
+          "slideNumber": 11,
+          "title": "6",
+          "textSnippet": "6 (초음파 센서) 초음파 피아노 조립하기(6)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 945527
+            },
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 934705
+            }
+          ]
+        },
+        {
+          "slideNumber": 12,
+          "title": "부저를 들고 긴다리(+) 와 짧은다리(–) 를 구분합니다.",
+          "textSnippet": "부저를 들고 긴다리(+) 와 짧은다리(–) 를 구분합니다. + - 긴 다리 짧은 다리 초음파 피아노 배선하기(1)",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 1442957
+            }
+          ]
+        },
+        {
+          "slideNumber": 13,
+          "title": "초음파 Gnd 바로 아래에 맞춰 부저를 연결합니다.",
+          "textSnippet": "초음파 Gnd 바로 아래에 맞춰 부저를 연결합니다. 초음파 피아노 배선하기(2)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 14,
+          "title": "초음파 피아노 배선하기(2)",
+          "textSnippet": "초음파 피아노 배선하기(2)",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 111369
+            }
+          ]
+        },
+        {
+          "slideNumber": 15,
+          "title": "초음파센서 Gnd 바로 아래에 전선을 연결합니다.",
+          "textSnippet": "초음파센서 Gnd 바로 아래에 전선을 연결합니다. 아두이노 GND에 연결합니다. 초음파 피아노 배선하기(3)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 2,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 1235768
+            },
+            {
+              "shapeIndex": 3,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 1394216
+            }
+          ]
+        },
+        {
+          "slideNumber": 16,
+          "title": "초음파 피아노 배선하기(3)",
+          "textSnippet": "초음파 피아노 배선하기(3)",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 111369
+            }
+          ]
+        },
+        {
+          "slideNumber": 17,
+          "title": "초음파 피아노 배선하기(4)",
+          "textSnippet": "초음파 피아노 배선하기(4)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 18,
+          "title": "초음파 피아노 배선하기(4)",
+          "textSnippet": "초음파 피아노 배선하기(4)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 19,
+          "title": "초음파 피아노 배선하기(5)",
+          "textSnippet": "초음파 피아노 배선하기(5)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 20,
+          "title": "초음파 피아노 배선하기(6)",
+          "textSnippet": "초음파 피아노 배선하기(6)",
+          "pictureCount": 0,
+          "mediaCount": 0,
+          "pictures": []
+        },
+        {
+          "slideNumber": 21,
+          "title": "초음파 피아노 배선하기(6)",
+          "textSnippet": "초음파 피아노 배선하기(6)",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 111369
+            }
+          ]
+        },
+        {
+          "slideNumber": 22,
+          "title": "초음파 피아노 코딩하기(1)",
+          "textSnippet": "초음파 피아노 코딩하기(1)",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 116034
+            }
+          ]
+        },
+        {
+          "slideNumber": 23,
+          "title": "초음파 피아노 코딩하기(2)",
+          "textSnippet": "초음파 피아노 코딩하기(2)",
+          "pictureCount": 2,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 138412
+            },
+            {
+              "shapeIndex": 3,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 123682
+            }
+          ]
+        },
+        {
+          "slideNumber": 24,
+          "title": "초음파 피아노 완성!",
+          "textSnippet": "초음파 피아노 완성!",
+          "pictureCount": 1,
+          "mediaCount": 0,
+          "pictures": [
+            {
+              "shapeIndex": 1,
+              "name": "image.png",
+              "ext": "png",
+              "contentType": "image/png",
+              "size": 358057
+            }
+          ]
+        }
+      ]
+    },
+    "status": {
+      "missing": [],
+      "warnings": [
+        "Slide rendering tools not found on PATH; slide metadata is available, but rendered slide exports are not."
+      ]
+    }
+  }
+}
