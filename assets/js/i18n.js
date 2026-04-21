@@ -9,10 +9,10 @@ const i18n = window.i18n = {
     'nav.quests': '퀘스트', 'nav.story': '스토리', 'nav.home': 'DORO 홈', 'nav.back': '← 프로그램 목록',
 
     // Hero
-    'hero.kicker': 'STEP 1 · 키트 선택',
+    'hero.kicker': '키트를 선택하세요',
     'hero.tagline1': '받은 DORO 키트를 선택하고 바로 시작하세요.', 'hero.tagline2': '구성품 확인부터 만들기까지 한 단계씩 따라할 수 있어요.',
     'hero.tagline3': '', 'hero.tagline4': '',
-    'hero.badge.label': 'DORO 홈러닝 키트', 'hero.badge.desc': '구매한 키트를 선택해 바로 시작하세요',
+    'hero.badge.label': 'DORO 홈러닝 키트', 'hero.badge.desc': '조립·작동 가이드',
     'hero.scroll': 'SCROLL',
 
     // DIMC Section
@@ -29,8 +29,8 @@ const i18n = window.i18n = {
     'quest.cta': '미션 시작 →',
 
     // Story Section
-    'story.badge': '도로랜드 이야기', 'story.title': '키트와 함께 만나는 도로랜드 이야기',
-    'story.intro': '각 키트는 멈춘 구역을 다시 움직이는 미션과 연결되어 있습니다. 짧은 배경 이야기만 읽고 바로 키트를 시작해 보세요.',
+    'story.badge': '도로랜드 이야기', 'story.title': '6개의 키트가 멈춘 도로랜드를 다시 움직여요',
+    'story.intro': '도로랜드의 구역들이 하나씩 멈췄어요. 소리, 빛, 움직임, 주행, 게임, 음악을 되살리는 6개의 키트를 완성하며 도로랜드를 다시 움직여 보세요.',
     'story.chars.title': '주요 캐릭터',
 
     // Science Section
@@ -40,8 +40,6 @@ const i18n = window.i18n = {
     // Footer
     'footer.copy': '© 2026 DOROLAND · Do Challenge. To Ask. Be Together · 주식회사 도로(DORO)',
     'lang.toggle': 'EN',
-    'ui.text.large': '글자 크게',
-    'ui.text.normal': '기본 글자',
 
     // ── Info Bar Common Labels ──
     'info.time.label': '⏱ 소요시간', 'info.age.label': '👤 대상',
@@ -291,10 +289,10 @@ const i18n = window.i18n = {
     'nav.quests': 'Quests', 'nav.story': 'Story', 'nav.home': 'DORO Home', 'nav.back': '← Program List',
 
     // Hero
-    'hero.kicker': 'STEP 1 · Pick Your Kit',
+    'hero.kicker': 'Pick Your Kit',
     'hero.tagline1': 'Choose the DORO kit you received and start right away.', 'hero.tagline2': 'From component check to building, you can follow each step on your own.',
     'hero.tagline3': '', 'hero.tagline4': '',
-    'hero.badge.label': 'DORO Home Learning Kit', 'hero.badge.desc': 'Select your kit and begin right away',
+    'hero.badge.label': 'DORO Home Learning Kit', 'hero.badge.desc': 'Assembly & demo guide',
     'hero.scroll': 'SCROLL',
 
     // DIMC
@@ -311,8 +309,8 @@ const i18n = window.i18n = {
     'quest.cta': 'Start Mission →',
 
     // Story Section
-    'story.badge': 'DOROLAND Stories', 'story.title': 'Short stories behind each kit',
-    'story.intro': 'Each kit connects to a mission that helps a stopped zone move again. Read a short story, then start your kit.',
+    'story.badge': 'DOROLAND Story', 'story.title': 'Six kits help DOROLAND move again',
+    'story.intro': 'Parts of DOROLAND have stopped. Complete the six kits that bring back sound, light, movement, driving, games, and music.',
     'story.chars.title': 'Main Characters',
 
     // Science Section
@@ -322,8 +320,6 @@ const i18n = window.i18n = {
     // Footer
     'footer.copy': '© 2026 DOROLAND · Do Challenge. To Ask. Be Together · DORO Inc.',
     'lang.toggle': '한',
-    'ui.text.large': 'Larger Text',
-    'ui.text.normal': 'Normal Text',
 
     // Info Bar Common Labels
     'info.time.label': '⏱ Duration', 'info.age.label': '👤 Target Age',
@@ -570,56 +566,6 @@ const i18n = window.i18n = {
 };
 
 let currentLang = localStorage.getItem('doro-lang') || 'ko';
-let currentTextScale = localStorage.getItem('doro-text-scale') === 'large' ? 'large' : 'normal';
-
-function ensureTopControls() {
-  const langBtn = document.getElementById('lang-toggle');
-  if (!langBtn) return;
-
-  let wrapper = document.querySelector('.top-controls');
-  if (!wrapper) {
-    wrapper = document.createElement('div');
-    wrapper.className = 'top-controls';
-    langBtn.parentNode.insertBefore(wrapper, langBtn);
-  }
-
-  if (!wrapper.contains(langBtn)) {
-    wrapper.appendChild(langBtn);
-  }
-
-  let textBtn = document.getElementById('text-scale-toggle');
-  if (!textBtn) {
-    textBtn = document.createElement('button');
-    textBtn.id = 'text-scale-toggle';
-    textBtn.className = 'text-scale-toggle';
-    textBtn.type = 'button';
-    textBtn.addEventListener('click', toggleTextScale);
-    wrapper.appendChild(textBtn);
-  }
-}
-
-function applyTextScale(mode) {
-  currentTextScale = mode === 'large' ? 'large' : 'normal';
-  localStorage.setItem('doro-text-scale', currentTextScale);
-  document.documentElement.classList.toggle('text-large', currentTextScale === 'large');
-  updateTextScaleButton();
-}
-
-function updateTextScaleButton() {
-  const btn = document.getElementById('text-scale-toggle');
-  if (!btn) return;
-  const lang = currentLang;
-  const isLarge = currentTextScale === 'large';
-  const labelKey = isLarge ? 'ui.text.normal' : 'ui.text.large';
-  const fallback = lang === 'en' ? (isLarge ? 'Normal Text' : 'Larger Text') : (isLarge ? '기본 글자' : '글자 크게');
-  btn.textContent = (i18n[lang] && i18n[lang][labelKey]) || fallback;
-  btn.title = btn.textContent;
-  btn.setAttribute('aria-pressed', isLarge ? 'true' : 'false');
-}
-
-function toggleTextScale() {
-  applyTextScale(currentTextScale === 'large' ? 'normal' : 'large');
-}
 
 function applyLanguage(lang) {
   currentLang = lang;
@@ -638,15 +584,11 @@ function applyLanguage(lang) {
     btn.title = lang === 'ko' ? 'Switch to English' : '한국어로 전환';
   }
   document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
-  updateTextScaleButton();
   window.dispatchEvent(new CustomEvent('doro:languagechange', { detail: { lang } }));
 }
 
 function toggleLanguage() { applyLanguage(currentLang === 'ko' ? 'en' : 'ko'); }
-window.toggleTextScale = toggleTextScale;
 
 document.addEventListener('DOMContentLoaded', () => {
-  ensureTopControls();
-  applyTextScale(currentTextScale);
   applyLanguage(currentLang);
 });

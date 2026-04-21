@@ -32,9 +32,6 @@
   <div class="firefly firefly-4"></div>
   <div class="firefly firefly-5"></div>
 
-  <!-- Language Toggle -->
-  <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" title="Switch to English" data-i18n="lang.toggle">EN</button>
-
   <!-- Navigation -->
   <nav class="nav" id="navbar">
     <a href="index.html" class="nav-brand">
@@ -44,26 +41,28 @@
     <ul class="nav-links">
       <li><a href="#quests" data-i18n="nav.quests">🗡 퀘스트</a></li>
       <li><a href="#story" data-i18n="nav.story">📖 스토리</a></li>
-      <li><a href="https://www.changex.org/kr/doro" target="_blank">🔗 Change X</a></li>
-      <li><a href="https://doroedu.net" target="_blank" data-i18n="nav.home">🏠 DORO 홈</a></li>
     </ul>
+    <div class="nav-actions">
+      <a href="https://doroedu.net" target="_blank" class="nav-home-link" data-i18n="nav.home">🏠 DORO 홈</a>
+      <button class="lang-toggle" id="lang-toggle" type="button" onclick="toggleLanguage()" title="Switch to English" data-i18n="lang.toggle">EN</button>
+    </div>
   </nav>
 
   <!-- ============ HERO ============ -->
   <section class="hero">
     <img src="assets/images/doroland/logo.png" alt="DOROLAND 로고" class="hero-logo" decoding="async" fetchpriority="high">
 
-    <div class="hero-game-badge" data-i18n="hero.kicker">STEP 1 · 키트 선택</div>
+    <div class="hero-game-badge" data-i18n="hero.kicker">키트를 선택하세요</div>
 
     <h1 class="hero-tagline">
-      <span data-i18n="hero.tagline1">받은 DORO 키트를 선택하고 바로 시작하세요.</span>
-      <span class="text-gradient" data-i18n="hero.tagline2">구성품 확인부터 만들기까지 한 단계씩 따라할 수 있어요.</span>
+      <span class="line" data-i18n="hero.tagline1">받은 DORO 키트를 선택하고 바로 시작하세요.</span>
+      <span class="line text-gradient" data-i18n="hero.tagline2">구성품 확인부터 만들기까지 한 단계씩 따라할 수 있어요.</span>
     </h1>
 
     <div class="hero-badge">
       <span class="badge-label" data-i18n="hero.badge.label">🎮 DORO 홈러닝 키트</span>
       <span class="badge-sep">|</span>
-      <span class="badge-desc" data-i18n="hero.badge.desc">구매한 키트를 선택해 바로 시작하세요</span>
+      <span class="badge-desc" data-i18n="hero.badge.desc">조립·작동 가이드</span>
     </div>
 
     <!-- 실제 제품 6종 쇼케이스 -->
@@ -373,14 +372,14 @@
 
   <!-- ============ STORY SECTION ============ -->
   <section id="story">
-    <div class="story-section">
+    <div class="story-section story-kit-world">
       <div class="story-text fade-in story-center-block">
         <div class="section-badge" data-i18n="story.badge">📖 도로랜드 이야기</div>
-        <h2 data-i18n="story.title">키트와 함께 만나는 도로랜드 이야기</h2>
+        <h2 data-i18n="story.title">6개의 키트가 멈춘 도로랜드를 다시 움직여요</h2>
         <p class="story-copy story-intro-copy" data-i18n="story.intro">
-          각 키트는 멈춘 구역을 다시 움직이는 미션과 연결되어 있습니다. 짧은 배경 이야기만 읽고 바로 키트를 시작해 보세요.
+          도로랜드의 구역들이 하나씩 멈췄어요. 소리, 빛, 움직임, 주행, 게임, 음악을 되살리는 6개의 키트를 완성하며 도로랜드를 다시 움직여 보세요.
         </p>
-        <div id="doroland-story-cards" class="story-cards-grid" aria-live="polite"></div>
+        <div id="doroland-role-map" class="story-kit-role-map" aria-live="polite"></div>
       </div>
     </div>
   </section>

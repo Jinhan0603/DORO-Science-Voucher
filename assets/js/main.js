@@ -39,21 +39,20 @@ function initVariantBranding() {
 }
 
 function renderDorolandStories() {
-  const mount = document.getElementById('doroland-story-cards');
+  const mount = document.getElementById('doroland-role-map');
   const stories = Array.isArray(window.DOROLAND_STORIES) ? window.DOROLAND_STORIES : [];
   if (!mount || !stories.length) return;
 
   const lang = (localStorage.getItem('doro-lang') || 'ko').startsWith('en') ? 'en' : 'ko';
 
-  mount.innerHTML = stories.slice(0, 3).map((story, index) => `
-    <article class="story-card fade-in stagger-${Math.min(index + 1, 5)}" data-story-id="${story.id}">
-      <h3>${lang === 'en' ? story.titleEn : story.titleKo}</h3>
-      <p>${lang === 'en' ? story.summaryEn : story.summaryKo}</p>
-    </article>
+  mount.innerHTML = stories.map((story, index) => `
+    <div class="story-role-chip fade-in stagger-${Math.min(index + 1, 5)}" data-story-id="${story.id}">
+      ${lang === 'en' ? story.labelEn : story.labelKo}
+    </div>
   `).join('');
 
-  document.querySelectorAll('#doroland-story-cards .fade-in').forEach(card => {
-    card.classList.add('visible');
+  document.querySelectorAll('#doroland-role-map .fade-in').forEach(item => {
+    item.classList.add('visible');
   });
 }
 

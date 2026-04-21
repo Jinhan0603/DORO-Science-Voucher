@@ -1,23 +1,32 @@
 window.DOROLAND_STORIES = [
   {
-    id: 'mysterious-invitation',
-    titleKo: '신비한 초대',
-    titleEn: 'The Mysterious Invitation',
-    summaryKo: '리코와 제로는 초대장을 따라 도로랜드에 들어오고, 멈춘 구역을 되살릴 첫 단서를 찾기 시작합니다.',
-    summaryEn: 'Rico and Zero enter DOROLAND through a mysterious invitation and begin searching for the first clue to wake the stopped zones.'
+    id: 'speaker-role',
+    labelKo: '🔊 도블투스 · 소리를 되찾는 키트',
+    labelEn: '🔊 Dobluetooth · Restores sound'
   },
   {
-    id: 'stopped-machine-song',
-    titleKo: '멈춰버린 기계의 노래',
-    titleEn: 'The Song of the Stopped Machine',
-    summaryKo: '하모니아의 장치가 멈추자 음악과 에너지가 사라지고, 학생들은 멜로디를 완성하며 연결된 구역을 다시 깨웁니다.',
-    summaryEn: 'When Harmonia stops, music and energy disappear, so students rebuild the melody and wake the connected zones again.'
+    id: 'mood-role',
+    labelKo: '💡 도도무드 · 빛을 되찾는 키트',
+    labelEn: '💡 Dodo Mood · Restores light'
   },
   {
-    id: 'codex-choice',
-    titleKo: '코덱스의 선택',
-    titleEn: 'Codex’s Choice',
-    summaryKo: '중심 제어실에서 코덱스와 마주한 학생들은 도로랜드를 다시 움직일 마지막 선택을 하게 됩니다.',
-    summaryEn: 'At the central control room, students face Codex and make the final choice that moves DOROLAND again.'
+    id: 'robot-role',
+    labelKo: '🤖 도봇 · 움직임을 되찾는 키트',
+    labelEn: '🤖 Dobot · Restores movement'
+  },
+  {
+    id: 'car-role',
+    labelKo: '🚗 도카 · 길을 찾는 키트',
+    labelEn: '🚗 Doca · Finds the route'
+  },
+  {
+    id: 'game-role',
+    labelKo: '🎮 도텐도 · 게임을 되살리는 키트',
+    labelEn: '🎮 Dotendo · Revives the game zone'
+  },
+  {
+    id: 'piano-role',
+    labelKo: '🎹 도짜르트 · 음악을 되찾는 키트',
+    labelEn: '🎹 Dozart · Restores music'
   }
 ];
