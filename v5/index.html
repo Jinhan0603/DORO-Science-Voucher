@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOROLAND V5 | DORO 키트 학습 가이드</title>
+  <meta name="description" content="DORO 키트를 받은 학생과 보호자를 위한 학습 가이드. 구성품 확인, 만들기, 기록, 자료를 한곳에서 확인할 수 있습니다.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="../assets/images/doroland/logo.png">
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="bg-fantasy"></div>
+  <div class="bg-overlay"></div>
+  <div class="bg-glow-teal"></div>
+  <div class="bg-glow-purple"></div>
+  <div class="bg-scanlines"></div>
+
+  <!-- Pixel Sparkles -->
+  <div class="sparkle" style="top:8%;left:15%;animation-delay:0s;"></div>
+  <div class="sparkle" style="top:22%;right:20%;animation-delay:1.5s;"></div>
+  <div class="sparkle" style="top:45%;left:8%;animation-delay:0.8s;"></div>
+  <div class="sparkle" style="top:70%;right:12%;animation-delay:2.2s;"></div>
+  <div class="sparkle" style="top:55%;left:35%;animation-delay:3s;"></div>
+  <div class="sparkle" style="top:35%;right:35%;animation-delay:1s;"></div>
+
+  <!-- Fireflies -->
+  <div class="firefly firefly-1"></div>
+  <div class="firefly firefly-2"></div>
+  <div class="firefly firefly-3"></div>
+  <div class="firefly firefly-4"></div>
+  <div class="firefly firefly-5"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand-text">DORO<span>LAND</span></span>
+      <span class="nav-version">V5</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#quests" data-pixel-icon="quest" data-pixel-icon-class="pixel-icon-nav" data-i18n="nav.quests">퀘스트</a></li>
+      <li><a href="#story" data-pixel-icon="story" data-pixel-icon-class="pixel-icon-nav" data-i18n="nav.story">스토리</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="https://doroedu.net" target="_blank" class="nav-home-link" data-pixel-icon="home" data-pixel-icon-class="pixel-icon-nav" data-i18n="nav.home">DORO 홈</a>
+      <button class="lang-toggle" id="lang-toggle" type="button" onclick="toggleLanguage()" title="Switch to English" data-i18n="lang.toggle">EN</button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <img src="../assets/images/doroland/logo.png" alt="DOROLAND 로고" class="hero-logo" decoding="async" fetchpriority="high">
+
+    <div class="hero-game-badge" data-i18n="hero.kicker">키트를 선택하세요</div>
+
+    <h1 class="hero-tagline">
+      <span class="line" data-i18n="hero.tagline1">받은 DORO 키트를 선택하고 바로 시작하세요.</span>
+      <span class="line text-gradient" data-i18n="hero.tagline2">구성품 확인부터 만들기까지 한 단계씩 따라할 수 있어요.</span>
+    </h1>
+
+    <div class="hero-badge">
+      <span class="badge-label" data-pixel-icon="gamepad" data-pixel-icon-class="pixel-icon-inline" data-i18n="hero.badge.label">DORO 홈러닝 키트</span>
+      <span class="badge-sep">|</span>
+      <span class="badge-desc" data-i18n="hero.badge.desc">조립·작동 가이드</span>
+    </div>
+
+    <!-- 실제 제품 6종 쇼케이스 -->
+    <div class="hero-kit-showcase" aria-label="DORO 6종 키트 쇼케이스">
+      <img src="../assets/images/kits/kit-all-group2.jpg" alt="DORO 6종 키트를 한눈에 보여주는 실사 사진" decoding="async" fetchpriority="high">
+    </div>
+
+    <div class="scroll-indicator">
+      <span data-i18n="hero.scroll">SCROLL</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+  </section>
+
+  <!-- ============ DIMC INTRO ============ -->
+  <section class="dimc-section" id="dimc">
+    <div class="section-badge" data-pixel-icon="parts" data-pixel-icon-class="pixel-icon-badge" data-i18n="dimc.badge">키트 안내</div>
+    <h2 class="dimc-title text-gradient" data-i18n="dimc.title">받은 키트로 바로 시작하세요</h2>
+    <p class="dimc-subtitle" data-i18n="dimc.subtitle">
+      구매한 키트를 열고 구성품 확인, 만들기, 기록, 자료 확인까지 이 화면에서 차례대로 따라가면 됩니다.
+    </p>
+    <div class="dimc-grid">
+      <div class="dimc-card fade-in stagger-1">
+        <span class="dimc-icon" data-pixel-icon="parts" data-pixel-icon-class="pixel-icon-xl" data-pixel-icon-only></span>
+        <h3 data-i18n="dimc.card1.title">구성품부터 확인</h3>
+        <p data-i18n="dimc.card1.desc">상자 속 부품을 보고 빠진 것이 없는지 먼저 확인해요.</p>
+      </div>
+      <div class="dimc-card fade-in stagger-2">
+        <span class="dimc-icon" data-pixel-icon="build" data-pixel-icon-class="pixel-icon-xl" data-pixel-icon-only></span>
+        <h3 data-i18n="dimc.card2.title">한 단계씩 만들기</h3>
+        <p data-i18n="dimc.card2.desc">학생용 설명과 문제 해결 안내를 보며 혼자서도 진행할 수 있어요.</p>
+      </div>
+      <div class="dimc-card fade-in stagger-3">
+        <span class="dimc-icon" data-pixel-icon="record" data-pixel-icon-class="pixel-icon-xl" data-pixel-icon-only></span>
+        <h3 data-i18n="dimc.card3.title">기록과 자료</h3>
+        <p data-i18n="dimc.card3.desc">실험 기록, 인증서, PDF와 영상을 한곳에서 확인할 수 있어요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUEST / KIT SECTION ============ -->
+  <section class="section" id="quests">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-badge" data-pixel-icon="quest" data-pixel-icon-class="pixel-icon-badge" data-i18n="quest.badge">QUESTS</div>
+        <h2 class="section-title" data-i18n="quest.title">수행 가능한 퀘스트</h2>
+        <p class="section-desc" data-i18n="quest.desc">
+          구매한 키트를 누르면 바로 시작할 수 있어요.
+        </p>
+      </div>
+
+      <div class="quest-grid" id="quest-grid">
+
+        <!-- ═══ 1. 도블투스 — 블루투스 스피커 (판다) ═══ -->
+        <a href="programs/1-bluetooth-speaker/index.html" class="quest-card quest-card-speaker fade-in stagger-1" data-chapter="emerald">
+          <div class="quest-banner">
+            <!-- 완성품/부품 flip -->
+            <img decoding="async" class="photo-front" src="../assets/images/kits/kit-speaker-hero.jpg" alt="도블투스 완성품">
+            <img decoding="async" class="photo-back"  src="../assets/images/kits/kit-speaker-parts.jpg" alt="도블투스 구성품">
+            <span class="quest-number emerald">1</span>
+            <span class="quest-animal"><img class="quest-animal-icon" src="../assets/images/pixel/panda.svg" alt="" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label emerald" data-i18n="p1.kit">DORO IoT 사운드 키트</div>
+            <h3 data-pixel-icon="speaker" data-pixel-icon-class="pixel-icon-title" data-i18n="p1.title">도블투스 — 블루투스 스피커</h3>
+            <p class="quest-desc" data-i18n="p1.card.desc">블루투스 스피커를 조립하고 음악이 나오는지 바로 확인해 보세요.</p>
+            <!-- RPG Stats -->
+            <div class="quest-stats">
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="time" data-pixel-icon-class="pixel-icon-stat">TIME</span>
+                <span class="quest-stat-value" data-i18n="time.90">90분</span>
+                <div class="stat-bar"><div class="stat-bar-fill emerald" style="width:60%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="level" data-pixel-icon-class="pixel-icon-stat">LV</span>
+                <span class="quest-stat-value">2/3</span>
+                <div class="stat-bar"><div class="stat-bar-fill emerald" style="width:50%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="age" data-pixel-icon-class="pixel-icon-stat">AGE</span>
+                <span class="quest-stat-value" data-i18n="p1.age">4~6학년</span>
+                <div class="stat-bar"><div class="stat-bar-fill emerald" style="width:70%"></div></div>
+              </div>
+            </div>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="p1.tag1">#블루투스통신</span>
+              <span class="quest-tag" data-i18n="p1.tag2">#사물인터넷</span>
+              <span class="quest-tag" data-i18n="p1.tag3">#소리의원리</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta">
+                <span data-pixel-icon="time" data-pixel-icon-class="pixel-icon-meta" data-i18n="time.90">90분</span><span data-pixel-icon="age" data-pixel-icon-class="pixel-icon-meta" data-i18n="p1.info.age">초등 4~6학년</span>
+              </div>
+              <span class="quest-cta emerald" data-pixel-icon="arrow-next" data-pixel-icon-position="after" data-pixel-icon-class="pixel-icon-cta" data-i18n="quest.cta">미션 시작</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ═══ 2. 도도무드 — 스마트 무드등 (고양이) ═══ -->
+        <a href="programs/2-mood-light/index.html" class="quest-card quest-card-moodlight fade-in stagger-2" data-chapter="purple">
+          <div class="quest-banner">
+            <img decoding="async" class="photo-front" src="../assets/images/kits/kit-moodlight-hero.jpg" alt="도도무드 완성품">
+            <img decoding="async" class="photo-back"  src="../assets/images/kits/kit-moodlight-parts.jpg" alt="도도무드 구성품">
+            <span class="quest-number purple">2</span>
+            <span class="quest-animal"><img class="quest-animal-icon" src="../assets/images/pixel/cat.svg" alt="" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label purple" data-i18n="p2.kit">DORO 센서 탐구 키트</div>
+            <h3 data-pixel-icon="lamp" data-pixel-icon-class="pixel-icon-title" data-i18n="p2.title">도도무드 — 스마트 무드등</h3>
+            <p class="quest-desc" data-i18n="p2.card.desc">무드등을 조립하고 주변 밝기에 따라 빛이 달라지는지 살펴보세요.</p>
+            <div class="quest-stats">
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="time" data-pixel-icon-class="pixel-icon-stat">TIME</span>
+                <span class="quest-stat-value" data-i18n="time.90">90분</span>
+                <div class="stat-bar"><div class="stat-bar-fill purple" style="width:60%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="level" data-pixel-icon-class="pixel-icon-stat">LV</span>
+                <span class="quest-stat-value">2/3</span>
+                <div class="stat-bar"><div class="stat-bar-fill purple" style="width:45%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="age" data-pixel-icon-class="pixel-icon-stat">AGE</span>
+                <span class="quest-stat-value" data-i18n="p2.age">3~6학년</span>
+                <div class="stat-bar"><div class="stat-bar-fill purple" style="width:80%"></div></div>
+              </div>
+            </div>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="p2.tag1">#조도센서</span>
+              <span class="quest-tag" data-i18n="p2.tag2">#LED회로</span>
+              <span class="quest-tag" data-i18n="p2.tag3">#입력출력제어</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta"><span data-pixel-icon="time" data-pixel-icon-class="pixel-icon-meta" data-i18n="time.90">90분</span><span data-pixel-icon="age" data-pixel-icon-class="pixel-icon-meta" data-i18n="p2.info.age">초등 3~6학년</span></div>
+              <span class="quest-cta purple" data-pixel-icon="arrow-next" data-pixel-icon-position="after" data-pixel-icon-class="pixel-icon-cta" data-i18n="quest.cta">미션 시작</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ═══ 3. 도봇 — 2족 보행 로봇 (강아지) ═══ -->
+        <a href="programs/3-walking-robot/index.html" class="quest-card quest-card-robot fade-in stagger-3" data-chapter="rose">
+          <div class="quest-banner">
+            <img decoding="async" class="photo-front" src="../assets/images/kits/kit-robot-hero.jpg" alt="도봇 완성품">
+            <img decoding="async" class="photo-back"  src="../assets/images/kits/kit-robot-parts.jpg" alt="도봇 구성품">
+            <span class="quest-number rose">3</span>
+            <span class="quest-animal"><img class="quest-animal-icon" src="../assets/images/pixel/dog.svg" alt="" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label rose" data-i18n="p3.kit">DORO 기구학 로봇 키트</div>
+            <h3 data-pixel-icon="robot" data-pixel-icon-class="pixel-icon-title" data-i18n="p3.title">도봇 — 2족 보행 로봇</h3>
+            <p class="quest-desc" data-i18n="p3.card.desc">두 발 로봇을 조립하고 걷는 움직임이 어떻게 만들어지는지 확인해 보세요.</p>
+            <div class="quest-stats">
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="time" data-pixel-icon-class="pixel-icon-stat">TIME</span>
+                <span class="quest-stat-value" data-i18n="time.120">120분</span>
+                <div class="stat-bar"><div class="stat-bar-fill rose" style="width:80%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="level" data-pixel-icon-class="pixel-icon-stat">LV</span>
+                <span class="quest-stat-value">3/3</span>
+                <div class="stat-bar"><div class="stat-bar-fill rose" style="width:75%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="age" data-pixel-icon-class="pixel-icon-stat">AGE</span>
+                <span class="quest-stat-value" data-i18n="p3.age">4~중등</span>
+                <div class="stat-bar"><div class="stat-bar-fill rose" style="width:60%"></div></div>
+              </div>
+            </div>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="p3.tag1">#기구학</span>
+              <span class="quest-tag" data-i18n="p3.tag2">#보행메커니즘</span>
+              <span class="quest-tag" data-i18n="p3.tag3">#전자회로</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta"><span data-pixel-icon="time" data-pixel-icon-class="pixel-icon-meta" data-i18n="time.120">120분</span><span data-pixel-icon="age" data-pixel-icon-class="pixel-icon-meta" data-i18n="p3.info.age">초등 4~중등</span></div>
+              <span class="quest-cta rose" data-pixel-icon="arrow-next" data-pixel-icon-position="after" data-pixel-icon-class="pixel-icon-cta" data-i18n="quest.cta">미션 시작</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ═══ 4. 도카 — AI 로봇 자동차 ═══ -->
+        <a href="programs/4-ir-car/index.html" class="quest-card quest-card-car fade-in stagger-4" data-chapter="amber">
+          <div class="quest-banner">
+            <img decoding="async" class="photo-front" src="../assets/images/kits/kit-car-hand.jpg" alt="도카 완성품">
+            <img decoding="async" class="photo-back"  src="../assets/images/kits/kit-car-parts.jpg" alt="도카 구성품">
+            <span class="quest-number amber">4</span>
+            <span class="quest-animal"><img class="quest-animal-icon" src="../assets/images/pixel/car.svg" alt="" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label amber" data-i18n="p4.kit">DORO AI 모빌리티 키트</div>
+            <h3 data-pixel-icon="car" data-pixel-icon-class="pixel-icon-title" data-i18n="p4.title">도카 — AI 로봇 자동차</h3>
+            <p class="quest-desc" data-i18n="p4.card.desc">로봇 자동차를 조립하고 손 움직임을 따라가는지 시험해 보세요.</p>
+            <div class="quest-stats">
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="time" data-pixel-icon-class="pixel-icon-stat">TIME</span>
+                <span class="quest-stat-value" data-i18n="time.120">120분</span>
+                <div class="stat-bar"><div class="stat-bar-fill amber" style="width:80%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="level" data-pixel-icon-class="pixel-icon-stat">LV</span>
+                <span class="quest-stat-value">3/3</span>
+                <div class="stat-bar"><div class="stat-bar-fill amber" style="width:70%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="age" data-pixel-icon-class="pixel-icon-stat">AGE</span>
+                <span class="quest-stat-value" data-i18n="p4.age">4~중등</span>
+                <div class="stat-bar"><div class="stat-bar-fill amber" style="width:60%"></div></div>
+              </div>
+            </div>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="p4.tag1">#IR센서</span>
+              <span class="quest-tag" data-i18n="p4.tag2">#거리측정</span>
+              <span class="quest-tag" data-i18n="p4.tag3">#자율주행기초</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta"><span data-pixel-icon="time" data-pixel-icon-class="pixel-icon-meta" data-i18n="time.120">120분</span><span data-pixel-icon="age" data-pixel-icon-class="pixel-icon-meta" data-i18n="p4.info.age">초등 4~중등</span></div>
+              <span class="quest-cta amber" data-pixel-icon="arrow-next" data-pixel-icon-position="after" data-pixel-icon-class="pixel-icon-cta" data-i18n="quest.cta">미션 시작</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ═══ 5. 도텐도 — 아두이노 게임기 (돼지) ═══ -->
+        <a href="programs/5-arduino-game/index.html" class="quest-card quest-card-game fade-in stagger-5" data-chapter="sky">
+          <div class="quest-banner">
+            <img decoding="async" class="photo-front" src="../assets/images/kits/kit-game-hand.jpg" alt="도텐도 완성품">
+            <img decoding="async" class="photo-back"  src="../assets/images/kits/kit-game-parts.jpg" alt="도텐도 구성품">
+            <span class="quest-number sky">5</span>
+            <span class="quest-animal"><img class="quest-animal-icon" src="../assets/images/pixel/pig.svg" alt="" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label sky" data-i18n="p5.kit">DORO 게임 코딩 키트</div>
+            <h3 data-pixel-icon="gamepad" data-pixel-icon-class="pixel-icon-title" data-i18n="p5.title">도텐도 — 아두이노 게임기</h3>
+            <p class="quest-desc" data-i18n="p5.card.desc">게임기를 조립하고 버튼으로 직접 움직이는 게임을 실행해 보세요.</p>
+            <div class="quest-stats">
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="time" data-pixel-icon-class="pixel-icon-stat">TIME</span>
+                <span class="quest-stat-value" data-i18n="time.120">120분</span>
+                <div class="stat-bar"><div class="stat-bar-fill sky" style="width:80%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="level" data-pixel-icon-class="pixel-icon-stat">LV</span>
+                <span class="quest-stat-value">3/3</span>
+                <div class="stat-bar"><div class="stat-bar-fill sky" style="width:70%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="age" data-pixel-icon-class="pixel-icon-stat">AGE</span>
+                <span class="quest-stat-value" data-i18n="p5.age">4~중등</span>
+                <div class="stat-bar"><div class="stat-bar-fill sky" style="width:60%"></div></div>
+              </div>
+            </div>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="p5.tag1">#LCD디스플레이</span>
+              <span class="quest-tag" data-i18n="p5.tag2">#게임로직</span>
+              <span class="quest-tag" data-i18n="p5.tag3">#피지컬컴퓨팅</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta"><span data-pixel-icon="time" data-pixel-icon-class="pixel-icon-meta" data-i18n="time.120">120분</span><span data-pixel-icon="age" data-pixel-icon-class="pixel-icon-meta" data-i18n="p5.info.age">초등 4~중등</span></div>
+              <span class="quest-cta sky" data-pixel-icon="arrow-next" data-pixel-icon-position="after" data-pixel-icon-class="pixel-icon-cta" data-i18n="quest.cta">미션 시작</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- ═══ 6. 도짜르트 — 초음파 피아노 (개구리) ═══ -->
+        <a href="programs/6-ultrasonic-piano/index.html" class="quest-card quest-card-piano fade-in stagger-6" data-chapter="coral">
+          <div class="quest-banner">
+            <img decoding="async" class="photo-front" src="../assets/images/kits/kit-piano-play.jpg" alt="도짜르트 완성품">
+            <img decoding="async" class="photo-back"  src="../assets/images/kits/kit-piano-parts.jpg" alt="도짜르트 구성품">
+            <span class="quest-number coral">6</span>
+            <span class="quest-animal"><img class="quest-animal-icon" src="../assets/images/pixel/frog.svg" alt="" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="quest-content">
+            <div class="quest-chapter-label coral" data-i18n="p6.kit">DORO 피지컬 컴퓨팅 키트</div>
+            <h3 data-pixel-icon="piano" data-pixel-icon-class="pixel-icon-title" data-i18n="p6.title">도짜르트 — 초음파 피아노</h3>
+            <p class="quest-desc" data-i18n="p6.card.desc">초음파 피아노를 조립하고 손 거리에 따라 음이 바뀌는지 연주해 보세요.</p>
+            <div class="quest-stats">
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="time" data-pixel-icon-class="pixel-icon-stat">TIME</span>
+                <span class="quest-stat-value" data-i18n="time.90">90분</span>
+                <div class="stat-bar"><div class="stat-bar-fill coral" style="width:60%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="level" data-pixel-icon-class="pixel-icon-stat">LV</span>
+                <span class="quest-stat-value">3/3</span>
+                <div class="stat-bar"><div class="stat-bar-fill coral" style="width:65%"></div></div>
+              </div>
+              <div class="quest-stat-item">
+                <span class="quest-stat-label" data-pixel-icon="age" data-pixel-icon-class="pixel-icon-stat">AGE</span>
+                <span class="quest-stat-value" data-i18n="p6.age">4~중등</span>
+                <div class="stat-bar"><div class="stat-bar-fill coral" style="width:60%"></div></div>
+              </div>
+            </div>
+            <div class="quest-tags">
+              <span class="quest-tag" data-i18n="p6.tag1">#초음파센서</span>
+              <span class="quest-tag" data-i18n="p6.tag2">#조건문코딩</span>
+              <span class="quest-tag" data-i18n="p6.tag3">#사운드인터랙션</span>
+            </div>
+            <div class="quest-footer">
+              <div class="quest-meta"><span data-pixel-icon="time" data-pixel-icon-class="pixel-icon-meta" data-i18n="time.90">90분</span><span data-pixel-icon="age" data-pixel-icon-class="pixel-icon-meta" data-i18n="p6.info.age">초등 4~중등</span></div>
+              <span class="quest-cta coral" data-pixel-icon="arrow-next" data-pixel-icon-position="after" data-pixel-icon-class="pixel-icon-cta" data-i18n="quest.cta">미션 시작</span>
+            </div>
+          </div>
+        </a>
+
+      </div><!-- /.quest-grid -->
+
+    </div>
+  </section>
+
+  <!-- ============ STORY SECTION ============ -->
+  <section id="story">
+    <div class="story-section story-kit-world">
+      <div class="story-text fade-in story-center-block">
+        <div class="section-badge" data-pixel-icon="story" data-pixel-icon-class="pixel-icon-badge" data-i18n="story.badge">도로랜드 이야기</div>
+        <div class="doroland-intro-card">
+          <div class="doroland-intro-visual">
+            <img src="../assets/images/pixel/panda.svg" alt="도블투스 판다 캐릭터" loading="lazy" decoding="async">
+            <img src="../assets/images/pixel/cat.svg" alt="도도무드 고양이 캐릭터" loading="lazy" decoding="async">
+            <img src="../assets/images/pixel/dog.svg" alt="도봇 강아지 캐릭터" loading="lazy" decoding="async">
+            <img src="../assets/images/pixel/car.svg" alt="도카 자동차 캐릭터" loading="lazy" decoding="async">
+            <img src="../assets/images/pixel/pig.svg" alt="도텐도 돼지 캐릭터" loading="lazy" decoding="async">
+            <img src="../assets/images/pixel/frog.svg" alt="도짜르트 개구리 캐릭터" loading="lazy" decoding="async">
+          </div>
+          <div class="doroland-intro-copy">
+            <h2 data-i18n="story.intro.title">도로랜드는 어떤 곳인가요?</h2>
+            <p data-i18n="story.intro.desc">
+              도로랜드는 기술과 자연이 함께 움직이던 상상 속 테마파크예요. 여러분이 만든 6개의 키트가 멈춘 구역들을 하나씩 다시 움직이게 합니다.
+            </p>
+          </div>
+        </div>
+        <div id="doroland-role-map" class="story-kit-role-map" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">DOROLAND V5</div>
+      <p class="footer-copy" data-i18n="footer.copy">
+        2026 DOROLAND · Do Challenge. To Ask. Be Together · 주식회사 도로(DORO)
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/pixel-icons.js"></script>
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/doroland-stories.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/pixel.js"></script>
+</body>
+</html>
+
+
+

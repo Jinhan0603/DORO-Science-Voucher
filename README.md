@@ -10,8 +10,9 @@
 |------|------|------|
 | **V3** ✨ 운영 중 | [DOROLAND V3 →](https://jinhan0603.github.io/DORO-Science-Voucher/) | 기존 운영 버전 |
 | **V4** 🆕 미리보기 | [DORO V4 Guide →](https://jinhan0603.github.io/DORO-Science-Voucher/v4/) | QR 기반 키트 가이드 · 구성품 확인 · 안전 약속 · 단계별 조립 |
+| **V5** 🎮 최종 업데이트 | [DOROLAND V5 →](https://jinhan0603.github.io/DORO-Science-Voucher/v5/) | DOROLAND 픽셀 UI · 6개 키트 상세 학습 · 자료/영상 · 기록/인증 |
 
-루트 `/`는 기존 V3를 유지하고, `/v4/`에서 새 가이드를 별도로 확인할 수 있습니다.
+루트 `/`는 기존 V3를 유지하고, `/v4/`와 `/v5/`에서 새 가이드를 별도로 확인할 수 있습니다.
 
 ## 🚀 프로그램 목록
 
