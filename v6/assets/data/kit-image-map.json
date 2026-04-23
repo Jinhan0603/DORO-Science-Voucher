@@ -1,0 +1,23 @@
+{
+  "3-walking-robot": {
+    "hero": "assets/images/curated/3-walking-robot/hero.jpg",
+    "gallery": [
+      "assets/images/curated/3-walking-robot/gallery-01.jpg",
+      "assets/images/curated/3-walking-robot/gallery-02.jpg"
+    ]
+  },
+  "4-ir-car": {
+    "hero": "assets/images/curated/4-ir-car/hero.jpg",
+    "gallery": [
+      "assets/images/curated/4-ir-car/gallery-01.jpg",
+      "assets/images/curated/4-ir-car/gallery-02.jpg"
+    ]
+  },
+  "5-arduino-game": {
+    "hero": "assets/images/curated/5-arduino-game/hero.jpg",
+    "gallery": [
+      "assets/images/curated/5-arduino-game/gallery-01.jpg",
+      "assets/images/curated/5-arduino-game/gallery-02.jpg"
+    ]
+  }
+}

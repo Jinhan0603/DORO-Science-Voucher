@@ -1,0 +1,957 @@
+{
+  "1-bluetooth-speaker": {
+    "slides": [
+      {
+        "slide": 1,
+        "type": "title",
+        "action": "skipped",
+        "reason": "표지 슬라이드"
+      },
+      {
+        "slide": 2,
+        "type": "assembly-video",
+        "action": "skipped",
+        "reason": "조립 영상은 starter-resources와 자료·영상 섹션에서 별도 제공"
+      },
+      {
+        "slide": 3,
+        "type": "safety",
+        "action": "skipped",
+        "reason": "안전 약속 섹션에서 요약 반영"
+      },
+      {
+        "slide": 4,
+        "type": "parts-overview",
+        "action": "component-check-overview",
+        "asset": "v5/assets/images/parts/1-bluetooth-speaker/overview.jpg"
+      },
+      {
+        "slide": 5,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 1,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-01.jpg"
+      },
+      {
+        "slide": 6,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 1,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-01.jpg"
+      },
+      {
+        "slide": 7,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 2,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-02.jpg"
+      },
+      {
+        "slide": 8,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 2,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-02.jpg"
+      },
+      {
+        "slide": 9,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 3,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-03.jpg"
+      },
+      {
+        "slide": 10,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 4,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-04.jpg"
+      },
+      {
+        "slide": 11,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 4,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-04.jpg"
+      },
+      {
+        "slide": 12,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 5,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-05.jpg"
+      },
+      {
+        "slide": 13,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 6,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-06.jpg"
+      },
+      {
+        "slide": 14,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 7,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-07.jpg"
+      },
+      {
+        "slide": 15,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 8,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-08.jpg"
+      },
+      {
+        "slide": 16,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-09.jpg"
+      },
+      {
+        "slide": 17,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-09.jpg"
+      },
+      {
+        "slide": 18,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 10,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-10.jpg"
+      },
+      {
+        "slide": 19,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-11.jpg"
+      },
+      {
+        "slide": 20,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 12,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-12.jpg"
+      },
+      {
+        "slide": 21,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 12,
+        "asset": "v5/assets/images/assembly/1-bluetooth-speaker/slides/step-12.jpg"
+      },
+      {
+        "slide": 22,
+        "type": "complete",
+        "action": "skipped",
+        "reason": "완성 안내 슬라이드"
+      }
+    ]
+  },
+  "2-mood-light": {
+    "slides": [
+      {
+        "slide": 1,
+        "type": "title",
+        "action": "skipped",
+        "reason": "표지 슬라이드"
+      },
+      {
+        "slide": 2,
+        "type": "assembly-video",
+        "action": "skipped",
+        "reason": "조립 영상은 starter-resources와 자료·영상 섹션에서 제공"
+      },
+      {
+        "slide": 3,
+        "type": "safety",
+        "action": "skipped",
+        "reason": "안전 약속 섹션에서 요약 반영"
+      },
+      {
+        "slide": 4,
+        "type": "parts-overview",
+        "action": "component-check-overview",
+        "asset": "v5/assets/images/parts/2-mood-light/overview.jpg"
+      },
+      {
+        "slide": 5,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 1,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-01.jpg"
+      },
+      {
+        "slide": 6,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 1,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-01.jpg"
+      },
+      {
+        "slide": 7,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 2,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-02.jpg"
+      },
+      {
+        "slide": 8,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 2,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-02.jpg"
+      },
+      {
+        "slide": 9,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 3,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-03.jpg"
+      },
+      {
+        "slide": 10,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 3,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-03.jpg"
+      },
+      {
+        "slide": 11,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 4,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-04.jpg"
+      },
+      {
+        "slide": 12,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 5,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-05.jpg"
+      },
+      {
+        "slide": 13,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 5,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-05.jpg"
+      },
+      {
+        "slide": 14,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 6,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-06.jpg"
+      },
+      {
+        "slide": 15,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 7,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-07.jpg"
+      },
+      {
+        "slide": 16,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 8,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-08.jpg"
+      },
+      {
+        "slide": 17,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-09.jpg"
+      },
+      {
+        "slide": 18,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 10,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-10.jpg"
+      },
+      {
+        "slide": 19,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 10,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-10.jpg"
+      },
+      {
+        "slide": 20,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-11.jpg"
+      },
+      {
+        "slide": 21,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-11.jpg"
+      },
+      {
+        "slide": 22,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 12,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-12.jpg"
+      },
+      {
+        "slide": 23,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 12,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-12.jpg"
+      },
+      {
+        "slide": 24,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 13,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-13.jpg"
+      },
+      {
+        "slide": 25,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 13,
+        "asset": "v5/assets/images/assembly/2-mood-light/slides/step-13.jpg"
+      },
+      {
+        "slide": 26,
+        "type": "complete",
+        "action": "skipped",
+        "reason": "완성 안내 슬라이드"
+      }
+    ]
+  },
+  "3-walking-robot": {
+    "slides": [
+      {
+        "slide": 1,
+        "type": "title",
+        "action": "skipped",
+        "reason": "표지 슬라이드"
+      },
+      {
+        "slide": 2,
+        "type": "safety",
+        "action": "skipped",
+        "reason": "안전 약속 섹션에서 요약 반영"
+      },
+      {
+        "slide": 3,
+        "type": "assembly-video",
+        "action": "skipped",
+        "reason": "조립 영상은 starter-resources와 자료·영상 섹션에서 제공"
+      },
+      {
+        "slide": 4,
+        "type": "parts-overview",
+        "action": "component-check-overview",
+        "asset": "v5/assets/images/parts/3-walking-robot/overview.jpg"
+      },
+      {
+        "slide": 5,
+        "type": "parts-detail",
+        "action": "skipped",
+        "reason": "구성품 이름과 수량은 구성품 카드 문구에 통합 반영"
+      },
+      {
+        "slide": 6,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 1,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-01.jpg"
+      },
+      {
+        "slide": 7,
+        "type": "separator",
+        "action": "skipped",
+        "reason": "장 구분용 제목 슬라이드"
+      },
+      {
+        "slide": 8,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 2,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-02.jpg"
+      },
+      {
+        "slide": 9,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 3,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-03.jpg"
+      },
+      {
+        "slide": 10,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 4,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-04.jpg"
+      },
+      {
+        "slide": 11,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 5,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-05.jpg"
+      },
+      {
+        "slide": 12,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 6,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-06.jpg"
+      },
+      {
+        "slide": 13,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 7,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-07.jpg"
+      },
+      {
+        "slide": 14,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 8,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-08.jpg"
+      },
+      {
+        "slide": 15,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-09.jpg"
+      },
+      {
+        "slide": 16,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-09.jpg"
+      },
+      {
+        "slide": 17,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 10,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-10.jpg"
+      },
+      {
+        "slide": 18,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-11.jpg"
+      },
+      {
+        "slide": 19,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-11.jpg"
+      },
+      {
+        "slide": 20,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 12,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-12.jpg"
+      },
+      {
+        "slide": 21,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 12,
+        "asset": "v5/assets/images/assembly/3-walking-robot/slides/step-12.jpg"
+      },
+      {
+        "slide": 22,
+        "type": "complete",
+        "action": "skipped",
+        "reason": "완성 안내 슬라이드"
+      }
+    ]
+  },
+  "4-ir-car": {
+    "slides": [
+      {
+        "slide": 1,
+        "type": "title",
+        "action": "skipped",
+        "reason": "표지 슬라이드"
+      },
+      {
+        "slide": 2,
+        "type": "assembly-video",
+        "action": "skipped",
+        "reason": "조립 영상은 starter-resources와 자료·영상 섹션에서 제공"
+      },
+      {
+        "slide": 3,
+        "type": "safety",
+        "action": "skipped",
+        "reason": "안전 약속 섹션에서 요약 반영"
+      },
+      {
+        "slide": 4,
+        "type": "parts-overview",
+        "action": "component-check-overview",
+        "asset": "v5/assets/images/parts/4-ir-car/overview.jpg"
+      },
+      {
+        "slide": 5,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 1,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-01.jpg"
+      },
+      {
+        "slide": 6,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 2,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-02.jpg"
+      },
+      {
+        "slide": 7,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 1,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-01.jpg"
+      },
+      {
+        "slide": 8,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 3,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-03.jpg"
+      },
+      {
+        "slide": 9,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 3,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-03.jpg"
+      },
+      {
+        "slide": 10,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 4,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-04.jpg"
+      },
+      {
+        "slide": 11,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 4,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-04.jpg"
+      },
+      {
+        "slide": 12,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 5,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-05.jpg"
+      },
+      {
+        "slide": 13,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 5,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-05.jpg"
+      },
+      {
+        "slide": 14,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 6,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-06.jpg"
+      },
+      {
+        "slide": 15,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 7,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-07.jpg"
+      },
+      {
+        "slide": 16,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 7,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-07.jpg"
+      },
+      {
+        "slide": 17,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 8,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-08.jpg"
+      },
+      {
+        "slide": 18,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-09.jpg"
+      },
+      {
+        "slide": 19,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-09.jpg"
+      },
+      {
+        "slide": 20,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 10,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-10.jpg"
+      },
+      {
+        "slide": 21,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-11.jpg"
+      },
+      {
+        "slide": 22,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-11.jpg"
+      },
+      {
+        "slide": 23,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 12,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-12.jpg"
+      },
+      {
+        "slide": 24,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 13,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-13.jpg"
+      },
+      {
+        "slide": 25,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 14,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-14.jpg"
+      },
+      {
+        "slide": 26,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 14,
+        "asset": "v5/assets/images/assembly/4-ir-car/slides/step-14.jpg"
+      },
+      {
+        "slide": 27,
+        "type": "complete",
+        "action": "skipped",
+        "reason": "완성 안내 슬라이드"
+      }
+    ]
+  },
+  "5-arduino-game": {
+    "slides": [
+      {
+        "slide": 1,
+        "type": "title",
+        "action": "skipped",
+        "reason": "표지 슬라이드"
+      },
+      {
+        "slide": 2,
+        "type": "assembly-video",
+        "action": "skipped",
+        "reason": "조립 영상은 starter-resources와 자료·영상 섹션에서 제공"
+      },
+      {
+        "slide": 3,
+        "type": "safety",
+        "action": "skipped",
+        "reason": "안전 약속 섹션에서 요약 반영"
+      },
+      {
+        "slide": 4,
+        "type": "safety",
+        "action": "skipped",
+        "reason": "안전 안내 보조 슬라이드"
+      },
+      {
+        "slide": 5,
+        "type": "parts-overview",
+        "action": "component-check-overview",
+        "asset": "v5/assets/images/parts/5-arduino-game/overview.jpg"
+      },
+      {
+        "slide": 6,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 1,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-01.jpg"
+      },
+      {
+        "slide": 7,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 2,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-02.jpg"
+      },
+      {
+        "slide": 8,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 3,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-03.jpg"
+      },
+      {
+        "slide": 9,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 4,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-04.jpg"
+      },
+      {
+        "slide": 10,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 5,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-05.jpg"
+      },
+      {
+        "slide": 11,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 6,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-06.jpg"
+      },
+      {
+        "slide": 12,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 7,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-07.jpg"
+      },
+      {
+        "slide": 13,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 8,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-08.jpg"
+      },
+      {
+        "slide": 14,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-09.jpg"
+      },
+      {
+        "slide": 15,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 10,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-10.jpg"
+      },
+      {
+        "slide": 16,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/5-arduino-game/slides/step-11.jpg"
+      },
+      {
+        "slide": 17,
+        "type": "complete",
+        "action": "skipped",
+        "reason": "완성 안내 슬라이드"
+      }
+    ]
+  },
+  "6-ultrasonic-piano": {
+    "slides": [
+      {
+        "slide": 1,
+        "type": "title",
+        "action": "skipped",
+        "reason": "표지 슬라이드"
+      },
+      {
+        "slide": 2,
+        "type": "demo-intro",
+        "action": "skipped",
+        "reason": "실제 작동 영상은 별도 demo mp4로 제공"
+      },
+      {
+        "slide": 3,
+        "type": "assembly-video",
+        "action": "skipped",
+        "reason": "조립 영상은 starter-resources와 자료·영상 섹션에서 제공"
+      },
+      {
+        "slide": 4,
+        "type": "parts-overview",
+        "action": "component-check-overview",
+        "asset": "v5/assets/images/parts/6-ultrasonic-piano/overview.jpg"
+      },
+      {
+        "slide": 5,
+        "type": "safety",
+        "action": "skipped",
+        "reason": "안전 약속 섹션에서 요약 반영"
+      },
+      {
+        "slide": 6,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 1,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-01.jpg"
+      },
+      {
+        "slide": 7,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 2,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-02.jpg"
+      },
+      {
+        "slide": 8,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 3,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-03.jpg"
+      },
+      {
+        "slide": 9,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 4,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-04.jpg"
+      },
+      {
+        "slide": 10,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 5,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-05.jpg"
+      },
+      {
+        "slide": 11,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 6,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-06.jpg"
+      },
+      {
+        "slide": 12,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 7,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-07.jpg"
+      },
+      {
+        "slide": 13,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 8,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-08.jpg"
+      },
+      {
+        "slide": 14,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 8,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-08.jpg"
+      },
+      {
+        "slide": 15,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-09.jpg"
+      },
+      {
+        "slide": 16,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 9,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-09.jpg"
+      },
+      {
+        "slide": 17,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 10,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-10.jpg"
+      },
+      {
+        "slide": 18,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 10,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-10.jpg"
+      },
+      {
+        "slide": 19,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-11.jpg"
+      },
+      {
+        "slide": 20,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-11.jpg"
+      },
+      {
+        "slide": 21,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 11,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-11.jpg"
+      },
+      {
+        "slide": 22,
+        "type": "program-setup",
+        "action": "skipped",
+        "reason": "학생용에서 제외: 프로그램 넣기 안내"
+      },
+      {
+        "slide": 23,
+        "type": "program-setup",
+        "action": "skipped",
+        "reason": "학생용에서 제외: 프로그램 넣기 안내"
+      },
+      {
+        "slide": 24,
+        "type": "assembly-step",
+        "action": "build-step",
+        "step": 12,
+        "asset": "v5/assets/images/assembly/6-ultrasonic-piano/slides/step-12.jpg"
+      }
+    ]
+  }
+}
