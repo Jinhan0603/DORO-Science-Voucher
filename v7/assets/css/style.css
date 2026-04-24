@@ -841,6 +841,10 @@ body {
   font-size: 1rem;
 }
 
+.safety-complete-actions {
+  align-items: stretch;
+}
+
 .is-awaiting-action {
   border-color: rgba(255, 255, 255, 0.16) !important;
   background: rgba(255, 255, 255, 0.06) !important;
@@ -6978,6 +6982,25 @@ a:focus-visible {
   min-height: 48px !important;
 }
 
+.safety-complete-actions .safety-component-btn {
+  flex: 1 1 21rem;
+  width: min(100%, 24rem);
+  min-height: 62px !important;
+  padding: 0.9rem 1.45rem !important;
+  border-radius: 1rem !important;
+  font-size: 1.08rem !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.01em;
+  justify-content: center;
+  box-shadow: 0 14px 30px rgba(6, 182, 212, 0.18);
+}
+
+.safety-complete-actions .safety-reset-btn {
+  flex: 0 1 18rem;
+  min-height: 42px;
+  align-self: center;
+}
+
 .parts-action-panel > .parts-next-btn {
   align-self: center;
   min-width: min(18rem, 100%);
@@ -7002,6 +7025,10 @@ a:focus-visible {
   .safety-component-btn {
     width: 100% !important;
     min-width: 0 !important;
+  }
+
+  .safety-complete-actions .safety-component-btn {
+    min-height: 58px !important;
   }
 }
 

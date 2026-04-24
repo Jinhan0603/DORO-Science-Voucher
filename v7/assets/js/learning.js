@@ -415,23 +415,49 @@
     }, 2200);
   }
 
+  var pendingScrollRestoreTimers = [];
+  var pendingScrollRestoreToken = 0;
+
+  function cancelPendingScrollRestores() {
+    pendingScrollRestoreToken += 1;
+    while (pendingScrollRestoreTimers.length) {
+      window.clearTimeout(pendingScrollRestoreTimers.pop());
+    }
+  }
+
+  function scheduleScrollRestore(restore, delay, token) {
+    var timerId = window.setTimeout(function () {
+      pendingScrollRestoreTimers = pendingScrollRestoreTimers.filter(function (id) {
+        return id !== timerId;
+      });
+      if (token !== pendingScrollRestoreToken) return;
+      restore();
+    }, delay);
+    pendingScrollRestoreTimers.push(timerId);
+  }
+
   function preserveScroll(callback) {
+    cancelPendingScrollRestores();
+    var token = pendingScrollRestoreToken;
     var x = window.scrollX || window.pageXOffset || 0;
     var y = window.scrollY || window.pageYOffset || 0;
     var restore = function () {
+      if (token !== pendingScrollRestoreToken) return;
       window.scrollTo({ left: x, top: y, behavior: 'auto' });
     };
     callback();
     restore();
     window.requestAnimationFrame(function () {
+      if (token !== pendingScrollRestoreToken) return;
       restore();
       window.requestAnimationFrame(function () {
+        if (token !== pendingScrollRestoreToken) return;
         restore();
       });
     });
-    window.setTimeout(restore, 80);
-    window.setTimeout(restore, 180);
-    window.setTimeout(restore, 320);
+    scheduleScrollRestore(restore, 80, token);
+    scheduleScrollRestore(restore, 180, token);
+    scheduleScrollRestore(restore, 320, token);
   }
 
   function rerenderLearningPreserveScroll() {
@@ -1870,7 +1896,9 @@
 
   function scrollToSection(sectionId) {
     var target = document.getElementById(sectionId);
-    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!target) return;
+    cancelPendingScrollRestores();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   function rerenderLearningAndScroll(sectionId) {
