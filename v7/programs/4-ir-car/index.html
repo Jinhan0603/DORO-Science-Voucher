@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>도카 — DORO AI 모빌리티 키트 | DOROLAND V7</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="icon" href="../../assets/images/curated/4-ir-car/hero.jpg">
+</head>
+<body>
+  <div class="bg-fantasy"></div><div class="bg-overlay"></div>
+  <div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="bg-scanlines"></div>
+  <div class="progress-bar" id="progress"></div>
+  <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" title="Switch to English">EN</button>
+  <nav class="nav" id="navbar">
+    <a href="../../index.html" class="nav-brand nav-back-link">
+      <span class="nav-back-arrow" data-pixel-icon="arrow-back" data-pixel-icon-class="pixel-icon-nav" data-pixel-icon-only></span><span class="nav-brand-text nav-back-text" data-i18n="prog.nav.back">프로그램 목록</span>
+    </a>
+    <a href="../../index.html" class="nav-brand">
+      <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V7</span>
+    </a>
+  </nav>
+  <div class="toc-sidebar">
+    <a href="#kit-view" class="toc-item active" data-toc-link="true" data-target="kit-view" aria-current="true"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 보기</span></a>
+    <a href="#starter-resources" class="toc-item" data-toc-link="true" data-target="starter-resources"><span class="toc-dot"></span> <span data-i18n="prog.toc.starter">교육자료 확인</span></a>
+    <a href="#starter-quiz" class="toc-item" data-toc-link="true" data-target="starter-quiz"><span class="toc-dot"></span> <span data-i18n="prog.toc.quiz">시작 전 확인</span></a>
+    <a href="#safety-promise" class="toc-item" data-toc-link="true" data-target="safety-promise"><span class="toc-dot"></span> <span data-i18n="prog.toc.safety">안전 약속</span></a>
+    <a href="#component-check" class="toc-item" data-toc-link="true" data-target="component-check"><span class="toc-dot"></span> <span data-i18n="prog.toc.components">구성품 확인</span></a>
+    <a href="#build-guide" class="toc-item" data-toc-link="true" data-target="build-guide"><span class="toc-dot"></span> <span data-i18n="prog.toc.build">한 단계씩 만들기</span></a>
+    <a href="#troubleshooting" class="toc-item" data-toc-link="true" data-target="troubleshooting"><span class="toc-dot"></span> <span data-i18n="prog.toc.trouble">왜 안 되지?</span></a>
+    <a href="#science-lab" class="toc-item" data-toc-link="true" data-target="science-lab"><span class="toc-dot"></span> <span data-i18n="prog.toc.lab">과학 실험</span></a>
+    <a href="#review-quiz" class="toc-item" data-toc-link="true" data-target="review-quiz"><span class="toc-dot"></span> <span data-i18n="prog.toc.review">되돌아보기</span></a>
+    <a href="#challenge-missions" class="toc-item" data-toc-link="true" data-target="challenge-missions"><span class="toc-dot"></span> <span data-i18n="prog.toc.mission">도전 미션</span></a>
+    <a href="#record-certificate" class="toc-item" data-toc-link="true" data-target="record-certificate"><span class="toc-dot"></span> <span data-i18n="prog.toc.record">기록·인증</span></a>
+    <a href="#resources-videos" class="toc-item" data-toc-link="true" data-target="resources-videos"><span class="toc-dot"></span> <span data-i18n="prog.toc.resources">자료·영상</span></a>
+  </div>
+
+  <section class="detail-hero">
+    <span class="chapter-badge" data-pixel-icon="car" data-pixel-icon-class="pixel-icon-badge" data-i18n="p4.kit" style="background:var(--amber);color:#000;">DORO AI 모빌리티 키트</span>
+    <h1 data-pixel-icon="car" data-pixel-icon-class="pixel-icon-hero" data-i18n="p4.title">도카 — AI 로봇 자동차</h1>
+    <p class="hero-desc" data-i18n="p4.desc">
+      도카를 조립해 센서가 손의 움직임을 어떻게 따라가는지 확인해 보세요.
+    </p>
+    <div class="science-badge" data-pixel-icon="science" data-pixel-icon-class="pixel-icon-badge" data-i18n="p4.science">핵심 과학 개념: IR 적외선 센서 · 거리 측정 · 모터 제어 · 자율주행 기초</div>
+  </section>
+
+  <div class="info-bar">
+    <div class="info-item"><span class="info-label" data-pixel-icon="time" data-pixel-icon-class="pixel-icon-stat" data-i18n="info.time.label">소요시간</span><span class="info-value" data-i18n="p4.info.time">120분</span></div>
+    <div class="info-item"><span class="info-label" data-pixel-icon="age" data-pixel-icon-class="pixel-icon-stat" data-i18n="info.age.label">대상</span><span class="info-value" data-i18n="p4.info.age">초등 4~중등</span></div>
+    <div class="info-item"><span class="info-label" data-pixel-icon="level" data-pixel-icon-class="pixel-icon-stat" data-i18n="info.level.label">난이도</span><span class="info-value" data-i18n="p4.info.level">LV 2/3</span></div>
+    <div class="info-item"><span class="info-label" data-pixel-icon="home" data-pixel-icon-class="pixel-icon-stat" data-i18n="info.type.label">학습형태</span><span class="info-value" data-i18n="p4.info.type">홈러닝 키트</span></div>
+    <div class="info-item"><span class="info-label info-label-character"><img class="quest-info-character-icon" src="../../assets/images/pixel/elephant.png" alt="" aria-hidden="true" loading="lazy" decoding="async"><span class="pixel-icon-text" data-i18n="p4.info.char.label">캐릭터</span></span><span class="info-value" data-i18n="p4.info.char">코끼리</span></div>
+  </div>
+
+  <div class="detail-content">
+
+    <section id="kit-view" style="margin-bottom:2.5rem;">
+      <h2 class="detail-section-title" data-pixel-icon="photo" data-pixel-icon-class="pixel-icon-heading" data-i18n="prog.photos">키트 사진</h2>
+      <div class="detail-kit-photos">
+        <div class="detail-kit-hero">
+          <img decoding="async" src="../../assets/images/curated/4-ir-car/hero.jpg" alt="도카 완성품 — 배경이 있는 DORO 로봇 자동차 사진">
+        </div>
+        <div class="detail-kit-thumb-row">
+          <div class="detail-kit-thumb">
+            <img decoding="async" src="../../assets/images/curated/4-ir-car/gallery-01.jpg" alt="도카 완성품 측면 사진">
+          </div>
+          <div class="detail-kit-thumb">
+            <img decoding="async" src="../../assets/images/curated/4-ir-car/gallery-02.jpg" alt="도카 구성품 전체">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="starter-resources" class="student-section fade-in"></section>
+    <section id="starter-quiz" class="student-section fade-in"></section>
+    <section id="safety-promise" class="student-section fade-in"></section>
+    <section id="component-check" class="student-section fade-in"></section>
+    <section id="build-guide" class="student-section fade-in"></section>
+    <section id="troubleshooting" class="student-section fade-in"></section>
+    <section id="science-lab" class="student-section fade-in"></section>
+    <section id="review-quiz" class="student-section fade-in"></section>
+    <section id="challenge-missions" class="student-section fade-in"></section>
+
+    <section id="record-certificate" class="student-group-section fade-in">
+      <div class="student-group-header">
+        <h2 class="student-group-title" data-pixel-icon="record" data-pixel-icon-class="pixel-icon-heading" data-i18n="prog.record.title">기록·인증</h2>
+        <p class="student-group-desc" data-i18n="prog.record.desc">만든 과정과 배운 내용을 기록하고, 완성 인증서를 저장해요.</p>
+      </div>
+      <section id="lab-notebook" class="student-section fade-in"></section>
+      <section id="certificate" class="student-section fade-in"></section>
+    </section>
+
+    <section id="resources-videos" class="student-group-section fade-in"></section>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">DOROLAND V7</div>
+      <p class="footer-copy">2026 DOROLAND · 주식회사 도로(DORO)</p>
+    </div>
+  </footer>
+  <script src="../../assets/js/pixel-icons.js"></script>
+  <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/kit-data.js"></script>
+  <script src="../../assets/js/assembly-guides.js"></script>
+  <script src="../../assets/js/science-resources.js"></script>
+  <script src="../../assets/js/safety-promises.js"></script>
+  <script src="../../assets/js/learning.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/pixel.js"></script>
+  <script src="../../assets/js/quest-briefs.js"></script>
+  <script src="../../assets/js/detail.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐶 도봇 — DORO 기구학 로봇 키트 | DOROLAND V3-CODEX</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <div class="bg-fantasy"></div><div class="bg-overlay"></div>
+  <div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="bg-scanlines"></div>
+  <div class="progress-bar" id="progress"></div>
+  <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" title="Switch to English">EN</button>
+  <nav class="nav" id="navbar">
+    <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
+      <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;" data-i18n="prog.nav.back">프로그램 목록</span>
+    </a>
+    <a href="../../index.html" class="nav-brand">
+      <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V3</span>
+    </a>
+  </nav>
+  <div class="toc-sidebar">
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 사진</span></a>
+    <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
+    <a href="#learning-hub" class="toc-item"><span class="toc-dot"></span> 학생 학습 모드</a>
+    <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
+    <a href="#docs" class="toc-item"><span class="toc-dot"></span> 교육 자료</a>
+    <a href="#media" class="toc-item"><span class="toc-dot"></span> 데모 영상</a>
+    <a href="#gallery" class="toc-item"><span class="toc-dot"></span> 교육 현장</a>
+    <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
+    <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
+  </div>
+
+  <section class="detail-hero">
+    <span class="chapter-badge" data-i18n="p3.kit" style="background:var(--rose);color:#fff;">🐶 DORO 기구학 로봇 키트</span>
+    <h1 data-i18n="p3.title">🤖 도봇 — 2족 보행 로봇</h1>
+    <p class="hero-desc" data-i18n="p3.desc">
+      강아지 캐릭터 목재 프레임의 2족 보행 로봇을 조립하며 기구학과 원운동-보행운동 변환 원리를 탐구합니다.
+      컬러 점퍼 와이어가 두 발이 되어 걷는 심화형 과학키트.
+    </p>
+    <div class="science-badge" data-i18n="p3.science">🔬 핵심 과학 개념: 기구학 · 원운동→보행운동 변환 · 모터 제어 · 전자 회로</div>
+  </section>
+
+  <div class="info-bar">
+    <div class="info-item"><span class="info-label" data-i18n="info.time.label">⏱ 소요시간</span><span class="info-value" data-i18n="p3.info.time">120분</span></div>
+    <div class="info-item"><span class="info-label" data-i18n="info.age.label">👤 대상</span><span class="info-value" data-i18n="p3.info.age">초등 4~중등</span></div>
+    <div class="info-item"><span class="info-label" data-i18n="info.level.label">⭐ 난이도</span><span class="info-value" data-i18n="p3.info.level">★★★</span></div>
+    <div class="info-item"><span class="info-label" data-i18n="info.type.label">🏠 학습형태</span><span class="info-value" data-i18n="p3.info.type">홈러닝 키트</span></div>
+    <div class="info-item"><span class="info-label" data-i18n="p3.info.char.label">🐶 캐릭터</span><span class="info-value" data-i18n="p3.info.char">강아지</span></div>
+  </div>
+
+  <div class="detail-content">
+
+    <section id="photos" style="margin-bottom:2.5rem;">
+      <h2 data-i18n="prog.photos" style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
+      <div class="detail-kit-photos">
+        <div class="detail-kit-hero">
+          <img src="../../assets/images/kits/kit-robot-white.png" alt="도봇 완성품 — 강아지 2족 보행 로봇 (흰 배경)">
+        </div>
+        <div class="detail-kit-thumb-row">
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-robot-hand.jpg" alt="도봇 손으로 들기">
+          </div>
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-robot-parts.jpg" alt="도봇 구성품 전체">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist" class="checklist-section fade-in">
+      <h2 class="checklist-title" data-i18n="prog.checklist.title">🔧 준비물 체크리스트</h2>
+      <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. <span id="checklist-progress"></span></p>
+      <div class="checklist-item"><input type="checkbox"><span>🐶 로봇 바디 (강아지 디자인 목재 프레임)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>⚙️ DC 모터 × 1 (원운동 발생)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🦵 플라스틱 크랭크 레그 세트 (기구 메커니즘)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔋 배터리 홀더 + AA 배터리 × 2</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔌 스위치</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔗 색깔 점퍼 케이블 세트</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔩 조립 나사 + 드라이버</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📄 학생용 활동지</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📖 조립 설명서</span></div>
+    </section>
+
+    <section id="missions" class="mission-section fade-in">
+      <h2 data-i18n="prog.missions">📖 STEP-BY-STEP 교육 과정</h2>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">1</span>
+          <span class="mission-step-title" data-i18n="p3.step1.title">도입 — 어떻게 걷는가?</span>
+          <span class="mission-step-time" data-i18n="time.15">⏱ 15분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>사람과 동물이 걷는 원리를 분석하고, 기계가 이것을 어떻게 모방하는지 살펴봅니다.</p>
+          <ul>
+            <li>완성된 강아지 로봇 보행 시연</li>
+            <li>기구학: 회전 운동을 직선 운동으로 바꾸는 원리</li>
+            <li>크랭크 메커니즘 개념 소개</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-robot-white.png" alt="도봇 완성품" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">2</span>
+          <span class="mission-step-title" data-i18n="p3.step2.title">과학 개념 — 기구학과 모터</span>
+          <span class="mission-step-time" data-i18n="time.15">⏱ 15분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>기구학(Kinematics): 물체의 운동을 분석하는 학문</li>
+            <li>DC 모터: 전기 에너지 → 회전 운동</li>
+            <li>크랭크-레그 메커니즘: 회전 → 보행 운동</li>
+            <li>활동지 기구도 그리기</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">3</span>
+          <span class="mission-step-title" data-i18n="p3.step3.title">조립 — 강아지 로봇 제작</span>
+          <span class="mission-step-time" data-i18n="time.50">⏱ 50분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>목재 바디에 모터와 크랭크 레그를 조립하여 2족 보행 로봇을 완성합니다.</p>
+          <ul>
+            <li>목재 강아지 바디 조립</li>
+            <li>DC 모터 장착</li>
+            <li>크랭크 레그 연결 (기구 메커니즘)</li>
+            <li>배터리 홀더 및 스위치 연결</li>
+            <li>색깔 케이블 정리 (두발 표현)</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-robot-parts.jpg" alt="도봇 구성품 배열" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">4</span>
+          <span class="mission-step-title" data-i18n="p3.step4.title">작동 + 탐구</span>
+          <span class="mission-step-time" data-i18n="time.20">⏱ 20분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>스위치 ON → 보행 확인</li>
+            <li>평평한 면 vs 약간 기울어진 면 보행 비교</li>
+            <li>보폭과 속도 관찰 기록</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-robot-hand.jpg" alt="도봇 손으로 들기" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--rose);">5</span>
+          <span class="mission-step-title" data-i18n="p3.step5.title">정리 + 발표</span>
+          <span class="mission-step-time" data-i18n="time.20">⏱ 20분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>기구학 개념 정리</li>
+            <li>내 강아지 로봇 소개</li>
+            <li>실제 로봇 공학에 쓰이는 보행 메커니즘 탐구</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DOCS DOWNLOAD ═══ -->
+    <section id="docs" class="docs-section fade-in">
+      <h2 data-i18n="prog.docs.title">📚 교육 자료 다운로드</h2>
+      <div class="docs-grid">
+        <div class="doc-card">
+          <div class="doc-card-icon">📄</div>
+          <div class="doc-card-info">
+            <div class="doc-card-title" data-i18n="prog.docs.overview">교육 개요서</div>
+            <div class="doc-card-desc">프로그램 목표 · 준비물 · 수업 흐름 요약</div>
+          </div>
+          <a href="../../assets/docs/guide-p3-robot.pdf" download class="doc-download-btn">
+            <span>⬇</span> PDF
+          </a>
+        </div>
+        <div class="doc-card">
+          <div class="doc-card-icon">📖</div>
+          <div class="doc-card-info">
+            <div class="doc-card-title" data-i18n="prog.docs.guide">교육 지도서</div>
+            <div class="doc-card-desc">교사·강사용 진행 가이드 (Notion 연결)</div>
+          </div>
+          <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
+            <span>🔗</span> Notion
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="media-section fade-in">
+      <h2 data-i18n="prog.demo.title">🎬 키트 작동 데모 영상</h2>
+      <div class="assembly-video">
+        <video controls preload="metadata" poster="../../assets/images/kits/kit-robot-white.png">
+          <source src="../../assets/media/kit-robot-assembly.mp4" type="video/mp4">
+          브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <div class="assembly-video-caption"><span data-i18n="p3.demo.caption">📹 도봇 보행 로봇 작동 데모</span></div>
+      <p class="demo-note" data-i18n="prog.demo.note">&#8251; 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.</p>
+      </div>
+      <div class="media-downloads">
+        <a href="../../assets/media/kit-robot-assembly.mp4" download class="media-download-btn">
+          <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══ TEACHING GALLERY ═══ -->
+    <section id="gallery" class="teaching-gallery-section fade-in">
+      <h2>📸 실제 교육 현장</h2>
+      <p class="gallery-desc">픽셀 이모티콘으로 재해석한 실제 키트 기반 교육 현장 장면입니다.</p>
+      <div class="px-teaching-grid">
+        <div class="px-teaching-item">
+          <img src="../../assets/images/pixel-teaching/teaching-robot-01.jpg" alt="로봇 교육 현장 01" loading="lazy">
+        </div>
+        <div class="px-teaching-item">
+          <img src="../../assets/images/pixel-teaching/teaching-robot-02.jpg" alt="로봇 교육 현장 02" loading="lazy">
+        </div>
+        <div class="px-teaching-item">
+          <img src="../../assets/images/pixel-teaching/teaching-robot-03.jpg" alt="로봇 교육 현장 03" loading="lazy">
+        </div>
+        <div class="px-teaching-item">
+          <img src="../../assets/images/pixel-teaching/teaching-robot-04.jpg" alt="로봇 교육 현장 04" loading="lazy">
+        </div>
+        <div class="px-teaching-item">
+          <img src="../../assets/images/pixel-teaching/teaching-robot-05.jpg" alt="로봇 교육 현장 05" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-ext" class="ai-extension fade-in">
+      <span class="extension-label" data-i18n="prog.ai.label">선택형 확장 활동</span>
+      <h3 data-i18n="p3.ai.title">🤖 Teachable Machine으로 보행 패턴 인식</h3>
+      <p>Google Teachable Machine으로 로봇의 보행 모션을 학습시키고, 걷는 상태와 멈춘 상태를 AI가 구별하는 확장 활동이 가능합니다.</p>
+      <a href="https://teachablemachine.withgoogle.com" target="_blank" class="ai-link">Teachable Machine →</a>
+    </section>
+
+    <section id="faq" class="faq-section fade-in">
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;"><span data-i18n="prog.faq.title">❓ 자주 묻는 질문</span></h2>
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="p3.faq1.q">로봇이 걷지 않고 한 자리에서 돌 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">두 발의 크랭크 위상이 맞지 않은 경우입니다. 크랭크 레그의 연결 각도를 90도 엇갈리게 조정해 보세요.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="p3.faq2.q">모터가 돌지 않을 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">배터리 방향과 스위치 연결을 확인하세요. 케이블이 모터 단자에 제대로 접촉되어 있는지도 확인합니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="p3.faq3.q">조립 시간이 부족할 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">사전에 바디 프레임을 미리 반조립해두면 수업 시간 내에 충분히 완성할 수 있습니다. 교사 가이드에 단계별 시간 배분이 안내되어 있습니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">모터 동작 시 안전 주의사항이 있나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          모터가 회전할 때 크랭크와 다리 부분에 손가락이 끼이지 않도록 주의하세요. 배터리 연결은 조립이 완전히 끝난 후 마지막에 진행합니다. 로봇이 작동 중일 때는 책상 끝에서 멀리 두세요.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">어떤 교육과정과 연계되나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          초등 과학 5~6학년 「운동과 에너지」·「기계와 도구」 영역과 연계됩니다. 원운동을 직선 보행으로 변환하는 크랭크 원리는 중학교 기술 교과의 기계 요소 단원과 직결됩니다.
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ═══ V3 LEARNING SECTIONS ═══ -->
+    <section id="parts-detective" class="student-section fade-in"></section>
+    <section id="safety-quest" class="student-section fade-in"></section>
+    <section id="build-guide" class="student-section fade-in"></section>
+    <section id="troubleshooting" class="student-section fade-in"></section>
+    <section id="science-lab" class="student-section fade-in"></section>
+    <section id="mission-cards" class="student-section fade-in"></section>
+    <section id="lab-notebook" class="student-section fade-in"></section>
+    <section id="certificate" class="student-section fade-in"></section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">⚔ DOROLAND V3-CODEX ⚔</div>
+      <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
+    </div>
+  </footer>
+  <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/kit-data.js"></script>
+  <script src="../../assets/js/learning.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/pixel.js"></script>
+  <script src="../../assets/js/detail.js"></script>
+</body>
+</html>
+
+
+

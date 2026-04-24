@@ -1,0 +1,489 @@
+{
+  "1-bluetooth-speaker": {
+    "source": "3-2. 블루투스 스피커_조립설명서.pptx",
+    "overviewSlide": 4,
+    "components": [
+      {
+        "id": "body-plates",
+        "name": "목재 몸체 판 세트",
+        "sourceLabel": "옆면 / 뒷면 / 앞면",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/body-plates.jpg"
+      },
+      {
+        "id": "speaker-supports",
+        "name": "스피커 지지대 4개",
+        "sourceLabel": "스피커 지지대 X 4개",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/speaker-supports.jpg"
+      },
+      {
+        "id": "speaker-rings",
+        "name": "스피커 고정대 2개",
+        "sourceLabel": "스피커 고정대 X 2개",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/speaker-rings.jpg"
+      },
+      {
+        "id": "speakers",
+        "name": "스피커 2개",
+        "sourceLabel": "스피커 X 2개",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/speakers.jpg"
+      },
+      {
+        "id": "switch",
+        "name": "스위치",
+        "sourceLabel": "스위치",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/switch.jpg"
+      },
+      {
+        "id": "battery-holder",
+        "name": "건전지 홀더",
+        "sourceLabel": "건전지 홀더",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/battery-holder.jpg"
+      },
+      {
+        "id": "batteries",
+        "name": "건전지 4개",
+        "sourceLabel": "건전지 4개",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/batteries.jpg"
+      },
+      {
+        "id": "bluetooth-module",
+        "name": "블루투스 모듈",
+        "sourceLabel": "블루투스 모듈",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/bluetooth-module.jpg"
+      },
+      {
+        "id": "switch-wire",
+        "name": "스위치 전선",
+        "sourceLabel": "스위치 전선 (빨강 검정)",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/switch-wire.jpg"
+      },
+      {
+        "id": "speaker-wire",
+        "name": "스피커 전선 2개",
+        "sourceLabel": "스피커 전선 X 2개 (노랑 파랑)",
+        "included": true,
+        "thumbnail": "assets/images/parts/1-bluetooth-speaker/speaker-wire.jpg"
+      }
+    ],
+    "removedCards": [
+      {
+        "name": "앰프 보드",
+        "reason": "overview slide의 분리 구성품으로 보이지 않고 블루투스 모듈 카드로 정리됨"
+      },
+      {
+        "name": "조립 나사와 드라이버",
+        "reason": "overview slide의 실제 상자 구성품 사진에 보이지 않음"
+      },
+      {
+        "name": "조립 설명서",
+        "reason": "실제 물리 부품이 아니라 학습 자료 성격"
+      }
+    ],
+    "needsHumanCheck": []
+  },
+  "2-mood-light": {
+    "source": "1-2. 스마트 무드등_조립설명서.pptx",
+    "overviewSlide": 4,
+    "components": [
+      {
+        "id": "cat-shade",
+        "name": "야옹이 등 갓",
+        "sourceLabel": "야옹이 등",
+        "included": true,
+        "thumbnail": "assets/images/parts/2-mood-light/cat-shade.jpg"
+      },
+      {
+        "id": "body-plates",
+        "name": "목재 몸체 판 세트",
+        "sourceLabel": "윗면 / 바닥면 / 긴 옆면 / 짧은 옆면",
+        "included": true,
+        "thumbnail": "assets/images/parts/2-mood-light/body-plates.jpg"
+      },
+      {
+        "id": "battery-holder",
+        "name": "건전지 홀더",
+        "sourceLabel": "건전지 홀더",
+        "included": true,
+        "thumbnail": "assets/images/parts/2-mood-light/battery-holder.jpg"
+      },
+      {
+        "id": "batteries",
+        "name": "AA 건전지",
+        "sourceLabel": "건전지",
+        "included": true,
+        "thumbnail": "assets/images/parts/2-mood-light/batteries.jpg"
+      },
+      {
+        "id": "breadboard",
+        "name": "브레드보드",
+        "sourceLabel": "브레드보드 (빵판)",
+        "included": true,
+        "thumbnail": "assets/images/parts/2-mood-light/breadboard.jpg"
+      },
+      {
+        "id": "electronics-set",
+        "name": "전자 부품 세트",
+        "sourceLabel": "다양한 전자 부품",
+        "included": true,
+        "thumbnail": "assets/images/parts/2-mood-light/electronics-set.jpg"
+      }
+    ],
+    "removedCards": [
+      {
+        "name": "조립 설명서",
+        "reason": "실제 물리 부품이 아니라 학습 자료 성격"
+      }
+    ],
+    "needsHumanCheck": []
+  },
+  "3-walking-robot": {
+    "source": "4-2. 워킹로봇_조립설명서.pptx",
+    "overviewSlide": 4,
+    "components": [
+      {
+        "id": "body-plates",
+        "name": "MDF 몸체 판 세트",
+        "sourceLabel": "MDF 전체 부품",
+        "included": true,
+        "thumbnail": "assets/images/parts/3-walking-robot/body-plates.jpg"
+      },
+      {
+        "id": "leg-parts",
+        "name": "다리 부품 세트",
+        "sourceLabel": "다리 3D 프린터 부품",
+        "included": true,
+        "thumbnail": "assets/images/parts/3-walking-robot/leg-parts.jpg"
+      },
+      {
+        "id": "motor-set",
+        "name": "모터 세트",
+        "sourceLabel": "모터",
+        "included": true,
+        "thumbnail": "assets/images/parts/3-walking-robot/motor-set.jpg"
+      },
+      {
+        "id": "power-set",
+        "name": "배터리 홀더와 건전지",
+        "sourceLabel": "건전지",
+        "included": true,
+        "thumbnail": "assets/images/parts/3-walking-robot/power-set.jpg"
+      },
+      {
+        "id": "jumper-set",
+        "name": "점퍼선 세트",
+        "sourceLabel": "점퍼선 M-M / 점퍼선 M-F / M 점퍼선",
+        "included": true,
+        "thumbnail": "assets/images/parts/3-walking-robot/jumper-set.jpg"
+      },
+      {
+        "id": "ir-sensor",
+        "name": "IR 센서",
+        "sourceLabel": "IR 센서",
+        "included": true,
+        "thumbnail": "assets/images/parts/3-walking-robot/ir-sensor.jpg"
+      },
+      {
+        "id": "switch",
+        "name": "스위치",
+        "sourceLabel": "스위치",
+        "included": true,
+        "thumbnail": "assets/images/parts/3-walking-robot/switch.jpg"
+      },
+      {
+        "id": "mini-breadboard",
+        "name": "미니 브레드보드",
+        "sourceLabel": "미니 브레드보드",
+        "included": true,
+        "thumbnail": "assets/images/parts/3-walking-robot/mini-breadboard.jpg"
+      },
+      {
+        "id": "l293d",
+        "name": "L293D 모터 드라이버",
+        "sourceLabel": "L293D",
+        "included": true,
+        "thumbnail": "assets/images/parts/3-walking-robot/l293d.jpg"
+      }
+    ],
+    "removedCards": [
+      {
+        "name": "센서 모듈",
+        "reason": "overview slide의 실제 라벨이 IR 센서로 표시됨"
+      },
+      {
+        "name": "제어 보드",
+        "reason": "overview slide 기준 실제 구성품은 L293D와 미니 브레드보드로 확인됨"
+      },
+      {
+        "name": "연결 케이블",
+        "reason": "overview slide 기준 점퍼선 세트로 구체화됨"
+      },
+      {
+        "name": "조립 설명서",
+        "reason": "실제 물리 부품이 아니라 학습 자료 성격"
+      }
+    ],
+    "needsHumanCheck": []
+  },
+  "4-ir-car": {
+    "source": "5-2. IR자동차_조립설명서.pptx",
+    "overviewSlide": 4,
+    "components": [
+      {
+        "id": "body-plates",
+        "name": "자동차 MDF 몸체 판",
+        "sourceLabel": "자동차 MDF",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/body-plates.jpg"
+      },
+      {
+        "id": "motor-set",
+        "name": "모터 세트",
+        "sourceLabel": "모터",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/motor-set.jpg"
+      },
+      {
+        "id": "batteries",
+        "name": "AA 건전지 3개",
+        "sourceLabel": "AA건전지 3개",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/batteries.jpg"
+      },
+      {
+        "id": "battery-holder",
+        "name": "AA 건전지 3구 홀더",
+        "sourceLabel": "AA건전지 3구 홀더",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/battery-holder.jpg"
+      },
+      {
+        "id": "jumper-set",
+        "name": "점퍼선 세트",
+        "sourceLabel": "M-F 10cm 점퍼선 4개 / M-M 10cm 점퍼선 4개 / M 20cm 점퍼선 2개",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/jumper-set.jpg"
+      },
+      {
+        "id": "wheels",
+        "name": "바퀴 4개",
+        "sourceLabel": "바퀴",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/wheels.jpg"
+      },
+      {
+        "id": "axle-set",
+        "name": "축 세트",
+        "sourceLabel": "작은 축 2개 / 긴 축",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/axle-set.jpg"
+      },
+      {
+        "id": "ir-sensor",
+        "name": "IR 센서",
+        "sourceLabel": "IR 센서",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/ir-sensor.jpg"
+      },
+      {
+        "id": "motor-driver",
+        "name": "모터 드라이버",
+        "sourceLabel": "모터 드라이버",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/motor-driver.jpg"
+      },
+      {
+        "id": "breadboard",
+        "name": "브레드보드",
+        "sourceLabel": "브레드 보드",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/breadboard.jpg"
+      },
+      {
+        "id": "jumper-cases",
+        "name": "점퍼선 케이스",
+        "sourceLabel": "점퍼선 케이스 (파랑, 하양)",
+        "included": true,
+        "thumbnail": "assets/images/parts/4-ir-car/jumper-cases.jpg"
+      }
+    ],
+    "removedCards": [
+      {
+        "name": "제어 보드",
+        "reason": "overview slide의 실제 라벨은 모터 드라이버로 표시됨"
+      },
+      {
+        "name": "연결 케이블",
+        "reason": "overview slide 기준 여러 종류의 점퍼선으로 구체화됨"
+      },
+      {
+        "name": "조립 설명서",
+        "reason": "실제 물리 부품이 아니라 학습 자료 성격"
+      }
+    ],
+    "needsHumanCheck": []
+  },
+  "5-arduino-game": {
+    "source": "2-2. 아두이노 게임기_조립설명서.pptx",
+    "overviewSlide": 5,
+    "components": [
+      {
+        "id": "arduino-board",
+        "name": "아두이노 보드",
+        "sourceLabel": "아두이노",
+        "included": true,
+        "thumbnail": "assets/images/parts/5-arduino-game/arduino-board.jpg"
+      },
+      {
+        "id": "lcd",
+        "name": "LCD 화면",
+        "sourceLabel": "LCD",
+        "included": true,
+        "thumbnail": "assets/images/parts/5-arduino-game/lcd.jpg"
+      },
+      {
+        "id": "switch-button-set",
+        "name": "스위치 버튼 세트",
+        "sourceLabel": "스위치 버튼",
+        "included": true,
+        "thumbnail": "assets/images/parts/5-arduino-game/switch-button-set.jpg"
+      },
+      {
+        "id": "battery-holder",
+        "name": "건전지 홀더",
+        "sourceLabel": "건전지 홀더",
+        "included": true,
+        "thumbnail": "assets/images/parts/5-arduino-game/battery-holder.jpg"
+      },
+      {
+        "id": "jumper-set",
+        "name": "점퍼선 세트",
+        "sourceLabel": "전선 (암-수) 20cm 2개 / 10cm 12개",
+        "included": true,
+        "thumbnail": "assets/images/parts/5-arduino-game/jumper-set.jpg"
+      },
+      {
+        "id": "body-plates",
+        "name": "게임기 MDF 몸체 판 세트",
+        "sourceLabel": "중간면 / 밑면 / 옆면 / 윗면 / 고정대 / 건전지 고정대",
+        "included": true,
+        "thumbnail": "assets/images/parts/5-arduino-game/body-plates.jpg"
+      }
+    ],
+    "removedCards": [
+      {
+        "name": "버튼 × 4",
+        "reason": "overview slide의 실제 구성품 라벨은 스위치 버튼 세트로 표시됨"
+      },
+      {
+        "name": "브레드보드",
+        "reason": "overview slide의 실제 상자 구성품 사진에 보이지 않음"
+      },
+      {
+        "name": "저항",
+        "reason": "overview slide의 실제 상자 구성품 사진에 보이지 않음"
+      },
+      {
+        "name": "USB 케이블",
+        "reason": "overview slide의 실제 상자 구성품 사진에 보이지 않음"
+      },
+      {
+        "name": "조립 설명서",
+        "reason": "실제 물리 부품이 아니라 학습 자료 성격"
+      }
+    ],
+    "needsHumanCheck": []
+  },
+  "6-ultrasonic-piano": {
+    "source": "6-2. 초음파피아노_조립설명서.pptx",
+    "overviewSlide": 4,
+    "components": [
+      {
+        "id": "base-panel",
+        "name": "아랫판",
+        "sourceLabel": "아래판",
+        "included": true,
+        "thumbnail": "assets/images/parts/6-ultrasonic-piano/base-panel.jpg"
+      },
+      {
+        "id": "arduino-wall-set",
+        "name": "아두이노 벽 세트",
+        "sourceLabel": "아두이노 벽",
+        "included": true,
+        "thumbnail": "assets/images/parts/6-ultrasonic-piano/arduino-wall-set.jpg"
+      },
+      {
+        "id": "arduino-board",
+        "name": "아두이노 보드",
+        "sourceLabel": "아두이노",
+        "included": true,
+        "thumbnail": "assets/images/parts/6-ultrasonic-piano/arduino-board.jpg"
+      },
+      {
+        "id": "jumper-set",
+        "name": "점퍼선 세트",
+        "sourceLabel": "점퍼선",
+        "included": true,
+        "thumbnail": "assets/images/parts/6-ultrasonic-piano/jumper-set.jpg"
+      },
+      {
+        "id": "buzzer",
+        "name": "부저",
+        "sourceLabel": "부저",
+        "included": true,
+        "thumbnail": "assets/images/parts/6-ultrasonic-piano/buzzer.jpg"
+      },
+      {
+        "id": "ultrasonic-sensor",
+        "name": "초음파 센서",
+        "sourceLabel": "초음파 센서",
+        "included": true,
+        "thumbnail": "assets/images/parts/6-ultrasonic-piano/ultrasonic-sensor.jpg"
+      },
+      {
+        "id": "breadboard",
+        "name": "브레드보드",
+        "sourceLabel": "브레드 보드",
+        "included": true,
+        "thumbnail": "assets/images/parts/6-ultrasonic-piano/breadboard.jpg"
+      },
+      {
+        "id": "keyboard-panel",
+        "name": "피아노 건반",
+        "sourceLabel": "피아노 건반",
+        "included": true,
+        "thumbnail": "assets/images/parts/6-ultrasonic-piano/keyboard-panel.jpg"
+      },
+      {
+        "id": "sensor-guard",
+        "name": "초음파 가림막",
+        "sourceLabel": "초음파 가림막",
+        "included": true,
+        "thumbnail": "assets/images/parts/6-ultrasonic-piano/sensor-guard.jpg"
+      }
+    ],
+    "removedCards": [
+      {
+        "name": "저항",
+        "reason": "overview slide의 실제 상자 구성품 사진에 보이지 않음"
+      },
+      {
+        "name": "USB 케이블",
+        "reason": "overview slide의 실제 상자 구성품 사진에 보이지 않음"
+      },
+      {
+        "name": "조립 설명서",
+        "reason": "실제 물리 부품이 아니라 학습 자료 성격"
+      }
+    ],
+    "needsHumanCheck": []
+  }
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8" width="32" height="32">
+  <!-- 8x8 pixel art clock face -->
+
+  <!-- Outer ring (teal) - top -->
+  <rect x="2" y="0" width="4" height="1" fill="#14B8A6"/>
+  <!-- Left side -->
+  <rect x="0" y="2" width="1" height="4" fill="#14B8A6"/>
+  <!-- Right side -->
+  <rect x="7" y="2" width="1" height="4" fill="#14B8A6"/>
+  <!-- Corners -->
+  <rect x="1" y="1" width="1" height="1" fill="#14B8A6"/>
+  <rect x="6" y="1" width="1" height="1" fill="#14B8A6"/>
+  <rect x="1" y="6" width="1" height="1" fill="#14B8A6"/>
+  <rect x="6" y="6" width="1" height="1" fill="#14B8A6"/>
+  <!-- Bottom -->
+  <rect x="2" y="7" width="4" height="1" fill="#14B8A6"/>
+
+  <!-- Clock face (white) -->
+  <rect x="1" y="2" width="6" height="4" fill="#f0f0f0"/>
+  <rect x="2" y="1" width="4" height="6" fill="#f0f0f0"/>
+
+  <!-- 12 o'clock tick -->
+  <rect x="3" y="1" width="2" height="1" fill="#0D9488"/>
+  <!-- 6 o'clock tick -->
+  <rect x="3" y="6" width="2" height="1" fill="#0D9488"/>
+  <!-- 3 o'clock tick -->
+  <rect x="6" y="3" width="1" height="2" fill="#0D9488"/>
+  <!-- 9 o'clock tick -->
+  <rect x="1" y="3" width="1" height="2" fill="#0D9488"/>
+
+  <!-- Clock hands (dark) -->
+  <!-- Hour hand (pointing to ~10) -->
+  <rect x="3" y="2" width="1" height="2" fill="#1a1a1a"/>
+  <!-- Minute hand (pointing to ~12) -->
+  <rect x="3" y="2" width="2" height="1" fill="#1a1a1a"/>
+
+  <!-- Center dot -->
+  <rect x="3" y="3" width="2" height="2" fill="#14B8A6"/>
+  <rect x="3" y="4" width="1" height="1" fill="#0D9488"/>
+
+  <!-- Bell top (teal) -->
+  <rect x="3" y="0" width="2" height="1" fill="#0D9488"/>
+
+</svg>

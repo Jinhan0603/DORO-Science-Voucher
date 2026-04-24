@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>DORO 픽셀 아이콘 — Claude 시안 v7</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #0f172a; font-family: 'Courier New', monospace; padding: 28px; min-height: 100vh; }
+h1 { color: #fbbf24; font-size: 20px; margin-bottom: 4px; }
+.meta { color: #64748b; font-size: 12px; margin-bottom: 32px; }
+h2 { color: #94a3b8; font-size: 11px; text-transform: uppercase; letter-spacing: 3px; margin: 28px 0 14px; border-left: 3px solid #334155; padding-left: 10px; }
+.row { display: flex; flex-wrap: wrap; gap: 14px; }
+.card { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 14px 12px 10px; text-align: center; min-width: 120px; }
+.card canvas { image-rendering: pixelated; image-rendering: crisp-edges; border: 1px solid #475569; display: block; margin: 0 auto 8px; }
+.key  { color: #fbbf24; font-size: 11px; font-weight: bold; margin-bottom: 2px; font-family: monospace; }
+.lbl  { color: #94a3b8; font-size: 10px; margin-bottom: 5px; }
+.badge { display: inline-block; font-size: 9px; padding: 1px 7px; border-radius: 3px; }
+.vhigh { background: #7f1d1d; color: #fca5a5; }
+.high  { background: #78350f; color: #fde68a; }
+.med   { background: #1e3a5f; color: #93c5fd; }
+.compare { display: flex; gap: 10px; align-items: center; margin: 0 auto 8px; justify-content: center; }
+.compare canvas { image-rendering: pixelated; }
+.cmp-lbl { font-size: 9px; color: #64748b; }
+</style>
+</head>
+<body>
+<h1>DORO 픽셀 아이콘 — Claude 시안</h1>
+<p class="meta">Minecraft 2D style · 16 × 16 pixel · 10× 확대 · 현재 아이콘과 비교</p>
+
+<h2>매우 높음 우선순위</h2>
+<div class="row" id="vhigh"></div>
+
+<h2>높음 우선순위</h2>
+<div class="row" id="high"></div>
+
+<h2>키트 / 정보형</h2>
+<div class="row" id="info"></div>
+
+<script>
+/* ── 팔레트 (기존 색상 체계 유지) ── */
+const P = {
+  K:'#0b1528', W:'#f8fafc', Y:'#fbbf24', y:'#fde68a',
+  C:'#22d3ee', c:'#a5f3fc', G:'#22c55e', g:'#86efac',
+  N:'#6b3a1f', n:'#a0522d', H:'#475569', h:'#94a3b8',
+  L:'#cbd5e1', T:'#e8b89a', t:'#f5d5c0', B:'#3b82f6',
+  b:'#93c5fd', D:'#7c4f2a', R:'#ef4444', r:'#fca5a5',
+  O:'#f97316', M:'#fb7185', E:'#fef3c7', A:'#34d399',
+  _: null,
+};
+
+/* fill helper */
+function f(ctx, s, col, x, y, w, h) {
+  if (!col || col === '_') return;
+  ctx.fillStyle = col;
+  ctx.fillRect(x*s, y*s, w*s, h*s);
+}
+
+/* pixel-array renderer */
+function px(ctx, s, rows) {
+  rows.forEach((row, ry) => {
+    [...row].forEach((ch, cx) => {
+      if (ch !== '_' && P[ch]) { ctx.fillStyle = P[ch]; ctx.fillRect(cx*s, ry*s, s, s); }
+    });
+  });
+}
+
+/* ── 아이콘 정의 ── */
+const ICONS = [
+
+  /* ═══════════════════════════════════════════
+     매우 높음 우선순위
+  ═══════════════════════════════════════════ */
+
+  { key:'build', lbl:'한 단계씩 만들기', g:'vhigh',
+    draw(ctx,s){
+      // 망치 head (front-view, horizontal)
+      f(ctx,s,P.K, 0,1, 10,5);
+      f(ctx,s,P.H, 1,2, 8,3);
+      f(ctx,s,P.L, 1,2, 5,1);
+      f(ctx,s,P.h, 6,2, 2,1);
+      f(ctx,s,P.h, 1,3, 1,2);
+      // handle (vertical)
+      f(ctx,s,P.K, 4,6, 4,9);
+      f(ctx,s,P.n, 5,6, 2,9);
+      f(ctx,s,P.N, 5,6, 1,4);
+    }
+  },
+
+  { key:'science', lbl:'과학 실험', g:'vhigh',
+    draw(ctx,s){
+      // stopper (cork)
+      f(ctx,s,P.K, 5,1, 6,2);
+      f(ctx,s,P.D, 6,1, 4,1);
+      // neck
+      f(ctx,s,P.K, 6,3, 4,4);
+      f(ctx,s,P.W, 7,3, 2,4);
+      // shoulders
+      f(ctx,s,P.K, 5,7, 6,1);
+      f(ctx,s,P.K, 3,8, 10,1);
+      // flask body
+      f(ctx,s,P.K, 2,9, 12,6);
+      f(ctx,s,P.C, 3,10, 10,4);
+      f(ctx,s,P.c, 3,10, 10,1);
+      f(ctx,s,P.W, 3,11,  3,2);
+      // bubbles
+      f(ctx,s,P.W, 11,12, 1,1);
+      f(ctx,s,P.W,  9,11, 1,1);
+    }
+  },
+
+  { key:'arrow-next', lbl:'다음 →', g:'vhigh',
+    draw(ctx,s){ px(ctx,s,[
+      '________________',
+      '________________',
+      '_________K______',
+      '________KYK_____',
+      '_______KYyYK____',
+      'KKKKKKKKYYYYK___',
+      'KyyyyyyyYYYYYK__',
+      'KyyyyyyyyYYYYYK_',
+      'KyyyyyyyyYYYYYK_',
+      'KyyyyyyyYYYYYK__',
+      'KKKKKKKKYYYYK___',
+      '_______KYyYK____',
+      '________KYK_____',
+      '_________K______',
+      '________________',
+      '________________',
+    ]); }
+  },
+
+  { key:'arrow-back', lbl:'← 이전', g:'vhigh',
+    draw(ctx,s){ px(ctx,s,[
+      '________________',
+      '________________',
+      '______K_________',
+      '_____KYK________',
+      '____KYyYK_______',
+      '___KYYYYKKKKKKKK',
+      '__KYYYYYyyyyyyyK',
+      '_KYYYYYyyyyyyyyK',
+      '_KYYYYYyyyyyyyyK',
+      '__KYYYYYyyyyyyyK',
+      '___KYYYYKKKKKKKK',
+      '____KYyYK_______',
+      '_____KYK________',
+      '______K_________',
+      '________________',
+      '________________',
+    ]); }
+  },
+
+  { key:'arrow-up', lbl:'↑ 위로', g:'vhigh',
+    draw(ctx,s){ px(ctx,s,[
+      '________________',
+      '_______K________',
+      '______KYK_______',
+      '_____KYyYK______',
+      '____KYyyYK______',
+      '___KYyyyYK______',
+      '__KYyyyyYK______',
+      '_KYyyyyyYK______',
+      'KKKYYYYYYKKKKKK_',
+      '______KyyK______',
+      '______KyyK______',
+      '______KyyK______',
+      '______KyyK______',
+      '______KyyK______',
+      '______KyyK______',
+      '______KKKK______',
+    ]); }
+  },
+
+  { key:'level', lbl:'난이도', g:'vhigh',
+    draw(ctx,s){
+      // bar 1 (short)
+      f(ctx,s,P.K, 1,10, 4,5);
+      f(ctx,s,P.G, 2,11, 2,3);
+      f(ctx,s,P.g, 2,11, 2,1);
+      // bar 2 (medium)
+      f(ctx,s,P.K, 6,6, 4,9);
+      f(ctx,s,P.G, 7, 7, 2,7);
+      f(ctx,s,P.g, 7, 7, 2,2);
+      // bar 3 (tall)
+      f(ctx,s,P.K, 11,2, 4,13);
+      f(ctx,s,P.G, 12,3, 2,11);
+      f(ctx,s,P.g, 12,3, 2,3);
+    }
+  },
+
+  { key:'age', lbl:'대상 / 학년', g:'vhigh',
+    draw(ctx,s){
+      // head
+      f(ctx,s,P.K, 5,1, 6,5);
+      f(ctx,s,P.H, 5,1, 6,1);      // hair
+      f(ctx,s,P.T, 6,2, 4,3);
+      f(ctx,s,P.t, 6,2, 2,1);
+      f(ctx,s,P.K, 7,4, 1,1);      // left eye
+      f(ctx,s,P.K, 9,4, 1,1);      // right eye
+      // body/shirt
+      f(ctx,s,P.K, 4,6, 8,5);
+      f(ctx,s,P.B, 5,7, 6,3);
+      f(ctx,s,P.b, 5,7, 3,1);
+      // arms
+      f(ctx,s,P.K, 2,7, 2,4);  f(ctx,s,P.T, 3,8, 1,3);
+      f(ctx,s,P.K,12,7, 2,4);  f(ctx,s,P.T,13,8, 1,3);
+      // legs
+      f(ctx,s,P.K, 5,11, 3,4);  f(ctx,s,P.B, 6,12, 1,3);
+      f(ctx,s,P.K, 8,11, 3,4);  f(ctx,s,P.B, 9,12, 1,3);
+    }
+  },
+
+  /* ═══════════════════════════════════════════
+     높음 우선순위
+  ═══════════════════════════════════════════ */
+
+  { key:'home', lbl:'DORO 홈', g:'high',
+    draw(ctx,s){
+      // roof (stepped triangle)
+      [[8,1,1],[7,2,3],[6,3,5],[5,4,7],[4,5,9],[3,6,11]].forEach(([x,row,w]) => {
+        f(ctx,s,P.K, x-1, row, w+2, 1);
+        f(ctx,s,P.Y, x,   row, w,   1);
+        f(ctx,s,P.y, x,   row, 1,   1);   // left-slope highlight
+      });
+      // walls
+      f(ctx,s,P.K, 2,7, 12,8);
+      f(ctx,s,P.n, 3,8, 10,6);
+      // left window
+      f(ctx,s,P.K, 3,9, 3,3);  f(ctx,s,P.y, 4,10, 2,2);
+      // right window
+      f(ctx,s,P.K,10,9, 3,3);  f(ctx,s,P.y,11,10, 2,2);
+      // door
+      f(ctx,s,P.K, 6,9, 4,6);
+      f(ctx,s,P.B, 7,10, 2,4);
+      f(ctx,s,P.Y, 7,12, 1,1);  // door knob
+    }
+  },
+
+  { key:'quest', lbl:'퀘스트', g:'high',
+    draw(ctx,s){ px(ctx,s,[
+      '________________',
+      '____KKKKK_______',
+      '___KYyyyyYK_____',
+      '___KYyyyyYK_____',
+      '___KKKKKKYК_____',
+      '________KyK_____',
+      '_______KKyK_____',
+      '_______KyKK_____',
+      '_______KKK______',
+      '________________',
+      '_______KKK______',
+      '_______KyK______',
+      '_______KyK______',
+      '_______KKK______',
+      '________________',
+      '________________',
+    ]); }
+  },
+
+  { key:'help', lbl:'왜 안되지?', g:'high',
+    draw(ctx,s){
+      // wrench C-head
+      f(ctx,s,P.K, 1,1, 5,1);
+      f(ctx,s,P.K, 1,5, 5,1);
+      f(ctx,s,P.K, 1,1, 2,5);
+      f(ctx,s,P.K, 4,2, 2,3);
+      f(ctx,s,P.H, 2,2, 2,3);
+      f(ctx,s,P.L, 2,2, 1,1);
+      // handle (diagonal NW→SE)
+      for(let i=0;i<6;i++){
+        f(ctx,s,P.K, 5+i, 5+i, 2,2);
+        f(ctx,s,P.H, 5+i, 5+i, 1,1);
+        f(ctx,s,P.L, 6+i, 5+i, 1,1);
+      }
+    }
+  },
+
+  { key:'record', lbl:'기록 / 인증', g:'high',
+    draw(ctx,s){
+      // notebook body
+      f(ctx,s,P.K, 2,1, 12,14);
+      // spine (left strip)
+      f(ctx,s,P.Y, 3,2, 2,12);
+      f(ctx,s,P.y, 3,2, 1,12);
+      // page area
+      f(ctx,s,P.W, 6,2, 7,12);
+      // lines on page
+      [4,6,8,10].forEach(row => {
+        f(ctx,s,P.b, 7,row, 5,1);
+      });
+      // pencil icon
+      f(ctx,s,P.Y, 7,3, 4,1);
+    }
+  },
+
+  /* ═══════════════════════════════════════════
+     키트 / 정보형
+  ═══════════════════════════════════════════ */
+
+  { key:'time', lbl:'소요시간', g:'med',
+    draw(ctx,s){
+      // clock face
+      f(ctx,s,P.K, 3,1, 10,12);
+      f(ctx,s,P.h, 4,2, 8,10);
+      f(ctx,s,P.L, 4,2, 4,2);
+      // clock hands
+      f(ctx,s,P.K, 8,3, 1,5);   // hour (12→6)
+      f(ctx,s,P.K, 8,7, 4,1);   // minute (12→3)
+      // notch at 12
+      f(ctx,s,P.K, 8,2, 1,1);
+      // stem
+      f(ctx,s,P.K, 6,13, 4,1);
+      f(ctx,s,P.K, 5,14, 6,1);
+    }
+  },
+
+  { key:'safety', lbl:'안전 약속', g:'med',
+    draw(ctx,s){
+      // shield outline
+      f(ctx,s,P.K, 3,1, 10,1);
+      f(ctx,s,P.K, 2,2, 12,1);
+      f(ctx,s,P.K, 1,3, 14,7);
+      f(ctx,s,P.K, 2,10, 12,2);
+      f(ctx,s,P.K, 4,12, 8,1);
+      f(ctx,s,P.K, 6,13, 4,1);
+      f(ctx,s,P.K, 8,14, 1,1);
+      // fill
+      f(ctx,s,P.B, 2,3, 12,7);
+      f(ctx,s,P.B, 3,10, 10,2);
+      f(ctx,s,P.B, 5,12, 6,1);
+      f(ctx,s,P.B, 7,13, 2,1);
+      f(ctx,s,P.b, 2,3, 6,3);
+      // checkmark
+      f(ctx,s,P.W, 5,8, 2,2);
+      f(ctx,s,P.W, 7,9, 2,1);
+      f(ctx,s,P.W, 7,6, 2,3);
+    }
+  },
+
+  { key:'parts', lbl:'키트 구성품', g:'med',
+    draw(ctx,s){
+      // box body
+      f(ctx,s,P.K, 1,4, 14,11);
+      f(ctx,s,P.n, 2,5, 12,9);
+      f(ctx,s,P.T, 2,5, 6,4);
+      // box lid
+      f(ctx,s,P.K, 1,1, 14,4);
+      f(ctx,s,P.Y, 2,2, 12,2);
+      f(ctx,s,P.y, 2,2, 6,1);
+      // lid ribbon
+      f(ctx,s,P.K, 7,1, 2,14);
+      f(ctx,s,P.R, 8,2, 1,12);
+    }
+  },
+
+  { key:'check', lbl:'완료 / 확인', g:'med',
+    draw(ctx,s){
+      // circle
+      f(ctx,s,P.K, 2,1, 12,14);
+      f(ctx,s,P.G, 3,2, 10,12);
+      f(ctx,s,P.g, 3,2, 5,4);
+      // checkmark
+      f(ctx,s,P.K, 3,9, 3,3);
+      f(ctx,s,P.K, 6,11,7,3);
+      f(ctx,s,P.W, 4,10, 2,1);
+      f(ctx,s,P.W, 4,11, 2,1);
+      f(ctx,s,P.W, 6,11, 1,1);
+      f(ctx,s,P.W, 7,10, 1,1);
+      f(ctx,s,P.W, 8, 9, 1,1);
+      f(ctx,s,P.W, 9, 8, 1,1);
+      f(ctx,s,P.W,10, 7, 1,1);
+      f(ctx,s,P.W,11, 6, 1,1);
+    }
+  },
+
+  { key:'video', lbl:'영상', g:'med',
+    draw(ctx,s){
+      // screen
+      f(ctx,s,P.K, 0,2, 11,12);
+      f(ctx,s,P.K, 12,4, 4,2);
+      f(ctx,s,P.K, 12,10,4,2);
+      f(ctx,s,P.H, 1,3, 9,10);
+      f(ctx,s,P.h, 1,3, 4,4);
+      // play triangle
+      f(ctx,s,P.Y, 3,5, 1,6);
+      f(ctx,s,P.Y, 4,6, 1,4);
+      f(ctx,s,P.Y, 5,7, 1,2);
+      f(ctx,s,P.Y, 6,8, 1,1);
+      // camera notches
+      f(ctx,s,P.Y, 13,5, 2,2);
+      f(ctx,s,P.Y, 13,11,2,2);
+    }
+  },
+
+  { key:'warning', lbl:'주의', g:'med',
+    draw(ctx,s){
+      // triangle outline
+      f(ctx,s,P.K, 7,0, 2,1);
+      f(ctx,s,P.K, 6,1, 4,1);
+      f(ctx,s,P.K, 5,2, 6,1);
+      f(ctx,s,P.K, 4,3, 8,1);
+      f(ctx,s,P.K, 3,4, 10,1);
+      f(ctx,s,P.K, 2,5, 12,1);
+      f(ctx,s,P.K, 1,6, 14,1);
+      f(ctx,s,P.K, 0,7, 16,1);
+      f(ctx,s,P.K, 0,8, 16,3);
+      // fill
+      f(ctx,s,P.Y, 7,1, 2,1);
+      f(ctx,s,P.Y, 6,2, 4,1);
+      f(ctx,s,P.Y, 5,3, 6,1);
+      f(ctx,s,P.Y, 4,4, 8,1);
+      f(ctx,s,P.Y, 3,5, 10,1);
+      f(ctx,s,P.Y, 2,6, 12,1);
+      f(ctx,s,P.Y, 1,7, 14,1);
+      f(ctx,s,P.Y, 1,8, 14,3);
+      // exclamation
+      f(ctx,s,P.K, 7,3, 2,4);
+      f(ctx,s,P.K, 7,9, 2,2);
+    }
+  },
+];
+
+/* ── 렌더링 ── */
+const SCALE = 10;
+
+function makeCard(icon) {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  // canvas (new design)
+  const cvs = document.createElement('canvas');
+  cvs.width  = 16 * SCALE;
+  cvs.height = 16 * SCALE;
+  cvs.title  = icon.key;
+  const ctx  = cvs.getContext('2d');
+
+  // checkerboard bg
+  for (let r = 0; r < 16; r++) for (let c = 0; c < 16; c++) {
+    ctx.fillStyle = (r + c) % 2 === 0 ? '#1e293b' : '#162032';
+    ctx.fillRect(c * SCALE, r * SCALE, SCALE, SCALE);
+  }
+  icon.draw(ctx, SCALE);
+
+  // 비교 행: 신규(Claude) | 현재
+  const cmpRow = document.createElement('div');
+  cmpRow.style.cssText = 'display:flex;gap:8px;justify-content:center;margin-bottom:8px;';
+
+  const colNew = document.createElement('div');
+  colNew.style.textAlign = 'center';
+  const lblNew = document.createElement('div');
+  lblNew.textContent = '신규'; lblNew.className = 'cmp-lbl';
+  colNew.appendChild(cvs);
+  colNew.appendChild(lblNew);
+
+  const colOld = document.createElement('div');
+  colOld.style.textAlign = 'center';
+  const imgOld = document.createElement('img');
+  imgOld.src = `../assets/pixel-icons/individual/${icon.key}.svg`;
+  imgOld.width = 16 * SCALE; imgOld.height = 16 * SCALE;
+  imgOld.style.cssText = 'image-rendering:pixelated;border:1px solid #475569;display:block;';
+  imgOld.onerror = () => colOld.remove();
+  const lblOld = document.createElement('div');
+  lblOld.textContent = '현재'; lblOld.className = 'cmp-lbl';
+  colOld.appendChild(imgOld);
+  colOld.appendChild(lblOld);
+
+  cmpRow.appendChild(colNew);
+  cmpRow.appendChild(colOld);
+  card.appendChild(cmpRow);
+
+  const keyEl = document.createElement('div'); keyEl.className = 'key'; keyEl.textContent = icon.key;
+  const lblEl = document.createElement('div'); lblEl.className = 'lbl'; lblEl.textContent = icon.lbl;
+  const badgeEl = document.createElement('span'); badgeEl.className = `badge ${icon.g}`;
+  badgeEl.textContent = {vhigh:'교체 매우 높음', high:'교체 높음', med:'교체 중간'}[icon.g];
+  card.appendChild(keyEl); card.appendChild(lblEl); card.appendChild(badgeEl);
+
+  return card;
+}
+
+const containers = { vhigh: document.getElementById('vhigh'), high: document.getElementById('high'), info: document.getElementById('info') };
+const groupMap   = { vhigh:'vhigh', high:'high', med:'info' };
+
+ICONS.forEach(icon => {
+  const target = containers[groupMap[icon.g]];
+  if (target) target.appendChild(makeCard(icon));
+});
+</script>
+</body>
+</html>

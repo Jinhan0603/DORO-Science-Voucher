@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐱 도도무드 — DORO 센서 탐구 키트 | DOROLAND V3-CODEX</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+  <div class="bg-fantasy"></div><div class="bg-overlay"></div>
+  <div class="bg-glow-teal"></div><div class="bg-glow-purple"></div>
+  <div class="bg-scanlines"></div>
+  <div class="progress-bar" id="progress"></div>
+  <button class="lang-toggle" id="lang-toggle" onclick="toggleLanguage()" title="Switch to English">EN</button>
+  <nav class="nav" id="navbar">
+    <a href="../../index.html" class="nav-brand" style="gap:0.5rem;">
+      <span style="font-size:1rem;">←</span><span class="nav-brand-text" style="font-size:0.55rem;" data-i18n="prog.nav.back">프로그램 목록</span>
+    </a>
+    <a href="../../index.html" class="nav-brand">
+      <span class="nav-brand-text">DORO<span>LAND</span></span><span class="nav-version">V3</span>
+    </a>
+  </nav>
+  <div class="toc-sidebar">
+    <a href="#photos" class="toc-item active"><span class="toc-dot"></span> <span data-i18n="prog.toc.photos">키트 사진</span></a>
+    <a href="#checklist" class="toc-item"><span class="toc-dot"></span> 준비물</a>
+    <a href="#learning-hub" class="toc-item"><span class="toc-dot"></span> 학생 학습 모드</a>
+    <a href="#missions" class="toc-item"><span class="toc-dot"></span> 교육 과정</a>
+    <a href="#docs" class="toc-item"><span class="toc-dot"></span> 교육 자료</a>
+    <a href="#media" class="toc-item"><span class="toc-dot"></span> 데모 영상</a>
+    <a href="#ai-ext" class="toc-item"><span class="toc-dot"></span> AI 확장</a>
+    <a href="#faq" class="toc-item"><span class="toc-dot"></span> FAQ</a>
+  </div>
+
+  <section class="detail-hero">
+    <span class="chapter-badge" data-i18n="p2.kit" style="background:var(--purple);color:#fff;">🐱 DORO 센서 탐구 키트</span>
+    <h1 data-i18n="p2.title">💡 도도무드 — 스마트 무드등</h1>
+    <p class="hero-desc" data-i18n="p2.desc">
+      고양이 캐릭터 목재 베이스 + 실리콘 갓으로 만들어진 스마트 무드등을 제작하며
+      조도센서와 LED 입력-출력 제어를 체험합니다.
+    </p>
+    <div class="science-badge" data-i18n="p2.science">🔬 핵심 과학 개념: 조도센서 · LED 회로 · 입력-출력 · 전기 에너지 변환</div>
+  </section>
+
+  <div class="info-bar">
+    <div class="info-item"><span class="info-label" data-i18n="info.time.label">⏱ 소요시간</span><span class="info-value" data-i18n="p2.info.time">90분</span></div>
+    <div class="info-item"><span class="info-label" data-i18n="info.age.label">👤 대상</span><span class="info-value" data-i18n="p2.info.age">초등 3~6학년</span></div>
+    <div class="info-item"><span class="info-label" data-i18n="info.level.label">⭐ 난이도</span><span class="info-value" data-i18n="p2.info.level">★★☆</span></div>
+    <div class="info-item"><span class="info-label" data-i18n="p2.info.ai.label">🎨 AI 확장</span><span class="info-value" data-i18n="p2.info.ai">없음 (기본)</span></div>
+    <div class="info-item"><span class="info-label" data-i18n="info.type.label">🏠 학습형태</span><span class="info-value" data-i18n="p2.info.type">홈러닝 키트</span></div>
+    <div class="info-item"><span class="info-label" data-i18n="p2.info.char.label">🐱 캐릭터</span><span class="info-value" data-i18n="p2.info.char">고양이</span></div>
+  </div>
+
+  <div class="detail-content">
+
+    <section id="photos" style="margin-bottom:2.5rem;">
+      <h2 data-i18n="prog.photos" style="font-family:var(--font-display);font-size:1.1rem;font-weight:800;margin-bottom:1rem;">📸 키트 사진</h2>
+      <div class="detail-kit-photos">
+        <div class="detail-kit-hero">
+          <img src="../../assets/images/kits/kit-moodlight-hero.jpg" alt="도도무드 완성품 — 고양이 무드등">
+        </div>
+        <div class="detail-kit-thumb-row">
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-moodlight-hand.jpg" alt="도도무드 손으로 들기">
+          </div>
+          <div class="detail-kit-thumb">
+            <img src="../../assets/images/kits/kit-moodlight-parts.jpg" alt="도도무드 구성품 전체">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist" class="checklist-section fade-in">
+      <h2 class="checklist-title" data-i18n="prog.checklist.title">🔧 준비물 체크리스트</h2>
+      <p class="checklist-desc">키트 구성품을 확인하고 체크해주세요. <span id="checklist-progress"></span></p>
+      <div class="checklist-item"><input type="checkbox"><span>🐱 무드등 베이스 (고양이 디자인 목재 프레임)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🐱 실리콘 고양이 갓 (LED 확산용)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>💡 LED 소자 × 여러개</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔭 조도센서 (CDS 셀)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔋 배터리 홀더 + AA 배터리 × 2</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔌 브레드보드 (미니)</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>🔗 점퍼 케이블 세트</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📄 학생용 활동지</span></div>
+      <div class="checklist-item"><input type="checkbox"><span>📖 조립 설명서</span></div>
+    </section>
+
+    <section id="missions" class="mission-section fade-in">
+      <h2 data-i18n="prog.missions">📖 STEP-BY-STEP 교육 과정</h2>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--purple);">1</span>
+          <span class="mission-step-title" data-i18n="p2.step1.title">도입 — 빛과 센서의 세계</span>
+          <span class="mission-step-time" data-i18n="time.10">⏱ 10분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>주변이 어두워지면 자동으로 켜지는 가로등처럼, 조도센서가 어떻게 작동하는지 소개합니다.</p>
+          <ul>
+            <li>빛의 밝기를 측정하는 센서 소개</li>
+            <li>완성된 고양이 무드등 시연</li>
+            <li>손으로 가리면 LED가 켜지는 원리 시연</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-moodlight-hero.jpg" alt="고양이 무드등 완성품" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--purple);">2</span>
+          <span class="mission-step-title" data-i18n="p2.step2.title">과학 개념 — 회로와 센서</span>
+          <span class="mission-step-time" data-i18n="time.10">⏱ 10분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>전기 회로의 기본: 전원 → 센서 → LED → 다시 전원</li>
+            <li>조도센서: 빛이 줄면 저항이 올라가는 원리</li>
+            <li>LED: 전기 에너지를 빛 에너지로 변환</li>
+            <li>활동지 회로도 그리기</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--purple);">3</span>
+          <span class="mission-step-title" data-i18n="p2.step3.title">조립 — 고양이 무드등 제작</span>
+          <span class="mission-step-time" data-i18n="time.35">⏱ 35분</span>
+        </div>
+        <div class="mission-step-body">
+          <p>목재 베이스에 회로를 조립하고 고양이 실리콘 갓을 씌웁니다.</p>
+          <ul>
+            <li>브레드보드에 LED와 조도센서 꽂기</li>
+            <li>점퍼 케이블로 배터리 홀더 연결</li>
+            <li>목재 베이스 조립</li>
+            <li>고양이 실리콘 갓 씌우기</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-moodlight-parts.jpg" alt="무드등 구성품 배열" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--purple);">4</span>
+          <span class="mission-step-title" data-i18n="p2.step4.title">작동 확인 + 탐구</span>
+          <span class="mission-step-time" data-i18n="time.15">⏱ 15분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>손으로 조도센서 가리기 → LED 켜짐 확인</li>
+            <li>다양한 밝기 환경에서 반응 관찰</li>
+            <li>활동지 결과 기록</li>
+          </ul>
+          <div class="mission-step-image">
+            <img src="../../assets/images/kits/kit-moodlight-hand.jpg" alt="완성된 무드등" loading="lazy">
+          </div>
+        </div>
+      </div>
+      <div class="mission-step">
+        <div class="mission-step-header">
+          <span class="mission-step-number" style="background:var(--purple);">5</span>
+          <span class="mission-step-title" data-i18n="p2.step5.title">정리 + 발표</span>
+          <span class="mission-step-time" data-i18n="time.20">⏱ 20분</span>
+        </div>
+        <div class="mission-step-body">
+          <ul>
+            <li>배운 과학 개념 정리</li>
+            <li>내 무드등 소개하기</li>
+            <li>실생활의 자동 조명 사례 탐구</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DOCS DOWNLOAD ═══ -->
+    <section id="docs" class="docs-section fade-in">
+      <h2 data-i18n="prog.docs.title">📚 교육 자료 다운로드</h2>
+      <div class="docs-grid">
+        <div class="doc-card">
+          <div class="doc-card-icon">📄</div>
+          <div class="doc-card-info">
+            <div class="doc-card-title" data-i18n="prog.docs.overview">교육 개요서</div>
+            <div class="doc-card-desc">프로그램 목표 · 준비물 · 수업 흐름 요약</div>
+          </div>
+          <a href="../../assets/docs/guide-p2-moodlight.pdf" download class="doc-download-btn">
+            <span>⬇</span> PDF
+          </a>
+        </div>
+        <div class="doc-card">
+          <div class="doc-card-icon">📖</div>
+          <div class="doc-card-info">
+            <div class="doc-card-title" data-i18n="prog.docs.guide">교육 지도서</div>
+            <div class="doc-card-desc">교사·강사용 진행 가이드 (Notion 연결)</div>
+          </div>
+          <a href="https://www.notion.so/345a7faf513d809998fccd8b2b5cd786" target="_blank" rel="noopener" class="doc-download-btn doc-notion-btn">
+            <span>🔗</span> Notion
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="media-section fade-in">
+      <h2 data-i18n="prog.demo.title">🎬 키트 작동 데모 영상</h2>
+      <div class="assembly-video">
+        <video controls preload="metadata" poster="../../assets/images/kits/kit-moodlight-hero.jpg">
+          <source src="../../assets/media/kit-moodlight-demo.mp4" type="video/mp4">
+          브라우저가 비디오를 지원하지 않습니다.
+        </video>
+        <div class="assembly-video-caption"><span data-i18n="p2.demo.caption">📹 도도무드 스마트 무드등 작동 데모</span></div>
+      <p class="demo-note" data-i18n="prog.demo.note">&#8251; 키트가 완성된 상태에서 작동하는 모습을 보여주는 데모 영상입니다.</p>
+      </div>
+      <div class="media-downloads">
+        <a href="../../assets/media/kit-moodlight-assembly.pdf" download class="media-download-btn">
+          <span class="dl-icon">📄</span> 조립 가이드 PDF 다운로드
+        </a>
+        <a href="../../assets/media/kit-moodlight-guide.pdf" download class="media-download-btn">
+          <span class="dl-icon">📋</span> 교사 가이드 PDF 다운로드
+        </a>
+        <a href="../../assets/media/kit-moodlight-assembly.mp4" download class="media-download-btn">
+          <span class="dl-icon">⬇️</span> 조립 영상 MP4 다운로드
+        </a>
+      </div>
+    </section>
+
+    <section id="ai-ext" class="ai-extension fade-in">
+      <span class="extension-label" data-i18n="prog.ai.label">선택형 확장 활동</span>
+      <h3 data-i18n="p2.ai.title">🎨 조명 + 색깔 탐구</h3>
+      <p>기본 키트만으로도 학습이 완결됩니다. 색깔 셀로판지를 LED 앞에 놓아 다양한 색 조명 효과를 탐구하는 확장 활동이 가능합니다.</p>
+    </section>
+
+    <section id="faq" class="faq-section fade-in">
+      <h2 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;"><span data-i18n="prog.faq.title">❓ 자주 묻는 질문</span></h2>
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="p2.faq1.q">LED가 켜지지 않을 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">LED의 긴 다리(+)와 짧은 다리(-)가 올바른 방향으로 꽂혀 있는지 확인하세요. 배터리 방향도 함께 체크합니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="p2.faq2.q">조도센서가 반응하지 않을 때는?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">조도센서와 배터리가 브레드보드에 제대로 꽂혔는지 확인하세요. 점퍼 케이블이 빠진 경우가 많습니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-i18n="p2.faq3.q">실리콘 갓은 어떻게 끼우나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">LED 위에 살짝 눌러서 끼웁니다. 실리콘 소재라 부드럽게 늘어나므로 억지로 끼울 필요가 없습니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">보호자/교사 지도 가이드가 있나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          네, 교사·강사용 지도서를 제공합니다. 단계별 진행 포인트, 자주 발생하는 오류 대처법, 확장 질문 예시가 담겨 있습니다. 위 「교육 자료 다운로드」 섹션에서 Notion 지도서를 확인할 수 있습니다.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">브레드보드 회로 연결 시 주의사항은?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          배터리를 연결하기 전에 회로 구성을 완료하세요. LED는 극성(+/-)이 있으므로 방향을 꼭 확인합니다. 점퍼 케이블을 너무 세게 꽂으면 브레드보드 홀이 손상될 수 있으니 부드럽게 삽입하세요.
+        </div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">어떤 교육과정과 연계되나요?</button>
+        <div class="faq-answer"><div class="faq-answer-inner">
+          초등 과학 4~6학년 「빛과 렌즈」·「전기회로와 전자부품」, 실과 「기술 시스템」 영역과 연계됩니다. 조도센서를 활용한 자동 제어 개념은 중학교 기술·정보 교과의 피지컬 컴퓨팅 단원과 이어집니다.
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ═══ V3 LEARNING SECTIONS ═══ -->
+    <section id="parts-detective" class="student-section fade-in"></section>
+    <section id="safety-quest" class="student-section fade-in"></section>
+    <section id="build-guide" class="student-section fade-in"></section>
+    <section id="troubleshooting" class="student-section fade-in"></section>
+    <section id="science-lab" class="student-section fade-in"></section>
+    <section id="mission-cards" class="student-section fade-in"></section>
+    <section id="lab-notebook" class="student-section fade-in"></section>
+    <section id="certificate" class="student-section fade-in"></section>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">⚔ DOROLAND V3-CODEX ⚔</div>
+      <p class="footer-copy">© 2026 DOROLAND · 주식회사 도로(DORO)</p>
+    </div>
+  </footer>
+  <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/kit-data.js"></script>
+  <script src="../../assets/js/learning.js"></script>
+  <script src="../../assets/js/main.js"></script>
+  <script src="../../assets/js/pixel.js"></script>
+  <script src="../../assets/js/detail.js"></script>
+</body>
+</html>
+
+
+

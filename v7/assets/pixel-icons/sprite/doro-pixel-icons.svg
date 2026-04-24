@@ -1,0 +1,637 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="speaker" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="1" y="5" width="3" height="6" fill="#0b1528"/>
+      <rect x="4" y="3" width="4" height="10" fill="#0b1528"/>
+      <rect x="2" y="6" width="2" height="4" fill="#67e8f9"/>
+      <rect x="5" y="4" width="2" height="8" fill="#22d3ee"/>
+      <rect x="8" y="5" width="2" height="1" fill="#fef3c7"/>
+      <rect x="8" y="10" width="2" height="1" fill="#fef3c7"/>
+      <rect x="10" y="3" width="2" height="2" fill="#14b8a6"/>
+      <rect x="10" y="11" width="2" height="2" fill="#14b8a6"/>
+      <rect x="12" y="2" width="2" height="12" fill="#0b1528"/>
+      <rect x="12" y="4" width="1" height="8" fill="#2dd4bf"/>
+    </symbol>
+
+    <symbol id="lamp" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="5" y="1" width="6" height="2" fill="#0b1528"/>
+      <rect x="4" y="3" width="8" height="6" fill="#0b1528"/>
+      <rect x="5" y="4" width="6" height="4" fill="#fbbf24"/>
+      <rect x="6" y="3" width="4" height="1" fill="#fde68a"/>
+      <rect x="6" y="9" width="4" height="2" fill="#0b1528"/>
+      <rect x="7" y="10" width="2" height="3" fill="#f472b6"/>
+      <rect x="4" y="13" width="8" height="2" fill="#0b1528"/>
+      <rect x="5" y="13" width="6" height="1" fill="#8b5cf6"/>
+    </symbol>
+
+    <symbol id="robot" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="7" y="1" width="2" height="2" fill="#0b1528"/>
+      <rect x="4" y="3" width="8" height="2" fill="#0b1528"/>
+      <rect x="3" y="5" width="10" height="8" fill="#0b1528"/>
+      <rect x="4" y="6" width="8" height="6" fill="#67e8f9"/>
+      <rect x="5" y="7" width="2" height="2" fill="#0b1528"/>
+      <rect x="9" y="7" width="2" height="2" fill="#0b1528"/>
+      <rect x="6" y="11" width="4" height="1" fill="#ec4899"/>
+      <rect x="1" y="7" width="2" height="3" fill="#8b5cf6"/>
+      <rect x="13" y="7" width="2" height="3" fill="#8b5cf6"/>
+      <rect x="5" y="13" width="2" height="2" fill="#0b1528"/>
+      <rect x="9" y="13" width="2" height="2" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="car" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="4" width="8" height="4" fill="#0b1528"/>
+      <rect x="1" y="8" width="14" height="4" fill="#0b1528"/>
+      <rect x="4" y="5" width="6" height="3" fill="#14b8a6"/>
+      <rect x="2" y="8" width="12" height="3" fill="#2dd4bf"/>
+      <rect x="5" y="6" width="2" height="2" fill="#bae6fd"/>
+      <rect x="8" y="6" width="2" height="2" fill="#bae6fd"/>
+      <rect x="2" y="10" width="2" height="1" fill="#f472b6"/>
+      <rect x="13" y="9" width="1" height="1" fill="#fbbf24"/>
+      <rect x="3" y="11" width="3" height="3" fill="#0b1528"/>
+      <rect x="10" y="11" width="3" height="3" fill="#0b1528"/>
+      <rect x="4" y="12" width="1" height="1" fill="#94a3b8"/>
+      <rect x="11" y="12" width="1" height="1" fill="#94a3b8"/>
+    </symbol>
+
+    <symbol id="gamepad" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="5" width="10" height="7" fill="#0b1528"/>
+      <rect x="2" y="7" width="2" height="4" fill="#0b1528"/>
+      <rect x="12" y="7" width="2" height="4" fill="#0b1528"/>
+      <rect x="4" y="6" width="8" height="5" fill="#8b5cf6"/>
+      <rect x="5" y="7" width="1" height="3" fill="#fef3c7"/>
+      <rect x="4" y="8" width="3" height="1" fill="#fef3c7"/>
+      <rect x="10" y="7" width="1" height="1" fill="#f472b6"/>
+      <rect x="11" y="9" width="1" height="1" fill="#2dd4bf"/>
+      <rect x="7" y="4" width="2" height="1" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="piano" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="4" width="12" height="8" fill="#0b1528"/>
+      <rect x="3" y="5" width="10" height="6" fill="#f8fafc"/>
+      <rect x="4" y="5" width="1" height="4" fill="#0b1528"/>
+      <rect x="7" y="5" width="1" height="4" fill="#0b1528"/>
+      <rect x="10" y="5" width="1" height="4" fill="#0b1528"/>
+      <rect x="3" y="10" width="10" height="1" fill="#f472b6"/>
+      <rect x="2" y="12" width="12" height="2" fill="#fb7185"/>
+    </symbol>
+
+    <symbol id="parts" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="5" y="2" width="6" height="2" fill="#0b1528"/>
+      <rect x="4" y="3" width="2" height="3" fill="#0b1528"/>
+      <rect x="10" y="3" width="2" height="3" fill="#0b1528"/>
+      <rect x="6" y="3" width="4" height="1" fill="#fef3c7"/>
+      <rect x="2" y="5" width="12" height="9" fill="#0b1528"/>
+      <rect x="3" y="6" width="10" height="2" fill="#fde68a"/>
+      <rect x="3" y="8" width="10" height="5" fill="#fbbf24"/>
+      <rect x="6" y="7" width="4" height="3" fill="#0b1528"/>
+      <rect x="7" y="8" width="2" height="1" fill="#67e8f9"/>
+      <rect x="4" y="10" width="3" height="2" fill="#22d3ee"/>
+      <rect x="9" y="10" width="3" height="2" fill="#f472b6"/>
+      <rect x="4" y="13" width="8" height="1" fill="#92400e"/>
+    </symbol>
+
+    <symbol id="safety" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="4" y="1" width="8" height="2" fill="#0b1528"/>
+      <rect x="3" y="3" width="10" height="6" fill="#0b1528"/>
+      <rect x="4" y="9" width="8" height="3" fill="#0b1528"/>
+      <rect x="6" y="12" width="4" height="2" fill="#0b1528"/>
+      <rect x="5" y="3" width="6" height="2" fill="#67e8f9"/>
+      <rect x="4" y="5" width="8" height="4" fill="#2dd4bf"/>
+      <rect x="5" y="9" width="6" height="2" fill="#14b8a6"/>
+      <rect x="7" y="11" width="2" height="1" fill="#14b8a6"/>
+      <rect x="5" y="7" width="2" height="2" fill="#fef3c7"/>
+      <rect x="7" y="8" width="2" height="2" fill="#fef3c7"/>
+      <rect x="9" y="5" width="2" height="4" fill="#fef3c7"/>
+    </symbol>
+
+    <symbol id="build" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="3" width="8" height="4" fill="#0b1528"/>
+      <rect x="3" y="4" width="6" height="2" fill="#cbd5e1"/>
+      <rect x="1" y="4" width="2" height="2" fill="#0b1528"/>
+      <rect x="7" y="6" width="3" height="3" fill="#0b1528"/>
+      <rect x="9" y="8" width="3" height="3" fill="#0b1528"/>
+      <rect x="11" y="10" width="3" height="4" fill="#0b1528"/>
+      <rect x="8" y="7" width="1" height="1" fill="#fbbf24"/>
+      <rect x="10" y="9" width="1" height="1" fill="#fbbf24"/>
+      <rect x="12" y="11" width="1" height="2" fill="#fbbf24"/>
+      <rect x="11" y="2" width="3" height="3" fill="#0b1528"/>
+      <rect x="12" y="3" width="1" height="6" fill="#fb7185"/>
+      <rect x="11" y="9" width="3" height="2" fill="#0b1528"/>
+      <rect x="12" y="9" width="1" height="1" fill="#fef3c7"/>
+    </symbol>
+
+    <symbol id="help" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="2" width="12" height="9" fill="#0b1528"/>
+      <rect x="3" y="3" width="10" height="7" fill="#fef3c7"/>
+      <rect x="4" y="10" width="5" height="3" fill="#0b1528"/>
+      <rect x="5" y="10" width="3" height="2" fill="#fef3c7"/>
+      <rect x="5" y="4" width="5" height="2" fill="#8b5cf6"/>
+      <rect x="9" y="6" width="2" height="2" fill="#8b5cf6"/>
+      <rect x="7" y="8" width="3" height="1" fill="#8b5cf6"/>
+      <rect x="7" y="11" width="2" height="2" fill="#fb7185"/>
+      <rect x="11" y="11" width="3" height="3" fill="#0b1528"/>
+      <rect x="12" y="12" width="1" height="1" fill="#2dd4bf"/>
+    </symbol>
+
+    <symbol id="science" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="6" y="1" width="4" height="2" fill="#0b1528"/>
+      <rect x="7" y="3" width="2" height="4" fill="#0b1528"/>
+      <rect x="4" y="6" width="8" height="2" fill="#0b1528"/>
+      <rect x="3" y="8" width="10" height="5" fill="#0b1528"/>
+      <rect x="2" y="13" width="12" height="2" fill="#0b1528"/>
+      <rect x="7" y="3" width="2" height="3" fill="#f8fafc"/>
+      <rect x="5" y="7" width="6" height="2" fill="#f8fafc"/>
+      <rect x="4" y="9" width="8" height="4" fill="#22d3ee"/>
+      <rect x="4" y="9" width="8" height="1" fill="#a5f3fc"/>
+      <rect x="5" y="11" width="2" height="1" fill="#fef3c7"/>
+      <rect x="10" y="4" width="2" height="2" fill="#f472b6"/>
+      <rect x="12" y="6" width="2" height="2" fill="#fbbf24"/>
+    </symbol>
+
+    <symbol id="review" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="2" width="10" height="12" fill="#0b1528"/>
+      <rect x="4" y="3" width="8" height="10" fill="#f8fafc"/>
+      <rect x="5" y="4" width="6" height="2" fill="#8b5cf6"/>
+      <rect x="5" y="8" width="2" height="2" fill="#14b8a6"/>
+      <rect x="7" y="9" width="1" height="1" fill="#14b8a6"/>
+      <rect x="9" y="8" width="2" height="1" fill="#94a3b8"/>
+      <rect x="5" y="11" width="2" height="2" fill="#f472b6"/>
+      <rect x="8" y="11" width="3" height="1" fill="#94a3b8"/>
+      <rect x="2" y="5" width="2" height="1" fill="#fbbf24"/>
+      <rect x="2" y="9" width="2" height="1" fill="#fbbf24"/>
+    </symbol>
+
+    <symbol id="mission" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="4" y="2" width="8" height="2" fill="#0b1528"/>
+      <rect x="3" y="4" width="10" height="5" fill="#0b1528"/>
+      <rect x="2" y="5" width="2" height="4" fill="#0b1528"/>
+      <rect x="12" y="5" width="2" height="4" fill="#0b1528"/>
+      <rect x="5" y="4" width="6" height="4" fill="#fbbf24"/>
+      <rect x="6" y="5" width="4" height="1" fill="#fde68a"/>
+      <rect x="7" y="8" width="2" height="4" fill="#0b1528"/>
+      <rect x="5" y="12" width="6" height="2" fill="#0b1528"/>
+      <rect x="6" y="12" width="4" height="1" fill="#f472b6"/>
+      <rect x="4" y="6" width="1" height="2" fill="#fbbf24"/>
+      <rect x="11" y="6" width="1" height="2" fill="#fbbf24"/>
+    </symbol>
+
+    <symbol id="record" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="2" width="10" height="12" fill="#0b1528"/>
+      <rect x="4" y="3" width="8" height="10" fill="#f8fafc"/>
+      <rect x="2" y="4" width="2" height="1" fill="#8b5cf6"/>
+      <rect x="2" y="7" width="2" height="1" fill="#8b5cf6"/>
+      <rect x="2" y="10" width="2" height="1" fill="#8b5cf6"/>
+      <rect x="5" y="5" width="5" height="2" fill="#22d3ee"/>
+      <rect x="5" y="8" width="6" height="1" fill="#94a3b8"/>
+      <rect x="5" y="10" width="4" height="1" fill="#94a3b8"/>
+      <rect x="10" y="10" width="3" height="3" fill="#0b1528"/>
+      <rect x="11" y="11" width="1" height="1" fill="#f472b6"/>
+    </symbol>
+
+    <symbol id="certificate" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="3" width="12" height="9" fill="#0b1528"/>
+      <rect x="3" y="4" width="10" height="7" fill="#fef3c7"/>
+      <rect x="5" y="5" width="6" height="2" fill="#14b8a6"/>
+      <rect x="5" y="8" width="4" height="1" fill="#94a3b8"/>
+      <rect x="10" y="9" width="4" height="4" fill="#0b1528"/>
+      <rect x="11" y="10" width="2" height="2" fill="#f472b6"/>
+      <rect x="10" y="13" width="1" height="2" fill="#fb7185"/>
+      <rect x="13" y="13" width="1" height="2" fill="#fb7185"/>
+      <rect x="4" y="11" width="4" height="1" fill="#fbbf24"/>
+    </symbol>
+
+    <symbol id="video" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="4" width="12" height="9" fill="#0b1528"/>
+      <rect x="3" y="5" width="10" height="7" fill="#1e293b"/>
+      <rect x="6" y="6" width="3" height="5" fill="#fef3c7"/>
+      <rect x="9" y="7" width="2" height="3" fill="#fef3c7"/>
+      <rect x="11" y="8" width="1" height="1" fill="#fef3c7"/>
+      <rect x="3" y="3" width="3" height="2" fill="#67e8f9"/>
+      <rect x="7" y="3" width="3" height="2" fill="#fbbf24"/>
+      <rect x="11" y="3" width="3" height="2" fill="#8b5cf6"/>
+      <rect x="4" y="12" width="8" height="1" fill="#2dd4bf"/>
+    </symbol>
+
+    <symbol id="pdf" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="1" width="9" height="14" fill="#0b1528"/>
+      <rect x="4" y="2" width="7" height="12" fill="#f8fafc"/>
+      <rect x="10" y="2" width="3" height="3" fill="#0b1528"/>
+      <rect x="11" y="3" width="1" height="1" fill="#cbd5e1"/>
+      <rect x="5" y="4" width="4" height="1" fill="#94a3b8"/>
+      <rect x="5" y="6" width="3" height="1" fill="#94a3b8"/>
+      <rect x="5" y="8" width="7" height="5" fill="#fb7185"/>
+      <rect x="6" y="9" width="1" height="3" fill="#fef3c7"/>
+      <rect x="8" y="9" width="2" height="1" fill="#fef3c7"/>
+      <rect x="8" y="11" width="2" height="1" fill="#fef3c7"/>
+    </symbol>
+
+    <symbol id="email" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="4" width="12" height="9" fill="#0b1528"/>
+      <rect x="3" y="5" width="10" height="7" fill="#f8fafc"/>
+      <rect x="4" y="6" width="2" height="1" fill="#22d3ee"/>
+      <rect x="6" y="7" width="2" height="1" fill="#22d3ee"/>
+      <rect x="8" y="7" width="2" height="1" fill="#8b5cf6"/>
+      <rect x="10" y="6" width="2" height="1" fill="#8b5cf6"/>
+      <rect x="4" y="10" width="8" height="1" fill="#f472b6"/>
+      <rect x="5" y="9" width="2" height="1" fill="#f472b6"/>
+      <rect x="9" y="9" width="2" height="1" fill="#f472b6"/>
+    </symbol>
+
+    <symbol id="chat" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="3" width="12" height="8" fill="#0b1528"/>
+      <rect x="3" y="4" width="10" height="6" fill="#fbbf24"/>
+      <rect x="5" y="7" width="2" height="2" fill="#0b1528"/>
+      <rect x="8" y="7" width="2" height="2" fill="#0b1528"/>
+      <rect x="11" y="7" width="1" height="2" fill="#0b1528"/>
+      <rect x="5" y="11" width="4" height="2" fill="#0b1528"/>
+      <rect x="6" y="10" width="2" height="2" fill="#fbbf24"/>
+    </symbol>
+
+    <symbol id="time" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="5" y="1" width="6" height="2" fill="#0b1528"/>
+      <rect x="3" y="3" width="10" height="10" fill="#0b1528"/>
+      <rect x="4" y="4" width="8" height="8" fill="#dbeafe"/>
+      <rect x="5" y="5" width="6" height="6" fill="#eff6ff"/>
+      <rect x="7" y="5" width="2" height="4" fill="#0b1528"/>
+      <rect x="8" y="8" width="3" height="2" fill="#0b1528"/>
+      <rect x="5" y="14" width="6" height="1" fill="#8b5cf6"/>
+    </symbol>
+
+    <symbol id="level" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="4" y="2" width="8" height="2" fill="#0b1528"/>
+      <rect x="3" y="4" width="10" height="8" fill="#0b1528"/>
+      <rect x="5" y="12" width="6" height="2" fill="#0b1528"/>
+      <rect x="5" y="3" width="6" height="2" fill="#8b5cf6"/>
+      <rect x="4" y="5" width="8" height="6" fill="#7c3aed"/>
+      <rect x="6" y="11" width="4" height="1" fill="#5b21b6"/>
+      <rect x="7" y="4" width="2" height="2" fill="#fbbf24"/>
+      <rect x="5" y="6" width="6" height="2" fill="#fbbf24"/>
+      <rect x="6" y="8" width="4" height="1" fill="#fbbf24"/>
+      <rect x="5" y="9" width="2" height="2" fill="#fbbf24"/>
+      <rect x="9" y="9" width="2" height="2" fill="#fbbf24"/>
+      <rect x="7" y="10" width="2" height="2" fill="#fbbf24"/>
+      <rect x="10" y="3" width="2" height="2" fill="#fef3c7"/>
+    </symbol>
+
+    <symbol id="age" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="5" y="2" width="6" height="2" fill="#0b1528"/>
+      <rect x="4" y="4" width="8" height="5" fill="#0b1528"/>
+      <rect x="5" y="5" width="6" height="4" fill="#fef3c7"/>
+      <rect x="3" y="3" width="10" height="2" fill="#0b1528"/>
+      <rect x="4" y="3" width="8" height="1" fill="#8b5cf6"/>
+      <rect x="7" y="1" width="2" height="2" fill="#0b1528"/>
+      <rect x="6" y="6" width="1" height="1" fill="#0b1528"/>
+      <rect x="9" y="6" width="1" height="1" fill="#0b1528"/>
+      <rect x="7" y="8" width="2" height="1" fill="#fb7185"/>
+      <rect x="3" y="9" width="10" height="5" fill="#0b1528"/>
+      <rect x="4" y="10" width="8" height="3" fill="#2dd4bf"/>
+      <rect x="6" y="10" width="4" height="1" fill="#a7f3d0"/>
+      <rect x="2" y="11" width="2" height="2" fill="#8b5cf6"/>
+      <rect x="12" y="11" width="2" height="2" fill="#8b5cf6"/>
+    </symbol>
+
+    <symbol id="lock" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="5" y="2" width="6" height="5" fill="#0b1528"/>
+      <rect x="6" y="3" width="4" height="4" fill="#f8fafc"/>
+      <rect x="3" y="7" width="10" height="7" fill="#0b1528"/>
+      <rect x="4" y="8" width="8" height="5" fill="#fbbf24"/>
+      <rect x="7" y="9" width="2" height="3" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="unlock" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="4" y="2" width="6" height="5" fill="#0b1528"/>
+      <rect x="5" y="3" width="4" height="3" fill="#f8fafc"/>
+      <rect x="9" y="5" width="2" height="2" fill="#f8fafc"/>
+      <rect x="3" y="7" width="10" height="7" fill="#0b1528"/>
+      <rect x="4" y="8" width="8" height="5" fill="#2dd4bf"/>
+      <rect x="7" y="9" width="2" height="3" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="check" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="3" width="10" height="10" fill="#0b1528"/>
+      <rect x="4" y="4" width="8" height="8" fill="#14b8a6"/>
+      <rect x="5" y="8" width="2" height="2" fill="#fef3c7"/>
+      <rect x="7" y="10" width="2" height="2" fill="#fef3c7"/>
+      <rect x="9" y="8" width="2" height="2" fill="#fef3c7"/>
+      <rect x="11" y="6" width="2" height="2" fill="#fef3c7"/>
+      <rect x="5" y="5" width="5" height="1" fill="#2dd4bf"/>
+    </symbol>
+
+    <symbol id="reset" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="4" y="2" width="7" height="2" fill="#0b1528"/>
+      <rect x="2" y="4" width="3" height="4" fill="#0b1528"/>
+      <rect x="11" y="4" width="3" height="6" fill="#0b1528"/>
+      <rect x="4" y="10" width="8" height="3" fill="#0b1528"/>
+      <rect x="5" y="3" width="5" height="1" fill="#67e8f9"/>
+      <rect x="3" y="5" width="2" height="2" fill="#67e8f9"/>
+      <rect x="12" y="5" width="1" height="4" fill="#67e8f9"/>
+      <rect x="5" y="11" width="6" height="1" fill="#67e8f9"/>
+      <rect x="2" y="2" width="4" height="3" fill="#0b1528"/>
+      <rect x="3" y="3" width="2" height="1" fill="#f472b6"/>
+      <rect x="4" y="1" width="2" height="2" fill="#f472b6"/>
+      <rect x="11" y="10" width="3" height="3" fill="#fbbf24"/>
+    </symbol>
+
+    <symbol id="arrow-next" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="5" width="8" height="6" fill="#0b1528"/>
+      <rect x="9" y="3" width="3" height="2" fill="#0b1528"/>
+      <rect x="11" y="5" width="2" height="2" fill="#0b1528"/>
+      <rect x="13" y="7" width="2" height="2" fill="#0b1528"/>
+      <rect x="11" y="9" width="2" height="2" fill="#0b1528"/>
+      <rect x="9" y="11" width="3" height="2" fill="#0b1528"/>
+      <rect x="3" y="7" width="7" height="2" fill="#2dd4bf"/>
+      <rect x="9" y="5" width="2" height="2" fill="#67e8f9"/>
+      <rect x="11" y="7" width="2" height="2" fill="#67e8f9"/>
+      <rect x="9" y="9" width="2" height="2" fill="#67e8f9"/>
+    </symbol>
+
+    <symbol id="arrow-back" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="6" y="5" width="8" height="6" fill="#0b1528"/>
+      <rect x="4" y="3" width="3" height="2" fill="#0b1528"/>
+      <rect x="3" y="5" width="2" height="2" fill="#0b1528"/>
+      <rect x="1" y="7" width="2" height="2" fill="#0b1528"/>
+      <rect x="3" y="9" width="2" height="2" fill="#0b1528"/>
+      <rect x="4" y="11" width="3" height="2" fill="#0b1528"/>
+      <rect x="6" y="7" width="7" height="2" fill="#2dd4bf"/>
+      <rect x="5" y="5" width="2" height="2" fill="#67e8f9"/>
+      <rect x="3" y="7" width="2" height="2" fill="#67e8f9"/>
+      <rect x="5" y="9" width="2" height="2" fill="#67e8f9"/>
+    </symbol>
+
+    <symbol id="arrow-up" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="6" y="6" width="4" height="8" fill="#0b1528"/>
+      <rect x="4" y="4" width="8" height="3" fill="#0b1528"/>
+      <rect x="2" y="6" width="3" height="3" fill="#0b1528"/>
+      <rect x="11" y="6" width="3" height="3" fill="#0b1528"/>
+      <rect x="7" y="2" width="2" height="2" fill="#0b1528"/>
+      <rect x="7" y="7" width="2" height="6" fill="#fbbf24"/>
+      <rect x="5" y="5" width="6" height="2" fill="#fde68a"/>
+      <rect x="4" y="7" width="2" height="1" fill="#fde68a"/>
+      <rect x="10" y="7" width="2" height="1" fill="#fde68a"/>
+      <rect x="7" y="3" width="2" height="2" fill="#fde68a"/>
+    </symbol>
+
+    <symbol id="warning" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="7" y="1" width="2" height="2" fill="#0b1528"/>
+      <rect x="6" y="3" width="4" height="3" fill="#0b1528"/>
+      <rect x="5" y="6" width="6" height="3" fill="#0b1528"/>
+      <rect x="3" y="9" width="10" height="4" fill="#0b1528"/>
+      <rect x="2" y="13" width="12" height="2" fill="#0b1528"/>
+      <rect x="7" y="4" width="2" height="5" fill="#fbbf24"/>
+      <rect x="5" y="9" width="6" height="3" fill="#fbbf24"/>
+      <rect x="7" y="12" width="2" height="1" fill="#fb7185"/>
+      <rect x="7" y="6" width="2" height="4" fill="#0b1528"/>
+      <rect x="7" y="11" width="2" height="1" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="home" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="11" y="2" width="3" height="4" fill="#0b1528"/>
+      <rect x="12" y="2" width="1" height="3" fill="#fb7185"/>
+      <rect x="6" y="1" width="4" height="2" fill="#0b1528"/>
+      <rect x="4" y="3" width="8" height="2" fill="#0b1528"/>
+      <rect x="2" y="5" width="12" height="3" fill="#0b1528"/>
+      <rect x="3" y="6" width="10" height="2" fill="#fb7185"/>
+      <rect x="3" y="8" width="10" height="6" fill="#0b1528"/>
+      <rect x="4" y="8" width="8" height="5" fill="#fbbf24"/>
+      <rect x="5" y="9" width="2" height="2" fill="#bae6fd"/>
+      <rect x="10" y="9" width="2" height="2" fill="#bae6fd"/>
+      <rect x="7" y="10" width="3" height="4" fill="#0b1528"/>
+      <rect x="8" y="11" width="1" height="2" fill="#8b5cf6"/>
+    </symbol>
+
+    <symbol id="quest" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="2" width="3" height="12" fill="#0b1528"/>
+      <rect x="4" y="2" width="9" height="7" fill="#0b1528"/>
+      <rect x="11" y="9" width="3" height="3" fill="#0b1528"/>
+      <rect x="5" y="3" width="7" height="5" fill="#fbbf24"/>
+      <rect x="11" y="8" width="1" height="2" fill="#fbbf24"/>
+      <rect x="3" y="3" width="1" height="10" fill="#f8fafc"/>
+      <rect x="7" y="4" width="2" height="2" fill="#fef3c7"/>
+      <rect x="6" y="6" width="4" height="1" fill="#fef3c7"/>
+      <rect x="6" y="12" width="5" height="2" fill="#0b1528"/>
+      <rect x="7" y="12" width="3" height="1" fill="#f472b6"/>
+    </symbol>
+
+    <symbol id="story" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="3" width="12" height="10" fill="#0b1528"/>
+      <rect x="3" y="4" width="10" height="8" fill="#fef3c7"/>
+      <rect x="4" y="5" width="3" height="3" fill="#2dd4bf"/>
+      <rect x="8" y="5" width="4" height="1" fill="#94a3b8"/>
+      <rect x="8" y="7" width="3" height="1" fill="#94a3b8"/>
+      <rect x="4" y="10" width="8" height="1" fill="#8b5cf6"/>
+      <rect x="3" y="13" width="10" height="1" fill="#f472b6"/>
+    </symbol>
+
+    <symbol id="photo" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="4" width="12" height="9" fill="#0b1528"/>
+      <rect x="3" y="5" width="10" height="7" fill="#bae6fd"/>
+      <rect x="5" y="7" width="2" height="2" fill="#fbbf24"/>
+      <rect x="4" y="10" width="3" height="1" fill="#14b8a6"/>
+      <rect x="7" y="9" width="3" height="2" fill="#14b8a6"/>
+      <rect x="9" y="8" width="3" height="3" fill="#2dd4bf"/>
+      <rect x="5" y="3" width="6" height="2" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="ai" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="4" width="10" height="8" fill="#0b1528"/>
+      <rect x="4" y="5" width="8" height="6" fill="#8b5cf6"/>
+      <rect x="5" y="6" width="2" height="2" fill="#fef3c7"/>
+      <rect x="9" y="6" width="2" height="2" fill="#fef3c7"/>
+      <rect x="6" y="10" width="4" height="1" fill="#2dd4bf"/>
+      <rect x="2" y="2" width="2" height="2" fill="#f472b6"/>
+      <rect x="12" y="2" width="2" height="2" fill="#f472b6"/>
+      <rect x="7" y="1" width="2" height="3" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="coding" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="4" width="12" height="8" fill="#0b1528"/>
+      <rect x="3" y="5" width="10" height="6" fill="#1e293b"/>
+      <rect x="4" y="6" width="2" height="1" fill="#22d3ee"/>
+      <rect x="6" y="7" width="2" height="1" fill="#f472b6"/>
+      <rect x="8" y="8" width="3" height="1" fill="#fbbf24"/>
+      <rect x="5" y="13" width="6" height="1" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="music" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="8" y="2" width="5" height="2" fill="#0b1528"/>
+      <rect x="8" y="4" width="2" height="7" fill="#0b1528"/>
+      <rect x="12" y="4" width="2" height="6" fill="#0b1528"/>
+      <rect x="5" y="10" width="4" height="4" fill="#0b1528"/>
+      <rect x="10" y="9" width="4" height="4" fill="#0b1528"/>
+      <rect x="9" y="3" width="4" height="1" fill="#f472b6"/>
+      <rect x="6" y="11" width="2" height="2" fill="#fbbf24"/>
+      <rect x="11" y="10" width="2" height="2" fill="#22d3ee"/>
+    </symbol>
+
+    <symbol id="print" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="4" y="2" width="8" height="4" fill="#0b1528"/>
+      <rect x="5" y="3" width="6" height="3" fill="#f8fafc"/>
+      <rect x="2" y="6" width="12" height="6" fill="#0b1528"/>
+      <rect x="3" y="7" width="10" height="4" fill="#94a3b8"/>
+      <rect x="5" y="9" width="6" height="5" fill="#0b1528"/>
+      <rect x="6" y="10" width="4" height="3" fill="#f8fafc"/>
+      <rect x="12" y="8" width="1" height="1" fill="#f472b6"/>
+    </symbol>
+
+    <symbol id="battery" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="5" width="11" height="6" fill="#0b1528"/>
+      <rect x="13" y="7" width="1" height="2" fill="#0b1528"/>
+      <rect x="3" y="6" width="3" height="4" fill="#2dd4bf"/>
+      <rect x="7" y="6" width="2" height="4" fill="#fbbf24"/>
+      <rect x="10" y="6" width="2" height="4" fill="#fb7185"/>
+    </symbol>
+
+    <symbol id="wire" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="5" width="4" height="2" fill="#0b1528"/>
+      <rect x="10" y="9" width="4" height="2" fill="#0b1528"/>
+      <rect x="5" y="6" width="2" height="2" fill="#f472b6"/>
+      <rect x="7" y="7" width="2" height="2" fill="#f472b6"/>
+      <rect x="9" y="8" width="2" height="2" fill="#f472b6"/>
+      <rect x="5" y="9" width="2" height="2" fill="#22d3ee"/>
+      <rect x="7" y="8" width="2" height="2" fill="#22d3ee"/>
+      <rect x="9" y="7" width="2" height="2" fill="#22d3ee"/>
+    </symbol>
+
+    <symbol id="circuit" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="3" width="10" height="10" fill="#0b1528"/>
+      <rect x="4" y="4" width="8" height="8" fill="#14b8a6"/>
+      <rect x="6" y="6" width="4" height="4" fill="#0b1528"/>
+      <rect x="7" y="7" width="2" height="2" fill="#fbbf24"/>
+      <rect x="1" y="5" width="2" height="1" fill="#f472b6"/>
+      <rect x="1" y="10" width="2" height="1" fill="#f472b6"/>
+      <rect x="13" y="5" width="2" height="1" fill="#f472b6"/>
+      <rect x="13" y="10" width="2" height="1" fill="#f472b6"/>
+    </symbol>
+
+    <symbol id="breadboard" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="3" width="12" height="10" fill="#0b1528"/>
+      <rect x="3" y="4" width="10" height="8" fill="#f8fafc"/>
+      <rect x="4" y="5" width="1" height="1" fill="#14b8a6"/>
+      <rect x="6" y="5" width="1" height="1" fill="#14b8a6"/>
+      <rect x="9" y="5" width="1" height="1" fill="#8b5cf6"/>
+      <rect x="11" y="5" width="1" height="1" fill="#8b5cf6"/>
+      <rect x="4" y="8" width="1" height="1" fill="#94a3b8"/>
+      <rect x="6" y="8" width="1" height="1" fill="#94a3b8"/>
+      <rect x="9" y="8" width="1" height="1" fill="#94a3b8"/>
+      <rect x="11" y="8" width="1" height="1" fill="#94a3b8"/>
+    </symbol>
+
+    <symbol id="motor" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="5" width="8" height="6" fill="#0b1528"/>
+      <rect x="4" y="6" width="6" height="4" fill="#fbbf24"/>
+      <rect x="11" y="6" width="3" height="4" fill="#0b1528"/>
+      <rect x="12" y="7" width="1" height="2" fill="#94a3b8"/>
+      <rect x="2" y="7" width="2" height="2" fill="#fb7185"/>
+      <rect x="5" y="7" width="3" height="2" fill="#fef3c7"/>
+      <rect x="6" y="3" width="2" height="2" fill="#0b1528"/>
+      <rect x="6" y="11" width="2" height="2" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="sensor" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="4" width="10" height="8" fill="#0b1528"/>
+      <rect x="4" y="5" width="8" height="6" fill="#2563eb"/>
+      <rect x="5" y="6" width="2" height="2" fill="#f8fafc"/>
+      <rect x="9" y="6" width="2" height="2" fill="#f8fafc"/>
+      <rect x="5" y="10" width="6" height="1" fill="#fbbf24"/>
+      <rect x="2" y="7" width="1" height="2" fill="#f472b6"/>
+      <rect x="13" y="7" width="1" height="2" fill="#f472b6"/>
+    </symbol>
+
+    <symbol id="chip" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="4" y="4" width="8" height="8" fill="#0b1528"/>
+      <rect x="5" y="5" width="6" height="6" fill="#1e293b"/>
+      <rect x="6" y="6" width="4" height="1" fill="#2dd4bf"/>
+      <rect x="6" y="8" width="3" height="1" fill="#f472b6"/>
+      <rect x="2" y="5" width="2" height="1" fill="#fbbf24"/>
+      <rect x="2" y="8" width="2" height="1" fill="#fbbf24"/>
+      <rect x="2" y="11" width="2" height="1" fill="#fbbf24"/>
+      <rect x="12" y="5" width="2" height="1" fill="#fbbf24"/>
+      <rect x="12" y="8" width="2" height="1" fill="#fbbf24"/>
+      <rect x="12" y="11" width="2" height="1" fill="#fbbf24"/>
+    </symbol>
+
+    <symbol id="wheel" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="4" y="2" width="8" height="2" fill="#0b1528"/>
+      <rect x="2" y="4" width="12" height="8" fill="#0b1528"/>
+      <rect x="4" y="12" width="8" height="2" fill="#0b1528"/>
+      <rect x="4" y="5" width="8" height="6" fill="#1e293b"/>
+      <rect x="6" y="6" width="4" height="4" fill="#94a3b8"/>
+      <rect x="7" y="7" width="2" height="2" fill="#2dd4bf"/>
+    </symbol>
+
+    <symbol id="screen" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="2" y="3" width="12" height="9" fill="#0b1528"/>
+      <rect x="3" y="4" width="10" height="7" fill="#16a34a"/>
+      <rect x="4" y="5" width="8" height="1" fill="#bbf7d0"/>
+      <rect x="4" y="7" width="5" height="1" fill="#bbf7d0"/>
+      <rect x="6" y="12" width="4" height="2" fill="#0b1528"/>
+      <rect x="4" y="14" width="8" height="1" fill="#0b1528"/>
+    </symbol>
+
+    <symbol id="button" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="3" y="6" width="10" height="6" fill="#0b1528"/>
+      <rect x="4" y="5" width="8" height="5" fill="#fb7185"/>
+      <rect x="5" y="5" width="6" height="1" fill="#fda4af"/>
+      <rect x="5" y="11" width="6" height="2" fill="#0b1528"/>
+      <rect x="7" y="12" width="2" height="2" fill="#94a3b8"/>
+    </symbol>
+
+    <symbol id="power" viewBox="0 0 16 16">
+      <rect width="16" height="16" fill="none"/>
+      <rect x="7" y="2" width="2" height="6" fill="#0b1528"/>
+      <rect x="6" y="2" width="4" height="1" fill="#2dd4bf"/>
+      <rect x="4" y="5" width="2" height="2" fill="#0b1528"/>
+      <rect x="10" y="5" width="2" height="2" fill="#0b1528"/>
+      <rect x="3" y="7" width="10" height="6" fill="#0b1528"/>
+      <rect x="5" y="8" width="6" height="4" fill="#fbbf24"/>
+    </symbol>
+  </defs>
+</svg>

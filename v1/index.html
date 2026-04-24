@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOROLAND V1 Archive Notice</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #081120;
+      --panel: rgba(12, 22, 40, 0.92);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #f5f7ff;
+      --muted: #b8c5df;
+      --accent: #2dd4bf;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      background:
+        radial-gradient(circle at top, rgba(45, 212, 191, 0.16), transparent 32%),
+        linear-gradient(180deg, #07101f, #081120 48%, #0a1730);
+      color: var(--text);
+      font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
+    }
+
+    main {
+      width: min(720px, 100%);
+      padding: 1.5rem;
+      border-radius: 1.1rem;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.28);
+    }
+
+    h1 {
+      margin: 0 0 0.8rem;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 0 0.9rem;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      min-height: 2.4rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(45, 212, 191, 0.12);
+      border: 1px solid rgba(45, 212, 191, 0.34);
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .links {
+      display: grid;
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: 0.75rem 1rem;
+      border-radius: 0.95rem;
+      border: 1px solid rgba(45, 212, 191, 0.5);
+      background: rgba(45, 212, 191, 0.12);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    a:hover,
+    a:focus-visible {
+      background: rgba(45, 212, 191, 0.22);
+      outline: 2px solid rgba(255, 255, 255, 0.8);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="badge">📦 V1 아카이브 안내</div>
+    <h1>V1 원본은 현재 저장소에 남아 있지 않아요.</h1>
+    <p>
+      지금 확인할 수 있는 가장 이른 실제 버전은 V2입니다.
+      이 페이지는 버전 접근 링크를 끊기지 않게 유지하기 위한 보존 안내 페이지입니다.
+    </p>
+    <p>
+      실제 서비스 흐름은 V2부터, 현재 운영 기준은 V3 루트부터 확인할 수 있습니다.
+    </p>
+    <div class="links">
+      <a href="../v2/">V2 바로 보기</a>
+      <a href="../">현재 루트 V3 보기</a>
+      <a href="../v7/">최신 V7 보기</a>
+    </div>
+  </main>
+</body>
+</html>

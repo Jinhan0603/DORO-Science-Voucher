@@ -1,0 +1,50 @@
+{
+  "1-bluetooth-speaker": {
+    "guidePdf": "assets/docs/assembly/1-bluetooth-speaker/guide.pdf",
+    "sourcePdf": "REFERENCE_ONLY: 3-1. 블루투스 스피커_조립설명서.pdf",
+    "sourcePptx": "REFERENCE_ONLY: 3-2. 블루투스 스피커_조립설명서.pptx",
+    "assemblyVideo": "assets/media/assembly/1-bluetooth-speaker/assembly.mp4",
+    "assemblyVideoSource": "REFERENCE_ONLY: 3-3. 블루투스 스피커_조립영상.mp4",
+    "notes": "압축본 assembly.mp4를 v7 public asset으로 반영 완료"
+  },
+  "2-mood-light": {
+    "guidePdf": "assets/docs/assembly/2-mood-light/guide.pdf",
+    "sourcePdf": "REFERENCE_ONLY: 1-1. 스마트 무드등_조립설명서.pdf",
+    "sourcePptx": "REFERENCE_ONLY: 1-2. 스마트 무드등_조립설명서.pptx",
+    "assemblyVideo": "assets/media/assembly/2-mood-light/assembly.mp4",
+    "assemblyVideoSource": "REFERENCE_ONLY: 1-3. 스마트 무드등_조립영상.mp4",
+    "notes": "압축본 assembly.mp4를 v7 public asset으로 반영 완료"
+  },
+  "3-walking-robot": {
+    "guidePdf": "assets/docs/assembly/3-walking-robot/guide.pdf",
+    "sourcePdf": "REFERENCE_ONLY: 4-1. 워킹로봇_조립설명서.pdf",
+    "sourcePptx": "REFERENCE_ONLY: 4-2. 워킹로봇_조립설명서.pptx",
+    "assemblyVideo": "assets/media/assembly/3-walking-robot/assembly.mp4",
+    "assemblyVideoSource": "REFERENCE_ONLY: 4-3. 워킹로봇_조립영상 (2).mp4",
+    "notes": "압축본 assembly.mp4를 v7 public asset으로 반영 완료"
+  },
+  "4-ir-car": {
+    "guidePdf": "assets/docs/assembly/4-ir-car/guide.pdf",
+    "sourcePdf": "REFERENCE_ONLY: 5-1. IR자동차_조립설명서.pdf",
+    "sourcePptx": "REFERENCE_ONLY: 5-2. IR자동차_조립설명서.pptx",
+    "assemblyVideo": "assets/media/assembly/4-ir-car/assembly.mp4",
+    "assemblyVideoSource": "REFERENCE_ONLY: 5-3. IR자동차_조립영상.mp4",
+    "notes": "압축본 assembly.mp4를 v7 public asset으로 반영 완료"
+  },
+  "5-arduino-game": {
+    "guidePdf": "assets/docs/assembly/5-arduino-game/guide.pdf",
+    "sourcePdf": "REFERENCE_ONLY: 2-1. 아두이노 게임기_조립설명서.pdf",
+    "sourcePptx": "REFERENCE_ONLY: 2-2. 아두이노 게임기_조립설명서.pptx",
+    "assemblyVideo": "assets/media/assembly/5-arduino-game/assembly.mp4",
+    "assemblyVideoSource": "REFERENCE_ONLY: 2-3. 아두이노게임기_조립영상.mp4",
+    "notes": "압축본 assembly.mp4를 v7 public asset으로 반영 완료"
+  },
+  "6-ultrasonic-piano": {
+    "guidePdf": "assets/docs/assembly/6-ultrasonic-piano/guide.pdf",
+    "sourcePdf": "REFERENCE_ONLY: 6-1. 초음파피아노_조립설명서.pdf",
+    "sourcePptx": "REFERENCE_ONLY: 6-2. 초음파피아노_조립설명서.pptx",
+    "assemblyVideo": "assets/media/assembly/6-ultrasonic-piano/assembly.mp4",
+    "assemblyVideoSource": "REFERENCE_ONLY: 6-3. 초음파피아노_조립영상.mp4",
+    "notes": "압축본 assembly.mp4를 v7 public asset으로 반영 완료"
+  }
+}
